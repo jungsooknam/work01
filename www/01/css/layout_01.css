@@ -12,9 +12,32 @@
 
 
 
-header															{position:absolute; width:1000px; height:38px; left:0; top:0; padding-top:10px; z-index:10;}
-header h1														{float:right; font:21px nsM; color:#FFF; line-height:32px; text-align:right; background:#081353; padding:1px 5% 0 1.5%; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
-header h2														{float:left; font:27px nsM; color:#F0FF00; line-height:36px; text-shadow:1px 1px 1px #2D2E41; padding-left:1.5%; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+header
+{position:absolute; width:1000px; height:38px; left:0; top:0; padding-top:10px; z-index:10;}
+header h1
+    /*과목명*/
+    {float:right;
+    font:32 pt nsM;
+    color:#334366;
+    line-height:32px;
+    text-align:right;
+    padding:1px 5% 0 1.5%;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease;
+    -o-transition:All 0.2s ease;}
+header h2
+    /*차시명*/
+{float:left;
+    font:20pt nsM;
+    color:#fff;
+    line-height:36px;
+    /*text-shadow:1px 1px 1px #2D2E41; */
+    padding-left:1.5%;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease;
+    -o-transition:All 0.2s ease;}
 footer 															{position:relative; float:left; width:100%; height:40px; background:url("../img/inc/footer_bg_01.png") no-repeat #2E2E2E; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 
 

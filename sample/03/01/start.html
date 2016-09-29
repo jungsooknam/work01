@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SQL 활용</title>
+<script type="text/javascript" src="js/KEMAPIWrapper.js"></script>
+<script type="text/javascript" src="js/SCOFunctions.js"></script>
+<script type="text/javascript">
+
+	function ScormStart() {
+		var nTotalPage = 9; //총페이지
+		var startFile = "01_01.html";
+		var contentFrame = document.getElementById("cnt");
+
+		var api = getAPIHandle();
+		if ( api == null) {
+		// alert ("SCORM API를 찾을 수 없습니다.");
+			contentFrame.src = startFile;
+		} else {
+			loadPage(nTotalPage);//해당 차시 총페이지 페이지를 
+
+			var learner_name=doGetValue("cmi.learner_name"); //학생 이름
+			var completion_status = doGetValue("cmi.completion_status"); //상태 호출함수
+			var bookmark = doGetValue("cmi.location"); //Bookmark 호출 함수
+			//cmi.exit
+
+			if (bookmark=="" || bookmark==null) {
+				alert("첫 방문을 환영합니다.");
+				contentFrame.src = startFile;
+
+			} else {
+				if (completion_status == "completed") {
+					var strMessage = "학습을 완료하셨습니다.\n다시 처음부터 학습하시겠습니까?";
+					if(confirm(strMessage)){
+					  contentFrame.src = startFile;
+					} else {
+						contentFrame.src = bookmark;
+					}
+				} else {
+					var strMessage = "이전에 학습하신곳으로\n이동하시겠습니까?";
+					if (confirm(strMessage)) {
+					contentFrame.src = bookmark;
+				} else {
+					contentFrame.src = startFile;
+					}
+				}
+			}
+			startTimer();
+		}
+	}
+
+	function ScormEnd() {
+		computeTime();
+		doTerminate();
+	}
+	window.onload = ScormStart;
+	window.onunload = ScormEnd;
+
+</script>
+</head>
+
+<frameset rows="0,*" cols="*" frameborder="no" border="0" framespacing="0">
+	<frame name="top" id="top" scrolling="no" noresize src="" marginwidth="0" marginheight="0" frameborder="no" />
+	<frame name="cnt" id="cnt" src="" marginwidth="0" marginheight="0" frameborder="NO" />
+</frameset>
+</html>
