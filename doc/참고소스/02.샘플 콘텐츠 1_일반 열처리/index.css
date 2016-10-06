@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+
+
+/* 기본설정 */
+* {margin:0; padding:0;}
+html,body												{height:100%; margin:0; padding:0; font:12px nbgM, ngB, Dotum, playM, playB, sans-serif; color:#333; line-height:18px;}
+div, table												{margin:0; padding:0;}
+input, select											{padding:0}
+img, fieldset											{border:0;}
+img														{vertical-align:top;}
+ul, ol														{list-style:none;}
+a:link, a:visited, a:active, a:hover				{text-decoration:none;}
+hr															{display:none;}
+
+.button													{border:none;}
+.button:hover											{cursor:pointer;}
+.hidden, legend, caption							{position:absolute; overflow:hidden; visibility:hidden; width:0; height:0; left:0; top:0; font-size:0; line-height:0; padding:0; margin:0;}
+
+
+
+
+
+#index-area											{position:relative; width:100%; height:100%; background:url("01/img/inc/bg_01.png") repeat;}
+#index-area .intro-course						{position:absolute; width:306px; height:64px; left:50%; top:190px; text-indent:-9999px; background:url("01/img/intro/name_course.png") no-repeat; margin-left:-153px;}
+#index-area .intro-chapter						{position:absolute; width:470px; height:49px; left:50%; top:280px; text-indent:-9999px; background:url("01/img/intro/name_chapter.png") no-repeat; margin-left:-235px;}
+#index-area a											{position:absolute; width:142px; height:142px; left:50%; top:360px; text-indent:-9999px; background:url("01/img/inc/ready.png") no-repeat; margin-left:-71px;}
+
+
+
+
+

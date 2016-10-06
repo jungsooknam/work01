@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 13;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			var dontShowPopupChapterByVideoEnd = true;
+			var _totalPageSummary =  02;
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+				});
+				
+				initSummaryPage();
+				lms_mode();
+				menuInit();
+
+				$("#sco-name1").text(currentSco1);
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper">
+
+			<header>
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="summary">
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_13.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+
+					<audio autoplay id="audio_bg">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"summary_bg.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+					<p id="sco-name1"></p>
+
+					<div id="summary-text1" class="summary-text">
+						<dl class="type-1">
+							<dt>시험의 종류 및 탄소강</dt>
+							<dd>
+								<div>재료의 특성 시험 중 담금질성 시험의 종류</div>
+								<span>Di 계산방법에 의한 담금질성</span>
+								<span>조미니(Jominy)시험</span>
+								<span>P-F 시험(Penetration-Fracture Test)</span>
+								<span>S-A-C시험</span>
+								<span>셰퍼드(Shepherd) P-V시험</span>
+								<span>공냉시험</span>
+							</dd>
+							<dd>
+								<div>탄소강</div>
+								<span>저탄소강</span>
+								<span>고탄소강</span>
+								<span>기계구조용 탄소강재(SM)-저탄소강</span>
+								<span>탄소공구강</span>
+								<span>주강</span>
+								<span>쾌삭강</span>
+								<span>침탄강</span>
+							</dd>
+
+						</dl>
+					</div>
+
+					<div id="summary-text2" class="summary-text">
+						<dl class="type-2">
+							<dt>금속 열처리 시험의 실습</dt>
+							<dd>
+								<div>시험 공정의 순서</div>
+								<span>가열 ⇒ 퀜칭 ⇒ 연마 ⇒ 경도측정</span>
+							</dd>
+						</dl>
+					</div>
+
+					<span id="pop-next">다음 버튼을 클릭하세요.</span>
+
+					<ul class="summary-page">
+						<li><img src="img/summary/btn_pre.png" id="page_left" class="button" /></li>
+						<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+						<li><img src="img/summary/btn_next.png" id="page_right" class="button" /></li>
+					</ul>
+				</div>
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+
+
+		</div>
+	</body>
+</html>

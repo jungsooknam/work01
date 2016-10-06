@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 01;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			var dontShowPopupChapterByVideoEnd = true;
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+				lms_mode();
+				menuInit();
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper">
+
+			<header style="display:none;">
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="intro">
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_01.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+
+					<div class="intro-course">과정명 - 일반 열처리</div>
+					<div class="intro-chapter">차시명 - 열처리 실습1</div>
+
+					<div class="intro-nut-01">너트 이미지 01</div>
+					<div class="intro-nut-02">너트 이미지 02</div>
+					<div class="intro-nut-03">너트 이미지 03</div>
+					<div class="intro-nut-04">너트 이미지 04</div>
+					<div class="intro-nut-05">너트 이미지 05</div>
+					<div class="intro-nut-06">너트 이미지 06</div>
+					<div class="intro-nut-07">너트 이미지 07</div>
+					<div class="intro-nut-08">너트 이미지 08</div>
+					<div class="intro-nut-09">너트 이미지 09</div>
+					<div class="intro-nut-10">너트 이미지 10</div>
+					<div class="intro-nut-11">너트 이미지 11</div>
+
+					<div class="intro-bg">마을 이미지</div>
+
+					<div class="next-page">다음 페이지</div>
+				</div>
+
+				<audio autoplay id="audio_bg">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"summary_bg.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+		</div>
+	</body>
+</html>

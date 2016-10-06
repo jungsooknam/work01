@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+
+@media all and (max-width:999px) {
+    #wrapper
+    {
+        width:100%;
+    }
+
+
+    /*과정명 표시 */
+    .intro_subject{
+        font:38px nbgM;
+        height:55px;
+        text-align:right;
+        margin-right: 20px;
+        /*margin-top: 90px;*/
+        padding-top: 90px;
+        color:#334366;
+
+    }
+
+    /*차시명 표시 */
+    .intro_subtitle{
+        float:right;
+        color:#fff;
+        font:50px nsM;
+        /*border:1px solid #3b4d70;*/
+        border-radius: 20px 0px 0px 20px;
+        background-color: #3b4d70;
+        height: 51px;
+        padding: 10px 20px 15px 30px;
+    }
+}
+
+@media all and (max-width:849px) {
+
+}
+
+@media all and (max-width:729px) {
+
+}
+
+@media all and (max-width:599px) {
+
+}
+
+
+
+/*#learning																{position:relative; width:1000px; height:620px; z-index:100;}*/
+/*#learning:after														{content:""; display:block; clear:both;}*/
+
+/*#learning .theme*/
+/*{*/
+    /*position:absolute;*/
+    /*left:0;*/
+    /*top:54px;*/
+    /*font:20px nsM;*/
+    /*color:#FFF;*/
+    /*line-height:25px;*/
+    /*background:url("../img/inc/theme_img_01.png") no-repeat #7771BD;*/
+    /*padding:4px 20px 2px 43px; z-index:100;*/
+    /*transition:All 0.2s ease;*/
+    /*-webkit-transition:All 0.2s ease;*/
+    /*-moz-transition:All 0.2s ease;*/
+    /*-o-transition:All 0.2s ease;*/
+/*}*/
+
+/*!*과정명 표시 *!*/
+/*#course{*/
+    /*font:40px nsM;*/
+    /*height:55px;*/
+    /*text-align:right;*/
+    /*margin-right: 20px;*/
+    /*!*margin-top: 90px;*!*/
+    /*padding-top: 90px;*/
+/*}*/
+
+/*!*차시명 표시 *!*/
+/*#chap-1{*/
+    /*float:right;*/
+    /*color:#fff;*/
+    /*font:50px nsM;*/
+    /*border:1px solid #3F4D62;*/
+    /*border-radius: 20px 0px 0px 20px;*/
+    /*background-color: #0B3A5B;*/
+    /*height: 50px;*/
+    /*padding: 10px 20px 15px 30px;*/
+/*}*/
+
+/*#introBack1{*/
+    /*height: 622px;*/
+    /*background:url("../img/intro/img_01.png") no-repeat;*/
+    /*background-position:20% 50%;*/
+/*}*/
+
+/*#introBack2{*/
+    /*height: 622px;*/
+    /*background:url("../img/intro/img_02.png") no-repeat;*/
+    /*background-position:15% 100%;*/
+/*}*/

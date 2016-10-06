@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 12;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/quiz.js"></script>
+
+		<script type="text/javascript">
+
+			var dontShowPopupChapterByVideoEnd = true;
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+
+				$("#page_left1").click(function(){
+					prevPageStudy1();
+				});
+				
+				$("#page_right1").click(function(){
+					nextPageStudy1();
+				});
+
+				$("#page_left2").click(function(){
+					prevPageStudy2();
+				});
+				
+				$("#page_right2").click(function(){
+					nextPageStudy2();
+				});
+
+				$("#page_left3").click(function(){
+					prevPageStudy3();
+				});
+				
+				$("#page_right3").click(function(){
+					nextPageStudy3();
+				});
+
+				initStudyPage1();
+				initStudyPage2();
+				initStudyPage3();
+
+				lms_mode();
+				menuInit();
+
+				$("#sco-name1").text(currentSco1);
+				$("#sco-name2").text(currentSco2);
+				$("#sco-name3").text(currentSco3);
+				$("#sco-name4").text(currentSco4);
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper">
+
+			<header>
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div class="intro" id="quiz-intro" style="display:block;">
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_12.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+
+					<p>문제는 <span>총 3문제</span>이고<br />각각 <span>2번의 기회</span>를 제공합니다.</p>
+					<a href="javascript:goQuiz('1');">START</a>
+				</div>
+				<!--  퀴즈 인트로 영역  -->
+
+
+
+				<ul class="quiz" id="quiz_1" style="display:none;">
+					<li class="name" id="sco-name1"></li>
+					<li class="question-1">
+						<dl>
+							<dt>Q1</dt>
+							<dd class="text">경화된 깊이가 얕은 강의 경화능 측정을 위한 가장 오래된 방법으로 강봉을 담금질하여 부러뜨린 후 파단면을 검사하여 경화깊이를  알리는 표준화된 시험 방법은?</dd>
+							<dd class="name">
+								<a href="javascript:selectAnswer1('type-1', 1, 'q1_n1');" id="q1_n1" class="n-1">불꽃시험<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 2, 'q1_n2');" id="q1_n2" class="n-2">P-F 시험<span class="qq none">사용자 체크</span><span class="correct-check1" style="display:none;">정답 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 3, 'q1_n3');" id="q1_n3" class="n-3">S-A-C시험<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 4, 'q1_n4');" id="q1_n4" class="n-4">셰퍼드(Shepherd) P-V시험<span class="qq none">사용자 체크</span></a>
+							</dd>
+						</dl>
+					</li>
+					<li class="btn" id="btn_1"><a href="javascript:checkAnswer(0);">정답 확인</a></li>
+					<li class="feed" id="quiz_feed_1" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">2</span></dt>
+							<dd>P-F 시험이라고 합니다. P-F 시험은 경화능을 측정할 뿐 아니라 인성도 평가 할 수 있으며 일정온도 구간에서 시험을 하기 때문에 불필요한 결정립 성장과 취약성이 나타나지 않고 만족스러운 경화깊이를 얻을 수 있는 경화온도를 선택할 수 있습니다.</dd>
+						</dl>
+						<a href="javascript:showLearningView('1');" class="type-1">관련 학습</a>
+						<a href="javascript:goQuiz('2');" class="type-2">다음 문제</a>
+					</li>
+					<li class="qqq check" id="q1_correct" style="display:none;"><img src="img/quiz/check_01.png" alt="" /></li>
+					<li class="qqq check" id="q1_wrong" style="display:none;"><img src="img/quiz/check_02.png" alt="" /></li>
+				</ul>
+
+				<div class="learning-view" id="learning-view-1" style="display:none;">
+					<h4>Q1. 관련 학습 보기</h4>
+					<span class="close"><a href="javascript:closeSolution('1');">닫기</a></span>
+
+					<div id="study-text11" class="study-text1"><img src="img/quiz/learn_11.png" alt="관련 학습 1-1" /></div>
+					<div id="study-text12" class="study-text1"><img src="img/quiz/learn_12.png" alt="관련 학습 1-2" /></div>
+					<div class="border">영상 테두리</div>
+
+					<ul class="study-page1">
+						<li><img src="img/summary/btn_pre.png" id="page_left1" class="button" /></li>
+						<li><span id="current_page_no1"></span> / <span id="total_page_no1"></span></li>
+						<li><img src="img/summary/btn_next.png" id="page_right1" class="button" /></li>
+					</ul>
+				</div>
+				<!--  퀴즈 1 영역  -->
+
+
+
+
+
+				<ul class="quiz" id="quiz_2" style="display:none;">
+					<li class="name" id="sco-name2"></li>
+					<li class="question-2">
+						<dl>
+							<dt>Q2</dt>
+							<dd class="text">탄소강 중 수축률이 주철의 2배이며 융점이 높고 강도가 큰 특징을 가진 탄소강은?</dd>
+							<dd class="name">
+								<a href="javascript:selectAnswer2('type-2', 1, 'q2_n1');" id="q2_n1" class="n-1">쾌삭강<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 2, 'q2_n2');" id="q2_n2" class="n-2">침탄강<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 3, 'q2_n3');" id="q2_n3" class="n-3">주강<span class="qq none">사용자 체크</span><span class="correct-check2" style="display:none;">정답 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 4, 'q2_n4');" id="q2_n4" class="n-4">고탄소강<span class="qq none">사용자 체크</span></a>
+							</dd>
+						</dl>
+					</li>
+					<li class="btn" id="btn_2"><a href="javascript:checkAnswer(1);">정답 확인</a></li>
+					<li class="feed" id="quiz_feed_2" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">3</span></dt>
+							<dd>탄소강 중 주강의 경우 주철의 2배인 수축률을 가지고 있고, 융점이 높고 강도가 크며, 유동성이 유동성이 작은 특징을 가지고 있습니다</dd>
+						</dl>
+						<a href="javascript:showLearningView('2');" class="type-1">관련 학습</a>
+						<a href="javascript:goQuiz('3');" class="type-2">다음 문제</a>
+					</li>
+					<li class="check" id="q2_correct" style="display:none;"><img src="img/quiz/check_01.png" alt="" /></li>
+					<li class="check" id="q2_wrong" style="display:none;"><img src="img/quiz/check_02.png" alt="" /></li>
+				</ul>
+
+				<div class="learning-view" id="learning-view-2" style="display:none;">
+					<h4>Q2. 관련 학습 보기</h4>
+					<span class="close"><a href="javascript:closeSolution('2');">닫기</a></span>
+
+					<div id="study-text21" class="study-text2"><img src="img/quiz/learn_21.png" alt="관련 학습 2-1" /></div>
+					<div class="border">영상 테두리</div>
+
+					<ul class="study-page2">
+						<li><img src="img/summary/btn_pre.png" id="page_left2" class="button" /></li>
+						<li><span id="current_page_no2"></span> / <span id="total_page_no2"></span></li>
+						<li><img src="img/summary/btn_next.png" id="page_right2" class="button" /></li>
+					</ul>
+				</div>
+				<!--  퀴즈 2 영역  -->
+
+
+
+
+
+				<ul class="quiz" id="quiz_3" style="display:none;">
+					<li class="name" id="sco-name3"></li>
+					<li class="question-3">
+						<dl>
+							<dt>Q3</dt>
+							<dd class="text">금속 열처리 시험에서 퀜칭 작업 중 주의사항으로 알맞지 <span>않은</span> 것은?</dd>
+							<dd class="name">
+								<a href="javascript:selectAnswer3('type-3', 1, 'q3_n1');" id="q3_n1" class="n-1">물 공급 관구와 시험편 퀜칭단 사이의 거리는 약 12.5mm로 맞춰야 한다.<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 2, 'q3_n2');" id="q3_n2" class="n-2">시험편 중심이 정확하게 유지되도록 시험편을 설치한다.<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 3, 'q3_n3');" id="q3_n3" class="n-3">시험편이 퀜칭 위치에 놓여 있는 동안에는 항상 건조된 상태로 유지되어야 한다.<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 4, 'q3_n4');" id="q3_n4" class="n-4">노에서 꺼내 물을 분사시켜 주기 전까지의 시간은 10분 이내로 해야 하며,<br />물을 분사하는 시간은 5초 이내로 짧게한다.<span class="qq none">사용자 체크</span><span class="correct-check3" style="display:none;">정답 체크</span></a>
+							</dd>
+						</dl>
+					</li>
+					<li class="btn" id="btn_3"><a href="javascript:checkAnswer(2);">정답 확인</a></li>
+					<li class="feed" id="quiz_feed_3" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">4</span></dt>
+							<dd>노에서 꺼내어 물을 분사시켜 주기 전까지의 시간은 5초 이내로 해야 하며, 물을 분사하는 시간은 10분 이상으로 해야합니다.</dd>
+						</dl>
+						<a href="javascript:showLearningView('3');" class="type-1">관련 학습</a>
+						<a href="javascript:goQuiz('4');" class="type-2">결과 확인</a>
+					</li>
+					<li class="check" id="q3_correct" style="display:none;"><img src="img/quiz/check_01.png" alt="" /></li>
+					<li class="check" id="q3_wrong" style="display:none;"><img src="img/quiz/check_02.png" alt="" /></li>
+				</ul>
+
+				<div class="learning-view" id="learning-view-3" style="display:none;">
+					<h4>Q3. 관련 학습 보기</h4>
+					<span class="close"><a href="javascript:closeSolution('3');">닫기</a></span>
+					<div id="study-text31" class="study-text3"><img src="img/quiz/learn_04.png" alt="관련 학습 3-1" /></div>
+					<div id="study-text32" class="study-text3"><img src="img/quiz/learn_05.png" alt="관련 학습 3-2" /></div>
+					<div id="study-text33" class="study-text3"><img src="img/quiz/learn_06.png" alt="관련 학습 3-3" /></div>
+					<div class="border">영상 테두리</div>
+
+					<ul class="study-page3">
+						<li><img src="img/summary/btn_pre.png" id="page_left3" class="button" /></li>
+						<li><span id="current_page_no3"></span> / <span id="total_page_no3"></span></li>
+						<li><img src="img/summary/btn_next.png" id="page_right3" class="button" /></li>
+					</ul>
+				</div>
+				<!--  퀴즈 3 영역  -->
+
+
+
+				<div class="q-num" style="display:none;">
+					<a href="javascript:goQuiz('1');">Q1<span id="q1_correct1" style="display:none;"><img src="img/quiz/check_11.png" alt="" /></span><span id="q1_wrong1" style="display:none;"><img src="img/quiz/check_12.png" alt="" /></span></a>
+					<a href="javascript:goQuiz('2');">Q2<span id="q2_correct1" style="display:none;"><img src="img/quiz/check_11.png" alt="" /></span><span id="q2_wrong1" style="display:none;"><img src="img/quiz/check_12.png" alt="" /></span></a>
+					<a href="javascript:goQuiz('3');">Q3<span id="q3_correct1" style="display:none;"><img src="img/quiz/check_11.png" alt="" /></span><span id="q3_wrong1" style="display:none;"><img src="img/quiz/check_12.png" alt="" /></span></a>
+				</div>
+
+				<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
+				<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+				<audio id="audio1">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+				<audio id="audio2">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+
+				<audio autoplay id="audio_bg">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"quiz_bg.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+
+				<!--  정오답 음성 영역  -->
+
+
+
+
+
+				<div class="quiz-result" id="result" style="display:none;">
+					<p id="sco-name4"></p>
+					<div>총 <span>3</span> 문제 중 <span id="correctCnt">0</span> 문제를 맞히셨습니다.</div>
+					<dl>
+						<dt>Q1</dt>
+						<dd><img id="q1_r1" src="img/quiz/check_x.png" alt="" /></a></dd>
+						<dt>Q2</dt>
+						<dd><img id="q2_r2" src="img/quiz/check_x.png" alt="" /></a></dd>
+						<dt>Q3</dt>
+						<dd><img id="q3_r3" src="img/quiz/check_x.png" alt="" /></a></dd>
+					</dl>
+					<a href="javascript:goWrongQuiz('1');" id="result-btn-1" class="type-1" style="display:block;">틀린 문제 다시 풀기</a>
+					<a href="javascript:goInit();" id="result-btn-2" class="type-1" style="display:none;">다시 풀기</a>
+					<a href="javascript:showSolution();" class="type-2">정답 및 해설 보기</a>
+					<span class="pop-next">다음 버튼을 클릭하세요.</span>
+				</div>
+				<!--  퀴즈 결과 영역  -->
+
+
+
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+
+
+
+#opening																{position:relative; width:1000px; height:620px; background:url("../img/inc/sconame_bg.png") 0 62px no-repeat; z-index:98;}
+#opening p																{position:absolute; left:50px; top:62px; font:20px nbgM; color:#FFF; line-height:20px; background:#3F89C7; padding:4px 15px 3px 11px; z-index:100;}
+
+#opening div															{position:absolute; width:110px; height:110px; text-indent:-9999px; z-index:91;}
+#opening div a														{display:block; overflow:hidden; width:110px; height:110px; z-index:91;}
+
+#opening .guide-text												{width:500px; height:30px; left:160px; top:61px; font:20px nbgM; color:#3C4349; line-height:30px; text-indent:0;}
+#opening .preview-guide											{width:320px; height:320px; left:340px; top:166px; background:url("../img/opening/guide_img.png") no-repeat;}
+#opening .exam-btn-1												{left:356px; top:150px; background:url("../img/opening/exam_btn_01.png") no-repeat;}
+#opening .exam-btn-2												{left:534px; top:150px; background:url("../img/opening/exam_btn_02.png") no-repeat;}
+#opening .exam-btn-3												{left:590px; top:312px; background:url("../img/opening/exam_btn_03.png") no-repeat;}
+#opening .exam-btn-4												{left:445px; top:421px; background:url("../img/opening/exam_btn_04.png") no-repeat;}
+#opening .exam-btn-5												{left:300px; top:312px; background:url("../img/opening/exam_btn_05.png") no-repeat;}
+
+
+
+#opening span														{position:absolute; text-indent:-9999px; z-index:90;}
+#opening .exam-img-11											{width:137px; height:62px; left:229px; top:138px; background:url("../img/opening/exam_img_11.png") no-repeat;}
+#opening .exam-img-12											{width:118px; height:59px; left:112px; top:143px; background:url("../img/opening/exam_img_12.png") no-repeat;}
+#opening .exam-img-13											{width:212px; height:222px; left:58px; top:202px; background:url("../img/opening/exam_img_13.png") no-repeat;}
+
+#opening .exam-img-21											{width:158px; height:62px; left:622px; top:113px; background:url("../img/opening/exam_img_21.png") no-repeat;}
+#opening .exam-img-22											{width:139px; height:88px; left:780px; top:110px; background:url("../img/opening/exam_img_22.png") no-repeat;}
+
+#opening .exam-img-31											{width:146px; height:42px; left:694px; top:318px; background:url("../img/opening/exam_img_31.png") no-repeat;}
+#opening .exam-img-32											{width:119px; height:75px; left:840px; top:267px; background:url("../img/opening/exam_img_32.png") no-repeat;}
+#opening .exam-img-33											{width:86px; height:83px; left:750px; top:235px; background:url("../img/opening/exam_img_33.png") no-repeat;}
+#opening .exam-img-34											{width:145px; height:62px; left:683px; top:385px; background:url("../img/opening/exam_img_34.png") no-repeat;}
+#opening .exam-img-35											{width:131px; height:62px; left:828px; top:402px; background:url("../img/opening/exam_img_35.png") no-repeat;}
+#opening .exam-img-36											{width:98px; height:97px; left:776px; top:422px; background:url("../img/opening/exam_img_36.png") no-repeat;}
+
+#opening .exam-img-41											{width:103px; height:80px; left:385px; top:507px; background:url("../img/opening/exam_img_41.png") no-repeat;}
+#opening .exam-img-42											{width:162px; height:62px; left:541px; top:489px; background:url("../img/opening/exam_img_42.png") no-repeat;}
+#opening .exam-img-43											{width:94px; height:66px; left:702px; top:517px; background:url("../img/opening/exam_img_43.png") no-repeat;}
+
+#opening .exam-img-51											{width:76px; height:78px; left:270px; top:410px; background:url("../img/opening/exam_img_51.png") no-repeat;}
+#opening .exam-img-52											{width:220px; height:62px; left:85px; top:482px; background:url("../img/opening/exam_img_52.png") no-repeat;}
+#opening .exam-img-53											{width:114px; height:76px; left:208px; top:508px; background:url("../img/opening/exam_img_53.png") no-repeat;}
+

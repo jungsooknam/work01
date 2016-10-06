@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+
+
+#objective																{position:relative; width:1000px; height:620px; background:url("../img/objective/bg_01.png") no-repeat; z-index:98;}
+#objective p															{position:absolute; left:50px; top:62px; font:20px nbgM; color:#FFF; line-height:20px; background:#3F89C7; padding:4px 15px 3px 11px; z-index:100;}
+
+#objective dl															{float:left; text-indent:-9999px;}
+
+
+
+
+
+

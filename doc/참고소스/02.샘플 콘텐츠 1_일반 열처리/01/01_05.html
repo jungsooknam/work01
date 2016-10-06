@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 05;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+				lms_mode();
+				menuInit();
+
+				$("#sco-name1").text(currentSco1);
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header>
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="learning">
+				<p id="sco-name1"></p>
+					<video autoplay id="myVideo">
+						<script type="text/javascript">
+							document.write("<source src='"+mp4Link+"01_01.mp4' type='video/mp4' />");
+						</script>
+					</video>
+				</div>
+
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+
+
+		</div>
+	</body>
+</html>

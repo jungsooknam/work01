@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 02;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+				lms_mode();
+				menuInit();
+
+				$("#sco-name1").text(currentSco1);
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper">
+
+			<header>
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="opening">
+					<p id="sco-name1"></p>
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_02.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+
+					<div class="guide-text">각각의 시험종류를 클릭하여 키워드를 확인하세요.</div>
+
+					<div class="preview-guide">열처리 시험</div>
+
+					<div class="exam-btn-1"><a href="#!" onclick="audioevent01()">S-A-C 시험</a></div>
+					<div class="exam-btn-2"><a href="#!" onclick="audioevent02()">P-F 시험</a></div>
+					<div class="exam-btn-3"><a href="#!" onclick="audioevent03()">조미니 시험</a></div>
+					<div class="exam-btn-4"><a href="#!" onclick="audioevent04()">공냉 시험</a></div>
+					<div class="exam-btn-5"><a href="#!" onclick="audioevent05()">셰퍼드 시험</a></div>
+
+					<span class="exam-img-11" id="examBtn1">경도 관통 시험</span>
+					<span class="exam-img-12" id="examBtn2">U 곡선</span>
+					<span class="exam-img-13" id="examBtn3">U 곡선 그래프</span>
+
+					<span class="exam-img-21" id="examBtn4">얕은 강의 경화능</span>
+					<span class="exam-img-22" id="examBtn5">경화 깊이 알림</span>
+
+					<span class="exam-img-31" id="examBtn6">끝담금질법</span>
+					<span class="exam-img-32" id="examBtn7">적은 시험재</span>
+					<span class="exam-img-33" id="examBtn8">짧은 시간</span>
+					<span class="exam-img-34" id="examBtn9">단면 분포 측정</span>
+					<span class="exam-img-35" id="examBtn10">많은 시험재</span>
+					<span class="exam-img-36" id="examBtn11">노력과 시간</span>
+
+					<span class="exam-img-41" id="examBtn12">합금원소</span>
+					<span class="exam-img-42" id="examBtn13">느린 임계 냉각속도</span>
+					<span class="exam-img-43" id="examBtn14">강화</span>
+
+					<span class="exam-img-51" id="examBtn15">환봉</span>
+					<span class="exam-img-52" id="examBtn16">V모양 측정 시편</span>
+					<span class="exam-img-53" id="examBtn17">원통 쐐기 모양</span>
+
+				</div>
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<audio id="audio1">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_01.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio2">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_02.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio3">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_03.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio4">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_04.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio5">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_05.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio6">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"01_02_06.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+			<style>
+				#opening span {display:none; opacity:0;}
+			</style>
+			<script>
+				var clickCheck = new Array();
+				var audioCheck = 0;
+				var oAudio = document.getElementById('myAudio');
+	
+				function audioevent01 (){
+					audioBtn(1); 
+					setTimeout(function(){examBtn(1)}, 2000);
+					setTimeout(function(){examBtn(2); examBtn(3)}, 4000);
+				}
+				function audioevent02 (){
+					audioBtn(5);
+					setTimeout(function(){examBtn(4)}, 2000);
+					setTimeout(function(){examBtn(5)}, 4000);
+				}
+				function audioevent03 (){
+					audioBtn(4); 
+					setTimeout(function(){examBtn(6)}, 2000); 
+					setTimeout(function(){examBtn(8)}, 3500);
+					setTimeout(function(){examBtn(7)}, 4500); 
+					setTimeout(function(){examBtn(9)}, 6000); 
+					setTimeout(function(){examBtn(10)}, 8000);
+					setTimeout(function(){examBtn(11)}, 9500);
+				}
+				function audioevent04 (){
+					audioBtn(3); 
+					setTimeout(function(){examBtn(12);}, 2000);
+					setTimeout(function(){examBtn(13);}, 3500);
+					setTimeout(function(){examBtn(14);}, 5000);
+				}
+				function audioevent05 (){
+					audioBtn(2); 
+					setTimeout(function(){examBtn(15)}, 2000);
+					setTimeout(function(){examBtn(16)}, 4000);
+					setTimeout(function(){examBtn(17)}, 6000);
+				}
+
+
+				function audioBtn(r){
+					document.getElementById("audio" + r).play();
+					j = r-1
+					clickCheck[j] = 'ok'
+					audioCheck = 0;
+					document.getElementById("myAudio").pause();
+					for (i = 0; i < 5 ; i++ )
+					{
+						q = i+1
+						if (q != r)
+						{document.getElementById("audio" + q).pause();}
+						if (clickCheck[i] == 'ok')
+						{
+							audioCheck += 1
+						}
+						if (audioCheck == 5)
+						{
+							if (r == 1)
+							{
+								setTimeout(function(){document.getElementById("audio6").play(); nextNotice();}, 6000)
+							}
+							if (r == 2)
+							{
+								setTimeout(function(){document.getElementById("audio6").play(); nextNotice();}, 8500)
+							}
+							if (r == 3)
+							{
+								setTimeout(function(){document.getElementById("audio6").play(); nextNotice();}, 7000)
+							}
+							if (r == 4)
+							{
+								setTimeout(function(){document.getElementById("audio6").play(); nextNotice();}, 12000)
+							}
+							if (r == 5)
+							{
+								setTimeout(function(){document.getElementById("audio6").play(); nextNotice();}, 6500)
+							}
+						}
+					}
+				}
+
+				function nextNotice(){
+					setTimeout(function(){
+						oAudio.currentTime = 17.0;
+						document.getElementById("myAudio").play();
+					}, 6000)
+				}
+
+				function examBtn(f){
+					document.getElementById('examBtn' + f).style.display="block"
+					TweenMax.to(('#examBtn'+ f), 0.5, {opacity:1});
+				}
+
+				$(document).ready(function(){
+					$('#slideBg').click(function(){
+						document.getElementById("myAudio").play();
+						audioBtn(0);
+					});
+					$('#play_btn').click(function(){
+						document.getElementById("myAudio").play();
+						audioBtn(0);
+					});
+				});
+			</script>
+
+
+		</div>
+	</body>
+</html>

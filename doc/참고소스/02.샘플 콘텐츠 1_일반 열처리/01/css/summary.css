@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+
+
+#summary																{position:relative; width:1000px; height:620px; background:url("../img/inc/sconame_bg.png") 0 62px no-repeat;}
+#summary p															{position:absolute; left:50px; top:62px; font:20px nbgM; color:#FFF; line-height:20px; background:#3F89C7; padding:4px 15px 3px 11px; z-index:100;}
+
+#summary div															{position:absolute; width:874px; height:430px; left:63px; top:120px;}
+#summary ul															{position:absolute; width:210px; height:28px; left:395px; top:560px; background:url("../img/summary/btn_img.png") no-repeat;}
+#summary li															{float:left; width:70px; height:28px; font:400 22px play; color:#2C313A; text-align:center;}
+
+#summary dl															{float:left; width:815px; padding-left:30px; margin-top:40px;}
+#summary dt															{float:left; width:800px; height:50px; font:25px nbgM; line-height:30px; padding:10px 0 0 15px;}
+#summary dd															{float:left; width:735px; height:330px; padding:17px 40px 10px 40px; background:#888;}
+#summary dd span													{float:left; width:730px; font:16px nbgM; color:#FFF; line-height:26px; background:url("../img/summary/bullet.png") 0 8px no-repeat; padding-left:10px; margin:4px 0 2px;}
+#summary dd span b												{display:inline-block; font-weight:normal; vertical-align:top;}
+#summary dd span.depth-2										{font-size:17px; line-height:22px; background:none; margin:0;}
+#summary dd span.depth-2 b									{display:inline-block; font-weight:normal; vertical-align:top;}
+
+#summary dl:first-child												{margin-top:0;}
+
+#summary .type-1													{background:url("../img/summary/num_01.png") no-repeat;}
+#summary .type-1 dt												{color:#2C81BC; background:url("../img/summary/line_01.png") 0 44px repeat-x;}
+#summary .type-1 dd												{width:326px; border-right:1px solid #5DA6C2; background:#1C7BA0;}
+#summary .type-1 dd span										{width:326px;}
+#summary .type-1 dd div											{position:relative; width:326px; height:40px; left:0; top:5px; font:19px nbgM; color:#FFFC00; line-height:26px;}
+
+#summary .type-2													{background:url("../img/summary/num_02.png") no-repeat;}
+#summary .type-2 dt												{color:#3E8C17; background:url("../img/summary/line_02.png") 0 44px repeat-x;}
+#summary .type-2 dd												{background:#0A974F;}
+#summary .type-2 dd div											{position:relative; width:326px; height:40px; left:0; top:5px; font:19px nbgM; color:#FFFC00; line-height:26px;}
+
+
+#pop-next																{position:absolute; display:none; width:126px; height:87px; right:5px; top:533px; text-indent:-9999px; background:url("../img/inc/chapter_next.png") no-repeat; z-index:101;}

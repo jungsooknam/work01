@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import url("layout.css");							/* 레이아웃 및 학습영역 요소 */
+@import url("intro.css");							/* 인트로 요소 */
+@import url("opening.css");						/* 학습열기 요소 */
+@import url("objective.css");					/* 학습목표 요소 */
+@import url("learning.css");						/* 학습내용 요소 */
+@import url("apply.css");							/* 적용활동 요소 */
+@import url("quiz.css");							/* 문제풀기 요소 */
+@import url("summary.css");						/* 핵심요약 요소 */
+@import url("outro.css");							/* 학습맺음 요소 */
+
+@import url("orientation.css");					/* 오리엔테이션 요소 */
+
+
+
+
+/* 기본설정 */
+* {margin:0; padding:0;}
+html,body												{height:100%; margin:0; padding:0; font:12px nbgM, ngB, Dotum, playM, playB, sans-serif; color:#333; line-height:18px;}
+div, table												{margin:0; padding:0;}
+input, select											{padding:0}
+img, fieldset											{border:0;}
+img														{vertical-align:top;}
+ul, ol														{list-style:none;}
+a:link, a:visited, a:active, a:hover				{text-decoration:none;}
+hr															{display:none;}
+
+.button													{border:none;}
+.button:hover											{cursor:pointer;}
+.hidden, legend, caption							{position:absolute; overflow:hidden; visibility:hidden; width:0; height:0; left:0; top:0; font-size:0; line-height:0; padding:0; margin:0;}
+
+
+
+
+

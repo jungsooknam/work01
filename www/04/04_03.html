@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		var currentPage = 07;											// 현 페이지 번호
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);					// 대주제
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+		});
+	</script>
+</head>
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+		<!--  과정명, 차시명 영역
+				변경하지 마세요.
+				모든 페이지 동일 합니다.
+		-->
+		<header class="learn">
+			<h1 id="course" tabindex="1"></h1>
+			<h2 id="chap-1" tabindex="2"></h2>
+		</header>
+
+		<!--  본문 영역 -->
+		<section id="objective">
+			<!--메뉴 영역
+				변경하지 마세요.
+					모든 페이지 동일 합니다.
+			-->
+			<nav>
+				<script type="text/javascript" src="js/menu.js"></script>
+				<div id="menu_open" tabindex="3">INDEX 열기</div>
+				<div id="menu"></div>
+				<div id="menu-bg"></div>
+			</nav>
+
+
+			<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+			<!--본문 내용-->
+			<!--요 부분 부터 페이지 마다 변경 됩니다. START-->
+			<!--영상 페이지 START-->
+			<div id="objective-area">
+				<dl class="type-1">
+					<dt>학습내용</dt>
+					<dd>
+						<div class="paragraph-1">
+							<p>1</p>테이블 생성
+						</div>
+					</dd>
+					<dd>
+						<div class="paragraph-1">
+							<p>2</p>테이블 변경
+						</div>
+						</dd>
+				</dl>
+
+				<dl class="type-2">
+					<dt>학습목표</dt>
+					<dd>데이터베이스에 테이블을 생성하고 데이터를 저장할 수 있다.</dd>
+					<dd>테이블의 구조를 변경할 수 있다.</dd>
+				</dl>
+
+				<div class="objective-guide">※ 음성강의를 확인해보세요.</div>
+
+
+
+				<audio class="objective-sound" controls>
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"04_03.mp3' type='audio/mpeg' />");
+					</script>
+					해당 브라우저는 음성을 지원하지 않습니다.
+				</audio>
+			</div>
+			<!--영상 페이지 END-->
+			<!--요 부분 부터 페이지 마다 변경 됩니다.  END-->
+
+			<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+			</section><!--  본문 영역 -->
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

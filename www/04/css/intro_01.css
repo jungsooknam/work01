@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 인트로 페이지*/
+
+/*과정명 표시 */
+.intro_subject{
+    font:38px nbgM;
+    height:55px;
+    text-align:right;
+    margin-right: 20px;
+    /*margin-top: 90px;*/
+    padding-top: 90px;
+    color:#334366;
+
+}
+
+/*차시명 표시 */
+.intro_subtitle{
+    float:right;
+    color:#fff;
+    font:50px nsM;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #3b4d70;
+    height: 51px;
+    padding: 10px 20px 15px 30px;
+}
+
+
+#introBack1{
+    height: 622px;
+    background:url("../img/intro/img_01.png") no-repeat;
+    background-position:20% 50%;
+}
+
+#introBack2{
+    height: 622px;
+    background:url("../img/intro/img_02.png") no-repeat;
+    background-position:15% 100%;
+}

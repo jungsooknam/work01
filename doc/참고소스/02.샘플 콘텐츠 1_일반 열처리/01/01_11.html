@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script type="text/javascript">
+			var currentPage = 11;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css">
+		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			var dontShowPopupChapterByVideoEnd = true;
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+				lms_mode();
+				menuInit();
+
+				$("#sco-name1").text(currentSco1);
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+
+		</script>
+
+
+	</head>
+
+
+
+	<body onload="init();">
+		<div id="wrapper" class="body-apply">
+
+			<header>
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="apply">
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_11.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+					<p id="sco-name1"></p>
+
+					<ul>
+						<li class="type-1">빈칸에 알맞은 단어를 드래그하여 시험결과를 정리해보세요.</li>
+						<li class="type-2">실험 결과 및 고찰</li>
+					</ul>
+
+					<article id="drag-area">
+						<span class="apply" id="dragLayer">
+							<div class="drag button" id="item-01"><img id="item-img-01" src="img/apply/drag_01.png" alt="리셋버튼" /></div>
+							<div class="drag button" id="item-02"><img id="item-img-02" src="img/apply/drag_02.png" alt="디지털 핀" /></div>
+							<div class="drag button" id="item-03"><img id="item-img-03" src="img/apply/drag_03.png" alt="USB 콘텍터" /></div>
+							<div class="drag button" id="item-04"><img id="item-img-04" src="img/apply/drag_04.png" alt="아날로그 핀" /></div>
+							<div class="drag button" id="item-05"><img id="item-img-05" src="img/apply/drag_05.png" alt="USB to 시리얼 IC" /></div>
+							<div class="drag button" id="item-06"><img id="item-img-06" src="img/apply/drag_06.png" alt="MCU" /></div>
+							<!-- DRAG 영역 끝 -->
+
+							<div class="check" id="check-01"><img id="check_01" src="img/apply/check_o.png" alt="정답" /></div>
+							<div class="check" id="check-02"><img id="check_02" src="img/apply/check_o.png" alt="정답" /></div>
+							<div class="check" id="check-03"><img id="check_03" src="img/apply/check_o.png" alt="정답" /></div>
+							<div class="check" id="check-04"><img id="check_04" src="img/apply/check_o.png" alt="정답" /></div>
+							<!-- 정오답 체크 영역 끝 -->
+
+							<div class="drop" id="item-11"><img id="item-img-11" src="img/apply/item_img.png" alt="" /></div>
+							<div class="drop" id="item-12"><img id="item-img-12" src="img/apply/item_img.png" alt="" /></div>
+							<div class="drop" id="item-13"><img id="item-img-13" src="img/apply/item_img.png" alt="" /></div>
+							<div class="drop" id="item-14"><img id="item-img-14" src="img/apply/item_img.png" alt="" /></div>
+							<!-- <div class="drop" id="item-15"><img id="item-img-15" src="img/apply/item_img.png" alt="" /></div>
+							<div class="drop" id="item-16"><img id="item-img-16" src="img/apply/item_img.png" alt="" /></div>
+							DROP 영역 끝 -->
+						</span>
+
+						<div class="btn" id="check-solution" style="display:none;"><a href="javascript:checkAnswer();">정답확인</a></div>
+						<div class="btn" id="show-solution" style="display:none;"><a href="javascript:showAnswer();">정답 및 해설</a></div>
+						<!-- 버튼 영역 끝 -->
+					</article>
+				</div>
+
+
+
+				<div id="apply_alert" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+				<div id="pop-next" style="display:none;">다음 버튼을 클릭하세요.</div>
+
+				<audio id="audio1">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+				<audio id="audio2">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+				<!--  정오답 음성 영역  -->
+
+
+
+				<div id="apply-answer" style="display:none;">
+					<h4>실험 결과 및 고찰</h4>
+					<span><a href="javascript:closeSolution();">닫기</a></span>
+
+					<dl class="moon">
+						<dt>정 답</dt>
+						<dd>이번 시험을 통해 금속은 열을 가했다가 순간적으로 냉각 시킬 경우 그 <b>경도</b>가<br />가장 <b>높다</b>는 것을 알 수 있었다. 급냉한 부분으로부터 <b>멀어 질수록</b> 경도가 <b>낮다</b>는 것을 알 수 있다.</dd>
+					</dl>
+
+					<dl class="answer">
+						<dt>해 설</dt>
+						<dd class="graph">경도 측정 결과</dd>
+						<dd class="text">시험 후 살펴본 그래프를 통해, 이번 시험은 금속에<br />열을 가했다가 순간적으로 냉각시킬 경우 그 경도가<br />가장 높다는 것을 알 수 있고, 급냉한 부분으로부터<br />멀어질 수록 경도가 낮아짐을 알 수 있다.</dd>
+					</dl>
+				</div>
+
+
+				<script type="text/javascript">
+					var dropCheck = 0;
+					var drags = new Array();
+					var ansOk = new Array();
+					var btnCnt = 0;
+
+					var kv = {'item-01':'','item-02':'','item-03':'','item-04':'','item-05':'','item-06':'aaa'};
+
+					function init (){
+						$(".drag.button").draggable({
+						containment : "#drag-area", 
+						revert : "invalid", // 지정한 DROP영역의 밖에 DROP 했을 때 원래 위치로 돌아가게 하는 속성
+						start: function(event,ui) {
+								$(this).draggable( "option", "revert", true );
+							}
+						});
+
+
+
+						$(".drop").droppable({
+							drop: function(event,ui) {
+
+								ui.draggable.draggable( "option", "revert", false );
+
+								var dragid = ui.draggable.attr("id");		// drag 레이어 ID 구하기
+								var dropid = $(this).attr("id");				// drop 레이어 ID 구하기
+
+								kv[dragid] = dropid;
+
+
+								$(".drop").droppable({disabled: false}); // 모든 레이어에 drop 가능하도록 세팅
+
+								for (i=1;i<=6;i++)
+								{
+									if(kv['item-0'+i])
+									{
+										$( "#"+kv['item-0'+i] ).droppable({  disabled: true }); // drop된 레이어에 더 이상 drop안되게 만들기
+									}
+								}
+
+								if (dragid == "item-01") { drags[0] = 'ok'; $('#item-img-01').attr('src', 'img/apply/drop_01.png'); if (dropid == "item-11") { ansOk[0] = 'ok'; } else { ansOk[0] = ''; } }
+								if (dragid == "item-02") { drags[1] = 'ok'; $('#item-img-02').attr('src', 'img/apply/drop_02.png');}
+								if (dragid == "item-03") { drags[2] = 'ok'; $('#item-img-03').attr('src', 'img/apply/drop_03.png'); if (dropid == "item-12") { ansOk[2] = 'ok'; } else { ansOk[2] = ''; } }
+								if (dragid == "item-04") { drags[3] = 'ok'; $('#item-img-04').attr('src', 'img/apply/drop_04.png'); if (dropid == "item-14") { ansOk[3] = 'ok'; } else { ansOk[3] = ''; } }
+								if (dragid == "item-05") { drags[4] = 'ok'; $('#item-img-05').attr('src', 'img/apply/drop_05.png'); if (dropid == "item-13") { ansOk[4] = 'ok'; } else { ansOk[4] = ''; } }
+								if (dragid == "item-06") {drags[5] = 'ok'; $('#item-img-06').attr('src', 'img/apply/drop_06.png');}
+								
+								dropCheck = 0;
+								for (r = 0;r < 6; r++ )
+								{
+									if (drags[r] == 'ok')
+									{
+										dropCheck += 1;
+										if (dropCheck == 4)
+										{
+											$("#check-solution").fadeIn(500);
+										}
+									}
+								}
+	
+								var droppableOffset = $(this).offset();
+								var x = droppableOffset.left;
+								var y = droppableOffset.top;
+								ui.draggable.offset({ top: y, left: x });
+
+								if (drags[0] == 'ok' && drags[1] == 'ok' && drags[2] == 'ok' && drags[3] == 'ok' && drags[4] == 'ok' && drags[5] == 'ok'){
+									$(".drag").draggable({disabled: true}); // 정답 레이어 drag 안되게 세팅
+									$(".drag").removeClass("button");
+									$('#check-solution').show();
+								}
+							}
+						});
+
+					}
+
+					var cnt = 0;
+					var x = 0;
+
+					function checkAnswer (){
+						$("#check-solution").hide();
+						for (var i=0; i<6; i++){
+							j = i + 1;
+							if (ansOk[i] != 'ok'){
+								if (cnt < 1){
+									$("#item-0"+j).remove();
+									$("#dragLayer").append("<div class='drag button' id='item-0"+j+"'><img id='item-img-0"+j+"' src='img/apply/drag_0"+j+".png' /></div>");
+									x++;
+									drags[i] = '';
+									btnCnt = 1;
+								}
+							}
+						}
+
+
+						if (ansOk[0] == 'ok' && ansOk[2] == 'ok' && ansOk[3] == 'ok' && ansOk[4] == 'ok'){
+							document.getElementById("audio1").play();
+							$("#show-solution").fadeIn(2000);
+							for( var i = 0; i < 6; i++ ){
+								if(ansOk[i] != 'ok'){
+									$("#item-img-0"+(i+1)).attr("src", "img/apply/drop_fail_0"+(i+1)+".png"); 
+								} 
+								$("#check-0"+(i+1)).css('display','block');
+							}
+						}else if (x > 0 || cnt == 0){
+							document.getElementById("audio2").play();
+							$("#apply_alert").fadeIn(1500).fadeOut(1500);
+							x = 0;
+
+							//drop 해제된 레이어에 다시 drop 가능하도록 하는 구문
+							for (i=11; i<=16; i++)
+							{
+								ii = i - 10;
+								if (ansOk[i-11] != 'ok')
+								{
+									$("#item-"+i).droppable( "enable" );
+									kv['item-0'+ii] = ''; // 정답확인 후 다시 drop 가능하게 된 레이어를 위한 배열 초기호를 위해
+								}
+							}
+						}else if (x > 0 || cnt == 1){
+							document.getElementById("audio2").play();
+							$("#check-solution").hide();
+							$("#show-solution").fadeIn(2000);
+							if (ansOk[0] != 'ok')
+							{
+								$("#check_01").attr("src", "img/apply/check_x.png");
+							}
+							if (ansOk[2] != 'ok')
+							{
+								$("#check_02").attr("src", "img/apply/check_x.png");
+							}
+							if (ansOk[4] != 'ok')
+							{
+								$("#check_03").attr("src", "img/apply/check_x.png");
+							}
+							if (ansOk[3] != 'ok')
+							{
+								$("#check_04").attr("src", "img/apply/check_x.png");
+							}
+							for( var i = 0; i < 6; i++ ){
+								if(ansOk[i] != 'ok'){
+									$("#item-img-0"+(i+1)).attr("src", "img/apply/drop_fail_0"+(i+1)+".png"); 
+								} 
+								$("#check-0"+(i+1)).css('display','block');
+							}
+							x = 0;
+						}
+
+						cnt++;
+						init();
+					}
+
+					function showAnswer (){
+						$("#apply-answer").fadeIn(500);
+					}
+					
+					//---------------------
+				    function changeAnswer(){
+						for( var i = 0; i < ansOk.length; i++ ){
+							if(ansOk[i] != 'ok'){
+								$("#item-img-0"+(i+1)).attr("src", "img/apply/drop_fail_0"+(i+1)+".png"); 
+							} 
+							$("#check-0"+(i+1)).css('display','block');
+						}
+					}
+
+					var s = 0;
+					closeSolution = function(){
+						$("#apply-answer").fadeOut(500);
+						$("#pop-next").css('display','block');
+						if(s== 0){
+							document.getElementById("next-audio").play();
+						}
+						$('#item-img-11').attr('src', 'img/apply/drop_01.png');
+						$('#item-img-12').attr('src', 'img/apply/drop_03.png');
+						$('#item-img-13').attr('src', 'img/apply/drop_05.png');
+						$('#item-img-14').attr('src', 'img/apply/drop_04.png');
+						for (var i=1; i<7; i++)
+						{
+							$('#item-img-0' + i).hide();
+						}
+						$("#check_01").attr("src", "img/apply/check_o.png");
+						$("#check_02").attr("src", "img/apply/check_o.png");
+						$("#check_03").attr("src", "img/apply/check_o.png");
+						$("#check_04").attr("src", "img/apply/check_o.png");
+						s = s + 1;
+					};
+	//---------------------
+				</script>
+
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+
+
+		</div>
+	</body>
+</html>

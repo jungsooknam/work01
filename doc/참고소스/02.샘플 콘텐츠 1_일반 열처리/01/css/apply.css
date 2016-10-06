@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+
+
+#apply																	{position:relative; width:1000px; height:620px; background:url("../img/apply/bg_01.png") no-repeat; z-index:98;}
+#apply p																{position:absolute; left:50px; top:62px; font:20px nbgM; color:#FFF; line-height:20px; background:#3F89C7; padding:4px 15px 3px 11px; z-index:100;}
+
+#apply ul																{position:absolute; width:1000px; height:82px; left:0; top:61px;}
+#apply li																	{float:left; width:930px; }
+#apply li.type-1														{width:815px; height:64px; font:20px nbgM; color:#3C4349; line-height:30px; padding-left:185px;}
+#apply li.type-2														{width:1000px; height:58px; font-size:35px; color:#FFF; line-height:40px; text-align:center; text-shadow:0 0 3px #27484F; padding-top:22px;}
+
+#apply article															{position:absolute; width:830px; height:361px; left:85px; top:205px;}
+#apply article .check												{position:absolute; display:none; width:39px; height:39px; z-index:52;}
+#apply article .drag													{position:absolute; width:130px; height:35px; z-index:51;}
+#apply article .drop													{position:absolute; width:130px; height:35px; z-index:50;}
+#apply article #item-01												{left:0; top:235px;}
+#apply article #item-02												{left:140px; top:235px;}
+#apply article #item-03												{left:280px; top:235px;}
+#apply article #item-04												{left:420px; top:235px;}
+#apply article #item-05												{left:560px; top:235px;}
+#apply article #item-06												{left:700px; top:235px;}
+
+#apply article #check-01											{left:275px; top:74px;}
+#apply article #check-02											{left:485px; top:74px;}
+#apply article #check-03											{left:275px; top:114px;}
+#apply article #check-04											{left:479px; top:114px;}
+
+#apply article #item-11												{left:294px; top:76px;}
+#apply article #item-12												{left:504px; top:76px;}
+#apply article #item-13												{left:294px; top:116px;}
+#apply article #item-14												{left:498px; top:116px;}
+#apply article #item-15												{left:495px; top:164px;}
+#apply article #item-16												{left:739px; top:240px;}
+
+#apply article .btn													{position:absolute; width:190px; height:41px; left:320px; bottom:0; background:url("../img/apply/btn_img.png") no-repeat;}
+#apply article .btn a													{display:block; overflow:hidden; width:150px; height:31px; font:20px nbgM; color:#FFF; text-align:center; padding:10px 40px 0 0;}
+
+
+
+#pop-next																{position:absolute; display:block; width:126px; height:87px; right:5px; top:533px; text-indent:-9999px; background:url("../img/inc/chapter_next.png") no-repeat; z-index:101;}
+#apply_alert															{position:absolute; width:1000px; height:520px; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; padding-top:140px; z-index:300;}
+
+
+
+
+
+#apply-answer														{position:absolute; width:1000px; height:660px; left:0; top:0; background:url("../img/apply/bg_02.png") repeat; z-index:300;}
+#apply-answer h4													{position:absolute; width:975px; left:0; top:40px; font:40px nbgM; color:#FFF; text-align:center; line-height:50px; padding:14px 0 0 25px;}
+#apply-answer span												{position:absolute; width:42px; height:42px; right:14px; top:12px;}
+#apply-answer a													{display:block; overflow:hidden; width:42px; height:42px; text-indent:-9999px; background:url("../img/apply/btn_close.png") no-repeat;}
+
+#apply-answer .moon												{position:absolute; width:1000px; height:135px; left:0; top:120px; border-top:5px solid #000; background:#FFF;}
+#apply-answer .moon dt											{position:absolute; width:78px; height:29px; left:0; top:35px; font-size:20px; color:#FFF; line-height:24px; background:url("../img/apply/answer_bg.png") no-repeat; padding:6px 0 0 32px;}
+#apply-answer .moon dd											{float:left; width:965px; font-size:20px; color:#444; line-height:35px; padding:36px 0 0 135px;}
+#apply-answer .moon dd b										{font-weight:normal; color:#D10101;}
+
+#apply-answer .answer											{position:absolute; width:1000px; height:305px; left:0; top:255px; border-bottom:5px solid #000; background:#E1F4F5;}
+#apply-answer .answer dt										{position:absolute; width:78px; height:29px; left:0; top:60px; font-size:20px; color:#FFF; line-height:24px; background:url("../img/apply/answer_bg.png") no-repeat; padding:6px 0 0 32px;}
+#apply-answer .answer dd										{float:left;}
+#apply-answer .answer .graph									{width:360px; height:243px; font:20px nbgM; color:#111; line-height:25px; text-align:center; background:url("../img/apply/answer_img.png") 0 57px no-repeat; padding:27px 0 0 46px; margin-left:135px;}
+#apply-answer .answer .text									{ font:16px nbgM; color:#1E464D; line-height:25px; padding:55px 0 0 30px;}
+

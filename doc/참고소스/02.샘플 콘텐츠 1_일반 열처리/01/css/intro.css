@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+
+
+
+#intro																		{position:relative; width:1000px; height:620px; background:url("../img/intro/bg_intro.png") no-repeat;}
+#intro div																{position:absolute; text-indent:-9999px;}
+
+
+#intro .intro-course													{width:305px; height:64px; left:349px; top:120px; background:url("../img/intro/name_course.png") no-repeat; z-index:31;}
+#intro .intro-chapter													{width:469px; height:49px; left:266px; top:209px; background:url("../img/intro/name_chapter.png") no-repeat; z-index:32;}
+
+#intro .intro-nut-01													{width:187px; height:162px; left:0; top:389px; background:url("../img/intro/nut_img_01.png") no-repeat; z-index:21;}
+#intro .intro-nut-02													{width:196px; height:162px; left:128px; top:310px; background:url("../img/intro/nut_img_02.png") no-repeat; z-index:22;}
+#intro .intro-nut-03													{width:196px; height:153px; left:128px; top:467px; background:url("../img/intro/nut_img_03.png") no-repeat; z-index:23;}
+#intro .intro-nut-04													{width:196px; height:162px; left:265px; top:389px; background:url("../img/intro/nut_img_04.png") no-repeat; z-index:24;}
+#intro .intro-nut-05													{width:196px; height:75px; left:265px; top:545px; background:url("../img/intro/nut_img_05.png") no-repeat; z-index:25;}
+#intro .intro-nut-06													{width:196px; height:153px; left:402px; top:467px; background:url("../img/intro/nut_img_06.png") no-repeat; z-index:26;}
+#intro .intro-nut-07													{width:196px; height:162px; left:538px; top:388px; background:url("../img/intro/nut_img_07.png") no-repeat; z-index:27;}
+#intro .intro-nut-08													{width:196px; height:76px; left:539px; top:544px; background:url("../img/intro/nut_img_08.png") no-repeat; z-index:28;}
+#intro .intro-nut-09													{width:196px; height:162px; left:674px; top:309px; background:url("../img/intro/nut_img_09.png") no-repeat; z-index:29;}
+#intro .intro-nut-10													{width:196px; height:154px; left:676px; top:466px; background:url("../img/intro/nut_img_10.png") no-repeat; z-index:30;}
+#intro .intro-nut-11													{width:188px; height:162px; right:0; top:388px; background:url("../img/intro/nut_img_11.png") no-repeat; z-index:31;}
+
+#intro .intro-bg														{width:1000px; height:160px; left:0; bottom:0; background:url("../img/intro/bg_maeul.png") no-repeat; z-index:11;}
+
+#intro .next-page													{width:126px; height:87px; right:5px; top:533px; background:url("../img/inc/chapter_next.png") no-repeat; z-index:101;}
+
+
+
+
+

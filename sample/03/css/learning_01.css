@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+
+
+#learning																{position:relative; width:1000px; height:620px; z-index:100;}
+#learning:after														{content:""; display:block; clear:both;}
+#learning .theme
+
+{position:absolute;
+    left:0;
+    top:58px;
+    font:22px nsM;
+    color:#334366;
+    line-height:25px;
+    background:url("../img/learn/learn_bullet_01.png") 0 5px no-repeat;
+    padding-left:35px; z-index:100;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease;
+    -o-transition:All 0.2s ease;}
+
+
+
+
+
+#content-area															{position:relative; float:left; width:870px; padding:110px 65px 0;}
+#content-area:after													{content:""; display:block; clear:both;}
+
+#content-area .subject											{float:left; width:850px; font:22px nsM; color:#356E76; line-height:30px; background:url("../img/learn/learn_bullet_02.png") 0 7px no-repeat; padding:0 0 4px 20px;}
+#content-area .text-area											{float:left; width:355px; padding-left:20px;}
+#content-area .movie-area										{float:right; width:450px; margin-right:10px;}
+#content-area .movie-area div									{position:relative; padding-top:90%;}
+#content-area .movie-area video								{position:absolute; left:0; top:0; width:100%; height:100%;}
+
+
+
+
+
+#content-area .type-1												{float:left; width:315px; font:18px nsM; color:#333; line-height:26px; border-right:6px solid #729CEB; border-left:6px solid #729CEB; background:#C6DCF3; padding:13px 13px 11px 15px;}
+
+#content-area .type-2												{float:left; width:355px; margin-top:30px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+#content-area .type-2 dt											{float:left; width:335px; font:18px nsM; color:#333; line-height:24px; background:url("../img/learn/learn_bullet_03.png") 0 5px no-repeat; padding:0 0 8px 20px;}
+#content-area .type-2 dt p										{font:12px Dotum; color:#777; line-height:20px;}
+#content-area .type-2 dd											{position:relative; float:left; width:315px; height:195px; background:#D2DDE8; padding:17px 20px 0;}
+
+#content-area .type-2 dd .page-area-1						{float:left; width:100%;}
+#content-area .type-2 dd .page-area-1 p					{display:block; width:95%; font:18px nsM; color:#333; line-height:20px; background:url("../img/learn/learn_bullet_04.png") 0 5px no-repeat; padding:0 0 7px 5%;}
+#content-area .type-2 dd .page-area-1 span				{display:block; width:87%; font:16px nsM; color:#333; line-height:20px; background:url("../img/learn/learn_bullet_05.png") 5.5% 8px no-repeat; padding:0 5% 5px 8%;}
+#content-area .type-2 dd .page-area-1 div					{display:block; width:86%; font:18px nsM; color:#FFF; line-height:20px; background:#999EAA; padding:9px 7% 7px; margin-top:3px;}
+
+#content-area .type-2 dd .learning-page					{position:absolute; width:90px; left:50%; bottom:7px; margin-left:-45px;}
+#content-area .type-2 dd .learning-page li					{float:left; display:inline-block; width:50px; height:21px; text-align:center;}
+#content-area .type-2 dd .learning-page .left				{float:left; width:20px; background:url("../img/learn/btn_pre_02.png") no-repeat;}
+#content-area .type-2 dd .learning-page .right			{float:left; width:20px; background:url("../img/learn/btn_next_02.png") no-repeat;}
+#content-area .type-2 dd .learning-page span			{display:inline-block; font:17px play; color:#333; line-height:20px; vertical-align:middle; margin:0 2px;}
+#content-area .type-2 dd .learning-page img				{cursor:pointer;}
+
+
+
+#page-narration														{float:right; width:355px; height:35px;}
+
+
+
+#page-ending															{float:left; width:860px; font:12px Dotum; color:#37414A; line-height:20px; text-align:right; padding:15px 75px 0 65px;}
+
+

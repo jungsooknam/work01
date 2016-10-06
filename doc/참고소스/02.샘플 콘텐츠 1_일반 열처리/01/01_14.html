@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+	<head>
+		<title>일반 열처리</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script>
+			var currentPage = 14;
+
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/narration.js"></script>
+
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				if (isMobilePlatform() == true) {
+					mobileAlertView();
+				}
+
+				initKeyEvent();
+				lms_mode();
+				menuInit();
+			});
+
+			window.onbeforeunload = function (){
+				if(typeof(_video) != "undefined" && _video != null)
+					_video.pause();
+			}
+
+			$(function() {
+				var btnCnt = 0;
+
+				$('.col-5 a').click(function(){
+					$(this).addClass('on');
+					btnCnt = btnCnt + 1;
+						if(btnCnt == 13)
+						{
+							document.getElementById('btn-result').style.display = "block";
+						}
+
+				});
+
+			});
+
+			function openDiagnosis (){
+				$("#outro-pop-1").fadeIn(300);
+			}
+
+			function closeDiagnosis (){
+				$("#outro-pop-1").fadeOut(150);
+			}
+
+			function openResult (){
+				$("#outro-pop-2").fadeIn(300);
+				$("#outro-pop-1").fadeOut(300);
+			}
+
+			function closeResult (){
+				$("#outro-pop-2").fadeOut(150);
+			}
+
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="wrapper">
+
+			<header style="display:none;">
+				<h2 id="chap" tabindex="2"></h2>
+				<h1 id="course" tabindex="1"></h1>
+			</header>
+			<!--  과정명, 차시명 영역  -->
+
+
+
+			<section>
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open"><input type="image" src="img/inc/btn_index_01.png" id="menu_open_btn" tabindex="3" /></div>
+					<div id="menu"></div>
+				</nav>
+				<!--  INDEX 메뉴 영역  -->
+
+				<div id="outro">
+					<audio autoplay id="myAudio">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"01_14.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+
+					<div class="outro-course">과정명 - 일반 열처리</div>
+
+					<div class="outro-text-1">텍스트 1</div>
+					<div class="outro-text-2">텍스트 2</div>
+					<div class="outro-text-3">텍스트 3</div>
+
+					<div class="outro-box-1">박스 이미지 1</div>
+					<div class="outro-box-2">박스 이미지 2</div>
+					<div class="outro-box-left">박스 왼쪽</div>
+					<div class="outro-box-right">박스 오른쪽</div>
+					<div class="outro-box-nut">박스 너트</div>
+
+					<div class="outro-btn-1"><a href="javascript:openDiagnosis();">자가진단 GO</a></div>
+
+					<div class="outro-bg">마을 이미지</div>
+				</div>
+
+
+
+				<div id="outro-pop-1" style="display:none;">
+					<h4>일반 열처리 <b>자가진단</b></h4>
+					<span><a href="javascript:closeDiagnosis();">닫기</a></span>
+
+					<div class="diagnosis">
+						<table border="0" cellpadding="1" cellspacing="1">
+							<thead>
+								<tr>
+									<th class="col-1 type-1">진단영역</th>
+									<th class="col-2 type-1">진단문항</th>
+									<th class="col-3">매우<br />미흡</th>
+									<th class="col-4">미흡</th>
+									<th class="col-5">보통</th>
+									<th class="col-6">우수</th>
+									<th class="col-7">매우<br />우수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-1" rowspan="5">퀜칭<br />처리하기</td>
+									<td class="col-2">01. 나는 퀜칭로 점검표 및 매뉴얼에 따라 설비 가동상태를 확인할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">02. 나는 작업표준서에 따라 작업조건을 확인한 후 기록할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">03. 나는 작업표준서에 따라 퀜칭작업을 수행할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">04. 나는 냉각제를 관리할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">05. 나는 퀜칭로에 이상이 발생되면 응급조치 매뉴얼에 따라 응급조치한 후 신속 보고할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-1" rowspan="4">템퍼링<br />처리하기</td>
+									<td class="col-2">01. 나는 템퍼링로 점검표 및 매뉴얼에 따라 설비 가동상태를 기록할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">02. 나는 작업표준서에 따라 작업조건을 기록할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">03. 나는 작업표준서에 따라 템퍼링작업을 수행할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">04. 나는 템퍼링로에 이상이 발생되면 응급조치 매뉴얼에 따라 응급조치 한 후 신속 보고할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-1" rowspan="4">후처리<br />작업하기</td>
+									<td class="col-2">01. 나는 작업표준서에 따라 지정된 후처리 공정을 수행할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">02. 나는 물질안전보건자료에 준하여 후처리를 관리할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">03. 나는 안전보호구를 착용하고 후처리 작업을 수행할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+								<tr>
+									<td class="col-2">04. 나는 후처리 설비를 관리할 수 있다.</td>
+									<td class="col-3"><a href="#">1</a></td>
+									<td class="col-4"><a href="#">2</a></td>
+									<td class="col-5"><a href="#!">3</a></td>
+									<td class="col-6"><a href="#">4</a></td>
+									<td class="col-7"><a href="#">5</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<a href="javascript:openResult();" class="result-btn" id="btn-result">진단결과 보기</a>
+				</div>
+
+
+
+				<div id="outro-pop-2" style="display:none;">
+					<h4>일반 열처리 <b>자가진단</b></h4>
+					<span><a href="javascript:closeResult();">닫기</a></span>
+
+					<div class="result-table">
+						<table border="0" cellpadding="1" cellspacing="1">
+							<thead>
+								<tr>
+									<th class="col-1">진단영역</th>
+									<th class="col-2">문항수</th>
+									<th class="col-3">점수</th>
+									<th class="col-4">점수 / 문항수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-1">퀜칭 처리하기</td>
+									<td class="col-2">5</td>
+									<td class="col-3">15</td>
+									<td class="col-4">3</td>
+								</tr>
+								<tr>
+									<td class="col-1">템퍼링 처리하기</td>
+									<td class="col-2">4</td>
+									<td class="col-3">12</td>
+									<td class="col-4">3</td>
+								</tr>
+								<tr>
+									<td class="col-1">후처리 작업하기</td>
+									<td class="col-2">4</td>
+									<td class="col-3">12</td>
+									<td class="col-4">3</td>
+								</tr>
+								<tr>
+									<td class="col-1">합계</td>
+									<td class="col-2">13</td>
+									<td class="col-3">39</td>
+									<td class="col-4">9</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="result-text">
+						<p>자신의 점수를 문항 수로 나눈 값이 ‘3점’ 이하에 해당하는 영역은</p>업무를 성공적으로 수행하는데 요구하는 능력이 부족한 것으로 교육 훈련이나 개인학습을 통한 개발이 필요함.
+					</div>
+				</div>
+
+
+
+				<div id="narration" name="narration">
+					<div id="nar_txt"></div>
+					<div id="nar_close" class="button" title="자막닫기"></div>
+				</div>
+			</section>
+			<!--  본문 영역 -->
+
+
+
+			<footer>
+				<div id="control">
+					<script type="text/javascript" src="js/controlbar.js"></script>
+				</div>
+
+				<script type="text/javascript">
+					if (captionLayer == 'yes')
+					{
+						_narFlag=true;
+						$("#narration").css('display','block');
+					}
+				</script>
+			</footer>
+			<!--  컨트롤  영역 -->
+
+		</div>
+	</body>
+</html>

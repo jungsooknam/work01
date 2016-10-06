@@ -1,0 +1,342 @@
+body, div, span, h1, h2, h3, h4, h5, h6, p, a, li {
+
+	margin: 0px; padding: 0px; border: 0px ; 
+}
+
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+
+body {background:#ff0000;}
+
+
+
+#headerBox  {	position: relative;	margin: 0 auto;	padding-top: 80px;background:url(header.png) no-repeat top left; 	}
+
+#ContentsBG  {position: relative;  margin: 0 auto;  }
+
+#bottom { background:url(bottom.png) no-repeat bottom center; position:absolute; width:100%; height:100%; bottom:0px;}
+
+ 
+.Comment {
+ position: relative; 
+ top:-10px; width:100%; 
+ max-width:440px; 
+ left:55px; -webkit-border-radius: 29px;-moz-border-radius: 29px;border-radius: 29px;
+ background:rgba(238,238,238,1);  
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#40ffffff,endColorstr=#40ffffff); 
+ zoom: 1;  
+ z-index:5}
+
+.Comment p {background:url(dot3.png) no-repeat 10px 14px; line-height:20px; vertical-align:middle; padding:5px 10px 5px 20px; font-size:14px; color:#333333;}
+
+
+
+/* 탭 관련 */
+
+ul, li {list-style:none; margin:0; padding:0; font-size:10pt; }
+
+.image_list {clear:both;overflow: hidden;width: 100%;}
+.image_list .images { display:none; }
+
+.tab {margin:0px 0px 0px 80px; cursor:pointer;}
+.tab li {width:50px;float:left;border-right:1px solid #e1e1e1;border-top:1px solid #e1e1e1;padding:7px;}
+.tab li.fir {border-left:1px solid #e1e1e1;}
+
+
+.tab li.tabOutClass {
+	
+	border-radius: 5px 5px 0px 0px; 
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a2a2a2), color-stop(1, #cccccc));
+	background:-moz-linear-gradient(top, #a2a2a2) 5%, #cccccc 100%);
+	background:-webkit-linear-gradient(top, #a2a2a2) 5%, #cccccc 100%);
+	background:-o-linear-gradient(top, #a2a2a2) 5%, #cccccc 100%);
+	background:-ms-linear-gradient(top, #a2a2a2 5%, #cccccc 100%);
+	background:linear-gradient(to bottom, #a2a2a2 5%, #cccccc 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a2a2a2', endColorstr='cccccc',GradientType=0);
+	background-color:#c8c8c8;
+	border:1px solid #a5a5a5;
+	color:#fff;
+	padding:5px 8px 5px;
+	margin:0px 1px 0px 0px; 
+	text-align:center;
+}
+.tab li.tabOverClass {
+	border-radius: 5px 5px 0px 0px; 
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #736155), color-stop(1, #937b6c));
+	background:-moz-linear-gradient(top, #736155 5%, #937b6c 100%);
+	background:-webkit-linear-gradient(top, #736155 5%, #937b6c 100%);
+	background:-o-linear-gradient(top, #736155 5%, #937b6c 100%);<input type="button" id="" />
+	background:-ms-linear-gradient(top, #736155 5%, #937b6c 100%);
+	background:linear-gradient(to bottom, #736155 5%, #937b6c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#736155', endColorstr='#937b6c',GradientType=0);
+	background-color:#ff7200;
+	border:1px solid #726054;
+	color:#ffffff;
+	font-weight:bold;
+	padding:5px 8px 5px;
+	margin:0px 1px 0px 0px; 
+	text-align:center;
+	text-shadow:0px 1px 0px #56463b;
+}
+
+
+
+
+/* 슬라이드 전체 패턴 배경(45 angle gray pattern) */
+.pageBg {
+		background:#dddddd url(bg.png) repeat-x;  
+}
+
+
+
+/*기본 폰트*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+
+/* 라운드형 문제박스 */
+.roundBox1 {position: relative;  
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #957d6e), color-stop(1, #726054));
+	background:-moz-linear-gradient(top, #957d6e 5%, #726054 100%);
+	background:-webkit-linear-gradient(top, #957d6e 5%, #726054 100%);
+	background:-o-linear-gradient(top, #957d6e 5%, #726054 100%);
+	background:-ms-linear-gradient(top, #957d6e 5%, #726054 100%);
+	background:linear-gradient(to bottom, #957d6e 5%, #726054 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#957d6e', endColorstr='#726054',GradientType=0);
+	background-color:#736155;
+	-moz-border-radius:10px 10px 0 0;
+	-webkit-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	border:1px solid #736155;
+	margin: 0px 60px 0px 60px;
+	padding: 20px 35px 20px 35px;
+	color:#ffffff;	
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #635349;		
+}
+
+.roundBox1 span { color:#FFFF00; border-bottom:1px solid #ffff00;}
+
+.roundBox2 {position: relative; 
+	background-color:#ffffff;
+	padding: 60px;
+	border:1px solid #c9c9c9;
+	border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-o-border-radius: 0 0 px 10px;
+	margin: 0px 60px 10px 60px;
+	padding: 20px 40px;
+	color:#333333;
+	font-size:14px;
+	text-decoration:none;	
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	box-shadow:0 0 10px rgba(0,0,0,0.27);
+}
+.roundBox3 {
+	height: 200px;
+	background-image: linear-gradient(90deg, transparent 79px, rgb(253, 112, 0) 79px, rgb(253, 112, 0) 81px, transparent 81px), linear-gradient(rgb(238, 238, 238) 0.1em, transparent 0.1em); background-size: 100% 1.6em; background-color: rgb(255, 255, 255);
+	border:1px solid #c9c9c9;
+	border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-o-border-radius: 0 0 10px 10px;
+	margin: 0px 60px 10px 60px;
+	padding: 24px 90px;
+	color:#333333;
+	font-size:14px;
+	text-decoration:none;
+	
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	box-shadow:0 0 10px rgba(0,0,0,0.27);
+}
+ 
+
+.lt {	
+	float:left;
+}
+
+ 
+/*인풋박스*/
+.inputBox1{position: relative; 
+	width:100%;
+	height:24px;
+	color:#333333;
+	font-size:14px;
+	line-height:22px;
+	border:1px dotted #333333;
+	background-color:transparent;
+}
+ 
+
+.inputBox2{position: relative; 
+	width:100%;
+	height:100px;
+	color:#333333;
+	font-size:14px;
+	line-height:22px;
+	border:1px dotted #333333;
+	background-color:transparent;
+}
+
+
+
+/* 해설 문제박스 */
+.explainBox {position: relative;  
+	display:none;
+	background-color:#ffffff;
+	padding: 20px;
+	border: 3px solid #bfaca0;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-o-border-radius: 12px;
+	margin: 0px 60px 0px 60px;
+	padding: 20px 40px;
+	color:#333333;
+	font-size:14px;
+	text-decoration:none;
+	
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.27);
+	box-shadow:0 0 5px rgba(0,0,0,0.27);
+}
+
+
+
+/* 정답확인 버튼(Red type button) */
+.myButton {position: relative; 
+	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ff7200), color-stop(1, #de4e00));
+	background:-moz-linear-gradient(top, #ff7200 5%, #de4e00 100%);
+	background:-webkit-linear-gradient(top, #ff7200 5%, #de4e00 100%);
+	background:-o-linear-gradient(top, #ff7200 5%, #de4e00 100%);
+	background:-ms-linear-gradient(top, #ff7200 5%, #de4e00 100%);
+	background:linear-gradient(to bottom, #ff7200 5%, #de4e00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7200', endColorstr='#de4e00',GradientType=0);
+	background-color:#ff7200;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:0px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #de4e00), color-stop(1, #ff7200));
+	background:-moz-linear-gradient(top, #de4e00 5%, #ff7200 100%);
+	background:-webkit-linear-gradient(top, #de4e00 5%, #ff7200 100%);
+	background:-o-linear-gradient(top, #de4e00 5%, #ff7200 100%);
+	background:-ms-linear-gradient(top, #de4e00 5%, #ff7200 100%);
+	background:linear-gradient(to bottom, #de4e00 5%, #ff7200 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#de4e00', endColorstr='#ff7200',GradientType=0);
+	background-color:#de4e00;
+}
+
+.myButton:active {
+	position:relative;
+	margin-top:1px;
+}
+
+
+/* 보기항목 원형블릿 */
+.circle1 {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #df7a7a), color-stop(1, #dd5d5d));
+	background:-moz-linear-gradient(top, #df7a7a 5%, #dd5d5d 100%);
+	background:-webkit-linear-gradient(top, #df7a7a 5%, #dd5d5d 100%);
+	background:-o-linear-gradient(top, #df7a7a 5%, #dd5d5d 100%);
+	background:-ms-linear-gradient(top, #df7a7a 5%, #dd5d5d 100%);
+	background:linear-gradient(to bottom, #df7a7a 5%, #dd5d5d 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#df7a7a', endColorstr='#dd5d5d',GradientType=0);
+	background-color:#38acc8;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+	border:0px solid #1e8fac;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	padding:4px 7px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b14e4e;
+	margin:8px;
+}
+
+.dab {
+	background-color:#8e5734;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	width:30px; text-align:center;
+	padding:3px 10px; 
+	color:#fff;
+}
+
+/*해설 구분선*/
+hr {
+	border-top:1px
+	solid #ded1c9; 
+	border-bottom:0px 
+	solid #ded1c9;
+}
+
+
+/* 해상도가 640px 보다 작은 경우 */ 
+@media screen and (max-width:640px) {
+	
+	#headerBox  { position: relative;	 top:0px;	width:100%; 	 background:url(header.png) no-repeat top left;}
+	
+	.tab {margin:0px 0px 0px 20px; cursor:pointer;}
+	.roundBox1 {margin: 0px 10px 0px 5px;	padding: 20px 20px 15px 20px;	}
+	.roundBox2 {margin: 0px 10px 0px 5px;	padding: 10px 20px; }
+	.roundBox3 {margin: 0px 10px 0px 5px;	padding: 10px 20px; }
+ 	.explainBox {margin: 0px 10px 0px 10px;	padding: 10px 20px;	}
+	.Comment {left:10px; width:95%;}
+ 
+/*인풋박스*/
+.inputBox1{width:65%; float:right}
+ 
+.inputBox2{width:65%; float:right;	height: 90%;}
+
+
+
+}
+ 
+ /* 해상도가 1024px 보다 큰 경우 */
+@media screen and (min-width:1024px) {
+
+ 
+/* 상단 슬라이드 박스 */
+	#headerBox  {		position: relative; top:0px;	width:1024px;		margin: 0 auto;  background:url(header.png) no-repeat top center; 	}
+		
+}
+
+/* 해상도가 1024px 보다 작은 경우 */ 
+@media screen and (max-width:1024px) {
+ 
+/* 상단 슬라이드 박스 */
+	#headerBox  { position: relative;	 top:0px;	width:100%;  background:url(header.png) no-repeat top left; 	}
+	
+}
+ 
+  

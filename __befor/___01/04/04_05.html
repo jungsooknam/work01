@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		var currentPage = 05;											// 현 페이지 번호
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+		});
+	</script>
+</head>
+
+<!--인트로 페이지-->
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header class="learn">
+		<h1 id="course" tabindex="1"></h1>
+		<div style="
+				/*background: #fff;*/
+				/*width:100%;*/
+				height: 50px;
+				background-repeat: no-repeat;
+				background-image: url('img/inc/chapter_bg.png');
+				/*background-attachment: fixed;*/
+				">
+			<h2 id="chap-1" tabindex="2"></h2>
+		</div>
+
+	</header><!--  과정명, 차시명 영역  -->
+
+	<section id="learning">
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav>
+		<!--  INDEX 메뉴 영역  -->
+
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+		<ul id="content-area">
+			<li class="subject">테이블 생성과 튜플 추가</li><!-- 학습 - 주제 영역 -->
+			<li class="text-area">
+
+
+
+				<dl class="type-2">
+					<dt>CREATE TABLE 테이블명</dt>
+					<dd>
+
+							<p>( 속성명 속성타입 [제약조건], <br>
+								속성명 속성타입,<br>
+								…<br>
+								)<br>
+							</p>
+
+
+						<audio id="btn-sound">
+							<script type="text/javascript">
+								document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+							</script>
+						</audio>
+
+
+					</dd>
+
+
+				</dl>
+
+
+
+				<audio id="page-narration" controls>
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"01_04.mp3' type='audio/mpeg' />");
+					</script>
+					해당 브라우저는 음성을 지원하지 않습니다.
+				</audio>
+			</li><!-- 학습 - 텍스트 영역 -->
+
+			<li class="movie-area">
+				<div>
+					<video id="page-movie" controls preload="auto" poster="img/inc/movie_img_01.png">
+						<script type="text/javascript">
+							document.write("<source src='"+mp4Link+"01_04.mp4' type='video/mp4' />");
+						</script>
+						해당 브라우저는 영상을 지원하지 않습니다.
+					</video>
+				</div>
+			</li><!-- 학습 - 동영상 영역 -->
+		</ul>
+
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+	</section><!--  본문 영역 -->
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

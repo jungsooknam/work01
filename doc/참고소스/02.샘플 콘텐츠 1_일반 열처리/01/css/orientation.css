@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+
+
+
+#orientation															{position:relative; width:860px; height:505px; background:url("../img/orientation/bg_01.png") center 95px no-repeat; padding:105px 70px 0;}
+#orientation #ot-name												{position:absolute; left:0; top:58px; font:20px nbgM; color:#F7EF68; line-height:20px; background:url("../img/inc/step_name_bg.png") repeat; padding:4px 18px 3px 15px; z-index:100;}
+
+#orientation dl															{float:left; width:860px; height:485px;}
+#orientation dt															{float:left; width:787px; height:42px; font:20px nbgM; color:#333; line-height:30px; padding:18px 0 0 73px;}
+#orientation dt span													{float:left; font:26px nbgM; color:#334571; line-height:30px; border-right:1px solid #B1B3B8; padding-right:15px; margin-right:15px;}
+
+#orientation dd														{position:relative; float:left; width:760px; height:400px; padding:25px 50px 0;}
+#orientation dd p														{float:left; width:760px; height:31px; font:24px nbgM; color:#FFF; padding-top:6px; margin-bottom:20px;}
+#orientation dd p b													{float:left; width:155px; font-weight:normal; text-align:center;}
+#orientation dd p a													{float:right; width:155px; height:41px; font:18px nbgM; color:#FFF; text-align:center; padding:11px 35px 0 0;}
+#orientation dd .type-1												{background:url("../img/orientation/title_bar_01.png") no-repeat;}
+#orientation dd .type-2												{background:url("../img/orientation/title_bar_02.png") no-repeat; margin-top:45px;}
+#orientation dd .author												{position:absolute; height:41px; left:50px; bottom:25px; background:url("../img/orientation/title_bar_03.png") no-repeat; padding-top:0; margin-bottom:0;}
+#orientation dd span												{float:left; width:728px; font:18px nbgM; color:#222; background:url("../img/orientation/bullet_01.png") 11px 1px no-repeat; padding-left:32px; margin-bottom:10px;}
+
+#orientation dd.flow													{background:url("../img/orientation/bg_03.png") center 25px no-repeat;}
+#orientation dd.flow p												{position:absolute; width:125px; height:71px; left:50px; padding:0; margin:0;}
+#orientation dd.flow p a											{display:block; overflow:hidden; width:125px; height:46px; font:20px nbgM; color:#333; background:url("../img/orientation/flow_bg_01.png") no-repeat; padding:25px 0 0 0;}
+#orientation dd.flow p.on a										{color:#FFF; background:url("../img/orientation/flow_bg_02.png") no-repeat;}
+#orientation dd.flow #m-1											{height:109px; top:25px;}
+#orientation dd.flow #m-1 a										{height:66px; padding:43px 0 0 0;}
+#orientation dd.flow #m-2											{top:149px;}
+#orientation dd.flow #m-3											{top:235px;}
+#orientation dd.flow #m-4											{top:321px;}
+
+#orientation dd.flow span											{position:absolute; width:115px; height:33px; left:180px; padding:0; margin:0;}
+#orientation dd.flow span a										{display:block; overflow:hidden; width:115px; height:26px; font:16px nbgM; color:#FFF; text-align:center; background:#3CA4E6; padding:7px 0 0 0;}
+#orientation dd.flow span.on a									{background:#23469D;}
+#orientation dd.flow #m-11										{top:25px;}
+#orientation dd.flow #m-12										{top:63px;}
+#orientation dd.flow #m-13										{top:101px;}
+#orientation dd.flow #m-21										{top:149px;}
+#orientation dd.flow #m-22										{top:187px;}
+#orientation dd.flow #m-31										{top:235px;}
+#orientation dd.flow #m-32										{top:273px;}
+#orientation dd.flow #m-41										{top:321px;}
+#orientation dd.flow #m-42										{top:359px;}
+
+#orientation dd.flow div											{display:none; position:absolute; width:439px; height:80px; left:350px; top:25px; font:18px nbgM; color:#222; line-height:24px; padding:320px 0 0 21px;}
+#orientation dd.flow #page-1									{background:url("../img/orientation/thumbnail_01.png") #FFF no-repeat;}
+#orientation dd.flow #page-2									{background:url("../img/orientation/thumbnail_02.png") #FFF no-repeat;}
+#orientation dd.flow #page-3									{background:url("../img/orientation/thumbnail_03.png") #FFF no-repeat;}
+#orientation dd.flow #page-4									{background:url("../img/orientation/thumbnail_04.png") #FFF no-repeat;}
+#orientation dd.flow #page-5									{background:url("../img/orientation/thumbnail_05.png") #FFF no-repeat;}
+#orientation dd.flow #page-6									{background:url("../img/orientation/thumbnail_06.png") #FFF no-repeat;}
+#orientation dd.flow #page-7									{background:url("../img/orientation/thumbnail_07.png") #FFF no-repeat;}
+#orientation dd.flow #page-8									{background:url("../img/orientation/thumbnail_08.png") #FFF no-repeat;}
+#orientation dd.flow #page-9									{background:url("../img/orientation/thumbnail_09.png") #FFF no-repeat;}
+
+
+
+#orientation dd.method												{background:url("../img/orientation/bg_04.png") center 25px no-repeat;}
+#orientation dd.method span										{position:absolute; width:22px; height:21px; font:700 16px play; color:#FFF; text-align:center; background:#EB4800; -webkit-border-radius:50%; -khtml-border-radius:50%; -moz-border-radius:50%; border-radius:50%; padding:1px 0 0 0; margin:0; z-index:110;}
+#orientation dd.method span.num-01							{left:702px; top:19px;}
+#orientation dd.method span.num-02							{left:136px; top:19px;}
+#orientation dd.method span.num-03							{left:136px; top:65px;}
+#orientation dd.method span.num-04							{left:670px; top:72px;}
+#orientation dd.method span.num-05							{left:261px; top:359px;}
+#orientation dd.method span.num-06							{left:402px; top:359px;}
+#orientation dd.method span.num-07							{left:500px; top:359px;}
+#orientation dd.method span.num-08							{left:523px; top:359px;}
+#orientation dd.method span.num-09							{left:546px; top:359px;}
+#orientation dd.method span.num-10							{left:585px; top:359px;}
+
+#orientation dd.method a											{position:absolute; display:block; overflow:hidden; text-indent:-9999px; z-index:120;}
+#orientation dd.method a.link-01								{width:155px; height:30px; left:559px; top:25px;}
+#orientation dd.method a.link-02								{width:155px; height:30px; left:146px; top:25px;}
+#orientation dd.method a.link-03								{width:115px; height:19px; left:146px; top:56px;}
+#orientation dd.method a.link-04								{width:504px; height:287px; left:178px; top:82px;}
+#orientation dd.method a.link-05								{width:85px; height:23px; left:229px; top:377px;}
+#orientation dd.method a.link-06								{width:196px; height:23px; left:315px; top:377px;}
+#orientation dd.method a.link-07								{width:14px; height:23px; left:512px; top:377px;}
+#orientation dd.method a.link-08								{width:14px; height:23px; left:527px; top:377px;}
+#orientation dd.method a.link-09								{width:16px; height:23px; left:542px; top:377px;}
+#orientation dd.method a.link-10								{width:67px; height:23px; left:563px; top:377px;}
+
+#orientation dd.method p											{position:absolute; display:none; font:19px nbgM; color:#FFF; line-height:24px; z-index:105;}
+#orientation dd.method p#balloon-01							{width:61px; height:36px; left:559px; top:14px; background:url("../img/orientation/balloon_01.png") no-repeat; padding:5px 0 0 204px;}
+#orientation dd.method p#balloon-02							{width:253px; height:36px; left:36px; top:14px; background:url("../img/orientation/balloon_02.png") no-repeat; padding:5px 0 0 12px;}
+#orientation dd.method p#balloon-03							{width:231px; height:50px; left:18px; top:49px; background:url("../img/orientation/balloon_03.png") no-repeat; padding:5px 0 0 12px;}
+#orientation dd.method p#balloon-04							{width:78px; height:297px; left:178px; top:67px; background:url("../img/orientation/balloon_04.png") no-repeat; padding:5px 0 0 553px;}
+#orientation dd.method p#balloon-05							{width:168px; height:94px; left:188px; top:301px; text-align:center; background:url("../img/orientation/balloon_05.png") no-repeat; padding:5px 0 0 0;}
+#orientation dd.method p#balloon-06							{width:196px; height:94px; left:315px; top:301px; text-align:center; background:url("../img/orientation/balloon_06.png") no-repeat; padding:5px 0 0 0;}
+#orientation dd.method p#balloon-07							{width:134px; height:94px; left:444px; top:301px; text-align:center; background:url("../img/orientation/balloon_07.png") no-repeat; padding:5px 0 0 0;}
+#orientation dd.method p#balloon-08							{width:97px; height:94px; left:486px; top:301px; text-align:center; background:url("../img/orientation/balloon_08.png") no-repeat; padding:5px 0 0 0;}
+#orientation dd.method p#balloon-09							{width:92px; height:94px; left:512px; top:301px; text-align:center; background:url("../img/orientation/balloon_09.png") no-repeat; padding:5px 0 0 0;}
+#orientation dd.method p#balloon-10							{width:97px; height:94px; left:548px; top:301px; text-align:center; background:url("../img/orientation/balloon_10.png") no-repeat; padding:5px 0 0 0;}
+
+
+
+#orientation ul															{display:none; position:absolute; width:1000px; height:620px; left:0; top:0; z-index:101;}
+#orientation li															{position:absolute; width:1000px; height:620px; left:0; top:0;}
+#orientation li div														{position:absolute; width:175px; height:33px; left:155px; top:200px; font:24px nbgM; color:#FFF; padding-top:9px;}
+#orientation li p														{position:absolute; width:470px; left:385px;}
+#orientation li.author-bg											{background:#000; opacity:0.60; filter:alpha(opacity=60);}
+#orientation li.author-content									{background:url("../img/orientation/bg_02.png") center 165px no-repeat;}
+#orientation li.btn													{width:20px; height:20px; left:899px; top:177px;}
+#orientation li.btn a													{display:block; overflow:hidden; width:20px; height:20px; text-indent:-9999px;}
+#orientation li .name												{top:285px; font:35px nbgM; color:#334571;}
+#orientation li .belong												{top:334px; font:20px nbgM; color:#222; padding-left:20px;}
+#orientation li .career												{top:393px; font:24px nbgM; color:#334571; padding-left:30px;}
+#orientation li .text-1												{top:435px; font:19px nbgM; color:#333; padding-left:30px;}
+#orientation li .text-2												{top:463px; font:19px nbgM; color:#333; padding-left:30px;}
+#orientation li .text-3												{top:491px; font:19px nbgM; color:#333; padding-left:30px;}
+
+#orientation .preparation-page									{display:block; width:210px; height:28px; left:325px; top:365px; background:url("../img/summary/btn_img.png") no-repeat;}
+#orientation .preparation-page li								{position:relative; float:left; width:70px; height:28px; font:400 22px play; color:#2C313A; text-align:center;}
+
+
+
+#orientation div														{position:absolute; width:40px; height:128px; z-index:100;}
+#orientation div a													{display:block; overflow:hidden; width:40px; height:128px; text-indent:-9999px;}
+
+
+
+#orientation table													{float:left; width:760px; background:#A6A6A6;}
+#orientation table th													{font:18px nbgM; color:#112B4B; background:#E2EEF0; padding:9px 0 8px;}
+#orientation table td													{position:relative; font:16px nbgM; color:#444; background:#FFF; padding:8px 0 6px 52px;}
+#orientation table td p												{position:relative; display:inline-block; width:40px; height:27px; font:700 18px play; color:#FFF; text-align:center; vertical-align:bottom; background:url("../img/orientation/th_box.png") no-repeat; padding:0; margin:0 7px 0 0;}
+#orientation table td span											{position:absolute; display:block; width:30px; height:19px; left:16px; top:6px; font:700 15px play; color:#FFF; text-align:center; background:#2F5299; -webkit-border-radius:15%; -khtml-border-radius:15%; -moz-border-radius:15%; border-radius:15%; padding:1px 0 0 0;}
+
+#orientation table.preparation-1 td								{font:15px nbgM; color:#333; text-align:center; line-height:23px; padding:9px 0 7px;}
+#orientation table.preparation-1 td.name						{color:#0E4C97;}
+#orientation table.preparation-2 td								{font:15px nbgM; color:#333; text-align:center; line-height:23px; padding:8px 0 6px;}
+#orientation table.preparation-2 td.name						{color:#0E4C97;}
+#orientation table.preparation-3 td								{font:15px nbgM; color:#333; text-align:center; line-height:23px; padding:18px 0 16px;}
+#orientation table.preparation-3 td.name						{color:#0E4C97;}
+
+
+
+#orientation .pre														{left:20px; top:284px;}
+#orientation .pre-off													{left:20px; top:284px; text-indent:-9999px; background:url("../img/orientation/btn_pre_01.png") no-repeat;}
+#orientation .pre a													{background:url("../img/orientation/btn_pre_02.png") no-repeat;}
+#orientation .next													{left:940px; top:284px;}
+#orientation .next-off												{left:940px; top:284px; text-indent:-9999px; background:url("../img/orientation/btn_next_01.png") no-repeat;}
+#orientation .next a													{background:url("../img/orientation/btn_next_02.png") no-repeat;}
+
+
+
+
+
+
+

@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+	<head>
+		<title>배출가스장치정비·검사</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script src="js/webfont.js"></script>
+		<script type="text/javascript">
+			var currentPage = 16;											// 현 페이지 번호
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/quiz.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+
+
+
+
+			<section id="quiz">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+
+
+				<ul class="intro" id="quiz-intro" style="display:block;">
+					<li class="title-area"><span>Q</span>uiz</li>
+					<li class="text-area">
+						<p class="type-1">오늘 배운 내용을 간단한<br /> 퀴즈를 통해 확인해 봅시다.</p>
+						<p class="type-2">문제는 <span>총 3문제</span>이고.<br /> 각각 <span>2번의 기회</span>를 제공합니다.</p>
+					</li>
+
+					<li class="btn-area">
+						<a href="javascript:goQuiz('1');">START</a>
+					</li>
+				</ul><!--  E : quiz-intro -->
+
+
+
+
+
+				<ul class="quiz" id="quiz_1" style="display:none;">
+					<li class="question">
+						<dl>
+							<dt>Q1</dt>
+							<dd class="text">가솔린엔진의 배출가스 제어에서 크랭크케이스 제어 가스로 <span>맞는</span> 것을 고르시오.</dd>
+							<dd class="type-1">
+								<a href="javascript:selectAnswer1('type-1', 1, 'q1_n1');" id="q1_n1" class="n-1">CO<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 2, 'q1_n2');" id="q1_n2" class="n-2">HC<span class="qq none">사용자 체크</span><span class="correct-check" style="display:none;">정답 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 3, 'q1_n3');" id="q1_n3" class="n-3">NOx<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer1('type-1', 4, 'q1_n4');" id="q1_n4" class="n-4">O2<span class="qq none">사용자 체크</span></a>
+							</dd>
+							<dd class="btn" id="btn_1"><a href="javascript:checkAnswer(0);">정답 확인</a></dd>
+						</dl>
+					</li>
+					<li class="feed" id="quiz_feed_1" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">2</span></dt>
+							<dd>크랭크케이스 제어 가스로는 HC(탄화수소)가 대부분입니다.</dd>
+							<dd class="btn"><a href="javascript:goQuiz('2');">다음 문제</a></dd>
+						</dl>
+					</li>
+					<li class="check-1" id="q1_correct" style="display:none;">체크- 정답</li>
+					<li class="check-2" id="q1_wrong" style="display:none;">체크 - 오답</li>
+				</ul><!--  E : quiz_1 -->
+
+
+
+
+
+				<ul class="quiz" id="quiz_2" style="display:none;">
+					<li class="question">
+						<dl>
+							<dt>Q2</dt>
+							<dd class="text">다음 보기의 기능을 하는 것은 무엇인지 고르시오.</dd>
+							<dd class="ex"><span><b>보기</b></span>ECU의 신호를 받아 엔진의 특정기준에 이르기 전까지는  캐니스터에서 서지탱크의 증발연료라인을 막기 위해 닫혀있다가 특정기준에 이르면 ECU에서의 신호로 밸브를 열어 캐니스터에서 서지탱크로 증발연료라인을 개방시키는 역할을 함</dd>
+							<dd class="type-2">
+								<a href="javascript:selectAnswer2('type-2', 1, 'q2_n1');" id="q2_n1" class="n-1">연료탱크 캡<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 2, 'q2_n2');" id="q2_n2" class="n-2">포지티브 크랭크케이스 벤텔레이션 밸브<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 3, 'q2_n3');" id="q2_n3" class="n-3">캐니스터<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer2('type-2', 4, 'q2_n4');" id="q2_n4" class="n-4">퍼지컨트롤 솔레노이드 밸브<span class="qq none">사용자 체크</span><span class="correct-check" style="display:none;">정답 체크</span></a>
+							</dd>
+							<dd class="btn" id="btn_2"><a href="javascript:checkAnswer(1);">정답 확인</a></dd>
+						</dl>
+					</li>
+					<li class="feed" id="quiz_feed_2" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">4</span></dt>
+							<dd>퍼지컨트롤 솔레노이드 밸브는 증발가스가 포집된 캐니스터의 증발연료를 엔진 연소실로 보내는 기능을 하는 장치입니다.</dd>
+							<dd class="btn"><a href="javascript:goQuiz('3');">다음 문제</a></dd>
+						</dl>
+					</li>
+					<li class="check-1" id="q2_correct" style="display:none;">체크- 정답</li>
+					<li class="check-2" id="q2_wrong" style="display:none;">체크 - 오답</li>
+				</ul><!--  E : quiz_2 -->
+
+
+
+
+
+				<ul class="quiz" id="quiz_3" style="display:none;">
+					<li class="question">
+						<dl>
+							<dt>Q3</dt>
+							<dd class="text">CVVT 시스템의 효과 중 해당하지 <span>않는</span> 것은 무엇인지 고르시오.</dd>
+							<dd class="type-1">
+								<a href="javascript:selectAnswer3('type-3', 1, 'q3_n1');" id="q3_n1" class="n-1">내부 EGR발생<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 2, 'q3_n2');" id="q3_n2" class="n-2">연소 안정성 향상<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 3, 'q3_n3');" id="q3_n3" class="n-3">팽창일 증가 등으로  연비개선<span class="qq none">사용자 체크</span></a>
+								<a href="javascript:selectAnswer3('type-3', 4, 'q3_n4');" id="q3_n4" class="n-4">배기가스  저감(CO, HC)의 효과<span class="qq none">사용자 체크</span><span class="correct-check" style="display:none;">정답 체크</span></a>
+							</dd>
+							<dd class="btn" id="btn_3"><a href="javascript:checkAnswer(2);">정답 확인</a></dd>
+						</dl>
+					</li>
+					<li class="feed" id="quiz_feed_3" style="display:none;">
+						<div><img src="img/inc/blank.png" alt="보기 클릭 가리개" /></div>
+						<dl>
+							<dt><span class="text-1">정답</span> <span class="text-2">4</span></dt>
+							<dd>CVVT 시스템은 배기가스 저감(HC, NOx)에 상당한 효과가 있습니다.</dd>
+							<dd class="btn"><a href="javascript:goQuiz('4');">결과확인</a></dd>
+						</dl>
+					</li>
+					<li class="check-1" id="q3_correct" style="display:none;">체크- 정답</li>
+					<li class="check-2" id="q3_wrong" style="display:none;">체크 - 오답</li>
+				</ul><!--  E : quiz_3 -->
+
+
+
+
+
+				<div class="q-num" style="display:none;">
+					<a href="javascript:goQuiz('1');">Q1<span id="q1_correct1" style="display:none;"><img src="img/quiz/check_04.png" alt="" /></span><span id="q1_wrong1" style="display:none;"><img src="img/quiz/check_05.png" alt="" /></span></a>
+					<a href="javascript:goQuiz('2');">Q2<span id="q2_correct1" style="display:none;"><img src="img/quiz/check_04.png" alt="" /></span><span id="q2_wrong1" style="display:none;"><img src="img/quiz/check_05.png" alt="" /></span></a>
+					<a href="javascript:goQuiz('3');">Q3<span id="q3_correct1" style="display:none;"><img src="img/quiz/check_04.png" alt="" /></span><span id="q3_wrong1" style="display:none;"><img src="img/quiz/check_05.png" alt="" /></span></a>
+				</div>
+
+				<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
+				<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+				<audio id="audio1">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+				<audio id="audio2">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+					</script>
+				</audio><!--  정오답 음성 영역  -->
+
+
+
+
+
+				<div class="quiz-result" id="result" style="display:none;">
+					<div class="result-text">총 <span>3</span> 문제 중 <span id="correctCnt">0</span> 문제를 맞히셨습니다.</div>
+
+					<div class="result-check">
+						<dl>
+							<dt>Q1</dt>
+							<dd><div><img id="q1_r1" src="img/quiz/check_x.png" alt="" /></div></dd>
+						</dl>
+
+						<dl>
+							<dt>Q2</dt>
+							<dd><div><img id="q2_r2" src="img/quiz/check_x.png" alt="" /></div></dd>
+						</dl>
+
+						<dl>
+							<dt>Q3</dt>
+							<dd><div><img id="q3_r3" src="img/quiz/check_x.png" alt="" /></div></dd>
+						</dl>
+
+						<a href="javascript:goWrongQuiz('1');" id="result-btn-1" class="type-1" style="display:block;">틀린 문제 다시 풀기</a>
+						<a href="javascript:goInit();" id="result-btn-2" class="type-1" style="display:none;">다시 풀기</a>
+						<a href="javascript:showSolution();" class="type-2">정답 및 해설 보기</a>
+					</div>
+
+					<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+				</div>
+
+
+
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>
