@@ -82,13 +82,15 @@ footer
 
 .page-ending
 {
-    float:left;
-    width:915px;
-    font:14px nsM;
+    position: absolute;
+    font:13px nsM;
     color:#37414A;
-    line-height:20px;
     text-align:right;
-    padding:10px 85px 0 0;
+    margin: 0;
+    padding:8px 5% 0 0;
+    bottom:7px;
+    width:95%;
+    border-top:1px solid #B8BEC4;
 }
 
 

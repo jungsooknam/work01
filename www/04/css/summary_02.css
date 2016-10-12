@@ -4,7 +4,6 @@
 
 @media all and (max-width:999px) {
     #summary																{width:100%; height:620px;}
-    #summary .page-ending											{position:absolute; width:90%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 5% 0;}
 }
 
 
@@ -66,7 +65,7 @@
 
     #summary
     {width:100%; height:100%;}
-    #summary .page-ending
+
     {width:95%; padding:8px 2.5% 0;}
 
 

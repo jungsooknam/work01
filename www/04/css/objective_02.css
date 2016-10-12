@@ -5,14 +5,10 @@
 @media all and (max-width:999px) {
 
     #objective																{width:100%; height:620px;}
-    #objective .page-ending											{position:absolute; width:90%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 5% 0;}
 }
 
 
 @media all and (max-width:849px) {
-
-    #objective .page-ending											{width:92%; padding:8px 4% 0;}
-
 
     #objective-area dl dt
     {
@@ -35,8 +31,6 @@
 
 @media all and (max-width:729px) {
 
-    #objective .page-ending											{width:94%; padding:8px 3% 0;}
-
     #objective-area dl dt
     {
         font-size:20px;
@@ -52,7 +46,7 @@
 
     #objective
     {width:100%; height:100%;}
-    #objective .page-ending
+
     {width:95%; padding:8px 2.5% 0;}
 
     #objective-area

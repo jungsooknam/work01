@@ -16,7 +16,7 @@
 
 
 
-/* ÀÎÆ®·Î ¿µ¿ª */
+/* ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #quiz-intro																{position:relative; float:left; width:100%; padding-top:180px;}
 #quiz-intro:after														{content:""; display:block; clear:both;}
@@ -24,8 +24,17 @@
 #quiz-intro li															{position:relative; float:left; color:#FFF; text-align:center;}
 #quiz-intro br															{display:none;}
 #quiz-intro span														{color:#F0FF00;}
-#quiz-intro a															{position:absolute; display:block; width:135px; height:40px; right:95px; bottom:20px; font:30px play; color:#FFF; line-height:35px; text-align:left; background:url("../img/quiz/start_img_01.png") right top no-repeat; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
-#quiz-intro a:hover													{color:#F0FF00; background-position:left top;}
+#quiz-intro a
+{
+    position:absolute;
+    display:block; width:135px; height:40px; right:95px;
+    bottom:20px; font:30px play; color:#FFF; line-height:35px; text-align:left;
+    background:url("../img/quiz/start_img_01.png") right top no-repeat;
+    transition:All 0.2s ease; -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
+}
+#quiz-intro a:hover
+{color:#F0FF00; background-position:left top;}
 
 #quiz-intro .title-area												{position:absolute; left:85px; top:340px; font:700 200px play; cursor:default; z-index:1;  transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #quiz-intro .text-area												{width:100%; height:185px; background:url("../img/quiz/quiz_bg_01.png") repeat;}
@@ -42,7 +51,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz																		{position:relative; float:left; width:100%; padding-top:105px;}
 .quiz:after																{content:""; display:block; clear:both;}
@@ -133,7 +142,8 @@
 
 .q-num																	{position:absolute; width:228px; height:36px; right:45px; top:87px; background:url("../img/quiz/q_num_line.png") 50px 17px no-repeat; z-index:103;}
 .q-num a																{position:relative; float:left; display:block; overflow:hidden; width:64px; height:29px; font:700 18px play; color:#FFF; background:url("../img/quiz/q_num_bg.png") no-repeat; padding:7px 0 0 12px;}
-.q-num a:hover														{background-position:0 bottom;}
+.q-num a:hover
+{background-position:0 bottom;}
 .q-num a.on															{background-position:0 bottom;}
 .q-num a span														{position:absolute; display:block; width:16px; height:16px; left:46px; top:6px;}
 
@@ -151,7 +161,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result															{float:left; width:100%; padding-top:150px;}
 .quiz-result:after														{content:""; display:block; clear:both;}

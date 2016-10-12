@@ -64,16 +64,19 @@
 
 		<div id="learning-quiz-text">
 
-			<div class="quiz-text">◈ 지금까지 학습한 내용을 적용해봅시다.</div>
+			<div class="quiz-guide">◈ 지금까지 학습한 내용을 적용해봅시다.</div>
 
 
 			<dl class="question">
-				<dt class="question">
+				<dt>
 					<p>
 						다음은 DEPARTMENT 테이블에 age (int) 속성을 추가하는 질의문 입니다.
-						단어를 입력하여 질의문을 완성해보세요. 입력 완료 버튼을 선택한 후 음성강의를 확인해 보세요.
+						<br>
+						단어를 입력하여 질의문을 완성해보세요.
+						입력 완료 버튼을 선택한 후 음성강의를 확인해 보세요.<br>
 				<p>
 				</dt>
+
 				<dd>
 					<p class = "input_question">
 						<input type="text" id="input_1" class="quiz-input" value="">
@@ -81,10 +84,13 @@
 						<input type="text" id="input_2" class="quiz-input" value="">
 						 age int
 					</p>
+				</dd>
 
-					<p id="inout_btn" class = "btn">
-						<a href="javascript:checkAnswer();">입력완료</a>
+				<dd class = "btn">
+					<p id="inout_btn" >
+						<a href="javascript:checkAnswer();">정답확인</a>
 					</p>
+
 				</dd>
 
 
@@ -107,6 +113,8 @@
 				해당 브라우저는 음성을 지원하지 않습니다.
 			</audio>
 
+			<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
+			<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
 
 			<audio id="audio1">
 				<script type="text/javascript">
@@ -121,6 +129,8 @@
 
 
 		</div><!--  E : learning-quiz -->
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
 	</section><!--  본문 영역 -->
 
 
@@ -134,19 +144,65 @@
 		 */
 		var answer = ["ALTER", "ADD"];
 
+		// 기회
+		var opt = 2;
+
 		function checkAnswer(){
-			for(var i=0;  i<answer.length ; i++) {
-				var c = $("#input_" + (i + 1)).val();
-				if(c == answer[i]){
-					$("#input_" + (i + 1)).css("color","#2e5b9c");
-					playAudio('audio1');
-				}else{
-					$("#input_" + (i + 1)).css("color","#f00");
-					$("#input_" + (i + 1)).val(answer[i]);
-					playAudio('audio2');
-				}
-				$("#learning_quiz_feed").show();
+			if(opt == 0){
+				return;
 			}
+			var flag = true;
+
+			for(var i=0;  i<answer.length ; i++) {
+
+				var c = $("#input_" + (i + 1)).val();
+
+				if(c == ""){
+					playAudio('audio1');
+					showAlertDiv1();
+					return;
+				}
+
+				if(c != answer[i]){
+					flag = false;
+				}
+
+			}
+			if(flag){
+				// 정답을 맞추면
+				playAudio('audio1');
+				$("#learning_quiz_feed").css('visibility','visible');
+			}else{
+				playAudio('audio2');
+				opt --;
+				if(opt == 0) {
+					// 기회가 없다면
+					$("#learning_quiz_feed").css('visibility','visible');
+				}else{
+					showAlertDiv2();
+				}
+			}
+		}
+
+		this.showAlertDiv1 = function (){
+//		function showAlertDiv1(){
+			$("#quiz_alert1").css("display", "block");
+			this.itv = setTimeout(this.hideDiv1,1200);
+		}
+
+		this.hideDiv1 = function (){
+			clearInterval(this.itv);
+			$("#quiz_alert1").css("display", "none");
+		}
+
+		this.showAlertDiv2 = function (){
+			$("#quiz_alert2").css("display", "block");
+			this.itv = setTimeout(this.hideDiv2,1200);
+		}
+
+		this.hideDiv2 = function (){
+			clearInterval(this.itv);
+			$("#quiz_alert2").css("display", "none");
 		}
 
 	</script>

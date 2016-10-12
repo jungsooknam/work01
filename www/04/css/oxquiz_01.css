@@ -13,12 +13,10 @@
 
 #learning-quiz .quiz-name
 {
-    /*position:absolute;*/
     float: left;
-    /*left:4.3%;*/
     font:50px nsM;
     color:#2e5b9c;
-    margin-left: 4.3%;;
+    margin-left: 4.3%;
 }
 
 #learning-quiz .quiz-text
@@ -26,23 +24,20 @@
     float: left;
     font:18px nsM;
     color:#2e2e2e;
-    /*line-height:25px;*/
-    margin-left: 1%;
     margin-top:25px;
 }
-
 
 #learning-quiz .question
 {
     width:100%;
-    padding:50px 0 0;
 }
 
 
 /*문제 텟스트*/
 #learning-quiz .question dt
 {
-    position: relative;
+    top: 60px;
+    position:absolute;
     width:100%;
     height: 88px;
     text-align:center;
@@ -63,8 +58,11 @@
 
 #learning-quiz .question dd
 {
-    float:left; width:100%; text-align:center; padding-top:5px;
-    padding-bottom:20px;
+    position:absolute;
+    /*border:1px solid #f0F;*/
+    top:160px;
+    width:100%;
+    text-align:center;
 }
 #learning-quiz .question a
 {
@@ -73,31 +71,71 @@
     width:165px;
     height:165px;
     text-indent:-9999px;
+    margin-right: 7%;
 }
 #learning-quiz .question a.o
 {
     background:url("../img/learn/btn_o_01.png") no-repeat;
-    margin-right:70px;
 }
 #learning-quiz .question a.x
 {
     background:url("../img/learn/btn_x_01.png") no-repeat;
-    margin-right:30px;
 }
 
-#learning-quiz .question a.o:hover							{background:url("../img/learn/btn_o_02.png") no-repeat;}
-#learning-quiz .question a.x:hover							{background:url("../img/learn/btn_x_02.png") no-repeat;}
+#learning-quiz .question a.o:hover
+{
+    background: url("../img/learn/btn_o_02.png") no-repeat;
+}
+#learning-quiz .question a.x:hover
+{
+    background:url("../img/learn/btn_x_02.png") no-repeat;
+}
 
-#learning-quiz .question span								{display:inline-block; overflow:hidden; width:165px; height:165px; text-indent:-9999px;}
-#learning-quiz .question span.o-1							{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:70px;}
-#learning-quiz .question span.o-2							{background:url("../img/learn/btn_o_02.png") no-repeat; margin-right:70px;}
-#learning-quiz .question span.o-3							{background:url("../img/learn/btn_o_03.png") no-repeat; margin-right:70px;}
-#learning-quiz .question span.o-4							{background:url("../img/learn/btn_o_04.png") no-repeat; margin-right:70px;}
+#learning-quiz .question span
+{
+    display:inline-block;
+    overflow:hidden;
+    width:165px;
+    height:165px;
+    text-indent:-9999px;
+    margin-right: 7%;
 
-#learning-quiz .question span.x-1							{background:url("../img/learn/btn_x_01.png") no-repeat; margin-right:30px;}
-#learning-quiz .question span.x-2							{background:url("../img/learn/btn_x_02.png") no-repeat; margin-right:30px;}
-#learning-quiz .question span.x-3							{background:url("../img/learn/btn_x_03.png") no-repeat; margin-right:30px;}
-#learning-quiz .question span.x-4							{background:url("../img/learn/btn_x_04.png") no-repeat; margin-right:30px;}
+
+}
+#learning-quiz .question span.o-1
+{
+    background:url("../img/learn/btn_o_01.png") no-repeat;
+}
+#learning-quiz .question span.o-2
+{
+    background:url("../img/learn/btn_o_02.png") no-repeat;
+}
+#learning-quiz .question span.o-3
+{
+    background:url("../img/learn/btn_o_03.png") no-repeat;
+}
+#learning-quiz .question span.o-4
+{
+    background:url("../img/learn/btn_o_04.png") no-repeat;
+}
+
+#learning-quiz .question span.x-1
+{
+    background:url("../img/learn/btn_x_01.png") no-repeat;
+}
+#learning-quiz .question span.x-2
+{
+    background:url("../img/learn/btn_x_02.png") no-repeat;
+}
+#learning-quiz .question span.x-3
+{
+    background:url("../img/learn/btn_x_03.png") no-repeat;
+}
+
+#learning-quiz .question span.x-4
+{
+    background:url("../img/learn/btn_x_04.png") no-repeat;
+}
 
 
 #question_result
@@ -108,12 +146,12 @@
 /*결과*/
 #learning-quiz .feed
 {
-    position:relative;
-    display:none;
+    display: none;
+    position:absolute;
     width:100%;
     height:180px;
     background-color:rgba(70, 110, 169, 0.2);
-    margin-top: 190px;
+    top:345px;
 }
 
 /*정답 및 해설*/
@@ -122,9 +160,8 @@
     width: 135px;
     font:20px nsM;
     color:#fff;
-    line-height:20px;
+    line-height:28px;
     background:#86898f;
-    padding:6px 0px 4px 0;
     text-align: center;
 }
 
@@ -132,7 +169,7 @@
 #learning-quiz .feed dd
 {
     float:left;
-    border: 1px solid #840;
+    /*border: 1px solid #840;*/
 }
 
 
@@ -153,7 +190,6 @@
 }
 
 
-
 #learning-quiz .feed span
 {
     display:block;
@@ -168,18 +204,4 @@
 {
     background:url("../img/learn/answer_x.png") no-repeat;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

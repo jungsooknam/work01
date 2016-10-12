@@ -23,7 +23,7 @@
 
 
 @import url("inputquiz_01.css");					/* 학습페이지 요소 */
-
+@import url("inputquiz_02.css");					/* 학습페이지 요소 - 반응형 */
 
 @import url("quiz_01.css");					/* 퀴즈 요소 */
 @import url("quiz_02.css");					/* 퀴즈 요소 - 반응형 */
