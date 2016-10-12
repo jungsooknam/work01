@@ -10,9 +10,10 @@
 #wrapper:after
 {content:""; display:block; clear:both;}
 
-.body-learning
+.body-learning, .body-outro
 {
     background:url("../img/inc/body_learn_01.png") no-repeat #E6EEF5;
+    background-size: 100% 100%;
 }
 
 .body-intro

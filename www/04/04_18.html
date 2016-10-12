@@ -9,7 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<script src="js/webfont.js"></script>
 	<script type="text/javascript">
-		var currentPage = 18;											// 현 페이지 번호
 		WebFont.load({
 			custom: {
 				families: ['nbgM', 'play']
@@ -99,6 +98,14 @@
 					<span>ADD</span> age int<br>
 			</dl>
 
+			<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
+
+			<audio id="page-narration" controls>
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"04_16.mp3' type='audio/mpeg' />");
+				</script>
+				해당 브라우저는 음성을 지원하지 않습니다.
+			</audio>
 
 
 			<audio id="audio1">

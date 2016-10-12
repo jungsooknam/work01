@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+
+#learning-quiz-text
+{
+    /*float:left; */
+    width:100%;
+    margin-top: 70px;
+    border: 1px solid #f00;
+}
+
+#learning-quiz-text:after
+{content:""; display:block; clear:both;}
+
+
+#learning-quiz-text .quiz-guide
+{
+    margin-left: 3%;
+    font:16px nsM;
+    color:#2e2e2e;
+    line-height:25px;
+}
+
+/*dl*/
+#learning-quiz-text .question
+{
+    width:100%;
+    /*padding:50px 0 0;*/
+}
+
+
+/*문제 BOX*/
+#learning-quiz-text .question dt
+{
+    /*position: relative;*/
+    /*width:90%;*/
+    /*line-height:88px;*/
+    height: 88px;
+
+    background:url("../img/quiz/q_box.png") no-repeat;
+    /*padding:0px 50px;*/
+}
+
+/*문제*/
+#learning-quiz-text .question dt p{
+    /*position: absolute;*/
+    /*width:90%;*/
+
+    font:23px nsM;
+    text-align:left;
+    color:#FFF;
+    /*margin: 0;*/
+
+    top : 50%;
+    transform: translate(0, -50%);
+}
+
+#learning-quiz-text .question dd
+{
+    text-align: center;"
+}
+
+#learning-quiz-text .question dd p
+{
+    line-height: 1.5;
+    display: inline-block;
+    text-align:left;
+}
+#learning-quiz-text .question dd .input_question
+{
+    text-align:left;
+}
+
+
+
+
+
+/*#learning-quiz-text .question a.o*/
+/*{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:70px;}*/
+/*#learning-quiz-text .question a.x*/
+/*{background:url("../img/learn/btn_x_01.png") no-repeat; margin-right:30px;}*/
+/*#learning-quiz-text .question a.o:hover*/
+/*{background:url("../img/learn/btn_o_02.png") no-repeat;}*/
+/*#learning-quiz-text .question a.x:hover*/
+/*{background:url("../img/learn/btn_x_02.png") no-repeat;}*/
+
+/*#learning-quiz-text .question span									{display:inline-block; overflow:hidden; width:165px; height:165px; text-indent:-9999px;}*/
+/*#learning-quiz-text .question span.o-1							{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:70px;}*/
+/*#learning-quiz-text .question span.o-2							{background:url("../img/learn/btn_o_02.png") no-repeat; margin-right:70px;}*/
+/*#learning-quiz-text .question span.o-3							{background:url("../img/learn/btn_o_03.png") no-repeat; margin-right:70px;}*/
+/*#learning-quiz-text .question span.o-4							{background:url("../img/learn/btn_o_04.png") no-repeat; margin-right:70px;}*/
+
+/*#learning-quiz-text .question span.x-1							{background:url("../img/learn/btn_x_01.png") no-repeat; margin-right:30px;}*/
+/*#learning-quiz-text .question span.x-2							{background:url("../img/learn/btn_x_02.png") no-repeat; margin-right:30px;}*/
+/*#learning-quiz-text .question span.x-3							{background:url("../img/learn/btn_x_03.png") no-repeat; margin-right:30px;}*/
+/*#learning-quiz-text .question span.x-4							{background:url("../img/learn/btn_x_04.png") no-repeat; margin-right:30px;}*/
+
+
+#learning-quiz-text .question .input_question
+{
+    font:bold 20px nsM;
+    line-height: 40px;
+    padding-top: 50px;
+    /*padding-bottom: 30px;*/
+    color:#333333;
+    /*border: 1px solid #f00;*/
+    height: 135px;
+}
+
+/*learn_input_button_bullet*/
+
+#learning-quiz-text .question dd .btn {
+    /*float: right;*/
+
+    background:url("../img/learn/learn_input_button_bullet.png") 0 10px no-repeat;
+    background-color: #b45c84;
+
+
+    color:#fff;
+    font:19px nsM;
+    padding: 7px 10px 5px 30px;
+    margin-right: 70px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+
+#learning-quiz-text .question dd .btn a
+{
+    color:#fff;
+}
+
+#learning-quiz-text .question .input_question input
+{
+    font:20px nsM;
+    color:#333333;
+    border: 1px solid #bacce5;
+}
+
+
+
+
+
+
+
+#learning-quiz-text .feed
+{
+    display: block;
+    /*position:relative;*/
+    /*float:left;*/
+    /*display: none;*/
+    /*visibility:hidden;*/
+    width:86%;
+    /*height:156px;*/
+    background-color:rgba(70, 110, 169, 0.2);
+    padding:50px 7% 20px 7%;
+
+    margin-top: 260px;
+    margin-bottom: 10px;
+
+    border:1px solid #0A974F;
+}
+#learning-quiz-text .feed dt
+{
+    float: left;
+    /*display: block;*/
+    /*position:relative;*/
+    left:70px;
+    top:0;
+    font:20px nsM;
+    color:#fff;
+    line-height:20px;
+    background:#7394c6;
+    padding:6px 25px 4px 3%;
+    /*border: 1px solid #f00;*/
+}
+
+
+#learning-quiz-text .feed dd
+{float:left;}
+#learning-quiz-text .feed span
+{
+    /*border: 1px solid #f00;*/
+    display:block;
+    width:72px;
+    height:72px;
+}
+#learning-quiz-text .feed span.o
+{
+    background:url("../img/learn/answer_o.png") no-repeat;
+}
+#learning-quiz-text .feed span.x
+{
+    background:url("../img/learn/answer_x.png") no-repeat;
+}
+
+#learning-quiz-text .feed .ox
+{width:10.5%;}
+
+#learning-quiz-text .feed .text-1
+{
+    width:89.5%;
+    font:18px nsM;
+    color:#333333;
+    line-height:25px;
+    /*padding-top:50px;*/
+}
+
+#learning-quiz-text .feed .text-1 span
+{
+    /*border: 1px solid #f00;*/
+    padding:0px;
+    margin:0px;
+    display:inline;
+    color:#b45c84;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
