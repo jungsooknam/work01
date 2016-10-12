@@ -17,6 +17,14 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.mp4
+*.mp3
+*.psd
+*.pptx
+*.eot
+*.ttf
+*.woff
+
 
 # Windows shortcuts
 *.lnk
@@ -84,3 +92,13 @@ bower_components/
 package.json
 gulpfile.js
 
+__befor/___01/audio/
+__befor/___01/down/
+__befor/___01/movie/
+sample/01/img/intro/
+sample/02/img/intro/
+sample/03/img/intro/
+sample/03/img/quiz/
+sample/03/img/summary/
+sample/down/
+www/down/
