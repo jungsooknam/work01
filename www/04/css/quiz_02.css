@@ -5,7 +5,7 @@
 @media all and (max-width:999px) {
 
 #quiz																		{width:100%;}
-#quiz .theme															{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}
+/*#quiz .theme															{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}*/
 #quiz .page-ending													{position:absolute; width:96%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 2% 0;}
 
 #quiz-intro																{padding-top:170px;}
@@ -26,7 +26,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz																		{padding-top:100px;}
 .quiz li.question														{height:310px;}
@@ -56,7 +56,9 @@
 .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_14.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-4-choice					{background:url("../img/quiz/num_14.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span								{width:36px; height:36px; left:-7px; top:-7px;}
-.quiz li.question dd.type-1 a span.check					{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_10.png") no-repeat;}
 .quiz li.question dd.type-1 a span.correct-check		{background-size:100%}
 
 
@@ -75,7 +77,9 @@
 .quiz li.question dd.type-2 a.n-4								{background:url("../img/quiz/num_14.png") no-repeat;}
 .quiz li.question dd.type-2 a.n-4-choice					{background:url("../img/quiz/num_14.png") left bottom no-repeat;}
 .quiz li.question dd.type-2 a span								{width:36px; height:36px; left:-7px; top:-7px;}
-.quiz li.question dd.type-2 a span.check					{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_10.png") no-repeat;}
 .quiz li.question dd.type-2 a span.correct-check		{background-size:100%}
 
 
@@ -113,7 +117,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result															{padding-top:140px;}
 
@@ -145,7 +149,7 @@
 
 @media all and (max-width:849px) {
 
-#quiz .theme															{top:50px; font-size:18px; background-position:-5px -1px; padding:2px 20px 1px 25px;}
+/*#quiz .theme															{top:50px; font-size:18px; background-position:-5px -1px; padding:2px 20px 1px 25px;}*/
 #quiz .page-ending													{width:96%; padding:8px 2% 0;}
 
 
@@ -163,7 +167,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz li.question dt													{width:85px; top:10px; font-size:45px; line-height:50px;}
 .quiz li.question dd.text											{width:82%; font-size:20px; line-height:25px; padding:30px 4.5% 15px 13.5%;}
@@ -216,7 +220,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result .result-text											{font-size:28px; line-height:33px; padding:22px 0 19px;}
 .quiz-result .result-text span									{font-size:36px;}
@@ -240,7 +244,7 @@
 
 @media all and (max-width:729px) {
 
-#quiz .theme															{top:45px; font-size:18px; background-position:-8px -3px; padding:2px 15px 1px 21px;}
+/*#quiz .theme															{top:45px; font-size:18px; background-position:-8px -3px; padding:2px 15px 1px 21px;}*/
 #quiz .page-ending													{width:94%; padding:8px 3% 0;}
 
 
@@ -264,7 +268,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz li.question dt													{width:73px; top:10px; font-size:40px;}
 .quiz li.question dd.text											{width:81%; font-size:18px; line-height:25px; padding:28px 4.5% 15px 14.5%;}
@@ -305,7 +309,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result .result-text											{font-size:25px; line-height:30px; padding:22px 0 19px;}
 .quiz-result .result-text span									{font-size:31px;}
@@ -334,7 +338,7 @@
 
 @media all and (max-width:599px) {
 
-#quiz .theme															{width:93.5%; top:80px; font-size:17px; line-height:20px; color:#005482; border-bottom:1px solid #9FB4C8; background:url("../img/inc/bullet_title.png") 11px 2px no-repeat; background-color:none; padding:2px 0 7px 6.5%;}
+/*#quiz .theme															{width:93.5%; top:80px; font-size:17px; line-height:20px; color:#005482; border-bottom:1px solid #9FB4C8; background:url("../img/inc/bullet_title.png") 11px 2px no-repeat; background-color:none; padding:2px 0 7px 6.5%;}*/
 #quiz .page-ending													{width:95%; padding:8px 2.5% 0;}
 
 
@@ -360,7 +364,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz																		{padding-top:110px;}
 .quiz li.question														{height:340px;}
@@ -384,7 +388,9 @@
 .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_24.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-4-choice					{background:url("../img/quiz/num_24.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span								{width:32px; height:32px;}
-.quiz li.question dd.type-1 a span.check					{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
 
 
 .quiz li.question dd.type-2										{width:91%; font-size:15px; line-height:18px; padding:15px 5% 0 4%;}
@@ -399,7 +405,9 @@
 .quiz li.question dd.type-2 a.n-4								{width:60%; background:url("../img/quiz/num_24.png") no-repeat;}
 .quiz li.question dd.type-2 a.n-4-choice					{width:60%; background:url("../img/quiz/num_24.png") left bottom no-repeat;}
 .quiz li.question dd.type-2 a span								{width:32px; height:32px;}
-.quiz li.question dd.type-2 a span.check					{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
 
 
 .quiz li.check-1														{top:106px; z-index:100;}
@@ -432,7 +440,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result															{padding-top:110px;}
 .quiz-result .result-text											{font-size:23px; line-height:28px; padding:21px 0 19px;}
@@ -458,7 +466,7 @@
 
 @media all and (max-width:519px) {
 
-#quiz .theme													{width:92%; padding-left:8%;}
+/*#quiz .theme													{width:92%; padding-left:8%;}*/
 
 }
 
@@ -473,7 +481,7 @@
 
 @media all and (max-width:449px) {
 
-#quiz .theme															{width:90.5%; padding-left:9.5%;}
+/*#quiz .theme															{width:90.5%; padding-left:9.5%;}*/
 
 
 
@@ -497,7 +505,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz li.question dd.text											{font-size:16px; line-height:22px; padding:62px 5% 15px 4%;}
 .quiz li.question dd.ex												{font-size:12px; line-height:16px; padding:22px 5% 11px 4%;}
@@ -541,7 +549,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result .result-text											{font-size:20px; line-height:25px; padding:18px 0 16px;}
 .quiz-result .result-text span									{font-size:20px;}
@@ -570,7 +578,7 @@
 
 @media all and (max-width:369px) {
 
-#quiz .theme															{width:89%; padding-left:11%;}
+/*#quiz .theme															{width:89%; padding-left:11%;}*/
 
 
 
@@ -594,7 +602,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz li.question dd.text											{width:91%; font-size:15px; line-height:20px; padding:60px 5% 13px 4%;}
 .quiz li.question dd.ex												{font-size:11px; line-height:15px; padding:19px 5% 10px 4%;}
@@ -627,7 +635,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result .result-text											{font-size:18px; line-height:23px; padding:18px 0 16px;}
 .quiz-result .result-text span									{font-size:18px;}

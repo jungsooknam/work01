@@ -4,84 +4,17 @@
 
 @media all and (max-width:999px) {
 
-#learning																{width:100%; height:620px;}
-#learning .theme
-{
-    top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;
-    background:url("../img/learn/learn_bullet_01.png") 0 5px no-repeat;
-}
-#learning .page-ending											{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
-#learning .page-ending-1										{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
+    #learning
+    {width:100%; height:620px;}
 
+    #learning .page-ending											{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
+    #learning .page-ending-1										{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
+    #learning .page-ending-2										{position:absolute; width:94%; bottom:11px; border-top:1px solid #B8BEC4; padding:8px 3% 0;}
 
-
-#learn-movie-area													{width:82%; padding:105px 9% 0;}
-
-
-
-#content-area															{width:90%; padding:110px 5% 0;}
-#content-area .subject											{width:97.5%; padding:0 0 4px 2.5%;}
-#content-area .text-area											{width:41.2%; padding-left:2.5%;}
-#content-area .movie-area										{width:52.3%; margin-right:0;}
-#content-area .movie-guide										{width:43.3%; font-size:20px; padding:2px 0 0 9%; margin:20px 0 0 0;}
-#content-area .movie-guide p									{font-size:17px;}
-
-
-
-#content-area .type-1												{width:100%;}
-#content-area .type-1 dt											{width:94%; padding:0 0 8px 6%;}
-#content-area .type-1 dd											{width:100%;}
-
-#content-area .type-1 dd .paragraph-1						{width:94%; padding:0 0 15px 6%;}
-#content-area .type-1 dd .paragraph-2						{width:88%; padding:15px 6% 5px 6%;}
-
-
-#page-narration-text												{width:99%; padding-left:1%; padding-bottom:20px;}
-#page-narration														{width:100%; height:35px;}
-#page-ending															{position:absolute; width:93%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 3.5% 0;}
-
-
-
-
-    #learning-quiz														{padding-top:100px;}
-
-    #learning-quiz .quiz-name										{top:112px; font-size:55px; line-height:60px;}
-    #learning-quiz .quiz-text											{top:145px; font-size:16px; line-height:22px;}
-
-
-    #learning-quiz .question dt										{font-size:23px; line-height:28px; padding:18px 0 16px;}
-
-
-    #learning-quiz .question a										{width:155px; height:155px;}
-    #learning-quiz .question a.o									{background-size:100%; margin-right:70px;}
-    #learning-quiz .question a.x										{background-size:100%; margin-right:30px;}
-    #learning-quiz .question a.o:hover							{background-size:100%;}
-    #learning-quiz .question a.x:hover							{background-size:100%;}
-
-    #learning-quiz .question span									{width:155px; height:155px;}
-    #learning-quiz .question span.o-1							{background-size:100%;}
-    #learning-quiz .question span.o-2							{background-size:100%;}
-    #learning-quiz .question span.o-3							{background-size:100%;}
-    #learning-quiz .question span.o-4							{background-size:100%;}
-    #learning-quiz .question span.x-1							{background-size:100%;}
-    #learning-quiz .question span.x-2							{background-size:100%;}
-    #learning-quiz .question span.x-3							{background-size:100%;}
-    #learning-quiz .question span.x-4							{background-size:100%;}
-
-
-
-
-    #learning-quiz .feed												{width:91.4%; height:105px; padding:30px 4.3% 0;}
-    #learning-quiz .feed dt											{top:-17px; font-size:18px; line-height:22px; padding:6px 25px 4px 4.3%;}
-    #learning-quiz .feed span										{width:65px; height:65px;}
-    #learning-quiz .feed span.o										{background-size:100%;}
-    #learning-quiz .feed span.x										{background-size:100%;}
-
-    #learning-quiz .feed .ox											{width:11%;}
-    #learning-quiz .feed .text-1										{width:89%; font-size:16px; line-height:22px; padding-top:10px;}
-
-
-
+    #content-area
+    {
+        width:86%;
+    }
 
 
 
@@ -98,72 +31,6 @@
 
 @media all and (max-width:849px) {
 
-/*#learning .theme														{top:50px; font-size:18px; background-position:-5px -1px; padding:2px 20px 1px 25px;}*/
-/*#learning .theme														{top:83px; font-size:17px; line-height:20px; background:url("../img/learn/learn_bullet_11.png") 0 3px no-repeat; padding-left:28px;}*/
-#learning .theme
-{top:58px; font-size:22px; line-height:25px;
-    background:url("../img/learn/learn_bullet_01.png") 0 5px no-repeat;
-    padding-left:35px;}
-#learning .page-ending											{width:92%; padding:8px 4% 0;}
-#learning .page-ending-1										{width:92%; padding:8px 4% 0;}
-
-
-
-#learn-movie-area													{width:92%; padding:100px 4% 0;}
-
-
-
-#content-area															{width:95%; padding:100px 2.5% 0;}
-#content-area .subject											{width:97.5%; font-size:20px; padding:0 0 4px 2.5%;}
-#content-area .text-area											{width:43.5%; padding-left:2.5%;}
-#content-area .movie-area										{width:51%;}
-#content-area .movie-guide										{width:41.5%; height:49px; font-size:18px; line-height:22px; padding:5px 0 0 9.5%; margin-top:15px;}
-#content-area .movie-guide p									{font-size:16px;}
-
-#content-area .type-1 dt											{width:93%; font-size:17px; line-height:24px; background-position:0 4px; padding:0 0 8px 7%;}
-#content-area .type-1 dd .paragraph-1						{width:93%; font-size:15px; line-height:20px; padding:0 0 15px 7%;}
-#content-area .type-1 dd .paragraph-1 p					{width:14px; left:1px; top:1px; line-height:13px; padding-top:2px;}
-#content-area .type-1 dd .paragraph-2						{width:87%; padding:15px 6% 5px 7%;}
-#content-area .type-1 dd .paragraph-2 span				{padding:0 0 7px 9px;}
-
-
-
-
-    /* ��¦���� ���� */
-
-    #learning-quiz														{padding-top:100px;}
-
-    #learning-quiz .quiz-name										{right:4%; top:115px; font-size:50px; line-height:55px;}
-    #learning-quiz .quiz-text											{left:4%; top:145px; font-size:16px; line-height:22px;}
-
-
-    #learning-quiz .question											{width:93%; height:265px; padding:80px 3.5% 0;}
-    #learning-quiz .question dt										{font-size:20px; line-height:25px; padding:20px 0 18px;}
-
-
-    #learning-quiz .question a										{width:145px; height:145px;}
-    #learning-quiz .question a.o									{margin-right:60px;}
-    #learning-quiz .question a.x										{margin-right:25px;}
-
-    #learning-quiz .question span									{width:145px; height:145px;}
-    #learning-quiz .question span.o-1							{margin-right:60px;}
-    #learning-quiz .question span.o-2							{margin-right:60px;}
-    #learning-quiz .question span.o-3							{margin-right:60px;}
-    #learning-quiz .question span.o-4							{margin-right:60px;}
-    #learning-quiz .question span.x-1							{margin-right:25px;}
-    #learning-quiz .question span.x-2							{margin-right:25px;}
-    #learning-quiz .question span.x-3							{margin-right:25px;}
-    #learning-quiz .question span.x-4							{margin-right:25px;}
-
-
-
-
-    #learning-quiz .feed												{width:92%; height:105px; padding:30px 4% 0;}
-    #learning-quiz .feed dt											{top:-17px; font-size:18px; line-height:22px; padding:6px 25px 4px 4%;}
-    #learning-quiz .feed span										{width:60px; height:60px;}
-
-    #learning-quiz .feed .ox											{width:12%;}
-    #learning-quiz .feed .text-1										{width:88%; font-size:16px; line-height:22px; padding-top:2px;}
 
 }
 
@@ -178,49 +45,9 @@
 
 @media all and (max-width:729px) {
 
-#learning .theme
-
-{top:45px; font-size:18px;
-    background:url("../img/learn/learn_bullet_01.png") 0 5px no-repeat;
-    padding:2px 15px 1px 21px;}
-
-#learning .page-ending											{width:94%; padding:8px 3% 0;}
-#learning .page-ending-1										{width:94%; padding:8px 3% 0;}
 
 
 
-#learn-movie-area													{width:94%; padding:90px 3% 0;}
-
-
-
-#content-area															{width:94%; padding:90px 3% 0;}
-#content-area .subject											{width:97%; font-size:18px; line-height:25px; background-position:0 5px; padding:0 0 4px 3%;}
-#content-area .text-area											{width:44%; padding-left:3%;}
-#content-area .movie-area										{width:50%;}
-#content-area .movie-guide										{width:40.5%; height:42px; font-size:15px; line-height:20px; background:url("../img/learn/movie_bullet_02.png") no-repeat; padding:3px 0 0 9.5%;}
-#content-area .movie-guide p									{font-size:13px;}
-
-#content-area .type-1 dt											{font-size:16px; line-height:21px; background:url("../img/learn/learn_bullet_12.png") 0 4px no-repeat; padding:0 0 5px 7%;}
-#content-area .type-1 dd .paragraph-1						{font-size:14px; line-height:19px;}
-#content-area .type-1 dd .paragraph-1 p					{left:0; font-size:11px; line-height:12px;}
-
-
-    #learning-quiz														{padding-top:90px;}
-
-    #learning-quiz .quiz-name										{right:4%; top:105px; font-size:45px; line-height:50px;}
-    #learning-quiz .quiz-text											{left:4%; top:130px; font-size:15px; line-height:20px;}
-
-    #learning-quiz .question											{width:94%; height:265px; padding:70px 3% 0;}
-    #learning-quiz .question dt										{font-size:18px; line-height:23px; padding:18px 0 16px;}
-
-
-
-    #learning-quiz .feed												{width:92%; height:125px; padding:30px 4% 0;}
-    #learning-quiz .feed dt											{top:-17px; font-size:18px; line-height:22px; padding:6px 25px 4px 4%;}
-    #learning-quiz .feed span										{width:60px; height:60px;}
-
-    #learning-quiz .feed .ox											{width:14%;}
-    #learning-quiz .feed .text-1										{width:86%; font-size:15px; line-height:20px; padding-top:2px;}
 
 }
 
@@ -232,73 +59,164 @@
 
 
 
-
+/*요기서 부터 모바일*/
 @media all and (max-width:599px) {
 
-#learning																{width:100%; height:100%;}
-#learning .theme														{width:93.5%; top:80px; font-size:17px; line-height:20px; color:#005482; border-bottom:1px solid #9FB4C8; background:url("../img/inc/bullet_title.png") 11px 2px no-repeat; background-color:none; padding:2px 0 7px 6.5%;}
-#learning .page-ending											{width:95%; padding:8px 2.5% 0;}
-#learning .page-ending-1										{width:95%; padding:8px 2.5% 0;}
+    #learning
+    {width:100%; height:100%;}
+    /**/
+    #learning .page-ending											{width:95%; padding:8px 2.5% 0;}
+    #learning .page-ending-1										{width:95%; padding:8px 2.5% 0;}
+    /**/
+    #content-area
+    {
+        width:95%;
+        margin-top:90px;
+        padding-bottom: 80px;
+    }
+    /**/
+    #content-area .subject
+    {
+        width:100%;
+        font-size:16px;
+        line-height:normal;
+        background:url("../img/learn/learn_bullet_12.png") 0 3px no-repeat;
+        margin-bottom: 10px;
+    }
+
+    #content-area .subject p
+    {
+        padding-left:15px;
+    }
+
+    #content-area .text-area
+    {
+        display: block;
+        width:100%;
+    }
+
+    #content-area .type-1
+    {
+        width:100%;
+        font:16px nsM;
+        color:#333;
+        background:url("../img/learn/learn_bullet_04.png") 0 5px no-repeat;
+        margin-left:0;
+        margin-bottom: 10px;
+    }
+
+    #content-area .type-1 p
+    {
+        padding:0 0 0 15px;
+    }
+
+
+    #content-area .type-2
+    {
+        width:90%;
+        margin: 0 auto;
+
+        font:14px nsM;
+        /*margin-left: 0;*/
+        transition:All 0.2s ease;
+        -webkit-transition:All 0.2s ease;
+        -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
+
+        margin-bottom: 10px;
+    }
+
+    #content-area .type-2 p
+    {
+        background-color: #999eaa;
+        color:#fff;
+        padding: 10px 20px;
+        color:#fff;
+    }
+
+    #content-area .type-3
+    {
+        width:90%;
+        font:16px nsM;
+        background:url("../img/learn/learn_bullet_05.png") 0px 7px no-repeat;
+        /*margin: 10px 8%;*/
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+
+    #content-area .type-3 p
+    {
+        padding:0 0 0 8px;
+    }
+
+
+    #content-area .type-4
+    {
+        width:100%;
+        font:16px nsM;
+        margin-bottom: 5px;
+        margin-left: 5%;
+        line-height:18px;
+        /*line-height:normal;*/
+    }
+
+    #content-area .type-4 p
+    {
+        float:left;
+        width:16px;
+        font:bold 12px Dotum;
+        color:#FFF;
+        line-height:18px;
+        text-align:center;
+        background:#527b99;
+        margin-right: 5px;
+        padding-top: -2px;
+    }
 
 
 
-#learn-movie-area													{width:95%; padding:125px 2.5% 75px;}
-#learn-movie-area div												{border:4px solid #0B3A5B;}
+
+
+    /*음성강의를 확인해보세요.*/
+    #page-narration-text
+    {
+        width:100%;
+        margin-left: 0;
+        font:14px nsM;
+        margin-bottom: 5px;
+    }
+
+    #learning ul li audio{
+        width: 100%;
+    }
 
 
 
-#content-area															{width:95%; padding:125px 2.5% 0;}
-#content-area .subject											{width:96%; font-size:16px; line-height:22px; background:url("../img/learn/learn_bullet_11.png") 0 4px no-repeat; padding:0 0 3px 4%;}
-#content-area .text-area											{width:100%; padding-left:0; padding-bottom:20px;}
-#content-area .movie-area										{width:100%;}
-#content-area .movie-guide										{width:93.5%; height:22px; font-size:14px; line-height:20px; background:url("../img/learn/movie_bullet_03.png") no-repeat; padding:2px 0 65px 6.5%;}
-#content-area .movie-guide p									{display:inline-block; font-size:14px; padding-left:6px;}
+    #content-area .movie-guide
+    {
+        width:100%;
+        font:16px nsM;
+        background:url("../img/learn/movie_bullet_11.png") 0 1px no-repeat;
 
-#content-area .type-1												{margin-top:5px;}
-#content-area .type-1 dt											{width:95%; padding:0 0 5px 5%;}
-#content-area .type-1 dd .paragraph-1						{width:95%; font-size:13px; line-height:17px; padding:0 0 10px 5%;}
-#content-area .type-1 dd .paragraph-1 p					{width:13px; padding-right:1px;}
-#content-area .type-1 dd .paragraph-2						{width:92%; padding:15px 4% 7px 4%;}
-#content-area .type-1 dd .paragraph-2 span				{padding:0 0 5px 9px;}
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
 
+    #content-area .movie-guide p
+    {
+        margin-left: 20px;
+    }
 
-
-    #learning-quiz														{padding:110px 0 40px;}
-
-    #learning-quiz .quiz-name										{width:94%; right:3%; top:120px; font-size:40px; line-height:45px; text-align:left;}
-    #learning-quiz .quiz-text											{width:97%; left:0; top:170px; font-size:14px; line-height:19px; border-top:1px solid #4085B9; padding:9px 0 0 3%;}
-
-
-    #learning-quiz .question											{width:95%; height:245px; padding:100px 2.5% 0;}
-    #learning-quiz .question dt										{font-size:17px; line-height:22px; padding:13px 0 11px;}
-    #learning-quiz .question dt br									{display:inline-block;}
+    #content-area .movie-guide p span
+    {
+        font-size:15px;
+        color:#3f4d62;
+    }
 
 
-    #learning-quiz .question dd										{padding-top:0;}
-    #learning-quiz .question a										{width:130px; height:130px;}
-    #learning-quiz .question a.o									{margin-right:50px;}
-    #learning-quiz .question a.x										{margin-right:30px;}
-
-    #learning-quiz .question span									{width:130px; height:130px;}
-    #learning-quiz .question span.o-1							{margin-right:50px;}
-    #learning-quiz .question span.o-2							{margin-right:50px;}
-    #learning-quiz .question span.o-3							{margin-right:50px;}
-    #learning-quiz .question span.o-4							{margin-right:50px;}
-    #learning-quiz .question span.x-1							{margin-right:30px;}
-    #learning-quiz .question span.x-2							{margin-right:30px;}
-    #learning-quiz .question span.x-3							{margin-right:30px;}
-    #learning-quiz .question span.x-4							{margin-right:30px;}
-
-
-
-
-    #learning-quiz .feed												{width:94%; height:95px; padding:30px 3% 0;}
-    #learning-quiz .feed dt											{top:-17px; font-size:17px; line-height:22px; padding:6px 22px 4px 3%;}
-    #learning-quiz .feed span										{width:55px; height:55px;}
-
-    #learning-quiz .feed .ox											{width:17%;}
-    #learning-quiz .feed .text-1										{width:83%; font-size:14px; line-height:19px; padding-top:2px;}
-
+    #content-area .movie-area
+    {
+        width:100%;
+    }
 }
 
 
@@ -312,7 +230,6 @@
 
 @media all and (max-width:519px) {
 
-#learning .theme														{width:92%; padding-left:8%;}
 
 }
 
@@ -327,59 +244,8 @@
 
 @media all and (max-width:449px) {
 
-#learning .theme														{width:90.5%; padding-left:9.5%;}
-#learning .page-ending											{width:94%; padding:8px 3% 0;}
-#learning .page-ending-1										{width:94%; padding:8px 3% 0;}
 
 
-
-#learn-movie-area													{width:94%; padding:125px 3% 75px;}
-
-
-
-#content-area															{width:94%; padding:125px 3% 0;}
-#content-area .subject											{width:95%; font-size:15px; line-height:20px; background-position:0 3px; padding:0 0 3px 5%;}
-
-#content-area .movie-guide										{width:85%; height:40px; font-size:14px; line-height:18px; background:url("../img/learn/movie_bullet_02.png") no-repeat; padding:5px 0 65px 15%; margin-top:10px;}
-#content-area .movie-guide p									{display:block; font-size:12px; padding-left:0;}
-
-#content-area .type-1 dt											{width:94%; font-size:15px; line-height:20px; background-position:0 3px; padding:0 0 5px 6%;}
-#content-area .type-1 dd .paragraph-1						{width:94%; padding:0 0 7px 6%;}
-#content-area .type-1 dd .paragraph-2						{font-size:11px; line-height:15px; margin-top:5px;}
-#content-area .type-1 dd .paragraph-2 span				{background-position:0 4px;}
-
-
-    #learning-quiz														{padding:110px 0 40px;}
-
-    #learning-quiz .quiz-name										{width:94%; right:3%; top:120px; font-size:32px; line-height:37px;}
-    #learning-quiz .quiz-text											{width:97%; top:163px; font-size:14px; line-height:19px; padding:9px 0 0 3%;}
-
-
-    #learning-quiz .question											{width:95%; height:255px; padding:90px 2.5% 0;}
-    #learning-quiz .question dt										{font-size:16px; line-height:21px; padding:10px 0;}
-    #learning-quiz .question dt br									{display:inline-block;}
-
-
-    #learning-quiz .question dd										{padding-top:10px;}
-    #learning-quiz .question a										{width:120px; height:120px;}
-    #learning-quiz .question a.o									{margin-right:30px;}
-    #learning-quiz .question a.x										{margin-right:30px;}
-
-    #learning-quiz .question span									{width:120px; height:120px;}
-    #learning-quiz .question span.o-1							{margin-right:30px;}
-    #learning-quiz .question span.o-2							{margin-right:30px;}
-    #learning-quiz .question span.o-3							{margin-right:30px;}
-    #learning-quiz .question span.o-4							{margin-right:30px;}
-
-
-
-
-    #learning-quiz .feed												{height:95px;}
-    #learning-quiz .feed dt											{top:-17px; font-size:16px; line-height:21px; padding:6px 22px 4px 3%;}
-    #learning-quiz .feed span										{width:50px; height:50px;}
-
-    #learning-quiz .feed .ox											{width:19%;}
-    #learning-quiz .feed .text-1										{width:81%; font-size:13px; line-height:18px; padding-top:2px;}
 
 }
 
@@ -394,62 +260,7 @@
 
 @media all and (max-width:369px) {
 
-#learning .theme														{width:89%; padding-left:11%;}
-#learning .page-ending											{width:93%; padding:8px 3.5% 0;}
-#learning .page-ending-1										{width:93%; padding:8px 3.5% 0;}
 
-
-
-#learn-movie-area													{width:93%; padding:125px 3.5% 75px;}
-#learn-movie-area div												{border:3px solid #0B3A5B;}
-
-
-
-#content-area															{width:93%; padding:125px 3.5% 0;}
-#content-area .subject											{width:94.5%; padding:0 0 3px 5.5%;}
-
-#content-area .movie-guide										{width:85%; height:33px; font-size:13px; line-height:16px; background:url("../img/learn/movie_bullet_04.png") no-repeat; padding:2px 0 65px 15%; margin-top:10px;}
-#content-area .movie-guide p									{font-size:11px;}
-
-#content-area .type-1 dt											{width:93.5%; padding-left:6.5%;}
-#content-area .type-1 dd .paragraph-1						{width:93.5%; padding-left:6.5%;}
-
-
-
-    #learning-quiz														{padding:110px 0 40px;}
-
-    #learning-quiz .quiz-name										{width:94%; right:3%; top:120px; font-size:25px; line-height:37px;}
-    #learning-quiz .quiz-text											{width:97%; top:163px; font-size:13px; line-height:19px; padding:9px 0 0 3%;}
-
-
-    #learning-quiz .question											{width:95%; height:255px; padding:90px 2.5% 0;}
-    #learning-quiz .question dt										{font-size:15px; line-height:21px; padding:10px 0;}
-
-
-    #learning-quiz .question dd										{padding-top:10px;}
-    #learning-quiz .question a										{width:110px; height:110px;}
-    #learning-quiz .question a.o									{margin-right:15px;}
-    #learning-quiz .question a.x										{margin-right:15px;}
-
-    #learning-quiz .question span									{width:110px; height:110px;}
-    #learning-quiz .question span.o-1							{margin-right:15px;}
-    #learning-quiz .question span.o-2							{margin-right:15px;}
-    #learning-quiz .question span.o-3							{margin-right:15px;}
-    #learning-quiz .question span.o-4							{margin-right:15px;}
-    #learning-quiz .question span.x-1							{margin-right:15px;}
-    #learning-quiz .question span.x-2							{margin-right:15px;}
-    #learning-quiz .question span.x-3							{margin-right:15px;}
-    #learning-quiz .question span.x-4							{margin-right:15px;}
-
-
-
-
-    #learning-quiz .feed												{width:94%; height:100px; padding:25px 3% 0;}
-    #learning-quiz .feed dt											{top:-17px; font-size:15px; line-height:21px; padding:6px 22px 4px 3%;}
-    #learning-quiz .feed span										{width:45px; height:45px;}
-
-    #learning-quiz .feed .ox											{width:19%;}
-    #learning-quiz .feed .text-1										{width:81%; font-size:12px; line-height:17px; padding-top:2px;}
 
 }
 

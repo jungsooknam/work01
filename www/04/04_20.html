@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+	<head>
+		<title>배출가스장치정비·검사</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			var currentPage = 17;											// 현 페이지 번호
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+
+		<script type="text/javascript">
+			var _totalPageSummary =  02;
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initSummaryPage();											// 핵심정리 페이징
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+			<section id="summary">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+				<div id="summary-area" >
+
+					<div class="summary-guide"><span>◈ 이번 회차에 학습한 내용을 정리해보겠습니다.</span></div>
+
+
+					<dl id="summary-text1" class="type-1">
+
+
+
+
+
+
+						<dt> <span>테이블 생성 </span></dt>
+
+						<dd class="leftbox">
+							<p class="stype-1"><span>T-SQL을 사용하는 방법 T-SQL을 사용하는 방법T-S</span></p>
+							<p class="stype-2"><span>DB 이름: test01 </span></p>
+							<p class="stype-2"><span>사용자 DB를 생성하려면, master DB를 사용해야 함</span></p>
+							<p class="stype-3"><span>USE master<br>
+								CREATE DATABASE test01</span>
+							</p>
+						</dd>
+
+						<dd>
+							<p class="stype-1"><span>drop 테이블과 truncate 테이블</span></p>
+							<p class="stype-2"><span>DDB 이름: test02</span></p>
+							<p class="stype-2"><span>D논리적 DB → 물리적 파일</span></p>
+							<p class="stype-3"><span>.mdf (for data), . ldf (for log), </br>
+								.ndf( for large DB –optional</span>
+							</p>
+						</dd>
+
+					</dl>
+
+
+					<dl id="summary-text2" class="type-1">
+
+
+						<dt><span>테이블 변경</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>add, alter, drop 컬럼</span></p>
+							<p class="stype-2"><span>ADD column : 속성 추가</span></p>
+							<p class="stype-5"><span>datetime형으로 pdate 속성을
+								memberTEST 테이블에 추가함</span></p>
+							<p class="stype-2"><span>alter column : 속성 추가</span></p>
+							<p class="stype-5"><span>name 속성의 타입을 varchar(30)으로
+								변경함</span></p>
+							<p class="stype-2"><span>DROP column : 속성 제거</span></p>
+						</dd>
+
+
+						<dd>
+							<p class="stype-1"><span>drop 테이블과 truncate 테이블</span></p>
+
+							<p class="stype-4"><span class="s_num">1
+							</span><span>테이블을 지우기</span></p>
+
+							<p class="stype-3"><span >DROP TABLE table_name</span></p>
+
+
+							<p class="stype-4"><span class="s_num">2</span>
+								<span>테이블의 모든 내용을 지우기, 단 테이블은 남기기</span>
+							</p>
+
+							<p class="stype-3"><span>TRUNCATE TABLE table_name</span></p>
+						</dd>
+
+					</dl>
+
+
+					<div class="summary-page">
+						<ul>
+							<li class="left"><a href="#!" id="page_left">이전 내용보기</a></li>
+							<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+							<li class="right"><a href="#!" id="page_right">다음 내용보기</a></li>
+						</ul>
+					</div>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
+
+
+
+				<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<script src="js/webfont.js"></script>
 	<script type="text/javascript">
-		var currentPage = 12;											// 현 페이지 번호
+
 		WebFont.load({
 			custom: {
 				families: ['nbgM', 'play']
@@ -46,9 +46,6 @@
 	</header><!--  과정명, 차시명 영역  -->
 
 
-
-
-
 	<section id="learning">
 		<nav>
 			<script type="text/javascript" src="js/menu.js"></script>
@@ -61,32 +58,44 @@
 
 		<div id="learning-quiz">
 			<div class="quiz-name">깜짝퀴즈</div>
+
 			<div class="quiz-text">다음 설명이 맞으면 O, 틀리면 X를 선택하세요.</div>
 
-
 			<dl class="question">
-				<dt>Q. 튜플 추가에서 INTO는 생략 가능 하다.</dt>
+				<dt><p>튜플 추가에서 INTO는 생략 가능 하다.</p></dt>
+
+
 				<dd id="question_ox">
 					<a href="javascript:checkAnswer('o');" class="o">O</a>
 					<a href="javascript:checkAnswer('x');" class="x">X</a>
 				</dd>
-				<dd id="question_result" style="display:none;">
+
+				<dd id="question_result">
 					<span id="result-o" class="o-1">O</span>
 					<span id="result-x" class="x-1">X</span>
 				</dd>
 			</dl>
 
+
+
+
+
+
 			<dl id="learning_quiz_feed" class="feed">
 				<dt>정답 및 해설</dt>
+
 				<dd class="ox">
 					<span class="o" id="result_ox_o"></span>
 					<span class="x" id="result_ox_x"></span>
 				</dd>
+
+
 				<dd class="text-1">튜플 추가 방법은<br>
 					INSERT INTO 테이블명(속성명, 속성명, ... )<br>
 					VALUES (속성값, 속성값,…)<br>
 					여기서 INTO는 생략 가능 하다. </dd>
 			</dl>
+
 
 
 
@@ -101,7 +110,7 @@
 				</script>
 			</audio><!--  정오답 음성 영역  -->
 
-			<div class="page-ending-2">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+			<!--<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>-->
 		</div><!--  E : learning-quiz -->
 	</section><!--  본문 영역 -->
 

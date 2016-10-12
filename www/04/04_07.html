@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<script src="js/webfont.js"></script>
 	<script type="text/javascript">
-		var currentPage = 06;											// 현 페이지 번호
+		var currentPage = 07;											// 현 페이지 번호
 		WebFont.load({
 			custom: {
 				families: ['nbgM', 'play']
@@ -40,12 +40,7 @@
 	<header class="learn">
 		<h1 id="course" tabindex="1"></h1>
 		<h2 id="chap-1" tabindex="2"></h2>
-	</header><!--  과정명, 차시명 영역  -->
-	<!--  INDEX 메뉴 영역
-                  변경하지 마세요.
-                  모든 페이지 동일 합니다.
-            -->
-
+	</header>
 
 
 	<section id="learning">
@@ -61,52 +56,41 @@
 		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
 
 
-
-
-
-
-
-		<!--<p class="theme-3">-->
-		<!--( 속성명 속성타입 [제약조건], <br>-->
-		<!--속성명 속성타입,<br>-->
-		<!--…<br>-->
-		<!--)<br>-->
-		<!--</p>-->
-
-
 		<ul id="content-area">
-			<li class="subject">테이블 생성과 투풀 추가</li><!-- 학습 - 주제 영역 -->
+			<li class="subject">
+				<p>테이블 생성과 투풀 추가</p>
+			</li><!-- 학습 - 주제 영역 -->
 
 			<li class="text-area">
 
 				<dl class="type-1">
-					<dt>튜플 추가</dt>
+					<p>튜플 추가</p>
 				</dl>
 
 				<dl class="type-2">
-					<dd>
-						<div class="paragraph-1">
+					<p>
 							INSERT INTO 테이블명(속성명, 속성명, ... )<br>
 							VALUES (속성값, 속성값,…)<br>
-						</div>
-					</dd>
+					</p>
+				</dl>
+
+				<dl class="type-3">
+					<p>INTO 는 생략 가능</p>
 
 				</dl>
 
 				<dl class="type-3">
-					<dd>INTO 는 생략 가능</dd>
-					<dd>id 속성은 자동 증가 타입임으로 값을 지정할
+					<p>id 속성은 자동 증가 타입임으로 값을 지정할
 						수 없음
-					</dd>
+					</p>
 				</dl>
-
 
 
 				<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
 
 				<audio id="page-narration" controls>
 					<script type="text/javascript">
-						document.write("<source src='"+mp3Link+"02_05.mp3' type='audio/mpeg' />");
+						document.write("<source src='"+mp3Link+"04_07.mp3' type='audio/mpeg' />");
 					</script>
 					해당 브라우저는 음성을 지원하지 않습니다.
 				</audio>
@@ -115,8 +99,9 @@
 
 
 			<li class="movie-guide">
-				실습 영상을 통해 학습을 진행하세요.
-				<p>[ 동영상 재생 > 전체 화면보기 ]</p>
+				<p>
+				실습 영상을 통해 학습을 진행하세요.<br>
+				<span>[ 동영상 재생 > 전체 화면보기 ]</span></p>
 			</li>
 
 
@@ -125,7 +110,7 @@
 				<div>
 					<video id="page-movie" controls preload="auto" poster="img/learn/movie_img_01.png">
 						<script type="text/javascript">
-							document.write("<source src='"+mp4Link+"02_05.mp4' type='video/mp4' />");
+							document.write("<source src='"+mp4Link+"04_07.mp4' type='video/mp4' />");
 						</script>
 						해당 브라우저는 영상을 지원하지 않습니다.
 					</video>

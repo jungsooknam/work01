@@ -5,19 +5,31 @@
 @import url("layout_01.css");					/* 레이아웃 요소 */
 @import url("layout_02.css");					/* 레이아웃 요소 - 반응형 */
 
-
 @import url("intro_01.css");					/* 인트로 요소 */
+@import url("intro_02.css");					/* 인트로 요소 */
 
 @import url("objective_01.css");					/* 학습목표 요소 */
-/*@import url("objective_02.css");					!* 학습목표 반응형 *!*/
+@import url("objective_02.css");					/* 학습목표 반응형 */
+
+@import url("fullvod_01.css");					/* 학습목표 요소 */
+@import url("fullvod_02.css");					/* 학습목표 반응형 */
+
 
 @import url("learning_01.css");					/* 학습페이지 요소 */
 @import url("learning_02.css");					/* 학습페이지 요소 - 반응형 */
 
+@import url("oxquiz_01.css");					/* 학습페이지 요소 */
+@import url("oxquiz_02.css");					/* 학습페이지 요소 - 반응형 */
+
+
+@import url("inputquiz_01.css");					/* 학습페이지 요소 */
+
+
 @import url("quiz_01.css");					/* 퀴즈 요소 */
 @import url("quiz_02.css");					/* 퀴즈 요소 - 반응형 */
 
-
+@import url("summary_01.css");				/* 핵심요약 요소 */
+@import url("summary_02.css");				/* 핵심요약 요소 - 반응형 */
 
 
 /* 기본설정 */
@@ -33,7 +45,14 @@ body
 
 div, table												{
     padding:0; margin:0;
-    /*border:1px solid #ccc;*/
+    /*border:1px solid #f0c;*/
+}
+li{
+    /*border:1px solid #f00;*/
+}
+
+p {
+    /*border:1px solid #00F;*/
 }
 input, select											{padding:0}
 img, fieldset											{border:0;}
@@ -48,9 +67,17 @@ hr															{display:none;}
     visibility:hidden;
     width:0; height:0; left:0; top:0;
     font-size:0; line-height:0;
-    padding:0; margin:0;}
+    padding:0; margin:0;
+}
 
 
+/*div, table												{*/
+    /*border:1px solid #f0c;*/
+/*}*/
+/*li{*/
+    /*border:1px solid #f00;*/
+/*}*/
 
-
-
+/*p, span, dl, dt{*/
+    /*border:1px solid #00F;*/
+/*}*/

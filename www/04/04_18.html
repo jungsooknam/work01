@@ -31,6 +31,10 @@
 			menuInit();														// 우측 메뉴
 		});
 	</script>
+
+
+
+
 </head>
 
 
@@ -59,38 +63,40 @@
 		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
 
 
-		<div id="learning-quiz">
-			<div class="quiz-name">깜짝퀴즈</div>
-			<div class="quiz-text">다음 설명이 맞으면 O, 틀리면 X를 선택하세요.</div>
+		<div id="learning-quiz-text">
+
+			<div class="quiz-text">◈ 지금까지 학습한 내용을 적용해봅시다.</div>
 
 
 			<dl class="question">
-				<dt>
+				<dt class="question">
 					<p>
-					Q. 튜플 추가에서 INTO는 생략 가능
-					하다.
+						다음은 DEPARTMENT 테이블에 age (int) 속성을 추가하는 질의문 입니다.
+						단어를 입력하여 질의문을 완성해보세요. 입력 완료 버튼을 선택한 후 음성강의를 확인해 보세요.
 				<p>
 				</dt>
-				<dd id="question_ox">
-					<a href="javascript:checkAnswer('o');" class="o">O</a>
-					<a href="javascript:checkAnswer('x');" class="x">X</a>
+				<dd>
+					<p class = "input_question">
+						<input type="text" id="input_1" class="quiz-input" value="">
+						 TABLE DEPARTMENT<br>
+						<input type="text" id="input_2" class="quiz-input" value="">
+						 age int
+					</p>
+
+					<p id="inout_btn" class = "btn">
+						<a href="javascript:checkAnswer();">입력완료</a>
+					</p>
 				</dd>
-				<dd id="question_result" style="display:none;">
-					<span id="result-o" class="o-1">O</span>
-					<span id="result-x" class="x-1">X</span>
-				</dd>
+
+
 			</dl>
 
 			<dl id="learning_quiz_feed" class="feed">
 				<dt>정답 및 해설</dt>
-				<dd class="ox">
-					<span class="o" id="result_ox_o"></span>
-					<span class="x" id="result_ox_x"></span>
-				</dd>
-				<dd class="text-1">튜플 추가 방법은<br>
-					INSERT INTO 테이블명(속성명, 속성명, ... )<br>
-					VALUES (속성값, 속성값,…)<br>
-					여기서 INTO는 생략 가능 하다. </dd>
+
+				<dd class="text-1">
+					<span>ALTER</span> TABLE DEPARTMENT<br>
+					<span>ADD</span> age int<br>
 			</dl>
 
 
@@ -106,66 +112,36 @@
 				</script>
 			</audio><!--  정오답 음성 영역  -->
 
-			<div class="page-ending-2">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
 		</div><!--  E : learning-quiz -->
 	</section><!--  본문 영역 -->
 
 
 
 	<script type="text/javascript">
-		function checkAnswer(result){
 
+		/**
+		 * 요기다 정답을 넣어주세요....
+		 * input 순서대로.
+		 * @type {string}
+		 */
+		var answer = ["ALTER", "ADD"];
 
-			/**
-			 * 요기다 정답을 넣어주세요....
-			 * o 일 경우 "o"
-			 * x 일 경우 "x"
-			 * @type {string}
-			 */
-			var answer = "o";
-
-
-			$("#learning_quiz_feed").show();
-			$("#question_result").show();
-			$("#question_ox").hide();
-
-			if(answer == "x") {
-				$("#result_ox_o").hide();
-
-				if(answer == result){
-
-					$("#result-x").removeClass("x-1");
-					$("#result-x").addClass("x-4");
-					// 정답 오디오
+		function checkAnswer(){
+			for(var i=0;  i<answer.length ; i++) {
+				var c = $("#input_" + (i + 1)).val();
+				if(c == answer[i]){
+					$("#input_" + (i + 1)).css("color","#2e5b9c");
 					playAudio('audio1');
 				}else{
-					$("#result-o").removeClass("o-1");
-					$("#result-o").addClass("o-2");
-					$("#result-x").removeClass("x-1");
-					$("#result-x").addClass("x-3");
-					// 오답 오디오
+					$("#input_" + (i + 1)).css("color","#f00");
+					$("#input_" + (i + 1)).val(answer[i]);
 					playAudio('audio2');
 				}
-			}else{
-				$("#result_ox_x").hide();
-				if(answer == result){
-
-					$("#result-o").removeClass("o-1");
-					$("#result-o").addClass("o-4");
-					// 정답 오디오
-					playAudio('audio1');
-				}else{
-					$("#result-x").removeClass("x-1");
-					$("#result-x").addClass("x-2");
-					$("#result-o").removeClass("o-1");
-					$("#result-o").addClass("o-3");
-					// 오답 오디오
-					playAudio('audio2');
-				}
-
-
+				$("#learning_quiz_feed").show();
 			}
 		}
+
 	</script>
 
 
