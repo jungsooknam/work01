@@ -56,7 +56,9 @@
 .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_14.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-4-choice					{background:url("../img/quiz/num_14.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span								{width:36px; height:36px; left:-7px; top:-7px;}
-.quiz li.question dd.type-1 a span.check					{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_10.png") no-repeat;}
 .quiz li.question dd.type-1 a span.correct-check		{background-size:100%}
 
 
@@ -75,7 +77,9 @@
 .quiz li.question dd.type-2 a.n-4								{background:url("../img/quiz/num_14.png") no-repeat;}
 .quiz li.question dd.type-2 a.n-4-choice					{background:url("../img/quiz/num_14.png") left bottom no-repeat;}
 .quiz li.question dd.type-2 a span								{width:36px; height:36px; left:-7px; top:-7px;}
-.quiz li.question dd.type-2 a span.check					{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_10.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_10.png") no-repeat;}
 .quiz li.question dd.type-2 a span.correct-check		{background-size:100%}
 
 
@@ -384,7 +388,9 @@
 .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_24.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-4-choice					{background:url("../img/quiz/num_24.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span								{width:32px; height:32px;}
-.quiz li.question dd.type-1 a span.check					{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
 
 
 .quiz li.question dd.type-2										{width:91%; font-size:15px; line-height:18px; padding:15px 5% 0 4%;}
@@ -399,7 +405,9 @@
 .quiz li.question dd.type-2 a.n-4								{width:60%; background:url("../img/quiz/num_24.png") no-repeat;}
 .quiz li.question dd.type-2 a.n-4-choice					{width:60%; background:url("../img/quiz/num_24.png") left bottom no-repeat;}
 .quiz li.question dd.type-2 a span								{width:32px; height:32px;}
-.quiz li.question dd.type-2 a span.check					{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
+.quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
 
 
 .quiz li.check-1														{top:106px; z-index:100;}

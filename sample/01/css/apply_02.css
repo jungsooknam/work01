@@ -18,6 +18,7 @@
 #apply-area .apply-text li.type-2								{width:100%; padding:35px 0 10px;}
 
 #apply-area .apply-sound										{padding-top:10px;}
+#narration-area														{width:96%;}
 
 
 
@@ -101,6 +102,9 @@
 #apply-area .apply-text li											{font-size:15px; line-height:20px;}
 #apply-area .apply-text li.type-2								{font-size:14px; padding-top:35px;}
 
+#narration-area														{width:96%;}
+#apply-area .narration-bg										{height:750px;}
+
 
 
 #drag-drop																{height:510px;}
@@ -144,6 +148,14 @@
 #apply-area .apply-text li.type-1								{width:80%; background-position:18.5% 5px; padding-left:20%;}
 #apply-area .apply-text li.type-2								{font-size:13px; padding:30px 0 10px;}
 #apply-area .apply-text li.type-2 span						{display:block; font-size:16px;}
+
+#apply-area .apply-sound audio								{width:79%;}
+#apply-area .apply-sound a										{width:15.5%; height:31px; font-size:16px; background:url("../img/apply/btn_narration_02.png") right top no-repeat; padding:11px 5% 0 0;}
+
+#narration-area														{width:96%;}
+#narration-area dt													{width:125px; height:28px; font-size:17px; line-height:22px; background:url("../img/apply/narration_tag_02.png") no-repeat; padding:7px 0 0 40px;}
+#narration-area dd													{font-size:15px; line-height:21px; padding:40px 30px 20px 35px;}
+#apply-area .narration-bg										{height:705px;}
 
 
 
@@ -221,6 +233,13 @@
 #apply-area .apply-text li.type-2								{font-size:13px; padding:20px 0 10px;}
 #apply-area .apply-text li.type-2 span						{display:block; font-size:16px;}
 
+#apply-area .apply-sound audio								{width:73.5%;}
+#apply-area .apply-sound a										{width:19%; padding:11px 7% 0 0;}
+
+#narration-area														{width:95%;}
+#narration-area dd													{font-size:14px; line-height:18px; padding:45px 25px 20px;}
+#apply-area .narration-bg										{height:940px;}
+
 
 
 #drag-drop																{height:665px;}
@@ -292,6 +311,16 @@
 #apply-area .apply-text li.type-2								{font-size:12px; padding:18px 0 8px;}
 #apply-area .apply-text li.type-2 span						{font-size:14px;}
 
+#apply-area .apply-sound audio								{width:72.5%;}
+#apply-area .apply-sound a										{width:21%; font-size:15px; background:url("../img/apply/btn_narration_03.png") right top no-repeat; padding:11px 6% 0 0;}
+
+#narration-area														{width:95%;}
+#narration-area dt													{width:112px; height:25px; font-size:14px; line-height:20px; background:url("../img/apply/narration_tag_03.png") no-repeat; padding:5px 0 0 28px;}
+#narration-area dd													{font-size:13px; line-height:17px; padding:37px 20px 15px;}
+#narration-area .btn												{right:12px; top:12px; width:19px; height:19px;}
+#narration-area .btn a												{width:19px; height:19px; background:url("../img/apply/narration_btn_02.png") no-repeat;}
+#apply-area .narration-bg										{height:955px;}
+
 
 
 #drag-drop																{height:695px;}
@@ -334,6 +363,10 @@
 #apply-area .apply-text li.type-1								{width:96%; background-position:1% 5px; padding-left:4%;}
 #apply-area .apply-text li.type-2								{font-size:11px; line-height:16px; padding:18px 0 8px;}
 #apply-area .apply-text li.type-2 span						{font-size:12px;}
+
+#apply-area .apply-sound audio								{width:79.5%;}
+#apply-area .apply-sound a										{width:20%; height:28px; font-size:13px; background:url("../img/apply/btn_narration_04.png") top repeat-x; padding:12px 0 0 0;}
+#narration-area dd													{font-size:12px; line-height:16px; padding:37px 20px 15px;}
 
 
 
@@ -389,6 +422,7 @@
 #apply_alert img														{margin-top:260px;}
 
 }
+
 
 
 

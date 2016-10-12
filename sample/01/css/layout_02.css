@@ -6,12 +6,14 @@
 
 #wrapper														{width:100%;}
 
-.body-learning												{background:url("../img/inc/body_learn_02.png") right top no-repeat #C5D0E2;}
+.body-learning
+{background:url("../img/inc/body_learn_02.png") right top no-repeat #C5D0E2;}
 
 
 
 header															{width:100%;}
-header.learn													{height:85px; background:url("../img/inc/body_learn_03.png") no-repeat;}
+header.learn
+{height:85px; background:url("../img/inc/body_learn_03.png") no-repeat;}
 footer 															{width:100%;}
 
 }
@@ -91,10 +93,10 @@ footer 															{height:35px; background:url("../img/inc/footer_bg_02.png"
 #menu_activated												{width:195px; height:100%; padding-bottom:0;}
 #menu_activated dl											{width:195px; padding:8px 0 10px;}
 #menu_activated dt											{font-size:18px; line-height:33px; padding:0 0 0 20px;}
-#menu_activated dd											{font-size:14px; line-height:15px; padding:0 0 0 20px;}
-#menu_activated dd a										{background:url("../img/inc/menu_bullet_11.png") 2px 5px no-repeat; padding-left:10px;}
-#menu_activated dd a:hover								{background:url("../img/inc/menu_bullet_12.png") 2px 5px no-repeat;}
-#menu_activated dd a.on									{background:url("../img/inc/menu_bullet_12.png") 2px 5px no-repeat;}
+#menu_activated dd											{font-size:14px; line-height:15px; padding:0 20px;}
+#menu_activated dd a										{background:url("../img/inc/menu_bullet_11.png") 2px 4px no-repeat; padding-left:10px; margin-bottom:3px;}
+#menu_activated dd a:hover								{background:url("../img/inc/menu_bullet_12.png") 2px 4px no-repeat;}
+#menu_activated dd a.on									{background:url("../img/inc/menu_bullet_12.png") 2px 4px no-repeat;}
 
 
 

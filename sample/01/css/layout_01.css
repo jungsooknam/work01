@@ -1,29 +1,35 @@
 @charset "utf-8";
 
-
-
-
 #wrapper														{position:relative; width:1000px; margin:0 auto;}
 #wrapper:after												{content:""; display:block; clear:both;}
 
 .body-learning												{background:url("../img/inc/body_learn_01.png") no-repeat #E6EEF5;}
-
-
-
-
 
 header															{position:absolute; width:1000px; height:38px; left:0; top:0; padding-top:10px; z-index:10;}
 header h1														{float:right; font:21px nsM; color:#FFF; line-height:32px; text-align:right; background:#081353; padding:1px 5% 0 1.5%; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 header h2														{float:left; font:27px nsM; color:#F0FF00; line-height:36px; text-shadow:1px 1px 1px #2D2E41; padding-left:1.5%; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 footer 															{position:relative; float:left; width:100%; height:40px; background:url("../img/inc/footer_bg_01.png") no-repeat #2E2E2E; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 
+#menu_open
+{
+    position:absolute;
+    width:52px;
+    height:29px;
+    right:0;
+    top:12px;
+    text-indent:-9999px;
+    background:url("../img/inc/menu_open_01.png") no-repeat;
+    cursor:pointer;
+    z-index:2003;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease;
+    -o-transition:All 0.2s ease;
+}
 
 
-
-
-#menu_open													{position:absolute; width:52px; height:29px; right:0; top:12px; text-indent:-9999px; background:url("../img/inc/menu_open_01.png") no-repeat; cursor:pointer; z-index:2003; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #menu_close													{display:block; width:205px; height:45px; text-indent:-9999px; background:url("../img/inc/menu_close_01.png") no-repeat; cursor:pointer;}
-#menu															{position:fixed; overflow-x:hidden; overflow-y:auto; width:205px; height:100%; right:-215px; top:0; background:url("../img/inc/menu_bg.png") repeat-y; opacity:0; padding-left:10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; z-index:2002;}
+#menu															{position:fixed; overflow-x:hidden; overflow-y:auto; width:205px; height:100%; right:-215px; top:0; background:url("../img/inc/menu_bg.png") left repeat-y; opacity:0; padding-left:10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; z-index:2002;}
 #menu.open													{display:block; right:0; opacity:1;}
 
 #menu_activated												{width:205px; height:90%; padding-bottom:10%;}

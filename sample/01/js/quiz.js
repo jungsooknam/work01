@@ -6,14 +6,20 @@ var vShowSolution = 0;
 function showSolution(){
 	vShowSolution = 1;
 	$(".q-num").show();
+	$("#result-before-1").hide();
+	$("#result-after-1").show();
+	$("#result-before-2").hide();
+	$("#result-after-2").show();
+	$("#result-before-3").hide();
+	$("#result-after-3").show();
 	goQuiz('1');
 }
 
 function pageInit(){
 	// 1번 문제 정리
 	if(vQuizResult[0] == 0){
-		$(".qq").removeClass("check");
-		$(".qq").addClass("none");
+		$(".qq1").removeClass("check-1");
+		$(".qq1").addClass("none");
 		$("#q1_n2").removeClass("n-2-choice");
 		$("#q1_n2").addClass("n-2");
 		$("#btn_1").show();
@@ -27,8 +33,8 @@ function pageInit(){
 
 	// 2번 문제 정리
 	if(vQuizResult[1] == 0){
-		$(".qq").removeClass("check");
-		$(".qq").addClass("none");
+		$(".qq2").removeClass("check-2");
+		$(".qq2").addClass("none");
 		$("#q2_n4").removeClass("n-4-choice");
 		$("#q2_n4").addClass("n-4");
 		$("#btn_2").show();
@@ -42,8 +48,8 @@ function pageInit(){
 
 	// 3번 문제 정리
 	if(vQuizResult[2] == 0){
-		$(".qq").removeClass("check");
-		$(".qq").addClass("none");
+		$(".qq3").removeClass("check-3");
+		$(".qq3").addClass("none");
 		$("#q3_n4").removeClass("n-4-choice");
 		$("#q3_n4").addClass("n-4");
 		$("#btn_3").show();
@@ -65,38 +71,55 @@ function goQuiz(num){
 
 					if(vShowSolution == 1){
 						$("#quiz_1").show();
+						$(".q-num .q1").addClass("on");
+						$(".q-num .q2").removeClass("on");
+						$(".q-num .q3").removeClass("on");
 					}else{
 						if(vQuizResult[0] == 0){
 							$("#quiz_1").show();
+							$(".q-num .q1").addClass("on");
+							$(".q-num .q2").removeClass("on");
+							$(".q-num .q3").removeClass("on");
 						}else{
 							goQuiz('2');
 						}
 					}
-				   break;
+					break;
 		case '2' :
 				   if(vShowSolution == 1){
 						$("#quiz_2").show();
+						$(".q-num .q1").removeClass("on");
+						$(".q-num .q2").addClass("on");
+						$(".q-num .q3").removeClass("on");
 					}else{
 						if(vQuizResult[1] == 0){
 							$("#quiz_2").show();
+							$(".q-num .q1").removeClass("on");
+							$(".q-num .q2").addClass("on");
+							$(".q-num .q3").removeClass("on");
 						}else{
 							goQuiz('3');
 						}
 					}
-				   break;
+					break;
 		case '3' :
 					if(vShowSolution == 1){
 						$("#quiz_3").show();
+						$(".q-num .q1").removeClass("on");
+						$(".q-num .q2").removeClass("on");
+						$(".q-num .q3").addClass("on");
 					}else{
 						if(vQuizResult[2] == 0){
 							$("#quiz_3").show();
+							$(".q-num .q1").removeClass("on");
+							$(".q-num .q2").removeClass("on");
+							$(".q-num .q3").addClass("on");
 						}else{
 							goQuiz('4');
 						}
 					}
 					break;
 		case '4' : 
-					playAudio('next-audio');
 					$("#result").show(); calculate(); break;
 	}
 }
@@ -107,32 +130,34 @@ var vSelectAnswer2 = "";
 var vSelectAnswer3 = "";
 function selectAnswer1(type, select, id){
 	vSelectAnswer1 = select;
-	$(".qq").removeClass("check");
-	$(".qq").addClass("none");
+	$(".qq1").removeClass("check-1");
+	$(".qq1").addClass("none");
 	$("#"+id + " > span").removeClass("none");
-	$("#"+id + " > span").addClass("check");
+	$("#"+id + " > span").addClass("check-1");
 }
 function selectAnswer2(type, select, id){
 	vSelectAnswer2 = select;
-	$(".qq").removeClass("check");
-	$(".qq").addClass("none");
+	$(".qq2").removeClass("check-2");
+	$(".qq2").addClass("none");
 	$("#"+id + " > span").removeClass("none");
-	$("#"+id + " > span").addClass("check");
+	$("#"+id + " > span").addClass("check-2");
 }
 function selectAnswer3(type, select, id){
 	vSelectAnswer3 = select;
-	$(".qq").removeClass("check");
-	$(".qq").addClass("none");
+	$(".qq3").removeClass("check-3");
+	$(".qq3").addClass("none");
 	$("#"+id + " > span").removeClass("none");
-	$("#"+id + " > span").addClass("check");
+	$("#"+id + " > span").addClass("check-3");
 }
 
 function checkAnswer(quizNum){
-	vWrongAnswerCnt++;
+	//vWrongAnswerCnt++;
+
 	if(quizNum == 0){					// 4지선다
 		if(vSelectAnswer1 == ""){
-			vWrongAnswerCnt = 0;
+			//vWrongAnswerCnt = 0;
 			this.showAlertDiv1();
+			playAudio('audio2');
 			//alert("문제를 풀어 보세요.");
 		}else{
 			if(vSelectAnswer1 == 2){
@@ -146,10 +171,15 @@ function checkAnswer(quizNum){
 				$("#btn_1").hide();
 				$(".correct-check1").show();
 				playAudio('audio1');
-			}else if(vWrongAnswerCnt == 1){
+			}else if(vWrongAnswerCnt == 0){
+				vWrongAnswerCnt++;
 				vQuizResult[quizNum] = 0;
 				this.showAlertDiv2();
-			}else if(vWrongAnswerCnt == 2){
+				playAudio('audio2');
+				$(".qq1").removeClass("check-1");
+				$(".qq1").addClass("none");
+
+			}else if(vWrongAnswerCnt == 1){
 				vWrongAnswerCnt = 0;
 				vQuizResult[quizNum] = 0;
 				$("#quiz_feed_"+(quizNum+1)).show();
@@ -161,12 +191,14 @@ function checkAnswer(quizNum){
 				$(".correct-check1").show();
 				playAudio('audio2');
 			}
+			vSelectAnswer1 = "";
 		}
 
 	}else if(quizNum == 1){				// 4지선다
 		if(vSelectAnswer2 == ""){
-			vWrongAnswerCnt = 0;
+			//vWrongAnswerCnt = 0;
 			this.showAlertDiv1();
+			playAudio('audio2');
 			//alert("문제를 풀어 보세요.");
 		}else{
 			if(vSelectAnswer2 == 4){
@@ -180,10 +212,15 @@ function checkAnswer(quizNum){
 				$("#btn_2").hide();
 				$(".correct-check2").show();
 				playAudio('audio1');
-			}else if(vWrongAnswerCnt == 1){
+			}else if(vWrongAnswerCnt == 0){
+				vWrongAnswerCnt++;
 				vQuizResult[quizNum] = 0;
 				this.showAlertDiv2();
-			}else if(vWrongAnswerCnt == 2){
+				playAudio('audio2');
+				$(".qq2").removeClass("check-2");
+				$(".qq2").addClass("none");
+
+			}else if(vWrongAnswerCnt == 1){
 				vWrongAnswerCnt = 0;
 				vQuizResult[quizNum] = 0;
 				$("#quiz_feed_"+(quizNum+1)).show();
@@ -195,6 +232,7 @@ function checkAnswer(quizNum){
 				$(".correct-check2").show();
 				playAudio('audio2');
 			}
+			vSelectAnswer2 = "";
 		}
 
 	}else if(quizNum == 2){				// 4지선다
@@ -214,10 +252,15 @@ function checkAnswer(quizNum){
 				$("#btn_3").hide();
 				$(".correct-check3").show();
 				playAudio('audio1');
-			}else if(vWrongAnswerCnt == 1){
+			}else if(vWrongAnswerCnt == 0){
+				vWrongAnswerCnt++;
 				vQuizResult[quizNum] = 0;
 				this.showAlertDiv2();
-			}else if(vWrongAnswerCnt == 2){
+				playAudio('audio2');
+				$(".qq3").removeClass("check-3");
+				$(".qq3").addClass("none");
+
+			}else if(vWrongAnswerCnt == 1){
 				vWrongAnswerCnt = 0;
 				vQuizResult[quizNum] = 0;
 				$("#quiz_feed_"+(quizNum+1)).show();
@@ -229,6 +272,7 @@ function checkAnswer(quizNum){
 				$(".correct-check3").show();
 				playAudio('audio2');
 			}
+			vSelectAnswer3 = "";
 		}
 	}
 }
@@ -254,6 +298,7 @@ function calculate(){
 		$("#q3_r3").attr("src", "img/quiz/check_x.png");
 	}
 	$("#correctCnt").text(vCorrectAnswerCnt);
+
 	if(vCorrectAnswerCnt == 3){
 		$("#result-btn-1").hide();
 		$("#result-btn-2").show();
@@ -270,6 +315,12 @@ function calculate(){
 function goInit(){
 	vShowSolution = 0;
 	$(".q-num").hide();
+	$("#result-before-1").show();
+	$("#result-after-1").hide();
+	$("#result-before-2").show();
+	$("#result-after-2").hide();
+	$("#result-before-3").show();
+	$("#result-after-3").hide();
 	vQuizResult = new Array(0,0,0);
 	pageInit();
 	goQuiz('1');
@@ -278,6 +329,12 @@ function goInit(){
 function goWrongQuiz(num){
 	vShowSolution = 0;
 	$(".q-num").hide();
+	$("#result-before-1").show();
+	$("#result-after-1").hide();
+	$("#result-before-2").show();
+	$("#result-after-2").hide();
+	$("#result-before-3").show();
+	$("#result-after-3").hide();
 	pageInit();
 	goQuiz(num);
 }

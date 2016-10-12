@@ -79,7 +79,9 @@
 .quiz li.question dd.type-1 a.n-4-choice					{color:#FDFF32; background:url("../img/quiz/num_04.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span								{position:absolute; display:block; width:40px; height:40px; left:-7px; top:-7px; text-indent:-9999px;}
 .quiz li.question dd.type-1 a span.none						{display:none;}
-.quiz li.question dd.type-1 a span.check					{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-1 a span.correct-check		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
 
 
@@ -99,7 +101,9 @@
 .quiz li.question dd.type-2 a.n-4-choice					{width:45%; color:#FDFF32; background:url("../img/quiz/num_04.png") left bottom no-repeat;}
 .quiz li.question dd.type-2 a span								{position:absolute; display:block; width:40px; height:40px; left:-7px; top:-7px; text-indent:-9999px;}
 .quiz li.question dd.type-2 a span.none						{display:none;}
-.quiz li.question dd.type-2 a span.check					{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-2 a span.correct-check		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
 
 
@@ -130,6 +134,7 @@
 .q-num																	{position:absolute; width:228px; height:36px; right:45px; top:87px; background:url("../img/quiz/q_num_line.png") 50px 17px no-repeat; z-index:103;}
 .q-num a																{position:relative; float:left; display:block; overflow:hidden; width:64px; height:29px; font:700 18px play; color:#FFF; background:url("../img/quiz/q_num_bg.png") no-repeat; padding:7px 0 0 12px;}
 .q-num a:hover														{background-position:0 bottom;}
+.q-num a.on															{background-position:0 bottom;}
 .q-num a span														{position:absolute; display:block; width:16px; height:16px; left:46px; top:6px;}
 
 #quiz_alert1															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}

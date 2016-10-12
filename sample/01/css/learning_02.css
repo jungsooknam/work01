@@ -5,7 +5,9 @@
 @media all and (max-width:999px) {
 
 #learning																{width:100%; height:620px;}
-#learning .theme														{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}
+#learning .theme
+{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}
+
 #learning .page-ending											{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
 #learning .page-ending-1										{position:absolute; width:82%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 9% 0;}
 #learning .page-ending-2										{position:absolute; width:94%; bottom:11px; border-top:1px solid #B8BEC4; padding:8px 3% 0;}
@@ -29,7 +31,7 @@
 #content-area .type-1 dt											{width:94%; padding:0 0 8px 6%;}
 #content-area .type-1 dd											{width:100%;}
 
-#content-area .type-1 dd .paragraph-1						{width:94%; padding:0 0 15px 6%;}
+#content-area .type-1 dd .paragraph-1						{width:94%; padding:0 0 10px 6%;}
 #content-area .type-1 dd .paragraph-2						{width:88%; padding:15px 6% 5px 6%;}
 
 
@@ -46,7 +48,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{padding-top:100px;}
 
@@ -116,7 +118,7 @@
 #content-area .movie-area										{width:51%;}
 
 #content-area .type-1 dt											{width:93%; font-size:17px; line-height:24px; background-position:0 4px; padding:0 0 8px 7%;}
-#content-area .type-1 dd .paragraph-1						{width:93%; font-size:15px; line-height:20px; padding:0 0 15px 7%;}
+#content-area .type-1 dd .paragraph-1						{width:93%; font-size:15px; line-height:20px; padding:0 0 10px 7%;}
 #content-area .type-1 dd .paragraph-1 p					{width:14px; left:1px; top:1px; line-height:13px; padding-top:2px;}
 #content-area .type-1 dd .paragraph-2						{width:87%; padding:15px 6% 5px 7%;}
 #content-area .type-1 dd .paragraph-2 span				{padding:0 0 7px 9px;}
@@ -130,7 +132,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{padding-top:100px;}
 
@@ -209,7 +211,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{padding-top:90px;}
 
@@ -241,7 +243,7 @@
 
 @media all and (max-width:599px) {
 
-#learning																{width:100%;}
+#learning																{width:100%; height:100%;}
 #learning .theme														{width:93.5%; top:80px; font-size:17px; line-height:20px; color:#005482; border-bottom:1px solid #9FB4C8; background:url("../img/inc/bullet_title.png") 11px 2px no-repeat; background-color:none; padding:2px 0 7px 6.5%;}
 #learning .page-ending											{width:95%; padding:8px 2.5% 0;}
 #learning .page-ending-1										{width:95%; padding:8px 2.5% 0;}
@@ -276,9 +278,9 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
-#learning-quiz														{padding:110px 0 40px;}
+#learning-quiz														{height:470px; padding:110px 0 40px;}
 
 #learning-quiz .quiz-name										{width:94%; right:3%; top:120px; font-size:40px; line-height:45px; text-align:left;}
 #learning-quiz .quiz-text											{width:97%; left:0; top:170px; font-size:14px; line-height:19px; border-top:1px solid #4085B9; padding:9px 0 0 3%;}
@@ -372,7 +374,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{padding:110px 0 40px;}
 
@@ -448,7 +450,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{padding:110px 0 40px;}
 

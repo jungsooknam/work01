@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 07;											// 현 페이지 번호
 			WebFont.load({
@@ -25,10 +28,17 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -40,7 +50,7 @@
 	<body>
 		<div id="wrapper" class="body-learning">
 
-			<header>
+			<header class="learn">
 				<h1 id="course" tabindex="1"></h1>
 				<h2 id="chap-1" tabindex="2"></h2>
 			</header><!--  과정명, 차시명 영역  -->

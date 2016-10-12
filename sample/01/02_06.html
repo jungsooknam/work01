@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 06;											// 현 페이지 번호
 			WebFont.load({
@@ -25,10 +28,17 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -40,7 +50,7 @@
 	<body>
 		<div id="wrapper" class="body-learning">
 
-			<header>
+			<header class="learn">
 				<h1 id="course" tabindex="1"></h1>
 				<h2 id="chap-1" tabindex="2"></h2>
 			</header><!--  과정명, 차시명 영역  -->
@@ -61,8 +71,58 @@
 
 
 				<ul id="content-area">
-					<li class="subject">6</li><!-- 학습 - 주제 영역 -->
+					<li class="subject">PCV 점검하기</li><!-- 학습 - 주제 영역 -->
+					<li class="text-area">
+
+						<dl class="type-1">
+							<dt>PCV밸브의 검사</dt>
+							<dd>
+								<div class="paragraph-1">
+									<p>1</p>PCV밸브 탈거
+								</div>
+
+								<div class="paragraph-1">
+									<p>2</p>PCV밸브의 나사산 있는 쪽 A부분에 얇은 막대기를 넣어 플런져가 움직이는지 검사
+								</div>
+
+								<div class="paragraph-2">
+									<span>플런저가 움직이지 않고 고착되었으면 PCV밸브를 청소하거나 교환</span>
+								</div>
+							</dd>
+						</dl>
+
+
+						<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
+
+						<audio id="page-narration" controls>
+							<script type="text/javascript">
+								document.write("<source src='"+mp3Link+"02_06.mp3' type='audio/mpeg' />");
+							</script>
+							해당 브라우저는 음성을 지원하지 않습니다.
+						</audio>
+					</li><!-- 학습 - 텍스트 영역 -->
+
+
+
+					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 동영상 재생 > 전체 화면보기 ]</p></li>
+
+
+
+					<li class="movie-area">
+						<div>
+							<video id="page-movie" controls preload="auto" poster="img/learn/cover_01.png">
+								<script type="text/javascript">
+									document.write("<source src='"+mp4Link+"02_06.mp4' type='video/mp4' />");
+								</script>
+								해당 브라우저는 영상을 지원하지 않습니다.
+							</video>
+						</div>
+					</li><!-- 학습 - 동영상 영역 -->
 				</ul>
+
+
+
+				<div class="page-ending-1">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
 			</section><!--  본문 영역 -->
 
 

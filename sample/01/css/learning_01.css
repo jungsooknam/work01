@@ -24,7 +24,8 @@
 
 
 
-#content-area															{position:relative; float:left; width:870px; padding:110px 65px 0;}
+#content-area
+{position:relative; float:left; width:870px; padding:110px 65px 0;}
 #content-area:after													{content:""; display:block; clear:both;}
 
 #content-area .subject											{float:left; width:850px; font:22px nsM; color:#1A3B6C; line-height:30px; background:url("../img/learn/learn_bullet_01.png") 0 6px no-repeat; padding:0 0 4px 20px;}
@@ -41,7 +42,7 @@
 #content-area .type-1 dt											{float:left; width:333px; font:20px nsM; color:#222; line-height:24px; background:url("../img/learn/learn_bullet_02.png") 0 5px no-repeat; padding:0 0 15px 22px;}
 #content-area .type-1 dd											{position:relative; float:left; width:355px;}
 
-#content-area .type-1 dd .paragraph-1						{position:relative; float:left; width:333px; font:16px nsM; color:#232530; line-height:20px; padding:0 0 15px 22px;}
+#content-area .type-1 dd .paragraph-1						{position:relative; float:left; width:333px; font:16px nsM; color:#232530; line-height:20px; padding:0 0 12px 22px;}
 #content-area .type-1 dd .paragraph-1 p					{position:absolute; width:14px; left:1px; top:2px; font:bold 12px Dotum; color:#FFF; line-height:13px; text-align:center; background:#6811C1; padding-top:2px;}
 #content-area .type-1 dd .paragraph-2						{float:left; width:310px; font:12px Dotum; color:#56595B; line-height:16px; background:#D9E3ED; padding:15px 23px 5px 22px;}
 #content-area .type-1 dd .paragraph-2 span				{display:block; background:url("../img/learn/learn_bullet_03.png") 1px 5px no-repeat; padding:0 0 7px 10px;}
@@ -61,7 +62,7 @@
 
 
 
-/* ±ôÂ¦ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½Â¦ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #learning-quiz														{float:left; width:100%; padding-top:105px;}
 #learning-quiz:after													{content:""; display:block; clear:both;}

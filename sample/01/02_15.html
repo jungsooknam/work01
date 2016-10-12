@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 15;											// 현 페이지 번호
 			WebFont.load({
@@ -28,10 +31,17 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -113,7 +123,18 @@
 							</script>
 							해당 브라우저는 음성을 지원하지 않습니다.
 						</audio>
+
+						<a href="javascript:viewNarration();" style="display:none;">해설보기</a>
 					</div>
+
+
+
+					<dl id="narration-area">
+						<dt>해설보기</dt>
+						<dd>크랭크케이스 배출가스 제어에 대하여 설명할 수 있다. 연료탱크 증발가스제어 시스템에 대하여 설명할 수 있다. 연료탱크 증발가스제어 시스템에 대하여 설명할 수 있다. CVVT 시스템에 대하여 설명할 수 있다.</dd>
+						<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
+					</dl>
+					<div class="narration-bg"></div>
 
 
 
@@ -149,8 +170,16 @@
 						revert : "invalid", // 지정한 DROP영역의 밖에 DROP 했을 때 원래 위치로 돌아가게 하는 속성
 						start: function(event,ui) {
 								$(this).draggable( "option", "revert", true );
+								$(this).addClass('ing')
 							}
 						});
+
+						$(".drag.button").draggable({
+						stop: function(event,ui) {
+								$(this).removeClass('ing')
+							}
+						});
+
 
 						$(".drop").droppable({
 							drop: function(event,ui) {
@@ -173,10 +202,10 @@
 									}
 								}
 
-								if (dragid == "item-01") { drags[0] = 'ok'; $('#item-img-01').addClass('drop-img'); if (dropid == "item-11") { ansOk[0] = 'ok'; } else { ansOk[0] = ''; } }
-								if (dragid == "item-02") { drags[1] = 'ok'; $('#item-img-02').addClass('drop-img'); if (dropid == "item-12") { ansOk[1] = 'ok'; } else { ansOk[1] = ''; } }
-								if (dragid == "item-03") { drags[2] = 'ok'; $('#item-img-03').addClass('drop-img'); if (dropid == "item-13") { ansOk[2] = 'ok'; } else { ansOk[2] = ''; } }
-								if (dragid == "item-04") { drags[3] = 'ok'; $('#item-img-04').addClass('drop-img'); if (dropid == "item-14") { ansOk[3] = 'ok'; } else { ansOk[3] = ''; } }
+								if (dragid == "item-01") { drags[0] = 'ok'; $('#item-01').removeClass('ing'); $('#item-img-01').addClass('drop-img'); if (dropid == "item-11") { ansOk[0] = 'ok'; } else { ansOk[0] = ''; } }
+								if (dragid == "item-02") { drags[1] = 'ok'; $('#item-02').removeClass('ing'); $('#item-img-02').addClass('drop-img'); if (dropid == "item-12") { ansOk[1] = 'ok'; } else { ansOk[1] = ''; } }
+								if (dragid == "item-03") { drags[2] = 'ok'; $('#item-03').removeClass('ing'); $('#item-img-03').addClass('drop-img'); if (dropid == "item-13") { ansOk[2] = 'ok'; } else { ansOk[2] = ''; } }
+								if (dragid == "item-04") { drags[3] = 'ok'; $('#item-04').removeClass('ing'); $('#item-img-04').addClass('drop-img'); if (dropid == "item-14") { ansOk[3] = 'ok'; } else { ansOk[3] = ''; } }
 
 
 								// item-11에 대한 정답 OX 체크
@@ -297,6 +326,7 @@
 						document.getElementById("audio2").play();
 						changeAnswer();
 						$(".apply-sound audio").fadeIn(500);
+						$(".apply-sound a").fadeIn(500);
 						$("#show-solution-1").hide();
 					}
 
@@ -304,7 +334,20 @@
 						document.getElementById("audio1").play();
 						changeAnswer();
 						$(".apply-sound audio").fadeIn(500);
+						$(".apply-sound a").fadeIn(500);
 						$("#show-solution-2").hide();
+					}
+
+					function viewNarration (){
+						$(".narration-bg").show();
+						$("#narration-area").show();
+						$("#narration-area").addClass("open");
+					}
+
+					function narrationClose (){
+						$(".narration-bg").hide();
+						$("#narration-area").hide();
+						$("#narration-area").removeClass("open");
 					}
 
 					function changeAnswer(){
