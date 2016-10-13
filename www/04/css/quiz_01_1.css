@@ -43,7 +43,7 @@
 #quiz-intro a:hover
 {
     color:#000;
-    background-position:right bottom;
+    /*background-position:right bottom;*/
 }
 
 #quiz-intro .title-area

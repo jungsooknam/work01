@@ -103,7 +103,7 @@
     width: 100%;
     background-color: rgba(70, 110, 169, 0.2);
     height: 120px;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 
 #learning-quiz-text .feed dt

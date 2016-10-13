@@ -31,6 +31,8 @@
 @import url("summary_01.css");				/* 핵심요약 요소 */
 @import url("summary_02.css");				/* 핵심요약 요소 - 반응형 */
 
+@import url("outro_01.css");				/* 핵심요약 요소 */
+@import url("outro_02.css");				/* 핵심요약 요소 - 반응형 */
 
 /* 기본설정 */
 * {margin:0; padding:0;}

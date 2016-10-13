@@ -1,5 +1,5 @@
 var subject = "SQL 활용";
-var subtitle = "데이타 구조 생성과 변경";
+var subtitle = "데이터 구조 생성과 변경";
 
 var pages = [
 	{pg:1, url:"04_01.html", category:"준비하기", text:"INTRO"},

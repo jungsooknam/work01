@@ -47,6 +47,7 @@
 
     margin-right: 0%;
 
+    -webkit-animation: intro-subtitle 1s; /* Chrome, Safari, Opera */
     animation: intro-subtitle 1s ;
 
     /*-webkit-animation-delay: 5s; !* Chrome, Safari, Opera *!*/
@@ -60,6 +61,8 @@
     position:absolute;
     height: 622px;
     background:url("../img/intro_outro/img_01.png") center bottom no-repeat;
+
+    -webkit-animation: intro-back1 1s; /* Chrome, Safari, Opera */
     animation: intro-back1 1s ;
 }
 
@@ -83,25 +86,27 @@
 @keyframes intro-title{
     /*알파로 보임.*/
     from {
-        margin-right: -100%;
+        opacity: 0;
     }
-
     to {
-        margin-right: 0%;
+        opacity: 1;
     }
 }
 
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes intro-title {
+    /*알파로 보임.*/
     from {
-        margin-right: -100%;
+        opacity: 0;
     }
-
     to {
-        margin-right: 0%;
+        opacity: 1;
     }
 }
+
+
+
 /*차시명*/
 /*왼쪽에서 오른쪽으로 이동.*/
 @keyframes intro-subtitle{
@@ -115,8 +120,22 @@
     }
 }
 
+/*차시명*/
+/*왼쪽에서 오른쪽으로 이동.*/
+@-webkit-keyframes intro-subtitle{
+
+    from {
+        margin-right: -100%;
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
 
 
+
+/*back 1*/
 /* Chrome, Safari, Opera */
 @-webkit-keyframes intro-back1 {
     from {
@@ -144,69 +163,34 @@
     }
 }
 
+
+
+/*back2*/
 /* Chrome, Safari, Opera */
 @-webkit-keyframes intro-back2 {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+        top:100%;
+    }
+    to {
+        opacity: 1;
+        top:0;
+    }
 }
 
 /* Standard syntax */
 @keyframes intro-back2 {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+        top:100%;
+    }
+    to {
+        opacity: 1;
+        top:0;
+    }
 }
 
 
 
 
 
-
-
-
-#outro
-{
-    position: relative;
-    height: 621px;
-}
-
-#outro .outro-title
-{
-    width: 82%;
-    position:relative;
-    font:30px nsM;
-    left:11%;
-    top:85px;
-    line-height: 50px;
-}
-
-#outro .outro_subtitle
-{
-    display: inline;
-    font:45px nsM;
-    color:#fff;
-    background-color: #476dab;
-    padding:2px;
-}
-
-#outro .introBack1
-{
-    position:absolute;
-    height: 497px;
-    top:124px;
-    width:100%;
-    background:url("../img/intro_outro/outro_img_01.png") no-repeat;
-    background-position: 80% bottom;
-}
-
-
-#outro .introBack2
-{
-
-    width:100%;
-    height: 295px;
-    top: 326px;
-    position:absolute;
-    background:url("../img/intro_outro/outro_img_02.png") no-repeat;
-    background-position: 80% bottom;
-
-}
