@@ -82,15 +82,28 @@ footer
 
 .page-ending
 {
-    position: absolute;
-    font:13px nsM;
-    color:#37414A;
-    text-align:right;
-    margin: 0;
-    padding:8px 5% 0 0;
-    bottom:7px;
-    width:95%;
-    border-top:1px solid #B8BEC4;
+	position: absolute;
+	font: 13px nsM;
+	color: #37414A;
+	text-align: right;
+	margin: 0;
+	padding: 8px 5% 0 0;
+	bottom: 5px;
+	width: 95%;
+	border-top: 1px solid #B8BEC4;
+}
+
+
+.page-ending2
+{
+	position: absolute;
+	font: 13px nsM;
+	color: #37414A;
+	text-align: right;
+	margin: 0;
+	padding: 8px 5% 0 0;
+	bottom: 5px;
+	width: 95%;
 }
 
 
@@ -177,6 +190,3 @@ no-repeat; cursor:pointer;}
 #search-text													{position:absolute; width:165px; height:30px; left:25px; top:55px; font:14px nbgM; color:#333; line-height:20px; border:0; background:#FFF; padding:0 5px; z-index:102;}
 #search-btn													{position:absolute; width:235px; height:40px; left:20px; top:50px; background:url("../img/inc/search_btn.png") no-repeat; z-index:101;}
 #search-close												{position:absolute; width:20px; height:20px; left:236px; top:15px; z-index:101;}
-
-
-

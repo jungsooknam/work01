@@ -4,7 +4,12 @@
 
 
 #learning
-{position:relative; width:1000px; height:620px; z-index:100;}
+{
+    position:relative;
+    width:1000px;
+    height:620px;
+    z-index:100;
+}
 
 #learning:after
 {content:""; display:block; clear:both;}

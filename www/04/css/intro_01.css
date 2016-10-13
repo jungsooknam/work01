@@ -4,15 +4,17 @@
 
 /*과정명 표시 */
 #intro{
+    position:relative;
     height: 620px;
+    overflow: hidden;
 }
 
 /*과목명*/
 #intro .intro_subject{
-    position:absolute;
-    width: 100%;
     height:55px;
     text-align:right;
+    position:absolute;
+    width: 100%;
     top : 90px;
     animation: intro-title 1s ;
 }
@@ -25,11 +27,13 @@
 
 /*차시명 표시 */
 #intro .intro_subtitle{
-    position:absolute;
-    width: 100%;
-    text-align: right;
-    top : 140px;
-    overflow: hidden;
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	top : 140px;
+	overflow: hidden;
+	left: 1px;
+	
 }
 
 #intro .intro_subtitle p
@@ -51,9 +55,10 @@
 }
 
 #intro .introBack1{
+    top:0;
     width:100%;
     position:absolute;
-    height: 620px;
+    height: 622px;
     background:url("../img/intro_outro/img_01.png") center bottom no-repeat;
     animation: intro-back1 1s ;
 }
@@ -61,7 +66,7 @@
 #intro .introBack2{
     width:100%;
     position:absolute;
-    height: 620px;
+    height: 622px;
     background:url("../img/intro_outro/img_02.png") center bottom no-repeat;
 
     -webkit-animation: intro-back2 1s; /* Chrome, Safari, Opera */
@@ -77,15 +82,26 @@
 /* Standard syntax */
 @keyframes intro-title{
     /*알파로 보임.*/
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-/* Chrome, Safari, Opera */
-@-webkit-keyframes intro-title {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        margin-right: -100%;
+    }
+
+    to {
+        margin-right: 0%;
+    }
 }
 
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes intro-title {
+    from {
+        margin-right: -100%;
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
 /*차시명*/
 /*왼쪽에서 오른쪽으로 이동.*/
 @keyframes intro-subtitle{
@@ -103,14 +119,29 @@
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes intro-back1 {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        top:100%;
+        /*margin-right: -100%;*/
+    }
+
+    to {
+        top:0;
+        /*margin-right: 0%;*/
+    }
 }
+
 
 /* Standard syntax */
 @keyframes intro-back1 {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        top:100%;
+        /*margin-right: -100%;*/
+    }
+
+    to {
+        top:0;
+        /*margin-right: 0%;*/
+    }
 }
 
 /* Chrome, Safari, Opera */
@@ -124,7 +155,6 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 
 
 

@@ -1,10 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 	<title>SQL 활용</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<script src="js/webfont.js"></script>
@@ -61,7 +64,7 @@
 
 
 			<dl class="question">
-				<dt><p>튜플 추가에서 INTO는 생략 가능 하다.</p></dt>
+				<dt><p>MS-SQL기본 타입 중 float, datetime, smalldatatime은 날짜속성 타입 이다.</p></dt>
 
 
 				<dd id="question_ox">
@@ -89,10 +92,8 @@
 				</dd>
 
 
-				<dd class="text-1">튜플 추가 방법은<br>
-					INSERT INTO 테이블명(속성명, 속성명, ... )<br>
-					VALUES (속성값, 속성값,…)<br>
-					여기서 INTO는 생략 가능 하다. </dd>
+				<dd class="text-1">Float는 실수속성 타입 입니다.<br>
+					날짜속성 타입은 datetime과 smalldatatime 입니다.</dd>
 			</dl>
 
 
@@ -125,7 +126,7 @@
 			 * x 일 경우 "x"
 			 * @type {string}
              */
-			var answer = "o";
+			var answer = "x";
 
 
 			$("#learning_quiz_feed").show();

@@ -1,10 +1,13 @@
 <!doctype html>
 <html>
 <head>
-	<title>SQL 활용</title>
+	<title>배출가스장치정비·검사</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
 	<script src="js/webfont.js"></script>
@@ -24,7 +27,7 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#sco-name1").text(currentSco1);					// 대주제
+			$("#sco-name1").text(currentSco1);
 
 			lms_mode();													// LMS 탑재관련
 			menuInit();														// 우측 메뉴
@@ -32,23 +35,22 @@
 	</script>
 </head>
 
-<!--인트로 페이지-->
+
 <body>
 <div id="wrapper" class="body-learning">
 
+	<!--  과정명, 차시명 영역
+            변경하지 마세요.
+            모든 페이지 동일 합니다.
+    -->
 	<header class="learn">
 		<h1 id="course" tabindex="1"></h1>
 		<h2 id="chap-1" tabindex="2"></h2>
-	</header><!--  과정명, 차시명 영역  -->
-	<!--  INDEX 메뉴 영역
-                  변경하지 마세요.
-                  모든 페이지 동일 합니다.
-            -->
+	</header>
 
 
-
+	<!--  본문 영역 -->
 	<section id="learning">
-
 
 		<nav>
 			<script type="text/javascript" src="js/menu.js"></script>
@@ -56,24 +58,26 @@
 			<div id="menu"></div>
 			<div id="menu-bg"></div>
 		</nav>
-
 		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
 
 
-
-
-		<ul id="content-area">
-			<li class="subject"><p>테이블 생성과 투풀 추가</p></li><!-- 학습 - 주제 영역 -->
-			</li><!-- 학습 - 동영상 영역 -->
-		</ul>
-
-
-
-		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
-
-
-
-	</section><!--  본문 영역 -->
+		<!--본문 내용-->
+		<!--요 부분 부터 페이지 마다 변경 됩니다. START-->
+		<!--영상 페이지 START-->
+		<div id="learn-movie-area">
+			<div>
+				<video controls preload="auto" poster="img/learn/cover_01_1.png">
+					<script type="text/javascript">
+						document.write("<source src='"+mp4Link+"04_10.mp4' type='video/mp4' />");
+					</script>
+					해당 브라우저는 영상을 지원하지 않습니다.
+				</video>
+			</div>
+		</div>
+		<!--영상 페이지 END-->
+		<!--요 부분 부터 페이지 마다 변경 됩니다.  END-->
+		<div class="page-ending2">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+	</section>
 
 
 
