@@ -186,8 +186,10 @@
 .quiz li.question dd.type-1 a.n-1								{background:url("../img/quiz/num_01.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-1-choice
 {color:#cc3366; background:url("../img/quiz/num_01.png") left bottom no-repeat;}
-.quiz li.question dd.type-1 a.n-2								{background:url("../img/quiz/num_02.png") no-repeat;}
-.quiz li.question dd.type-1 a.n-2-choice					{color:#cc3366; background:url("../img/quiz/num_02.png") left bottom no-repeat;}
+.quiz li.question dd.type-1 a.n-2
+{background:url("../img/quiz/num_02.png") no-repeat;}
+.quiz li.question dd.type-1 a.n-2-choice
+{color:#cc3366; background:url("../img/quiz/num_02.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a.n-3								{background:url("../img/quiz/num_03.png") no-repeat;}
 .quiz li.question dd.type-1 a.n-3-choice					{color:#cc3366; background:url("../img/quiz/num_03.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_04.png") no-repeat;}

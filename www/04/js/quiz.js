@@ -19,16 +19,19 @@ function showSolution(){
 }
 
 function pageInit(){
-
+	console.log("Quiz Init")
 	// 1번 문제 정리
 	if(vQuizResult[0] == 0){
-
+		console.log("요거 실행하는 겨??")
 		var answer = correctAnswer[0];
 
 		$(".qq1").removeClass("check-1");
 		$(".qq1").addClass("none");
+
 		$("#q1_n"+answer).removeClass("n-"+answer+"-choice");
-		$("#q1_"+answer).addClass("n-"+answer);
+		$("#q1_n"+answer).addClass("n-"+answer);
+
+
 		$("#btn_1").show();
 		$("#q1_correct").hide();
 		$("#q1_correct1").hide();
