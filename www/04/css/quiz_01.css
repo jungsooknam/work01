@@ -155,8 +155,11 @@
     display:block;
     width:59px;
     height:42px;
-    left:54px; top:10px; font:18px nsM; color:#FFF; line-height:23px; text-align:center; border:3px solid #3375A7; border-radius:35px; padding-top:17px;}
-.quiz li.question dd.ex b											{font-weight:normal;}
+    left:54px; top:10px; font:18px nsM; color:#FFF; line-height:28px; text-align:center; border:3px solid #3375A7; border-radius:35px; padding-top:17px;}
+.quiz li.question dd.ex b
+
+
+{font-weight:normal;}
 .quiz li.question dd.btn
 {
     position:absolute;
@@ -347,7 +350,6 @@
     top:-65px;
     background:url("../img/quiz/btn_img_02.png") no-repeat; padding:0;
     z-index:103;
-    border: 1px solid #f00;
 }
 .quiz li.feed dd.btn a
 {
@@ -371,7 +373,7 @@
     width:238px;
     /*     height:36px; */
     right:35px;
-    top:93px;
+    top: 98px;
     /*border:1px solid #f00;*/
     background:url("../img/quiz/q_num_line.png") 50px 17px no-repeat;
     z-index:103;
@@ -388,15 +390,15 @@
     font:18px nsM;
     color:#FFF;
     background:url("../img/quiz/q_num_bg.png") no-repeat;
-    padding:7px 0 0 12px;
-    line-height:14px
+    padding: 8px 0 0 8px;
+    line-height:14px;
 }
 
 .q-num a:hover
 {
     background-position:0 -44px;
 }
-.q-num a span														{position:absolute; display:block; width:16px; height:16px; left:46px; top:6px;}
+.q-num a span														{position:absolute;display:block;width:16px;height:16px;left: 42px;top:6px;}
 
 #quiz_alert1															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
 #quiz_alert1 img														{margin-top:140px;}
