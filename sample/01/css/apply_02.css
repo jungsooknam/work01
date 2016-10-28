@@ -6,7 +6,7 @@
 
 #apply																	{width:100%;}
 #apply .theme															{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}
-#apply .page-ending												{position:absolute; width:96%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 2% 0;}
+#apply .page-ending												{width:96%; bottom:10px; padding:8px 2% 0;}
 
 
 
@@ -18,7 +18,9 @@
 #apply-area .apply-text li.type-2								{width:100%; padding:35px 0 10px;}
 
 #apply-area .apply-sound										{padding-top:10px;}
+#apply-area .apply-sound span								{padding-top:15px;}
 #narration-area														{width:96%;}
+#narration-area.open												{bottom:85px;}
 
 
 
@@ -32,6 +34,11 @@
 #drag-drop .drop-zone											{width:79.2%; height:380px; background:url("../img/apply/bg_02.png") center 90px no-repeat #FFF;}
 #drag-drop .drop-zone p											{width:99%; left:50%; top:3px; background-position:25px 13px; margin-left:-49.5%;}
 #drag-drop .drop-zone span									{background:url("../img/apply/item_img_02.png") no-repeat;}
+
+#item-11 span.correct-img										{background:url("../img/apply/drop_11.png") no-repeat;}
+#item-12 span.correct-img										{background:url("../img/apply/drop_12.png") no-repeat;}
+#item-13 span.correct-img										{background:url("../img/apply/drop_13.png") no-repeat;}
+#item-14 span.correct-img										{background:url("../img/apply/drop_14.png") no-repeat;}
 
 #drag-drop .check													{width:41px; height:41px;}
 #drag-drop .check-o												{width:41px; height:41px; background:url("../img/apply/check_o_2.png") no-repeat;}
@@ -103,6 +110,8 @@
 #apply-area .apply-text li.type-2								{font-size:14px; padding-top:35px;}
 
 #narration-area														{width:96%;}
+#narration-area.open												{bottom:95px;}
+#apply-area .apply-sound span								{padding-top:20px;}
 #apply-area .narration-bg										{height:750px;}
 
 
@@ -151,10 +160,12 @@
 
 #apply-area .apply-sound audio								{width:79%;}
 #apply-area .apply-sound a										{width:15.5%; height:31px; font-size:16px; background:url("../img/apply/btn_narration_02.png") right top no-repeat; padding:11px 5% 0 0;}
+#apply-area .apply-sound span								{padding-top:8px;}
 
 #narration-area														{width:96%;}
 #narration-area dt													{width:125px; height:28px; font-size:17px; line-height:22px; background:url("../img/apply/narration_tag_02.png") no-repeat; padding:7px 0 0 40px;}
 #narration-area dd													{font-size:15px; line-height:21px; padding:40px 30px 20px 35px;}
+#narration-area.open												{bottom:80px;}
 #apply-area .narration-bg										{height:705px;}
 
 
@@ -166,6 +177,11 @@
 #drag-drop .drop-zone											{height:360px; background:url("../img/apply/bg_03.png") center 87px no-repeat #FFF;}
 #drag-drop .drop-zone p											{background-position:center 13px;}
 #drag-drop .drop-zone span									{background:url("../img/apply/item_img_03.png") no-repeat;}
+
+#item-11 span.correct-img										{background:url("../img/apply/drop_21.png") no-repeat;}
+#item-12 span.correct-img										{background:url("../img/apply/drop_22.png") no-repeat;}
+#item-13 span.correct-img										{background:url("../img/apply/drop_23.png") no-repeat;}
+#item-14 span.correct-img										{background:url("../img/apply/drop_24.png") no-repeat;}
 
 #drag-drop .check													{width:36px; height:36px;}
 #drag-drop .check-o												{width:36px; height:36px; background:url("../img/apply/check_o_3.png") no-repeat;}
@@ -235,9 +251,11 @@
 
 #apply-area .apply-sound audio								{width:73.5%;}
 #apply-area .apply-sound a										{width:19%; padding:11px 7% 0 0;}
+#apply-area .apply-sound span								{padding-top:21px;}
 
 #narration-area														{width:95%;}
 #narration-area dd													{font-size:14px; line-height:18px; padding:45px 25px 20px;}
+#narration-area.open												{bottom:93px;}
 #apply-area .narration-bg										{height:940px;}
 
 
@@ -258,12 +276,12 @@
 #item-03																	{left:88px; top:42px;}
 #item-04																	{left:198px; top:42px;}
 
-#item-11																	{left:50%; top:518px; margin-left:40px;}
+#item-11																	{left:50%; top:315px; margin-left:40px;}
 #item-12																	{left:50%; top:281px; margin-left:-145px;}
 #item-13																	{left:50%; top:55px; margin-left:40px;}
 #item-14																	{left:50%; top:281px; margin-left:40px;}
 
-#check-01																{left:50%; top:516px; margin-left:22px;}
+#check-01																{left:50%; top:313px; margin-left:22px;}
 #check-02																{left:50%; top:279px; margin-left:-167px;}
 #check-03																{left:50%; top:53px; margin-left:22px;}
 #check-04																{left:50%; top:279px; margin-left:22px;}
@@ -300,8 +318,9 @@
 
 @media all and (max-width:449px) {
 
-#apply																	{height:955px;}
+#apply																	{height:980px;}
 #apply .theme															{width:90.5%; padding-left:9.5%;}
+#apply .page-ending												{width:95%; border-top:1px solid #7D91A8;padding:8px 2.5% 0;}
 
 
 
@@ -313,13 +332,15 @@
 
 #apply-area .apply-sound audio								{width:72.5%;}
 #apply-area .apply-sound a										{width:21%; font-size:15px; background:url("../img/apply/btn_narration_03.png") right top no-repeat; padding:11px 6% 0 0;}
+#apply-area .apply-sound span								{padding-top:5px;}
 
 #narration-area														{width:95%;}
 #narration-area dt													{width:112px; height:25px; font-size:14px; line-height:20px; background:url("../img/apply/narration_tag_03.png") no-repeat; padding:5px 0 0 28px;}
 #narration-area dd													{font-size:13px; line-height:17px; padding:37px 20px 15px;}
 #narration-area .btn												{right:12px; top:12px; width:19px; height:19px;}
 #narration-area .btn a												{width:19px; height:19px; background:url("../img/apply/narration_btn_02.png") no-repeat;}
-#apply-area .narration-bg										{height:955px;}
+#narration-area.open												{bottom:77px;}
+#apply-area .narration-bg										{height:980px;}
 
 
 
@@ -367,6 +388,7 @@
 #apply-area .apply-sound audio								{width:79.5%;}
 #apply-area .apply-sound a										{width:20%; height:28px; font-size:13px; background:url("../img/apply/btn_narration_04.png") top repeat-x; padding:12px 0 0 0;}
 #narration-area dd													{font-size:12px; line-height:16px; padding:37px 20px 15px;}
+#narration-area.open												{bottom:75px;}
 
 
 
@@ -377,6 +399,11 @@
 #drag-drop .drop-zone											{height:556px; background-position:center 74px;}
 #drag-drop .drop-zone p											{width:98%; height:29px; top:4px; background-position:center 9px; margin-left:-49%;}
 #drag-drop .drop-zone span									{background:url("../img/apply/item_img_04.png") no-repeat;}
+
+#item-11 span.correct-img										{background:url("../img/apply/drop_31.png") no-repeat;}
+#item-12 span.correct-img										{background:url("../img/apply/drop_32.png") no-repeat;}
+#item-13 span.correct-img										{background:url("../img/apply/drop_33.png") no-repeat;}
+#item-14 span.correct-img										{background:url("../img/apply/drop_34.png") no-repeat;}
 
 #drag-drop .check													{width:33px; height:33px;}
 #drag-drop .check-o												{width:33px; height:33px; background:url("../img/apply/check_o_4.png") no-repeat;}
@@ -402,7 +429,7 @@
 #item-04 .drop-img													{background:url("../img/apply/drop_34.png") no-repeat;}
 #item-04 .fail-img													{background:url("../img/apply/drop_fail_34.png") no-repeat;}
 
-#item-11																	{left:50%; top:505px; margin-left:45px;}
+#item-11																	{left:50%; top:305px; margin-left:45px;}
 #item-12																	{left:50%; top:268px; margin-left:-135px;}
 #item-13																	{left:50%; top:45px; margin-left:45px;}
 #item-14																	{left:50%; top:268px; margin-left:45px;}

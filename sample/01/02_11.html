@@ -27,11 +27,24 @@
 		<script type="text/javascript" src="js/common-script.js"></script>
 
 		<script type="text/javascript">
+			var _totalPageImage =  02;									// 이미지보기 페이징 수
+
 			$(document).ready(function(){
 				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				initImagePage();												// 학습영역 이미지 페이징
+
+				$("#img_page_left").click(function(){
+					prevPageImage();
+					playAudio('btn-sound');
+				});
+				
+				$("#img_page_right").click(function(){
+					nextPageImage();
+					playAudio('btn-sound');
+				});
 				
 				var contentId = getContentId();
 				function resizeHeight(){
@@ -75,54 +88,44 @@
 					<li class="text-area">
 
 						<dl class="type-1">
-							<dt>퍼지컨트롤 솔레노이드 밸브 검사</dt>
+							<dt>퍼지컨트롤 솔레노이드 밸브 시스템 점검</dt>
 							<dd>
 								<div class="paragraph-1">
-									<p>1</p>점화스위치를 OFF하고 배터리 (-) 터미널을 분리함
+									<p>1</p>스로틀 바디에서 진공호스를 분리
 								</div>
 
 								<div class="paragraph-1">
-									<p>2</p>퍼지컨트롤 솔레노이드 밸브 컨넥터 (A)를 탈거함
+									<p>2</p>핸드 진공펌프를 진공호스를 분리된 니플의 플러그에 연결<br />
+									<a href="javascript:openViewbox1();">이미지 보기</a>
 								</div>
 
 								<div class="paragraph-1">
-									<p>3</p>퍼지컨트롤 솔레노이드 밸브에서 흡기매니폴드 측 진공호그(B)를 분리함
-								</div>
-
-								<div class="paragraph-1">
-									<p>4</p>핸드 진공 펌프를 진공호스가 연결되었던 니플에 연결하고 진공을 가함
-								</div>
-
-								<div class="paragraph-1">
-									<p>5</p>퍼지컨트롤 솔레노이드 밸브 전원단과 제어단에 배터리 (+)와 (-)케이블을 연결하여 밸브작동 상태를 검사함
-								</div>
-
-								<div class="paragraph-1">
-									<p>6</p>퍼지컨트롤 솔레노이드 밸브의 저항을 측정함
+									<p>3</p>진공을 가하면서 항목 점검<br />
+									<a href="javascript:openViewbox2();">이미지 보기</a>
 								</div>
 							</dd>
 						</dl>
 
 
-						<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
+						<!-- <div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
 
 						<audio id="page-narration" controls>
 							<script type="text/javascript">
-								document.write("<source src='"+mp3Link+"02_11.mp3' type='audio/mpeg' />");
+								document.write("<source src='"+mp3Link+"02_10.mp3' type='audio/mpeg' />");
 							</script>
 							해당 브라우저는 음성을 지원하지 않습니다.
-						</audio>
+						</audio> -->
 					</li><!-- 학습 - 텍스트 영역 -->
 
 
 
-					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 동영상 재생 > 전체 화면보기 ]</p></li>
+					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 재생 버튼 선택 후 전체 화면보기로 학습하세요. ]</p></li>
 
 
 
 					<li class="movie-area">
 						<div>
-							<video id="page-movie" controls preload="auto" poster="img/learn/cover_02.png">
+							<video id="page-movie" controls preload="auto" poster="img/learn/cover_02_3.png">
 								<script type="text/javascript">
 									document.write("<source src='"+mp4Link+"02_11.mp4' type='video/mp4' />");
 								</script>
@@ -131,6 +134,42 @@
 						</div>
 					</li><!-- 학습 - 동영상 영역 -->
 				</ul>
+
+
+
+				<div class="img-view case-1">
+					<div class="img-1">
+						<img src="img/learn/img_11_01.png" alt="관련 이미지" />
+					</div>
+
+					<p><a href="javascript:closeViewbox1();">닫기</a></p>
+				</div>
+
+
+
+				<div class="img-view case-2">
+					<div id="img-group-1" class="img-page-area img-1">
+						<img src="img/learn/img_11_02.png" alt="엔진 냉각 상태" />
+					</div>
+
+					<div id="img-group-2" class="img-page-area img-1">
+						<img src="img/learn/img_11_03.png" alt="엔진 웜업 상태" />
+					</div>
+
+					<ul class="img-page type-3">
+						<li class="left"><img src="img/learn/btn_pre_01.png" id="img_page_left" alt="이전 이미지보기" /></li>
+						<li><span id="current_img_page_no"></span> / <span id="total_img_page_no"></span></li>
+						<li class="right"><img src="img/learn/btn_next_01.png" id="img_page_right" alt="다음 이미지보기" /></li>
+					</ul>
+
+					<p><a href="javascript:closeViewbox2();">닫기</a></p>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
 
 
 

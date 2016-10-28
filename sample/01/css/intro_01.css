@@ -16,8 +16,8 @@
 #intro .img-04															{width:180px; height:180px; right:0; top:0; background:url("../img/intro_outro/intro_img_03.png") no-repeat; z-index:102;}
 
 #intro span																{position:absolute; display:block; z-index:104;}
-#intro .course-name												{right:0; top:250px; font:30px nsM; color:#FFF; line-height:40px; text-align:right; background:#081353; padding:4px 40px 1px 15px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
-#intro .chapter-name												{right:0; top:310px; font:55px nsM; color:#F0FF00; line-height:70px; text-align:right; text-shadow:1px 1px 1px #2D2E41; padding-right:40px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+#intro .course-name												{right:0; top:250px; font:30px nsM; color:#FFF; line-height:40px; text-align:right; background:#081353; padding:4px 40px 1px 15px;}
+#intro .chapter-name												{right:0; top:310px; font:55px nsM; color:#F0FF00; line-height:70px; text-align:right; text-shadow:1px 1px 1px #2D2E41; padding-right:40px;}
 
 
 

@@ -16,7 +16,7 @@
 
 
 
-/* ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+/* ÀÎÆ®·Î ¿µ¿ª */
 
 #quiz-intro																{position:relative; float:left; width:100%; padding-top:180px;}
 #quiz-intro:after														{content:""; display:block; clear:both;}
@@ -24,17 +24,8 @@
 #quiz-intro li															{position:relative; float:left; color:#FFF; text-align:center;}
 #quiz-intro br															{display:none;}
 #quiz-intro span														{color:#F0FF00;}
-#quiz-intro a
-{
-    position:absolute;
-    display:block; width:135px; height:40px; right:95px;
-    bottom:20px; font:30px play; color:#FFF; line-height:35px; text-align:left;
-    background:url("../img/quiz/start_img_01.png") right top no-repeat;
-    transition:All 0.2s ease; -webkit-transition:All 0.2s ease;
-    -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
-}
-#quiz-intro a:hover
-{color:#F0FF00; background-position:left top;}
+#quiz-intro a															{position:absolute; display:block; width:135px; height:40px; right:95px; bottom:20px; font:25px nsM; color:#FFF; line-height:35px; text-align:left; background:url("../img/quiz/start_img_01.png") right top no-repeat; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+#quiz-intro a:hover													{color:#F0FF00; background-position:left top;}
 
 #quiz-intro .title-area												{position:absolute; left:85px; top:340px; font:700 200px play; cursor:default; z-index:1;  transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #quiz-intro .text-area												{width:100%; height:185px; background:url("../img/quiz/quiz_bg_01.png") repeat;}
@@ -51,7 +42,7 @@
 
 
 
-/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+/* ÄûÁî ¿µ¿ª */
 
 .quiz																		{position:relative; float:left; width:100%; padding-top:105px;}
 .quiz:after																{content:""; display:block; clear:both;}
@@ -91,7 +82,9 @@
 .quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
-.quiz li.question dd.type-1 a span.correct-check		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-1 a span.correct-check-1		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-1 a span.correct-check-2		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-1 a span.correct-check-3		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
 
 
 
@@ -113,21 +106,43 @@
 .quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 .quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
-.quiz li.question dd.type-2 a span.correct-check		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-2 a span.correct-check-1		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-2 a span.correct-check-2		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-2 a span.correct-check-3		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
 
 
 
 
 
-.quiz li.check-1
-{
-    position:absolute;
-    display:block;
-    width:110px;
-    height:110px;
-    left:33px;
-    top:95px;
-    text-indent:-9999px; background:url("../img/quiz/check_02.png") no-repeat;}
+.quiz li.question dd.type-3										{float:left; width:81%; font:20px nsM; line-height:25px; padding:10px 5% 0 14%;}
+.quiz li.question dd.type-3 a										{position:relative; display:inline-block; width:165px; height:165px; text-indent:-9999px; margin-right:0;}
+
+.quiz li.question dd.type-3 a.n-o								{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:80px;}
+.quiz li.question dd.type-3 a.n-o-choice					{background:url("../img/learn/btn_o_03.png") no-repeat; margin-right:80px;}
+.quiz li.question dd.type-3 a.n-x								{background:url("../img/learn/btn_x_01.png") no-repeat;}
+.quiz li.question dd.type-3 a.n-x-choice					{background:url("../img/learn/btn_x_03.png") no-repeat;}
+.quiz li.question dd.type-3 a span								{position:absolute; display:block; width:40px; height:40px; left:0; top:18px; text-indent:-9999px;}
+.quiz li.question dd.type-3 a span.none						{display:none;}
+.quiz li.question dd.type-3 a span.check-1				{background:url("../img/quiz/check_30.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-3 a span.check-2				{background:url("../img/quiz/check_30.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-3 a span.check-3				{background:url("../img/quiz/check_30.png") no-repeat; z-index:101;}
+.quiz li.question dd.type-3 a span.correct-check-1		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-3 a span.correct-check-2		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+.quiz li.question dd.type-3 a span.correct-check-3		{background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
+
+
+
+
+
+.quiz li.question dd.type-4										{float:left; width:80.5%; font:20px nsM; line-height:25px; padding:20px 5% 0 14.5%;}
+.quiz li.question dd.type-4 label								{position:relative; display:inline-block; font:24px nsM; color:#FFF; line-height:48px; padding-right:12px;}
+.quiz li.question dd.type-4 input								{position:relative; display:inline-block; width:665px; height:45px; font:22px nsM; color:#1A3B6C; line-height:35px; border:5px solid #BEDCE9; padding:0 10px 0;}
+
+
+
+
+
+.quiz li.check-1														{position:absolute; display:block; width:110px; height:110px; left:33px; top:95px; text-indent:-9999px; background:url("../img/quiz/check_02.png") no-repeat;}
 .quiz li.check-2														{position:absolute; display:block; width:110px; height:110px; left:33px; top:95px; text-indent:-9999px; background:url("../img/quiz/check_03.png") no-repeat;}
 
 
@@ -138,9 +153,15 @@
 
 .quiz li.feed dl														{position:relative; float:left; width:100%;}
 .quiz li.feed dt														{position:absolute; width:130px; top:9px; text-align:right;}
+.quiz li.feed dt.correct-case-1									{position:absolute; width:945px; top:9px; text-align:left; padding-left:55px;}
+
 .quiz li.feed dt span.text-1										{display:inline-block; font:20px nsM; color:#222; line-height:60px; vertical-align:top; padding:11px 5px 0 0;}
 .quiz li.feed dt span.text-2										{display:inline-block; font:700 60px play; color:#FF0060; line-height:60px; vertical-align:top;}
+.quiz li.feed dt span.text-3										{display:inline-block; font:bold 60px nbgM; color:#FF0060; line-height:60px; vertical-align:top; padding-top:5px;}
+.quiz li.feed dt span.text-4										{display:inline-block; font:27px nbgM; color:#FF0060; line-height:60px; vertical-align:top; padding-top:10px;}
+
 .quiz li.feed dd														{float:left; width:80%; font:18px nsM; color:#1A3B6C; line-height:25px; padding:40px 5.5% 0 14.5%;}
+.quiz li.feed dd.text-case-1										{width:850px; padding:70px 50px 0 100px;}
 .quiz li.feed dd.btn													{position:absolute; width:160px; height:50px; right:45px; top:135px; background:url("../img/quiz/btn_img_02.png") no-repeat; padding:0;}
 .quiz li.feed dd.btn a												{display:block; overflow:hidden; width:110px; height:34px; font:18px nsM; color:#FFF; text-align:center; padding:16px 45px 0 5px;}
 
@@ -150,8 +171,7 @@
 
 .q-num																	{position:absolute; width:228px; height:36px; right:45px; top:87px; background:url("../img/quiz/q_num_line.png") 50px 17px no-repeat; z-index:103;}
 .q-num a																{position:relative; float:left; display:block; overflow:hidden; width:64px; height:29px; font:700 18px play; color:#FFF; background:url("../img/quiz/q_num_bg.png") no-repeat; padding:7px 0 0 12px;}
-.q-num a:hover
-{background-position:0 bottom;}
+.q-num a:hover														{background-position:0 bottom;}
 .q-num a.on															{background-position:0 bottom;}
 .q-num a span														{position:absolute; display:block; width:16px; height:16px; left:46px; top:6px;}
 
@@ -169,7 +189,7 @@
 
 
 
-/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
+/* Åë°è ¿µ¿ª */
 
 .quiz-result															{float:left; width:100%; padding-top:150px;}
 .quiz-result:after														{content:""; display:block; clear:both;}

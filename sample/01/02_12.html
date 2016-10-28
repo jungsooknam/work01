@@ -27,11 +27,24 @@
 		<script type="text/javascript" src="js/common-script.js"></script>
 
 		<script type="text/javascript">
+			var _totalPageImage =  02;									// 이미지보기 페이징 수
+
 			$(document).ready(function(){
 				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				initImagePage();												// 학습영역 이미지 페이징
+
+				$("#img_page_left").click(function(){
+					prevPageImage();
+					playAudio('btn-sound');
+				});
+				
+				$("#img_page_right").click(function(){
+					nextPageImage();
+					playAudio('btn-sound');
+				});
 				
 				var contentId = getContentId();
 				function resizeHeight(){
@@ -70,73 +83,111 @@
 
 
 
+				<ul id="content-area">
+					<li class="subject">퍼지 컨트롤 솔레노이드 밸브(PCSV)</li><!-- 학습 - 주제 영역 -->
+					<li class="text-area">
+
+						<dl class="type-1">
+							<dt>퍼지컨트롤 솔레노이드 밸브 검사</dt>
+							<dd>
+								<div class="paragraph-1">
+									<p>1</p>점화스위치를 OFF하고 배터리 (-) 터미널을 분리함
+								</div>
+
+								<div class="paragraph-1">
+									<p>2</p>퍼지컨트롤 솔레노이드 밸브 컨넥터 (A)를 탈거함<br />
+									<a href="javascript:openViewbox1();">이미지 보기</a>
+								</div>
+
+								<div class="paragraph-1">
+									<p>3</p>퍼지컨트롤 솔레노이드 밸브에서 흡기매니폴드 측 진공호그(B)를 분리함
+								</div>
+
+								<div class="paragraph-1">
+									<p>4</p>핸드 진공 펌프를 진공호스가 연결되었던 니플에 연결하고 진공을 가함
+								</div>
+
+								<div class="paragraph-1">
+									<p>5</p>퍼지컨트롤 솔레노이드 밸브 전원단과 제어단에 배터리 (+)와 (-)케이블을 연결하여 밸브작동 상태를 검사함<br />
+									<a href="javascript:openViewbox2();">이미지 보기</a>
+								</div>
+
+								<div class="paragraph-1">
+									<p>6</p>퍼지컨트롤 솔레노이드 밸브의 저항을 측정함<br />
+									<a href="javascript:openViewbox3();">이미지 보기</a>
+								</div>
+							</dd>
+						</dl>
+					</li><!-- 학습 - 텍스트 영역 -->
 
 
-				<div id="learning-quiz">
-					<div class="quiz-name"><span>깜</span>짝퀴즈</div>
-					<div class="quiz-text">※ 다음 설명이 맞으면 O, 틀리면 X를 선택하세요.</div>
+
+					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 재생 버튼 선택 후 전체 화면보기로 학습하세요. ]</p></li>
 
 
 
-
-					<dl class="question">
-						<dt>연료탱크 캡은 연료 탱크 외부의 공기가<br /> 유입되지 못하게 하는 역할을 한다.</dt>
-						<dd id="question_ox">
-							<a href="javascript:checkAnswer('C');" class="o">O</a>
-							<a href="javascript:checkAnswer('W');" class="x">X</a>
-						</dd>
-						<dd id="question_result" style="display:none;">
-							<span id="result-o" class="o-1">O</span>
-							<span id="result-x" class="x-1">X</span>
-						</dd>
-					</dl>
-
-					<dl id="learning_quiz_feed" class="feed">
-						<dt>정답 및 해설</dt>
-						<dd class="ox"><span class="o"></span></dd>
-						<dd class="text-1">연료탱크 캡은 연료탱크 내의 연료 증발가스가 외부로 방출되지 못하게 하는 기능과 함께 연료탱크 내에 연료의 사용으로 인한 진공이 형성되지 않도록 적절한 대기의 공기가 유입되게 하는 역할을 합니다.</dd>
-					</dl>
+					<li class="movie-area">
+						<div>
+							<video id="page-movie" controls preload="auto" poster="img/learn/cover_02_3.png">
+								<script type="text/javascript">
+									document.write("<source src='"+mp4Link+"02_12.mp4' type='video/mp4' />");
+								</script>
+								해당 브라우저는 영상을 지원하지 않습니다.
+							</video>
+						</div>
+					</li><!-- 학습 - 동영상 영역 -->
+				</ul>
 
 
 
-					<audio id="audio1">
+				<div class="img-view case-1">
+					<div class="img-1">
+						<img src="img/learn/img_12_01.png" alt="관련 이미지" />
+					</div>
+
+					<p><a href="javascript:closeViewbox1();">닫기</a></p>
+				</div>
+
+
+
+				<div class="img-view case-2">
+					<div id="img-group-1" class="img-page-area img-1">
+						<img src="img/learn/img_12_02.png" alt="엔진 냉각 상태" />
+					</div>
+
+					<div id="img-group-2" class="img-page-area img-1">
+						<img src="img/learn/img_12_03.png" alt="엔진 웜업 상태" />
+					</div>
+
+					<ul class="img-page">
+						<li class="left"><img src="img/learn/btn_pre_01.png" id="img_page_left" alt="이전 이미지보기" /></li>
+						<li><span id="current_img_page_no"></span> / <span id="total_img_page_no"></span></li>
+						<li class="right"><img src="img/learn/btn_next_01.png" id="img_page_right" alt="다음 이미지보기" /></li>
+					</ul>
+
+					<p><a href="javascript:closeViewbox2();">닫기</a></p>
+
+					<audio id="btn-sound">
 						<script type="text/javascript">
-							document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
 						</script>
 					</audio>
-					<audio id="audio2">
-						<script type="text/javascript">
-							document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
-						</script>
-					</audio><!--  정오답 음성 영역  -->
+				</div>
 
-					<div class="page-ending-2">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
-				</div><!--  E : learning-quiz -->
+
+
+				<div class="img-view case-3">
+					<div class="img-1">
+						<img src="img/learn/img_12_04.png" alt="관련 이미지" />
+					</div>
+
+					<p><a href="javascript:closeViewbox3();">닫기</a></p>
+				</div>
+
+
+
+				<div class="page-ending-1">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
 			</section><!--  본문 영역 -->
-
-
-
-			<script type="text/javascript">
-				function checkAnswer(result){
-					if('C' == result){
-						$("#learning_quiz_feed").show();
-						$("#question_result").show();
-						$("#question_ox").hide();
-						$("#result-o").removeClass("o-1");
-						$("#result-o").addClass("o-4");
-						playAudio('audio1');
-					}else{
-						$("#learning_quiz_feed").show();
-						$("#question_result").show();
-						$("#question_ox").hide();
-						$("#result-o").removeClass("o-1");
-						$("#result-o").addClass("o-3");
-						$("#result-x").removeClass("x-1");
-						$("#result-x").addClass("x-2");
-						playAudio('audio2');
-					}
-				}
-			</script>
 
 
 

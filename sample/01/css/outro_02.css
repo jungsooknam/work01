@@ -5,6 +5,7 @@
 @media all and (max-width:999px) {
 
 #outro																	{width:100%; height:600px; background-size:115%;}
+#outro .page-ending												{width:96%; padding:8px 2% 0;}
 
 #outro .img-01														{width:600px; height:600px; background-size:100%;}
 #outro .img-02														{width:100%; height:600px; background-size:100%;}
@@ -53,7 +54,7 @@
 #outro dd .data-02													{top:77px;}
 #outro dd .data-03													{top:109px;}
 #outro dd .data-04													{top:141px;}
-#outro dd .data-05													{top:195px;}
+#outro dd .data-05													{top:173px;}
 
 
 #outro .course-name												{top:65px; font-size:20px; line-height:30px; padding:3px 33px 2px 20px;}
@@ -71,9 +72,26 @@
 
 
 
+@media all and (max-width:768px) {
+
+#outro dd .data-04													{top:141px;}
+#outro dd .data-05													{top:195px;}
+
+}
+
+
+
+
+
+
+
+
+
+
 @media all and (max-width:729px) {
 
 #outro																	{height:560px; background-size:150%;}
+#outro .page-ending												{width:94%; padding:8px 3% 0;}
 
 #outro .img-01														{width:500px; height:500px;}
 #outro .img-02														{height:560px; background-position:30px 0;}
@@ -107,13 +125,14 @@
 @media all and (max-width:599px) {
 
 #outro																	{height:550px; background-size:200%;}
+#outro .page-ending												{width:95%; padding:8px 2.5% 0;}
 
 
 #outro .img-01														{width:449px; height:449px;}
 #outro .img-02														{height:550px; background-size:125%; background-position:-70px 0;}
 
 
-#outro dl																{height:235px;}
+#outro dl																{height:255px;}
 #outro dt																{top:-15px; font-size:18px; line-height:23px; padding:4px 20px 3px 25px;}
 #outro dd																{font-size:15px; line-height:22px;}
 #outro dd p															{left:27px; background-position:0 9px; padding:0 35px 0 18px;}
@@ -126,7 +145,23 @@
 
 #outro .course-name												{top:60px; font-size:17px; padding:3px 26px 2px 15px;}
 #outro .chapter-name												{top:110px; font-size:37px; line-height:47px; padding-right:25px;}
-#outro .ending-text													{top:265px; font-size:20px; padding-right:25px;}
+#outro .ending-text													{top:250px; font-size:20px; padding-right:25px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:464px) {
+
+#outro dd .data-04													{top:119px;}
+#outro dd .data-05													{top:191px;}
 
 }
 
@@ -147,7 +182,7 @@
 #outro .img-02														{height:535px; background-size:145%; background-position:-140px 0;}
 
 
-#outro dl																{height:235px;}
+#outro dl																{height:255px;}
 #outro dt																{top:-15px; font-size:17px; line-height:22px; padding:4px 20px 3px 20px;}
 #outro dd																{font-size:14px; line-height:20px;}
 #outro dd p															{left:20px; background:url("../img/intro_outro/bullet_02.png") 0 8px no-repeat; padding:0 20px 0 14px;}
@@ -160,7 +195,23 @@
 
 #outro .course-name												{top:50px; font-size:16px; padding:1px 26px 1px 15px;}
 #outro .chapter-name												{top:100px; font-size:35px; line-height:45px;}
-#outro .ending-text													{top:250px; font-size:19px;}
+#outro .ending-text													{top:235px; font-size:19px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:413px) {
+
+#outro dd .data-04													{top:119px;}
+#outro dd .data-05													{top:191px;}
 
 }
 
@@ -181,7 +232,7 @@
 #outro .img-02														{height:520px; background-size:165%; background-position:-175px 0;}
 
 
-#outro dl																{height:235px;}
+#outro dl																{height:245px;}
 #outro dt																{top:-15px; font-size:16px; line-height:22px; padding:4px 20px 3px 20px;}
 #outro dd																{font-size:13px; line-height:18px;}
 #outro dd p															{left:20px; padding:0 20px 0 12px;}

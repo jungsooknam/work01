@@ -4,13 +4,13 @@
 
 @media all and (max-width:999px) {
 
-#objective																{width:100%; height:620px;}
+#objective																{width:100%; height:100%;}
 #objective .theme													{top:55px; background-position:-1px 0; padding:4px 20px 2px 43px;}
 #objective .page-ending											{position:absolute; width:90%; bottom:7px; border-top:1px solid #B8BEC4; padding:8px 5% 0;}
 
 
 
-#objective-area														{width:90%; padding:110px 5% 0;}
+#objective-area														{width:90%; padding:110px 5% 65px;}
 
 #objective-area dl													{width:76.5%; padding:24px 0 15px 22%;}
 #objective-area dt													{top:10px; font-size:25px;}
@@ -36,7 +36,7 @@
 #objective .theme													{top:50px; font-size:18px; background-position:-5px -1px; padding:2px 20px 1px 25px;}
 #objective .page-ending											{width:92%; padding:8px 4% 0;}
 
-#objective-area														{width:92%; padding:100px 4% 0;}
+#objective-area														{width:92%; padding:100px 4% 65px;}
 
 #objective-area dl													{width:78.5%; padding:22px 0 15px 20%;}
 #objective-area dt													{top:10px; font-size:22px; line-height:30px; padding:3px 15px 1px;}
@@ -60,7 +60,7 @@
 #objective .theme													{top:45px; font-size:18px; background-position:-8px -3px; padding:2px 15px 1px 21px;}
 #objective .page-ending											{width:94%; padding:8px 3% 0;}
 
-#objective-area														{width:94%; padding:90px 3% 0;}
+#objective-area														{width:94%; padding:90px 3% 65px;}
 
 #objective-area dl													{width:77.5%; padding:18px 0 12px 21%; margin-bottom:12px;}
 #objective-area .type-1											{border:4px solid #5A8DAC;}

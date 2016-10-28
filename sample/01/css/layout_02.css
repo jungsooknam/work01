@@ -6,14 +6,12 @@
 
 #wrapper														{width:100%;}
 
-.body-learning
-{background:url("../img/inc/body_learn_02.png") right top no-repeat #C5D0E2;}
+.body-learning												{background:url("../img/inc/body_learn_02.png") right top no-repeat #C5D0E2;}
 
 
 
 header															{width:100%;}
-header.learn
-{height:85px; background:url("../img/inc/body_learn_03.png") no-repeat;}
+header.learn													{height:85px; background:url("../img/inc/body_learn_03.png") no-repeat;}
 footer 															{width:100%;}
 
 }

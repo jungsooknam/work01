@@ -10,15 +10,17 @@
 
 
 
-#summary-area														{position:relative; float:left; width:890px; padding:110px 55px 0;}
+#summary-area														{position:relative; float:left; width:890px; padding:60px 55px 0;}
 #summary-area:after												{content:""; display:block; clear:both;}
+
+#summary-area .summary-guide								{float:left; width:770px; font:18px nsM; color:#20335A; line-height:20px; background:url("../img/apply/bullet_01.png") 110px 5px no-repeat; padding-left:120px; margin-bottom:30px;}
 
 #summary-area dl													{float:left; width:890px;}
 #summary-area dt													{position:relative; float:left; width:825px; height:42px; font:25px nsM; color:#FFF; line-height:35px; border-radius:15px 15px 0 0; padding:8px 0 0 65px;}
 #summary-area .type-1 dt										{background:url("../img/summary/title_bg_01.png") repeat;}
 #summary-area .type-2 dt										{background:url("../img/summary/title_bg_03.png") repeat;}
 
-#summary-area dt span											{position:absolute; width:50px; height:49px; left:0; top:0; font:700 40px play; line-height:45px; text-align:center; border-radius:15px 0 0 0; padding-top:1px;}
+#summary-area dt span											{position:absolute; width:50px; height:50px; left:0; top:0; border-radius:15px 0 0 0; padding-top:0;}
 #summary-area .type-1 dt span								{background:url("../img/summary/title_bg_02.png") repeat;}
 #summary-area .type-2 dt span								{background:url("../img/summary/title_bg_04.png") repeat;}
 

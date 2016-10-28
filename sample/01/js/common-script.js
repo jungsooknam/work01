@@ -63,6 +63,79 @@ function nextPageLearn() {
 
 
 
+// Image view /////////////////////////////////////////////////////////////////
+
+function openViewbox1() {
+	$(".case-1").show();
+}
+function closeViewbox1() {
+	$(".case-1").hide();
+}
+
+function openViewbox2() {
+	$(".case-2").show();
+}
+function closeViewbox2() {
+	$(".case-2").hide();
+}
+
+function openViewbox3() {
+	$(".case-3").show();
+}
+function closeViewbox3() {
+	$(".case-3").hide();
+}
+
+
+
+
+
+// Image page /////////////////////////////////////////////////////////////////
+
+function initImagePage() {
+	_presentPageImage=1;
+	showPageNoImage();
+}
+
+function showPageNoImage() {
+
+	$(".img-page-area").css("display", "none");
+	$("#img-group-" + _presentPageImage).css("display", "block");
+
+	$("#current_img_page_no").empty();
+	$("#current_img_page_no").append(_presentPageImage);
+	$("#total_img_page_no").empty();
+	$("#total_img_page_no").append(_totalPageImage);
+
+	if(_totalPageImage == 1)
+		$(".img-page").hide();
+
+	if(_presentPageImage == 1)
+		$("#img_page_left").hide();
+	else
+		$("#img_page_left").show();
+
+	if(_presentPageImage == _totalPageImage)
+		$("#img_page_right").hide();
+	else
+		$("#img_page_right").show();
+}
+
+function prevPageImage() {
+	_presentPageImage--;
+	showPageNoImage();
+}
+
+
+function nextPageImage() {
+	_presentPageImage++;
+	showPageNoImage();
+}
+
+
+
+
+
 // Summary page /////////////////////////////////////////////////////////////////
 
 function initSummaryPage() {

@@ -28,7 +28,7 @@ function pageInit(){
 		$("#q1_wrong").hide();
 		$("#q1_wrong1").hide();
 		$("#quiz_feed_1").hide();
-		$(".correct-check1").hide();
+		$(".correct-check-1").hide();
 	}
 
 	// 2번 문제 정리
@@ -43,7 +43,7 @@ function pageInit(){
 		$("#q2_wrong").hide();
 		$("#q2_wrong1").hide();
 		$("#quiz_feed_2").hide();
-		$(".correct-check2").hide();
+		$(".correct-check-2").hide();
 	}
 
 	// 3번 문제 정리
@@ -58,7 +58,7 @@ function pageInit(){
 		$("#q3_wrong").hide();
 		$("#q3_wrong1").hide();
 		$("#quiz_feed_3").hide();
-		$(".correct-check3").hide();
+		$(".correct-check-3").hide();
 	}
 }
 
@@ -169,7 +169,7 @@ function checkAnswer(quizNum){
 				$("#q1_correct").show();
 				$("#q1_correct1").show();
 				$("#btn_1").hide();
-				$(".correct-check1").show();
+				$(".correct-check-1").show();
 				playAudio('audio1');
 			}else if(vWrongAnswerCnt == 0){
 				vWrongAnswerCnt++;
@@ -188,7 +188,7 @@ function checkAnswer(quizNum){
 				$("#q1_wrong").show();
 				$("#q1_wrong1").show();
 				$("#btn_1").hide();
-				$(".correct-check1").show();
+				$(".correct-check-1").show();
 				playAudio('audio2');
 			}
 			vSelectAnswer1 = "";
@@ -210,7 +210,7 @@ function checkAnswer(quizNum){
 				$("#q2_correct").show();
 				$("#q2_correct1").show();
 				$("#btn_2").hide();
-				$(".correct-check2").show();
+				$(".correct-check-2").show();
 				playAudio('audio1');
 			}else if(vWrongAnswerCnt == 0){
 				vWrongAnswerCnt++;
@@ -229,7 +229,7 @@ function checkAnswer(quizNum){
 				$("#q2_wrong").show();
 				$("#q2_wrong1").show();
 				$("#btn_2").hide();
-				$(".correct-check2").show();
+				$(".correct-check-2").show();
 				playAudio('audio2');
 			}
 			vSelectAnswer2 = "";
@@ -250,7 +250,7 @@ function checkAnswer(quizNum){
 				$("#q3_correct").show();
 				$("#q3_correct1").show();
 				$("#btn_3").hide();
-				$(".correct-check3").show();
+				$(".correct-check-3").show();
 				playAudio('audio1');
 			}else if(vWrongAnswerCnt == 0){
 				vWrongAnswerCnt++;
@@ -269,7 +269,7 @@ function checkAnswer(quizNum){
 				$("#q3_wrong").show();
 				$("#q3_wrong1").show();
 				$("#btn_3").hide();
-				$(".correct-check3").show();
+				$(".correct-check-3").show();
 				playAudio('audio2');
 			}
 			vSelectAnswer3 = "";

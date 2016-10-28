@@ -24,6 +24,7 @@ var OutroMotion = (function(){
 			TweenMax.to($(".course-name"), 0, {x:0, autoAlpha:0});
 			TweenMax.to($(".chapter-name"), 0, {x:-120, autoAlpha:0});
 			TweenMax.to($(".ending-text"), 0, {x:-120, autoAlpha:0});
+			TweenMax.to($(".page-ending"), 0, {x:0, autoAlpha:0});
 		},
 
 
@@ -42,6 +43,7 @@ var OutroMotion = (function(){
 			TweenMax.to($(".course-name"), 1.5, {delay:1, x:0, autoAlpha:1, ease:Cubic.easeOut});
 			TweenMax.to($(".chapter-name"),1, {delay:1.5, x:0, autoAlpha:1, ease:Cubic.easeOut});
 			TweenMax.to($(".ending-text"),1, {delay:2, x:0, autoAlpha:1, ease:Cubic.easeOut});
+			TweenMax.to($(".page-ending"),4, {delay:4, x:0, autoAlpha:1, ease:Cubic.easeOut});
 		}
 	}
 

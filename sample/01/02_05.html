@@ -27,11 +27,24 @@
 		<script type="text/javascript" src="js/common-script.js"></script>
 
 		<script type="text/javascript">
+			var _totalPageImage =  02;									// 이미지보기 페이징 수
+
 			$(document).ready(function(){
 				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				initImagePage();												// 학습영역 이미지 페이징
+
+				$("#img_page_left").click(function(){
+					prevPageImage();
+					playAudio('btn-sound');
+				});
+				
+				$("#img_page_right").click(function(){
+					nextPageImage();
+					playAudio('btn-sound');
+				});
 				
 				var contentId = getContentId();
 				function resizeHeight(){
@@ -78,7 +91,8 @@
 							<dt>계통의 검사</dt>
 							<dd>
 								<div class="paragraph-1">
-									<p>1</p>PCV 밸브에서 통풍호스를 분리시키고 로커암 커버에서 밸브를 탈거한 다음 깨끗한 호스를  탈거한 PCV밸브에 연결
+									<p>1</p>PCV 밸브에서 통풍호스를 분리시키고 로커암 커버에서 밸브를 탈거한 다음 깨끗한 호스를  탈거한 PCV밸브에 연결<br />
+									<a href="javascript:openViewbox1();">이미지 보기</a>
 								</div>
 
 								<div class="paragraph-1">
@@ -91,27 +105,17 @@
 								</div>
 							</dd>
 						</dl>
-
-
-						<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
-
-						<audio id="page-narration" controls>
-							<script type="text/javascript">
-								document.write("<source src='"+mp3Link+"02_05.mp3' type='audio/mpeg' />");
-							</script>
-							해당 브라우저는 음성을 지원하지 않습니다.
-						</audio>
 					</li><!-- 학습 - 텍스트 영역 -->
 
 
 
-					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 동영상 재생 > 전체 화면보기 ]</p></li>
+					<li class="movie-guide">실습 영상을 통해 학습을 진행하세요.<p>[ 재생 버튼 선택 후 전체 화면보기로 학습하세요. ]</p></li>
 
 
 
 					<li class="movie-area">
 						<div>
-							<video id="page-movie" controls preload="auto" poster="img/learn/cover_01.png">
+							<video id="page-movie" controls preload="auto" poster="img/learn/cover_01_2.png">
 								<script type="text/javascript">
 									document.write("<source src='"+mp4Link+"02_05.mp4' type='video/mp4' />");
 								</script>
@@ -120,6 +124,32 @@
 						</div>
 					</li><!-- 학습 - 동영상 영역 -->
 				</ul>
+
+
+
+				<div class="img-view case-1">
+					<div id="img-group-1" class="img-page-area img-1">
+						<img src="img/learn/img_05_01.png" alt="PCV 밸브" />
+					</div>
+
+					<div id="img-group-2" class="img-page-area img-1">
+						<img src="img/learn/img_05_02.png" alt="PCV 밸브" />
+					</div>
+
+					<ul class="img-page type-1">
+						<li class="left"><img src="img/learn/btn_pre_01.png" id="img_page_left" alt="이전 이미지보기" /></li>
+						<li><span id="current_img_page_no"></span> / <span id="total_img_page_no"></span></li>
+						<li class="right"><img src="img/learn/btn_next_01.png" id="img_page_right" alt="다음 이미지보기" /></li>
+					</ul>
+
+					<p><a href="javascript:closeViewbox1();">닫기</a></p>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
 
 
 
