@@ -134,7 +134,26 @@ footer
     text-indent:-9999px;
     background:url("../img/inc/menu_close_01.png")
 no-repeat; cursor:pointer;}
-#menu															{position:fixed; overflow-x:hidden; overflow-y:auto; width:205px; height:100%; right:-215px; top:0; background:url("../img/inc/menu_bg.png") repeat-y; opacity:0; padding-left:10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; z-index:2002;}
+
+
+#menu
+{
+    position:fixed;
+    overflow-x:hidden;
+    overflow-y:auto;
+    width:205px;
+    height:100%;
+    right:-205px;
+    top:0;
+    background:#FFF;
+    opacity:0;
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease;
+    -o-transition:All 0.2s ease;
+    z-index:2002;
+}
+
 #menu.open													{display:block; right:0; opacity:1;}
 
 #menu_activated												{width:205px; height:90%; padding-bottom:10%;}

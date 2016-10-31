@@ -175,12 +175,17 @@
 				// 정답을 맞추면
 				playAudio('audio1');
 				$("#learning_quiz_feed").css('visibility','visible');
+				$("#page-narration-text").css('visibility','visible');
+				$("#page-narration").css('visibility','visible');
+
 			}else{
 				playAudio('audio2');
 				opt --;
 				if(opt == 0) {
 					// 기회가 없다면
 					$("#learning_quiz_feed").css('visibility','visible');
+					$("#page-narration-text").css('visibility','visible');
+					$("#page-narration").css('visibility','visible');
 				}else{
 					showAlertDiv2();
 				}

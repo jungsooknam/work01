@@ -103,10 +103,12 @@
 
     .theme
     {
-        width:93.5%; top:80px; font-size:17px; line-height:20px; color:#005482;
+        width: calc(100% - 30px);
+        /*90%;*/
+        top:80px; font-size:17px; line-height:20px; color:#005482;
         /*border-bottom:1px solid #9FB4C8;*/
         background:url("../img/learn/learn_bullet_11.png") 0px 3px no-repeat;
-        background-color:none;
+        /*background-color:none;*/
         padding:2px 0 7px 27px;
     }
 

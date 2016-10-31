@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>배출가스장치정비·검사</title>
+	<title>SQL 활용</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -78,7 +78,7 @@
 			</li>
 
 			<li class="btn-area">
-				<a href="javascript:goQuiz('1');">START</a>
+				<a href="javascript:goQuiz('1');">시작하기</a>
 			</li>
 		</ul><!--  E : quiz-intro -->
 
@@ -90,7 +90,8 @@
 				<dl>
 					<dt>Q1</dt>
 					<dd class="text">
-						<p>MS-SQL에서 숫자형 타입으로 자동증분이 되는 것은?</p>
+						<p>MS-SQL에서 제공하는 기본 데이터 타입 중 숫자형 타입으로 자동증분이 되는 것은?
+						</p>
 					</dd>
 
 					<dd class="type-1">
@@ -119,7 +120,7 @@
 
 					<dd>
 						<span class="text-1">해설</span>
-						자동 증가 속성 타입은 identity 타입입니다.</dd>
+						자동 증가 속성을 가진 타입은 identity 타입입니다. bigint 타입은 64비트를 제공하는 -2^63~ 2^63-1(정수)를 나타내며, Smallint 타입은 16비트를 사용해서  -2^15~2^15-1(정수)를 나타냅니다. Char 타입은 문자 타입 중 하나로 숫자형 타입이 아닙니다.</dd>
 					<dd class="btn"><a href="javascript:goQuiz('2');">다음 문제</a></dd>
 				</dl>
 			</li>
@@ -135,12 +136,13 @@
 			<li class="question">
 				<dl>
 					<dt>Q2</dt>
-					<dd class="text"><p>테이블의 모든 내용은 지우는 DDL문을 선택하시오. 단, 테이블 자체는 남겨진다.</p></dd>
+					<dd class="text"><p>테이블의 구조를 변경하기 위한 구문을 고르시오.
+					</p></dd>
 					<dd class="type-1">
-						<a href="javascript:selectAnswer2('type-2', 1, 'q2_n1');" id="q2_n1" class="n-1">DELETE<span class="qq2 none">사용자 체크</span></a>
-						<a href="javascript:selectAnswer2('type-2', 2, 'q2_n2');" id="q2_n2" class="n-2">TRUNCATE<span class="qq2 none">사용자 체크</span></a>
-						<a href="javascript:selectAnswer2('type-2', 3, 'q2_n3');" id="q2_n3" class="n-3">REMOVE<span class="qq2 none">사용자 체크</span></a>
-						<a href="javascript:selectAnswer2('type-2', 4, 'q2_n4');" id="q2_n4" class="n-4">DROP<span class="qq2 none">사용자 체크</span>
+						<a href="javascript:selectAnswer2('type-2', 1, 'q2_n1');" id="q2_n1" class="n-1">ALTER TABLE 문<span class="qq2 none">사용자 체크</span></a>
+						<a href="javascript:selectAnswer2('type-2', 2, 'q2_n2');" id="q2_n2" class="n-2">CREATE TABLE 문<span class="qq2 none">사용자 체크</span></a>
+						<a href="javascript:selectAnswer2('type-2', 3, 'q2_n3');" id="q2_n3" class="n-3">DROP TABLE 문<span class="qq2 none">사용자 체크</span></a>
+						<a href="javascript:selectAnswer2('type-2', 4, 'q2_n4');" id="q2_n4" class="n-4">TRUNCATE TABLE 문<span class="qq2 none">사용자 체크</span>
 							<span class="correct-check" style="display:none;">정답 체크</span></a>
 					</dd>
 					<dd class="btn" id="btn_2"><a href="javascript:checkAnswer(1);">정답 확인</a></dd>
@@ -152,7 +154,7 @@
 					<dt><span class="text-1">정답</span> <span class="text-2">2</span></dt>
 					<dd>
 						<span class="text-1">해설</span>
-						테이블의 내용을 지우는 DDL문은 TRUNCATE입니다. DELETE는 DML문입니다.</dd>
+						테이블의 구조를 변경하는 구문은 ALTER TABLE 문 입니다. CREATE TABLE 문은 테이블을 생성할 때 사용하는 구문이고, DROP TABLE 문은 테이블을 지울 때, TRUNCATE TABLE 문은 테이블의 모든 내용은 지우지만 테이블은 남기고자 할 때 사용하는 구문입니다.</dd>
 					<dd class="btn"><a href="javascript:goQuiz('3');">다음 문제</a></dd>
 				</dl>
 			</li>
@@ -168,8 +170,16 @@
 				<dl>
 					<dt>Q3</dt>
 					<dd class="text"><p>다음 괄호 안에 들어 갈 수 없는 것을 고르시오.</p></dd>
-					<dd class="ex"><span><b>보기</b></span>ALTER TABLE 테이블명 {<br>
-						( ) COLUMN 속성명 [타입]}</dd>
+					<dd class="ex">
+
+						<span class="sample"><b>보기</b></span>
+
+
+
+						ALTER TABLE 테이블명 {<br>
+						<span style="color:#F1FF53">(&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+						<!--( )-->
+						COLUMN 속성명 [타입]}</dd>
 					<dd class="type-2">
 						<a href="javascript:selectAnswer3('type-3', 1, 'q3_n1');" id="q3_n1" class="n-1">ADD<span class="qq3 none">사용자 체크</span></a>
 						<a href="javascript:selectAnswer3('type-3', 2, 'q3_n2');" id="q3_n2" class="n-2">SET<span class="qq3 none">사용자 체크</span></a>

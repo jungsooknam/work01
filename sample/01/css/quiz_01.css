@@ -16,7 +16,7 @@
 
 
 
-/* ÀÎÆ®·Î ¿µ¿ª */
+/* ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 #quiz-intro																{position:relative; float:left; width:100%; padding-top:180px;}
 #quiz-intro:after														{content:""; display:block; clear:both;}
@@ -29,7 +29,8 @@
 
 #quiz-intro .title-area												{position:absolute; left:85px; top:340px; font:700 200px play; cursor:default; z-index:1;  transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #quiz-intro .text-area												{width:100%; height:185px; background:url("../img/quiz/quiz_bg_01.png") repeat;}
-#quiz-intro .btn-area												{width:100%; height:115px; background:url("../img/quiz/quiz_bg_02.png") repeat;}
+#quiz-intro .btn-area
+{width:100%; height:115px; background:url("../img/quiz/quiz_bg_02.png") repeat;}
 #quiz-intro .type-1													{font:38px nsM; line-height:50px; padding:44px 0 3px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #quiz-intro .type-2													{font:28px nsM; line-height:50px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 
@@ -42,7 +43,7 @@
 
 
 
-/* ÄûÁî ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz																		{position:relative; float:left; width:100%; padding-top:105px;}
 .quiz:after																{content:""; display:block; clear:both;}
@@ -189,7 +190,7 @@
 
 
 
-/* Åë°è ¿µ¿ª */
+/* ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
 .quiz-result															{float:left; width:100%; padding-top:150px;}
 .quiz-result:after														{content:""; display:block; clear:both;}

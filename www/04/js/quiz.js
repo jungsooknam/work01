@@ -3,7 +3,7 @@
  * @type {number}
  */
 
-var correctAnswer = [2,2,2]
+var correctAnswer = [2,1,2]
 
 var vWrongAnswerCnt = 0;
 var vCorrectAnswerCnt = 0;

@@ -136,6 +136,11 @@
     width:90%;
     margin-left: 5%;
     height:35px;
+    visibility:hidden;
+}
+
+#learning-quiz-text #page-narration-text{
+    visibility:hidden;
 }
 
 

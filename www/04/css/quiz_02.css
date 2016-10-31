@@ -28,7 +28,7 @@
     .quiz li.question dd.text											{width:81%; font-size:22px; line-height:28px; padding:35px 4.5% 10px 14.5%;}
 
     .quiz li.question dd.ex												{width:81%; font-size:15px; line-height:21px; padding:14px 4.5% 13px 14.5%;}
-    .quiz li.question dd.ex span										{width:103px; height:100%; left:0; top:0; font-size:16px; line-height:23px; vertical-align:middle; border:0; border-radius:0; background:#3375A7; padding-top:0;}
+    .quiz li.question dd.ex .sample										{width:103px; height:100%; left:0; top:0; font-size:16px; line-height:23px; vertical-align:middle; border:0; border-radius:0; background:#3375A7; padding-top:0;}
     .quiz li.question dd.ex b											{display:inline-block; padding:14px 0 0 3px;}
 
     .quiz li.question dd.btn
@@ -201,7 +201,7 @@
     .quiz li.question dt													{width:85px; top:10px; font-size:45px; line-height:50px;}
     .quiz li.question dd.text											{width:82%; font-size:20px; line-height:25px; padding:30px 4.5% 15px 13.5%;}
     .quiz li.question dd.ex												{width:82%; font-size:14px; line-height:20px; padding:14px 4.5% 13px 13.5%;}
-    .quiz li.question dd.ex span										{width:82px; font-size:15px; line-height:21px;}
+    .quiz li.question dd.ex .sample										{width:82px; font-size:15px; line-height:21px;}
     .quiz li.question dd.ex b
     {padding:14px 0 0 5px;}
     .quiz li.question dd.btn
@@ -303,7 +303,7 @@
     .quiz li.question dt													{width:73px; top:10px; font-size:40px;}
     .quiz li.question dd.text											{width:81%; font-size:18px; line-height:25px; padding:28px 4.5% 15px 14.5%;}
     .quiz li.question dd.ex												{width:81%; font-size:13px; line-height:18px; padding:12px 4.5% 11px 14.5%;}
-    .quiz li.question dd.ex span										{width:71px; font-size:14px; line-height:21px;}
+    .quiz li.question dd.ex sample										{width:71px; font-size:14px; line-height:21px;}
     .quiz li.question dd.ex b											{padding:12px 0 0 3px;}
     .quiz li.question dd.btn
     {width:126px; height:36px; right:4%;
@@ -446,7 +446,8 @@
         width:100px;
         height:31px;
         margin: 0 auto;
-        font-size:27px;
+        font-size:20px;
+        line-height: 30px;
         background:url("../img/quiz/start_img_02.png") center bottom no-repeat;
         text-align: center;
     }
@@ -484,7 +485,7 @@
         /*padding:43px 5% 15px 4%;*/
     }
     .quiz li.question dd.ex												{width:91%; font-size:13px; line-height:17px; padding:25px 5% 11px 4%;}
-    .quiz li.question dd.ex span										{width:25%; height:25px; left:50%; top:-10px; font-size:14px; line-height:20px; border-radius:30px; margin-left:-12.5%;}
+    .quiz li.question dd.ex .sample										{width:25%; height:25px; left:50%; top:-10px; font-size:14px; line-height:20px; border-radius:30px; margin-left:-12.5%;}
     .quiz li.question dd.ex b											{padding:3px 0 0 0;}
     .quiz li.question dd.btn
     {
@@ -660,6 +661,8 @@
     {
         font-size:18px;
     }
+
+
 }
 
 @media all and (max-width:449px) {
@@ -691,7 +694,7 @@
 
     .quiz li.question dd.text											{font-size:16px; line-height:22px; padding:62px 5% 15px 4%;}
     .quiz li.question dd.ex												{font-size:12px; line-height:16px; padding:22px 5% 11px 4%;}
-    .quiz li.question dd.ex span										{width:30%; height:22px; top:-10px; font-size:13px; line-height:18px; margin-left:-15%;}
+    .quiz li.question dd.ex .sample										{width:30%; height:22px; top:-10px; font-size:13px; line-height:18px; margin-left:-15%;}
     .quiz li.question dd.ex b											{padding:3px 0 0 0;}
     .quiz li.question dd.btn
     {
@@ -803,7 +806,7 @@
 
     .quiz li.question dd.text											{width:91%; font-size:15px; line-height:20px; padding:60px 5% 13px 4%;}
     .quiz li.question dd.ex												{font-size:11px; line-height:15px; padding:19px 5% 10px 4%;}
-    .quiz li.question dd.ex span										{width:30%; height:20px; top:-10px; font-size:12px; line-height:17px; margin-left:-15%;}
+    .quiz li.question dd.ex .sample										{width:30%; height:20px; top:-10px; font-size:12px; line-height:17px; margin-left:-15%;}
     .quiz li.question dd.ex b											{padding:3px 0 0 0;}
 
     .quiz li.question dd.type-1										{width:91%; font-size:13px; line-height:18px; padding:25px 5% 0 4%;}

@@ -53,10 +53,11 @@
     position:absolute;
     background:url("../img/intro_outro/outro_img_02.png") no-repeat;
     background-position: 60% bottom;
-
     -webkit-animation: outro-back2 0.7s; /* Chrome, Safari, Opera */
     animation: outro-back2 0.7s ;
 }
+
+
 
 /* Standard syntax */
 @keyframes outro-title{

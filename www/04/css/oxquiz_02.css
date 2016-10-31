@@ -42,6 +42,9 @@
 
 @media all and (max-width:849px) {
 
+    #learning-quiz .question dt p {
+        font-size: 23px;
+    }
     /*퀴즈*/
     #learning-quiz .question a
     {width:145px; height:145px;}
@@ -66,23 +69,39 @@
 
 /*요기서부터 모바일*/
 @media all and (max-width:599px) {
+
+    #learning-quiz .question dt p {
+        font-size: 20px;
+    }
+
     #learning-quiz
     {
         margin-top:95px;
-        height: 650px
+        height: 655px
     }
 
 
     #learning-quiz .quiz-name
     {
-        font-size:20px;
+        width: 98%;
+        font-size:27px;
+        display: inline-block;
+        /*border: 1px solid #f00;*/
+        margin-left: 1%;
+
+        border-bottom: 1px solid #aaa;
     }
 
     #learning-quiz .quiz-text
     {
+        width: 97%;
         font-size:14px;
         margin-left: 1%;
         margin-top:6px;
+        padding-left: 1%;
+        /*padding-top: 5px;*/
+
+
     }
 
     #learning-quiz .question
@@ -93,7 +112,7 @@
 
     #learning-quiz .question dt
     {
-        top: 30px;
+        top: 60px;
         height: 60px;
     }
 
@@ -104,7 +123,7 @@
 
     #learning-quiz .question dd
     {
-        top : 90px;
+        top : 120px;
         height: 130px;
         padding-top: 10px;
     }
@@ -200,13 +219,13 @@
 
 @media all and (max-width:449px) {
 
-    #learning-quiz .quiz-name {
-        font-size: 18px;
-    }
+    /*#learning-quiz .quiz-name {*/
+        /*font-size: 18px;*/
+    /*}*/
 
-    #learning-quiz .quiz-text {
-        font-size: 12px;
-    }
+    /*#learning-quiz .quiz-text {*/
+        /*font-size: 12px;*/
+    /*}*/
 
     #learning-quiz .question dt p {
         font-size: 14px;
@@ -245,14 +264,14 @@
 
 @media all and (max-width:369px) {
 
-    #learning-quiz .quiz-name
-    {
-        font-size:16px;
-    }
-    #learning-quiz .quiz-text
-    {
-        font-size:10px;
-    }
+    /*#learning-quiz .quiz-name*/
+    /*{*/
+        /*font-size:16px;*/
+    /*}*/
+    /*#learning-quiz .quiz-text*/
+    /*{*/
+        /*font-size:10px;*/
+    /*}*/
 
     #learning-quiz .question dt p
     {

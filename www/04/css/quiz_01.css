@@ -78,7 +78,7 @@
     height:40px;
     right:95px;
     top:480px;
-    font:40px play;
+    font:bold 30px nsM;
     color:#003366;
     background:url("../img/quiz/start_img_01.png") left bottom no-repeat;
     transition:All 0.2s ease;
@@ -149,13 +149,16 @@
 .quiz li.question dd.text span									{color:#FDFF32; border-bottom:1px solid #FDFF32;}
 
 .quiz li.question dd.ex												{position:relative; float:left; width:80%; font:16px nsM; color:#FFF; line-height:23px; border-bottom:1px solid #4085B9; background:#005391; padding:19px 5.5% 18px 14.5%;}
-.quiz li.question dd.ex span
+/*.quiz li.question dd.ex span*/
+.quiz li.question dd.ex .sample
 {
     position:absolute;
     display:block;
     width:59px;
     height:42px;
-    left:54px; top:10px; font:18px nsM; color:#FFF; line-height:28px; text-align:center; border:3px solid #3375A7; border-radius:35px; padding-top:17px;}
+    left:54px; top:10px; font:18px nsM; color:#FFF; line-height:28px; text-align:center; border:3px solid #3375A7; border-radius:35px; padding-top:17px;
+}
+
 .quiz li.question dd.ex b
 
 

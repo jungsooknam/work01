@@ -68,18 +68,16 @@
 
     {width:95%; padding:8px 2.5% 0;}
 
-
-
     #summary-area .summary-guide {
-        display: none;
+        font-size: 14px;
     }
 
     #summary-area
     {
         width:100%;
-        margin-top:95px;
+        margin-top:85px;
 
-        height: 650px
+        height: 660px
     }
 
     /*타이틀*/
@@ -177,7 +175,7 @@
     {
         float:left;
         width:60px;
-        height:23px;
+        height:28px;
         font:100 16px play;
         color:#2C313A;
         text-align:center;
@@ -192,11 +190,13 @@
 
     #summary-area li.left a
     {
+        height: 30px;
         background:url("../img/summary/btn_pre_mobile.png") no-repeat;
     }
     #summary-area li.right a
     {
-        background:url("../img/summary/btn_next_mobile.png") no-repeat;
+        height: 30px;
+        background:url("../img/summary/btn_next_mobile.png") 2px 0 no-repeat;
     }
 
 }

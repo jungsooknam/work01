@@ -27,13 +27,14 @@
 
 #summary-area .summary-guide{
     width: 94%;
-    color: #333333;
-    font:15px Doum;
+    color:#2e2e2e;
+    font:16px nsM;
     margin: 0 auto;
+    margin-bottom: 5px;
 }
 
 #summary-area .summary-guide span{
-    margin-left: 10px;
+    color:#2e2e2e;
 }
 
 
