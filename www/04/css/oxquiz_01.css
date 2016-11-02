@@ -59,10 +59,11 @@
 #learning-quiz .question dd
 {
     position:absolute;
-    /*border:1px solid #f0F;*/
-    top:160px;
+    /*top:160px;*/
+    margin-top: 160px;
     width:100%;
     text-align:center;
+    /*border: 1px solid #f00;*/
 }
 #learning-quiz .question a
 {

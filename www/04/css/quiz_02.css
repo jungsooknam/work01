@@ -406,7 +406,8 @@
     /*인트로*/
     #quiz
     {
-        height: 779px
+        /*height: 779px*/
+        /*margin-bottom: 28px;*/
     }
 
     #quiz-intro .title-area
