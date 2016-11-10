@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 	<title>SQL 활용</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+
+	<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
 	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/font.css" />
@@ -20,105 +20,25 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="css/default.css" />
 
-		<script type="text/javascript" src="js/globalvars.js"></script>
-		<script type="text/javascript" src="js/jquery-latest.js"></script>
-		<script type="text/javascript" src="js/common.js"></script>
-		<script type="text/javascript" src="js/common-script.js"></script>
-		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-		<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+	<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
 
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);
 
-				lms_mode();													// LMS 탑재관련
-				menuInit();														// 우측 메뉴
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
 
-				shows();
-				$(window).resize(function(){  
-					shows();
-				});
-
-
-				var contentId = getContentId();
-				function resizeHeight(){
-					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
-				}
-				addEventListener('resize', resizeHeight, false);
-				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 
-			function setCookie( name, value, expiredays ){
-				var todayDate = new Date();
-				todayDate.setDate( todayDate.getDate() + expiredays );
-				document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
-			}
-
-			function getCookie(name) {
-				var prefix = name + "=";
-				var cookieStartIndex = document.cookie.indexOf(prefix);
-				if (cookieStartIndex == -1) return null;
-				var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
-				if (cookieEndIndex == -1) cookieEndIndex = document.cookie.length;
-				return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
-			}
-
-			function shows(){
-				var win_w = window.innerWidth;
-
-				if(win_w <= 1000){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("960 <= win_w");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}else if(win_w > 849 && win_w < 1000){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("960 < win_w < 1000");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}else if(win_w >= 730 && win_w < 850){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("1000 <= win_w < 1200");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}else if(win_w >= 600 && win_w < 730){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("1000 <= win_w < 1200");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}else if(win_w >= 450 && win_w < 600){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("1000 <= win_w < 1200");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}else if(win_w >= 370 && win_w < 450){
-					if(getCookie("reloadAction3") != "done"){
-						//alert("1000 <= win_w < 1200");
-						setCookie("reloadAction3", "done", "1");
-						location.reload();
-					}else{
-						setCookie("reloadAction3", "none", "1");
-					}
-				}
-			}
-		</script>
-	</head>
+	</script>
+</head>
 
 
 
@@ -166,9 +86,9 @@
 				<dd>
 					<p class = "input_question">
 						<input type="text" id="input_1" class="quiz-input" value="">
-						 TABLE DEPARTMENT<br>
+						TABLE DEPARTMENT<br>
 						<input type="text" id="input_2" class="quiz-input" value="">
-						 age int
+						age int
 					</p>
 				</dd>
 
@@ -182,13 +102,7 @@
 
 			</dl>
 
-			<dl id="learning_quiz_feed" class="feed">
-				<dt>정답 및 해설</dt>
 
-				<dd class="text-1">
-					<span>ALTER</span> TABLE DEPARTMENT<br>
-					<span>ADD</span> age int<br>
-			</dl>
 
 			<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
 
@@ -201,6 +115,24 @@
 
 			<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
 			<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+
+
+			<dl id="learning_quiz_feed" class="feed">
+				<dt>정답 및 해설</dt>
+
+				<dd class="text-1">
+					<span>ALTER</span> TABLE DEPARTMENT<br>
+					<span>ADD</span> age int<br>
+				</dd>
+
+				<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
+			</dl>
+			<div class="narration-bg"></div>
+
+
+
+
 
 			<audio id="audio1">
 				<script type="text/javascript">
@@ -221,6 +153,9 @@
 
 
 
+
+
+
 	<script type="text/javascript">
 
 		/**
@@ -235,7 +170,7 @@
 
 		function checkAnswer(){
 
-var win_w = window.innerWidth;
+			var win_w = window.innerWidth;
 			if(opt == 0){
 				return;
 			}
