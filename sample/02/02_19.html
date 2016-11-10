@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<title>배출가스장치정비·검사</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			var currentPage = 19;											// 현 페이지 번호
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/outro.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				lms_mode();													// LMS 탑재관련
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper">
+
+
+
+			<section id="outro">
+				<span class="course-name">배출가스장치정비·검사</span>
+				<span class="chapter-name">가솔린엔진의<br />배출가스</span>
+				<span class="ending-text">수고하셨습니다.</span>
+
+				<dl class="data-box">
+					<dt class="data-name">참고자료</dt>
+					<dd>
+						<p class="data-01">현대자동차 정비교육교재(아반테XD), 2002</p>
+						<p class="data-02">신차교재(제네시스), 2007. 11(pp.47~56)</p>
+						<p class="data-03">i-30 신차교재, 2007. 11(pp.27~36)</p>
+						<p class="data-04">도서출판 골든벨, 현대베르나정비지침서, 2000.1(pp.EC2~EC13) (원저자 : 현대자동차㈜서비스 정보팀)</p>
+						<p class="data-05">신차교재(에쿠스), 2007.1(pp.39~40)</p>
+					</dd>
+				</dl>
+
+				<div class="img-02">객체</div>
+				<div class="img-01">물방울</div>
+
+				<div class="page-ending">※ 학습을 마치셨습니다.</div>
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

@@ -106,6 +106,24 @@ footer
 	width: 95%;
 }
 
+/*#learning .page-ending											{width:95%; padding:8px 2.5% 0;}*/
+
+.page-ending3
+{
+	position: absolute;
+	font: 13px nsM;
+	color: #37414A;
+	text-align: right;
+	background: url("../img/intro_outro/ending_bg.png") repeat;
+	margin: 0;
+	padding: 8px 5% 0 0;
+	bottom: 1px;
+	width: 95%;
+	line-height: 25px;
+	z-index: 103;
+	
+	
+}
 
 
 

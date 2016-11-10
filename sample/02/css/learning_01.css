@@ -8,9 +8,25 @@
 #learning .theme														{position:absolute; left:0; top:54px; font:20px nsM; color:#FFF; line-height:25px; background:url("../img/inc/theme_img_01.png") no-repeat #7771BD; padding:4px 20px 2px 43px; z-index:100; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 #learning .page-ending											{float:left; width:915px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; padding:10px 85px 0 0;}
 #learning .page-ending-1										{position:absolute;  float:left; width:930px; bottom:7px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; border-top:1px solid #7D91A8; padding:10px 70px 0 0;}
+#learning .page-ending-2										{position:absolute;  float:left; width:970px; bottom:9px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; border-top:1px solid #7D91A8; padding:10px 30px 0 0;}
 
+#learning .img-view													{position:absolute; display:none; width:100%; height:620px; text-align:center; background:url("../img/learn/pop_bg.png") repeat; z-index:2100;}
+#learning .img-view p												{position:absolute; width:110px; height:110px; right:0; top:0; background:url("../img/learn/pop_close_bg.png") no-repeat; padding:15px;}
+#learning .img-view p a											{float:right; display:block; overflow:hidden; width:45px; height:45px; right:0; top:0; text-indent:-9999px; background:url("../img/learn/pop_close_btn_01.png") center 10px no-repeat;}
+#learning .img-view div											{position:relative; border:5px solid #548FFF; box-shadow:0 0 5px #111; background:#FFF; padding:10px; margin:0 auto;}
+#learning .img-view .img-1										{width:450px; margin-top:130px;}
+#learning .img-view .img-2										{width:450px; margin-top:105px;}
 
+#learning .img-view .img-page									{position:absolute; width:112px; left:50%; margin-left:-56px;}
+#learning .img-view .img-page li								{float:left; display:inline-block; width:70px; height:25px; font:23px play; color:#FFF; line-height:22px; text-align:center;}
+#learning .img-view .img-page .left							{float:left; width:21px; background:url("../img/learn/btn_pre_02.png") no-repeat;}
+#learning .img-view .img-page .right							{float:left; width:21px; background:url("../img/learn/btn_next_02.png") no-repeat;}
+#learning .img-view .img-page span							{display:inline-block; vertical-align:top; padding-top:1px; margin:0 2px;}
+#learning .img-view .img-page img							{vertical-align:top; cursor:pointer;}
 
+#learning .img-view .type-1										{bottom:120px;}
+#learning .img-view .type-2										{bottom:100px;}
+#learning .img-view .type-3										{bottom:120px;}
 
 
 #learn-movie-area													{position:relative; float:left; width:837px; padding:105px 0 0 81px;}
@@ -28,11 +44,11 @@
 
 #content-area .subject											{float:left; width:850px; font:22px nsM; color:#1A3B6C; line-height:30px; background:url("../img/learn/learn_bullet_01.png") 0 6px no-repeat; padding:0 0 4px 20px;}
 #content-area .text-area											{float:left; width:355px; padding-left:20px;}
-#content-area .movie-area										{float:right; width:450px; margin-right:10px;}
+#content-area .movie-guide										{float:right; width:382px; height:52px; font:20px nsM; color:#1A3B6C; line-height:26px; background:url("../img/learn/movie_bullet_01.png") no-repeat; padding:2px 0 0 68px; margin-bottom:15px;}
+#content-area .movie-guide p									{font-size:16px; color:#3F4D62;}
+#content-area .movie-area										{float:right; width:450px;}
 #content-area .movie-area div									{position:relative; padding-top:56.2%;}
 #content-area .movie-area video								{position:absolute; left:0; top:0; width:100%; height:100%;}
-#content-area .movie-guide										{float:right; width:382px; height:52px; font:20px nsM; color:#1A3B6C; line-height:26px; background:url("../img/learn/movie_bullet_01.png") no-repeat; padding:2px 0 0 68px; margin:20px 10px 0 0;}
-#content-area .movie-guide p									{font-size:17px; color:#3F4D62;}
 
 
 
@@ -40,8 +56,10 @@
 #content-area .type-1 dt											{float:left; width:333px; font:20px nsM; color:#222; line-height:24px; background:url("../img/learn/learn_bullet_02.png") 0 5px no-repeat; padding:0 0 15px 22px;}
 #content-area .type-1 dd											{position:relative; float:left; width:355px;}
 
-#content-area .type-1 dd .paragraph-1						{position:relative; float:left; width:333px; font:16px nsM; color:#232530; line-height:20px; padding:0 0 15px 22px;}
+#content-area .type-1 dd .paragraph-1						{position:relative; float:left; width:333px; font:16px nsM; color:#232530; line-height:20px; padding:0 0 12px 22px;}
 #content-area .type-1 dd .paragraph-1 p					{position:absolute; width:14px; left:1px; top:2px; font:bold 12px Dotum; color:#FFF; line-height:13px; text-align:center; background:#6811C1; padding-top:2px;}
+#content-area .type-1 dd .paragraph-1 a					{display:inline-block; overflow:hidden; font:12px Dotum; color:#FFF; line-height:16px; text-align:center; border-radius:20px; background:#004480; padding:3px 10px 0; margin-top:3px;}
+
 #content-area .type-1 dd .paragraph-2						{float:left; width:310px; font:12px Dotum; color:#56595B; line-height:16px; background:#D9E3ED; padding:15px 23px 5px 22px;}
 #content-area .type-1 dd .paragraph-2 span				{display:block; background:url("../img/learn/learn_bullet_03.png") 1px 5px no-repeat; padding:0 0 7px 10px;}
 
@@ -50,5 +68,64 @@
 #page-narration-text												{float:right; width:352px; font:14px nsM; color:#56595B; padding:13px 0 7px 3px;}
 #page-narration														{float:right; width:355px; height:35px;}
 #page-ending															{float:left; width:860px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; padding:15px 75px 0 65px;}
+
+
+
+
+
+
+
+
+
+
+/* ��¦���� ���� */
+
+#learning-quiz														{float:left; width:100%; padding-top:105px;}
+#learning-quiz:after													{content:""; display:block; clear:both;}
+
+#learning-quiz .quiz-name										{position:absolute; right:4.3%; top:117px; font:60px nsM; color:#FFF; line-height:65px; text-shadow:0 0 4px #333;}
+#learning-quiz .quiz-name span								{color:#F0FF00;}
+#learning-quiz .quiz-text											{position:absolute; left:4.3%; top:150px; font:18px nsM; color:#FFF; line-height:25px;}
+
+
+#learning-quiz .question											{float:left; width:91.4%; height:265px; background:url("../img/quiz/quiz_bg_02.png") repeat; padding:80px 4.3% 0;}
+#learning-quiz .question dt										{float:left; width:100%; font:25px nsM; color:#FFF; line-height:30px; text-align:center; background:url("../img/quiz/quiz_bg_02.png") repeat; padding:16px 0 14px;}
+#learning-quiz .question dt br									{display:none;}
+
+
+#learning-quiz .question dd										{float:left; width:100%; text-align:center; padding-top:5px;}
+#learning-quiz .question a										{display:inline-block; overflow:hidden; width:165px; height:165px; text-indent:-9999px;}
+#learning-quiz .question a.o									{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:70px;}
+#learning-quiz .question a.x										{background:url("../img/learn/btn_x_01.png") no-repeat; margin-right:30px;}
+#learning-quiz .question a.o:hover							{background:url("../img/learn/btn_o_02.png") no-repeat;}
+#learning-quiz .question a.x:hover							{background:url("../img/learn/btn_x_02.png") no-repeat;}
+
+#learning-quiz .question span									{display:inline-block; overflow:hidden; width:165px; height:165px; text-indent:-9999px;}
+#learning-quiz .question span.o-1							{background:url("../img/learn/btn_o_01.png") no-repeat; margin-right:70px;}
+#learning-quiz .question span.o-2							{background:url("../img/learn/btn_o_02.png") no-repeat; margin-right:70px;}
+#learning-quiz .question span.o-3							{background:url("../img/learn/btn_o_03.png") no-repeat; margin-right:70px;}
+#learning-quiz .question span.o-4							{background:url("../img/learn/btn_o_04.png") no-repeat; margin-right:70px;}
+
+#learning-quiz .question span.x-1							{background:url("../img/learn/btn_x_01.png") no-repeat; margin-right:30px;}
+#learning-quiz .question span.x-2							{background:url("../img/learn/btn_x_02.png") no-repeat; margin-right:30px;}
+#learning-quiz .question span.x-3							{background:url("../img/learn/btn_x_03.png") no-repeat; margin-right:30px;}
+#learning-quiz .question span.x-4							{background:url("../img/learn/btn_x_04.png") no-repeat; margin-right:30px;}
+
+
+
+
+#learning-quiz .feed												{position:relative; float:left; display:none; width:91.4%; height:95px; background:#EDF0F6; padding:35px 4.3% 0;}
+#learning-quiz .feed dt											{position:absolute; left:0; top:-17px; font:20px nsM; color:#F0FF00; line-height:25px; border-radius:0 35px 35px 0; background:#133F80; padding:6px 25px 4px 4.3%;}
+#learning-quiz .feed dd											{float:left;}
+#learning-quiz .feed span										{display:block; width:72px; height:72px;}
+#learning-quiz .feed span.o										{background:url("../img/learn/answer_o.png") no-repeat;}
+#learning-quiz .feed span.x										{background:url("../img/learn/answer_x.png") no-repeat;}
+
+#learning-quiz .feed .ox											{width:10.5%;}
+#learning-quiz .feed .text-1										{width:89.5%; font:18px nsM; color:#1A3B6C; line-height:25px; padding-top:10px;}
+
+
+
+
 
 

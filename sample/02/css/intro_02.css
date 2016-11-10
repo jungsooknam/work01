@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+#intro																		{width:100%; height:600px; background-size:115%;}
+#intro .page-ending													{width:92%; padding:11px 4% 9px;}
+
+#intro .img-01															{width:600px; height:600px; background-size:100%;}
+#intro .img-02															{width:600px; height:600px; background-size:100%;}
+#intro .img-03															{width:270px; height:270px; right:415px; background-size:100%;}
+#intro .img-04															{width:180px; height:180px; background-size:100%;}
+
+#intro .course-name												{top:245px;}
+#intro .chapter-name												{top:305px;}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:849px) {
+
+#intro																		{height:580px; background-size:130%;}
+#intro .page-ending													{padding:10px 4% 8px;}
+
+#intro .img-01															{width:580px; height:580px;}
+#intro .img-02															{width:580px; height:580px;}
+#intro .img-03															{width:260px; height:260px; right:402px;}
+#intro .img-04															{width:170px; height:170px;}
+
+#intro .course-name												{top:240px; font-size:28px; line-height:40px; padding:3px 35px 1px 15px;}
+#intro .chapter-name												{top:300px; font-size:50px; line-height:65px; padding-right:35px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:729px) {
+
+#intro																		{height:560px; background-size:150%;}
+#intro .page-ending													{padding:9px 4% 7px;}
+
+#intro .img-01															{width:500px; height:500px;}
+#intro .img-02															{width:560px; height:560px; background-position:30px 0;}
+#intro .img-03															{width:252px; height:252px; right:358px;}
+#intro .img-04															{width:170px; height:170px;}
+
+#intro .course-name												{top:230px; font-size:25px; line-height:30px; padding:6px 30px 4px 15px;}
+#intro .chapter-name												{top:285px; font-size:45px; line-height:60px; padding-right:30px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:599px) {
+
+#intro																		{height:550px; background-size:200%;}
+#intro .page-ending													{padding:8px 4% 6px;}
+
+#intro .img-01															{width:449px; height:449px;}
+#intro .img-02															{width:449px; height:550px; background-size:125%; background-position:30px 0;}
+#intro .img-03															{width:237px; height:237px; right:257px;}
+#intro .img-04															{width:130px; height:130px; background-position:18px 0;}
+
+#intro .course-name												{top:215px; font-size:23px; line-height:30px; padding:4px 25px 3px 15px;}
+#intro .chapter-name												{top:270px; font-size:40px; line-height:55px; padding-right:25px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:449px) {
+
+#intro																		{height:535px; background:url("../img/intro_outro/intro_bg_11.png") center -40px no-repeat; background-size:110%;}
+#intro .page-ending													{padding:7px 4% 5px;}
+
+#intro .img-01															{width:100%; height:535px; background-size:125%;}
+#intro .img-02															{width:100%; height:535px; background-size:145%; background-position:20px 0;}
+#intro .img-03															{width:245px; height:245px; right:179px;}
+#intro .img-04															{width:130px; height:130px; background-position:15px 0;}
+
+#intro .course-name												{top:255px; font-size:20px; line-height:25px; padding:4px 25px 2px 12px;}
+#intro .chapter-name												{top:300px; font-size:35px; line-height:45px; padding-right:25px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:369px) {
+
+#intro																		{height:520px; background-position:center -60px; background-size:130%;}
+
+#intro .img-01															{width:100%; height:520px; background-size:125%; background-position:0 40px;}
+#intro .img-02															{width:100%; height:520px; background-size:165%; background-position:-70px 0;}
+#intro .img-03															{width:253px; height:253px; right:177px;}
+#intro .img-04															{width:120px; height:120px; background-position:21px 0;}
+
+#intro .course-name												{top:265px; font-size:18px; line-height:25px; padding:4px 25px 2px 12px;}
+#intro .chapter-name												{top:310px; font-size:30px; line-height:40px; padding-right:25px;}
+
+}
+
+
+
+
+
+

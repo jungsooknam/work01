@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 07;											// 현 페이지 번호
 			WebFont.load({
@@ -25,10 +28,17 @@
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -40,7 +50,7 @@
 	<body>
 		<div id="wrapper" class="body-learning">
 
-			<header>
+			<header class="learn">
 				<h1 id="course" tabindex="1"></h1>
 				<h2 id="chap-1" tabindex="2"></h2>
 			</header><!--  과정명, 차시명 영역  -->
@@ -60,10 +70,73 @@
 
 
 
-				<ul id="content-area">
-					<li class="subject">7</li><!-- 학습 - 주제 영역 -->
-				</ul>
+
+
+				<div id="learning-quiz">
+					<div class="quiz-name"><span>깜</span>짝퀴즈</div>
+					<div class="quiz-text">※ 다음 설명이 맞으면 O, 틀리면 X를 선택하세요.</div>
+
+
+
+
+					<dl class="question">
+						<dt>크랭크케이스에서 발생되는 배출가스는 <br />CO가스이다.</dt>
+						<dd id="question_ox">
+							<a href="javascript:checkAnswer('W');" class="o">O</a>
+							<a href="javascript:checkAnswer('C');" class="x">X</a>
+						</dd>
+						<dd id="question_result" style="display:none;">
+							<span id="result-o" class="o-1">O</span>
+							<span id="result-x" class="x-1">X</span>
+						</dd>
+					</dl>
+
+					<dl id="learning_quiz_feed" class="feed">
+						<dt>정답 및 해설</dt>
+						<dd class="ox"><span class="x"></span></dd>
+						<dd class="text-1">크랭크케이스에서 발생되는 배출가스는 HC가스입니다.</dd>
+					</dl>
+
+
+
+					<audio id="audio1">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+					<audio id="audio2">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+						</script>
+					</audio><!--  정오답 음성 영역  -->
+
+					<div class="page-ending-2">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+				</div><!--  E : learning-quiz -->
 			</section><!--  본문 영역 -->
+
+
+
+			<script type="text/javascript">
+				function checkAnswer(result){
+					if('C' == result){
+						$("#learning_quiz_feed").show();
+						$("#question_result").show();
+						$("#question_ox").hide();
+						$("#result-x").removeClass("x-1");
+						$("#result-x").addClass("x-4");
+						playAudio('audio1');
+					}else{
+						$("#learning_quiz_feed").show();
+						$("#question_result").show();
+						$("#question_ox").hide();
+						$("#result-o").removeClass("o-1");
+						$("#result-o").addClass("o-2");
+						$("#result-x").removeClass("x-1");
+						$("#result-x").addClass("x-3");
+						playAudio('audio2');
+					}
+				}
+			</script>
 
 
 

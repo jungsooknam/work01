@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 01;											// 현 페이지 번호
 			WebFont.load({
@@ -22,13 +25,19 @@
 		<script type="text/javascript" src="js/jquery-latest.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/common-script.js"></script>
+		<script type="text/javascript" src="js/tweenmax.min.js"></script>
+		<script type="text/javascript" src="js/intro.js"></script>
 
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
-
 				lms_mode();													// LMS 탑재관련
-				menuInit();														// 우측 메뉴
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -38,31 +47,19 @@
 
 
 	<body>
-		<div id="wrapper" class="body-learning">
-
-			<header>
-				<h1 id="course" tabindex="1"></h1>
-				<h2 id="chap-1" tabindex="2"></h2>
-			</header><!--  과정명, 차시명 영역  -->
+		<div id="wrapper">
 
 
 
+			<section id="intro">
+				<span class="course-name">배출가스장치정비·검사</span>
+				<span class="chapter-name">가솔린엔진의<br />배출가스</span>
+				<div class="img-04">객체 3</div>
+				<div class="img-03">객체 2</div>
+				<div class="img-02">객체 1</div>
+				<div class="img-01">물방울</div>
 
-
-			<section id="learning">
-				<nav>
-					<script type="text/javascript" src="js/menu.js"></script>
-					<div id="menu_open" tabindex="3">INDEX 열기</div>
-					<div id="menu"></div>
-					<div id="menu-bg"></div>
-				</nav><!--  INDEX 메뉴 영역  -->
-				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
-
-
-
-				<ul id="content-area">
-					<li class="subject">1</li><!-- 학습 - 주제 영역 -->
-				</ul>
+				<p class="page-ending">※ 다음페이지로 이동하여 학습을 시작하세요.</p>
 			</section><!--  본문 영역 -->
 
 

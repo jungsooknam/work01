@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 	<title>SQL 활용</title>
@@ -20,24 +20,107 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="css/default.css" />
 
-	<script type="text/javascript" src="js/globalvars.js"></script>
-	<script type="text/javascript" src="js/jquery-latest.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/common-script.js"></script>
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
 
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#sco-name1").text(currentSco1);
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);
 
-			lms_mode();													// LMS 탑재관련
-			menuInit();														// 우측 메뉴
-		});
-	</script>
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+
+				shows();
+				$(window).resize(function(){  
+					shows();
+				});
 
 
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+
+			function setCookie( name, value, expiredays ){
+				var todayDate = new Date();
+				todayDate.setDate( todayDate.getDate() + expiredays );
+				document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+			}
+
+			function getCookie(name) {
+				var prefix = name + "=";
+				var cookieStartIndex = document.cookie.indexOf(prefix);
+				if (cookieStartIndex == -1) return null;
+				var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+				if (cookieEndIndex == -1) cookieEndIndex = document.cookie.length;
+				return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+			}
+
+			function shows(){
+				var win_w = window.innerWidth;
+
+				if(win_w <= 1000){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("960 <= win_w");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}else if(win_w > 849 && win_w < 1000){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("960 < win_w < 1000");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}else if(win_w >= 730 && win_w < 850){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("1000 <= win_w < 1200");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}else if(win_w >= 600 && win_w < 730){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("1000 <= win_w < 1200");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}else if(win_w >= 450 && win_w < 600){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("1000 <= win_w < 1200");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}else if(win_w >= 370 && win_w < 450){
+					if(getCookie("reloadAction3") != "done"){
+						//alert("1000 <= win_w < 1200");
+						setCookie("reloadAction3", "done", "1");
+						location.reload();
+					}else{
+						setCookie("reloadAction3", "none", "1");
+					}
+				}
+			}
+		</script>
+	</head>
 
 
-</head>
 
 
 
@@ -91,7 +174,7 @@
 
 				<dd class = "btn">
 					<p id="inout_btn" >
-						<a href="javascript:checkAnswer();">정답확인</a>
+						<a href="javascript:checkAnswer();">입력완료</a>
 					</p>
 
 				</dd>
@@ -111,7 +194,7 @@
 
 			<audio id="page-narration" controls>
 				<script type="text/javascript">
-					document.write("<source src='"+mp3Link+"04_16.mp3' type='audio/mpeg' />");
+					document.write("<source src='"+mp3Link+"04_18.mp3' type='audio/mpeg' />");
 				</script>
 				해당 브라우저는 음성을 지원하지 않습니다.
 			</audio>
@@ -151,6 +234,8 @@
 		var opt = 2;
 
 		function checkAnswer(){
+
+var win_w = window.innerWidth;
 			if(opt == 0){
 				return;
 			}

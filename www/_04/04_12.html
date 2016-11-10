@@ -1,0 +1,188 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+		});
+	</script>
+</head>
+
+
+
+
+
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header>
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header><!--  과정명, 차시명 영역  -->
+
+
+	<section id="learning">
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav><!--  INDEX 메뉴 영역  -->
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<div id="learning-quiz">
+			<div class="quiz-name">깜짝퀴즈</div>
+			<div class="quiz-text">다음 설명이 맞으면 O, 틀리면 X를 선택하세요.</div>
+
+
+			<dl class="question">
+				<dt><p>MS-SQL기본 타입 중 float, datetime, smalldatatime은 <br>날짜속성 타입이다.</p></dt>
+
+
+				<dd id="question_ox">
+					<a href="javascript:checkAnswer('o');" class="o">O</a>
+					<a href="javascript:checkAnswer('x');" class="x">X</a>
+				</dd>
+
+				<dd id="question_result">
+					<span id="result-o" class="o-1">O</span>
+					<span id="result-x" class="x-1">X</span>
+				</dd>
+			</dl>
+
+
+
+
+
+
+			<dl id="learning_quiz_feed" class="feed">
+				<dt>정답 및 해설</dt>
+
+				<dd class="ox">
+					<span class="o" id="result_ox_o"></span>
+					<span class="x" id="result_ox_x"></span>
+				</dd>
+
+
+				<dd class="text-1">Float는 실수속성 타입입니다.<br>
+					날짜속성 타입은 datetime과 smalldatatime입니다.</dd>
+			</dl>
+
+
+
+
+			<audio id="audio1">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio2">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+				</script>
+			</audio><!--  정오답 음성 영역  -->
+
+
+		</div><!--  E : learning-quiz -->
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+
+	</section><!--  본문 영역 -->
+
+
+
+	<script type="text/javascript">
+		function checkAnswer(result){
+
+
+			/**
+			 * 요기다 정답을 넣어주세요....
+			 * o 일 경우 "o"
+			 * x 일 경우 "x"
+			 * @type {string}
+             */
+			var answer = "x";
+
+
+			$("#learning_quiz_feed").show();
+			$("#learning_quiz_feed").css("visibility", "visible");
+
+			$("#question_result").show();
+			$("#question_ox").hide();
+
+			if(answer == "x") {
+				$("#result_ox_o").hide();
+
+				if(answer == result){
+
+					$("#result-x").removeClass("x-1");
+					$("#result-x").addClass("x-4");
+					// 정답 오디오
+					playAudio('audio1');
+				}else{
+					$("#result-o").removeClass("o-1");
+					$("#result-o").addClass("o-2");
+					$("#result-x").removeClass("x-1");
+					$("#result-x").addClass("x-3");
+					// 오답 오디오
+					playAudio('audio2');
+				}
+			}else{
+				$("#result_ox_x").hide();
+				if(answer == result){
+
+					$("#result-o").removeClass("o-1");
+					$("#result-o").addClass("o-4");
+					// 정답 오디오
+					playAudio('audio1');
+				}else{
+					$("#result-x").removeClass("x-1");
+					$("#result-x").addClass("x-2");
+					$("#result-o").removeClass("o-1");
+					$("#result-o").addClass("o-3");
+					// 오답 오디오
+					playAudio('audio2');
+				}
+
+
+			}
+		}
+	</script>
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

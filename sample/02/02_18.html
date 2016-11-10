@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
-		<script src="js/webfont.js"></script>
+		<script type="text/javascript" src="js/webfont.js"></script>
 		<script type="text/javascript">
 			var currentPage = 18;											// 현 페이지 번호
 			WebFont.load({
@@ -24,11 +27,31 @@
 		<script type="text/javascript" src="js/common-script.js"></script>
 
 		<script type="text/javascript">
+			var _totalPageSummary =  03;
+
 			$(document).ready(function(){
-				$("#sco-name1").text(currentSco1);
+				$("#sco-name1").text(currentSco1);					// 대주제
 
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
+				initSummaryPage();											// 핵심정리 페이징
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -40,7 +63,7 @@
 	<body>
 		<div id="wrapper" class="body-learning">
 
-			<header>
+			<header class="learn">
 				<h1 id="course" tabindex="1"></h1>
 				<h2 id="chap-1" tabindex="2"></h2>
 			</header><!--  과정명, 차시명 영역  -->
@@ -49,7 +72,7 @@
 
 
 
-			<section id="learning">
+			<section id="summary">
 				<nav>
 					<script type="text/javascript" src="js/menu.js"></script>
 					<div id="menu_open" tabindex="3">INDEX 열기</div>
@@ -60,9 +83,66 @@
 
 
 
-				<ul id="content-area">
-					<li class="subject">18</li><!-- 학습 - 주제 영역 -->
-				</ul>
+				<div id="summary-area">
+					<div class="summary-guide">이번 회차에 학습한 내용을 정리해보겠습니다.</div>
+
+					<dl id="summary-text1" class="type-1">
+						<dt><span><img src="img/summary/title_bullet.png" alt="" /></span>크랭크케이스 배출가스 제어</dt>
+						<dd>
+							<p>크랭크케이스 배출가스 제어장치</p>
+							<span>연소실에서 배출된 블로바이 가스가 대기 중으로 방출되는 것을 방지하는 장치</span>
+
+							<p>PCV 기능</p>
+							<span>PCV 제어를 통해 크랭크케이스에 유출되는 블로바이 가스를 대기에 방출하지 않고 재연소 시킴</span>
+						</dd>
+					</dl>
+
+
+
+					<dl id="summary-text2" class="type-2">
+						<dt><span><img src="img/summary/title_bullet.png" alt="" /></span>연료탱크 증발가스 제어</dt>
+						<dd>
+							<p>연료탱크 캡</p>
+							<span>연료탱크 내에서 발생되는 증발가스를 외부로 배출 시키지 않고, 탱크내부가 진공이 되지 않도록 대기압이 통하게 함</span>
+
+							<p>캐니스터</p>
+							<span>증발가스를 포집했다가 특정 조건이 되면 PCSV에 의해 재연소 시키는 역할을 함</span>
+
+							<p>PCSV 제어</p>
+							<span>캐니스터에 포집된 증발가스를 재연소 시킴</span>
+						</dd>
+					</dl>
+
+
+
+					<dl id="summary-text3" class="type-1">
+						<dt><span><img src="img/summary/title_bullet.png" alt="" /></span>CVVT 시스템</dt>
+						<dd>
+							<p>CVVT 제어</p>
+							<span>OCV에 의해 캠축의 회전으로 캠각의 위상을 변화시켜 저속에서는 안정된 엔진상태와 중ㆍ속에서는 밸브오버랩을 키워서 출력과 연비, 배출가스저감을 실현함</span>
+						</dd>
+					</dl>
+
+
+
+					<div class="summary-page">
+						<ul>
+							<li class="left"><a href="#!" id="page_left">이전 내용보기</a></li>
+							<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+							<li class="right"><a href="#!" id="page_right">다음 내용보기</a></li>
+						</ul>
+					</div>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
+
+
+
+				<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
 			</section><!--  본문 영역 -->
 
 

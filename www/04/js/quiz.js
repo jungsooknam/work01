@@ -15,6 +15,12 @@ var vShowSolution = 0;
 function showSolution(){
 	vShowSolution = 1;
 	$(".q-num").show();
+	$("#result-before-1").hide();
+	$("#result-after-1").show();
+	$("#result-before-2").hide();
+	$("#result-after-2").show();
+	$("#result-before-3").hide();
+	$("#result-after-3").show();
 	goQuiz('1');
 }
 
@@ -80,18 +86,38 @@ function pageInit(){
 	}
 }
 
+function checkQnum(num) {
+	if(num ==1 ){
+		$(".q-num .q1").addClass("on");
+		$(".q-num .q2").removeClass("on");
+		$(".q-num .q3").removeClass("on");
+	}else if(num ==2 ){
+		$(".q-num .q2").addClass("on");
+		$(".q-num .q1").removeClass("on");
+		$(".q-num .q3").removeClass("on");
+	}else if(num ==3 ){
+		$(".q-num .q3").addClass("on");
+		$(".q-num .q1").removeClass("on");
+		$(".q-num .q2").removeClass("on");
+	}
+
+}
+
 function goQuiz(num){
+
 	$(".intro").hide();
 	$(".quiz").hide();
 	$(".quiz-result").hide();
 	switch(num){
 		case '1' :
-
 					if(vShowSolution == 1){
 						$("#quiz_1").show();
+						checkQnum(1);
+
 					}else{
 						if(vQuizResult[0] == 0){
 							$("#quiz_1").show();
+							checkQnum(1);
 						}else{
 							goQuiz('2');
 						}
@@ -100,9 +126,11 @@ function goQuiz(num){
 		case '2' :
 				   if(vShowSolution == 1){
 						$("#quiz_2").show();
+					   checkQnum(2);
 					}else{
 						if(vQuizResult[1] == 0){
 							$("#quiz_2").show();
+							checkQnum(2);
 						}else{
 							goQuiz('3');
 						}
@@ -111,9 +139,11 @@ function goQuiz(num){
 		case '3' :
 					if(vShowSolution == 1){
 						$("#quiz_3").show();
+						checkQnum(3);
 					}else{
 						if(vQuizResult[2] == 0){
 							$("#quiz_3").show();
+							checkQnum(3);
 						}else{
 							goQuiz('4');
 						}
@@ -129,7 +159,20 @@ var vSelectAnswer1 = "";
 var vSelectAnswer2 = "";
 var vSelectAnswer3 = "";
 function selectAnswer1(type, select, id){
+
+	console.log("///", type, select, id);
+
+
+	var pp = $("#"+id);
+	console.log(pp);
+	//var p = $( "p:first" );
+	var position = pp.position();
+	console.log("left: " + position.left + ", top: " + position.top);
+	//$( "p:last" ).text( "left: " + position.left + ", top: " + position.top );
+
 	vSelectAnswer1 = select;
+
+
 	$(".qq1").removeClass("check-1");
 	$(".qq1").addClass("none");
 	$("#"+id + " > span").removeClass("none");
@@ -317,6 +360,14 @@ function calculate(){
 function goInit(){
 	vShowSolution = 0;
 	$(".q-num").hide();
+
+	$("#result-before-1").show();
+	$("#result-after-1").hide();
+	$("#result-before-2").show();
+	$("#result-after-2").hide();
+	$("#result-before-3").show();
+	$("#result-after-3").hide();
+
 	vQuizResult = new Array(0,0,0);
 	pageInit();
 	goQuiz('1');
@@ -325,6 +376,12 @@ function goInit(){
 function goWrongQuiz(num){
 	vShowSolution = 0;
 	$(".q-num").hide();
+	$("#result-before-1").show();
+	$("#result-after-1").hide();
+	$("#result-before-2").show();
+	$("#result-after-2").hide();
+	$("#result-before-3").show();
+	$("#result-after-3").hide();
 	pageInit();
 	goQuiz(num);
 }

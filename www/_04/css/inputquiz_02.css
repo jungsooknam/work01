@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+
+    #learning-quiz-text #page-narration-text {
+        width:90%;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:849px) {
+
+    #learning-quiz-text .question dt p{
+        font-size:18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:729px) {
+    #learning-quiz-text .question dt p{
+        font-size:16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*요기서 부터 모바일*/
+@media all and (max-width:599px) {
+
+    #learning-quiz-text
+    {
+        margin-top:90px;
+        margin-bottom: 28px;
+    }
+
+    #learning-quiz-text .quiz-guide
+    {
+        font-size:14px;
+    }
+
+    #learning-quiz-text .question dt p{
+        font-size:16px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        line-height: 30px;
+        font-size: 16px;
+        padding-top: 40px;
+        height: 70px;
+    }
+
+    #learning-quiz-text .question dd .input_question input
+    {
+        font-size:16px;
+    }
+
+    #learning-quiz-text .question .btn p a
+    {
+        font:16px nsM;
+        padding-top : 11px;
+        background:url("../img/quiz/btn_img_11.png") 0 0px no-repeat;
+    }
+
+    #learning-quiz-text .question .btn p a:hover
+    {
+        background:url("../img/quiz/btn_img_12.png") 0 0px no-repeat;
+    }
+
+    #learning-quiz-text .feed dt
+    {
+        width:120px;
+        font-size:16px;
+        line-height:26px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:16px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:449px) {
+
+    #learning-quiz-text .question dt p{
+        font-size:14px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        font-size: 14px;
+    }
+
+
+    #learning-quiz-text .feed dt
+    {
+        font-size:14px;
+        line-height:26px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:369px) {
+    #learning-quiz-text .question dt p{
+        font-size:12px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        font-size: 12px;
+    }
+
+    #learning-quiz-text .feed dt
+    {
+        font-size:12px;
+        line-height:24px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:12px;
+    }
+}
+
+
+
+
+
+

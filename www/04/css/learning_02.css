@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 
 
@@ -65,7 +65,7 @@
     {
         width:95%;
         margin-top:90px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
     }
     /**/
     #content-area .subject

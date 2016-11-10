@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+
+
+
+#outro																	{position:relative; width:1000px; height:620px; background:url("../img/intro_outro/intro_bg_01.png") no-repeat; z-index:100;}
+#outro:after																{content:""; display:block; clear:both;}
+#outro .page-ending												{position:absolute; float:left; width:940px; bottom:10px; font:14px nsM; color:#8092A6; line-height:20px; text-align:right; padding:10px 30px 0; z-index:104;}
+
+
+
+#outro div																{position:absolute; display:block; text-indent:-9999px;}
+#outro .img-01														{width:620px; height:620px; left:0; top:0; background:url("../img/intro_outro/intro_bg_02.png") no-repeat; z-index:102;}
+#outro .img-02														{width:100%; height:620px; right:0; top:0; background:url("../img/intro_outro/outro_img_01.png") no-repeat; z-index:101;}
+
+
+
+#outro dl																{position:absolute; width:1000px; height:250px; bottom:0; background:url("../img/intro_outro/outro_img_02.png") repeat; z-index:103;}
+#outro dt																{position:absolute; top:-20px; font:28px nsM; color:#FFF; line-height:35px; border-radius:0 30px 30px 0; background:#49B70E; padding:4px 30px 1px 45px;}
+#outro dd																{float:left; font:20px nsM; color:#FFF; line-height:27px;}
+#outro dd p															{position:absolute; left:47px; background:url("../img/intro_outro/bullet_01.png") 0 11px no-repeat; padding-left:20px;}
+#outro dd .data-01													{top:45px;}
+#outro dd .data-02													{top:80px;}
+#outro dd .data-03													{top:115px;}
+#outro dd .data-04													{top:150px;}
+#outro dd .data-05													{top:185px;}
+
+
+
+#outro span															{position:absolute; display:block; z-index:104;}
+#outro .course-name												{right:0; top:75px; font:25px nsM; color:#FFF; line-height:35px; text-align:right; background:#081353; padding:3px 43px 2px 20px;}
+#outro .chapter-name												{right:0; top:135px; font:50px nsM; color:#F0FF00; line-height:65px; text-align:right; text-shadow:1px 1px 1px #2D2E41; padding-right:40px;}
+#outro .ending-text													{right:0; top:315px; font:30px nsM; color:#FFF; line-height:40px; text-align:right; text-shadow:1px 1px 1px #2D2E41; padding-right:40px;}
+
+
+
+

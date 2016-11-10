@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+		});
+	</script>
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header>
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header><!--  과정명, 차시명 영역  -->
+
+
+
+
+
+	<section id="learning">
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav><!--  INDEX 메뉴 영역  -->
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<div id="learning-quiz-text">
+
+			<div class="quiz-guide">◈ 지금까지 학습한 내용을 적용해봅시다.</div>
+
+
+			<dl class="question">
+				<dt>
+					<p>
+						다음은 DEPARTMENT 테이블에 age (int) 속성을 추가하는 질의문 입니다.
+						<br>
+						단어를 입력하여 질의문을 완성해보세요.
+						입력 완료 버튼을 선택한 후 음성강의를 확인해 보세요.<br>
+				<p>
+				</dt>
+
+				<dd>
+					<p class = "input_question">
+						<input type="text" id="input_1" class="quiz-input" value="">
+						 TABLE DEPARTMENT<br>
+						<input type="text" id="input_2" class="quiz-input" value="">
+						 age int
+					</p>
+				</dd>
+
+				<dd class = "btn">
+					<p id="inout_btn" >
+						<a href="javascript:checkAnswer();">정답확인</a>
+					</p>
+
+				</dd>
+
+
+			</dl>
+
+			<dl id="learning_quiz_feed" class="feed">
+				<dt>정답 및 해설</dt>
+
+				<dd class="text-1">
+					<span>ALTER</span> TABLE DEPARTMENT<br>
+					<span>ADD</span> age int<br>
+			</dl>
+
+			<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
+
+			<audio id="page-narration" controls>
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"04_16.mp3' type='audio/mpeg' />");
+				</script>
+				해당 브라우저는 음성을 지원하지 않습니다.
+			</audio>
+
+			<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
+			<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+			<audio id="audio1">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio2">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+				</script>
+			</audio><!--  정오답 음성 영역  -->
+
+
+		</div><!--  E : learning-quiz -->
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+	</section><!--  본문 영역 -->
+
+
+
+	<script type="text/javascript">
+
+		/**
+		 * 요기다 정답을 넣어주세요....
+		 * input 순서대로.
+		 * @type {string}
+		 */
+		var answer = ["ALTER", "ADD"];
+
+		// 기회
+		var opt = 2;
+
+		function checkAnswer(){
+			if(opt == 0){
+				return;
+			}
+			var flag = true;
+
+			for(var i=0;  i<answer.length ; i++) {
+
+				var c = $("#input_" + (i + 1)).val();
+
+				if(c == ""){
+					playAudio('audio1');
+					showAlertDiv1();
+					return;
+				}
+
+				if(c != answer[i]){
+					flag = false;
+				}
+
+			}
+			if(flag){
+				// 정답을 맞추면
+				playAudio('audio1');
+				$("#learning_quiz_feed").css('visibility','visible');
+				$("#page-narration-text").css('visibility','visible');
+				$("#page-narration").css('visibility','visible');
+
+			}else{
+				playAudio('audio2');
+				opt --;
+				if(opt == 0) {
+					// 기회가 없다면
+					$("#learning_quiz_feed").css('visibility','visible');
+					$("#page-narration-text").css('visibility','visible');
+					$("#page-narration").css('visibility','visible');
+				}else{
+					showAlertDiv2();
+				}
+			}
+		}
+
+		this.showAlertDiv1 = function (){
+//		function showAlertDiv1(){
+			$("#quiz_alert1").css("display", "block");
+			this.itv = setTimeout(this.hideDiv1,1200);
+		}
+
+		this.hideDiv1 = function (){
+			clearInterval(this.itv);
+			$("#quiz_alert1").css("display", "none");
+		}
+
+		this.showAlertDiv2 = function (){
+			$("#quiz_alert2").css("display", "block");
+			this.itv = setTimeout(this.hideDiv2,1200);
+		}
+
+		this.hideDiv2 = function (){
+			clearInterval(this.itv);
+			$("#quiz_alert2").css("display", "none");
+		}
+
+	</script>
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>
