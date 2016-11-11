@@ -27,6 +27,7 @@
 	<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+	<script type="text/javascript" src='js/inputQuiz.js'></script>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -85,53 +86,74 @@
 
 				<dd>
 					<p class = "input_question">
+						<span id = "inputCheck_x1" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o1" class="check_o" style="display:none;"></span>
+
 						<input type="text" id="input_1" class="quiz-input" value="">
 						TABLE DEPARTMENT<br>
+
+						<span id = "inputCheck_x2" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o2" class="check_o" style="display:none;"></span>
+
 						<input type="text" id="input_2" class="quiz-input" value="">
 						age int
+
 					</p>
 				</dd>
 
-				<dd class = "btn">
-					<p id="inout_btn" >
-						<a href="javascript:checkAnswer();">입력완료</a>
+				<dd id="inout_btn" class = "btn" style="display: none;">
+					<p>
+						<a href="javascript:;">입력완료</a>
 					</p>
-
 				</dd>
 
+				<dd class="btn" id="correct-solution" style="display:none;">
+					<p>
+						<a href="javascript:;">정답확인</a>
+					</p>
+				</dd>
 
 			</dl>
 
 
+			<div class="apply-sound" style="display:none;">
+			<!--<div class="apply-sound" >-->
+				<span>※ 음성강의를 확인해보세요.</span>
+				<audio controls>
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"04_18.mp3' type='audio/mpeg' />");
+					</script>
+					해당 브라우저는 음성을 지원하지 않습니다.
+				</audio>
 
-			<div id="page-narration-text">※ 음성강의를 확인해보세요.</div>
+				<div id="viewExplanationBtn">
+				<a href="#" onclick="viewExplanation();">해설보기</a>
+				</div>
 
-			<audio id="page-narration" controls>
-				<script type="text/javascript">
-					document.write("<source src='"+mp3Link+"04_18.mp3' type='audio/mpeg' />");
-				</script>
-				해당 브라우저는 음성을 지원하지 않습니다.
-			</audio>
+			</div>
+
+
 
 			<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
 			<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
 
 
 
-			<dl id="learning_quiz_feed" class="feed">
+
+			<dl id="learning_quiz_feed" class="feed" style="display:none;">
+
 				<dt>정답 및 해설</dt>
 
 				<dd class="text-1">
 					<span>ALTER</span> TABLE DEPARTMENT<br>
 					<span>ADD</span> age int<br>
+
 				</dd>
 
-				<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
+				<dd class="btn"><a href="#" onclick= hiddenExplanation(); >해설닫기</a></dd>
 			</dl>
-			<div class="narration-bg"></div>
 
-
-
+			<div class="narration-bg" style="display:none;"></div>
 
 
 			<audio id="audio1">
@@ -156,82 +178,16 @@
 
 
 
-	<script type="text/javascript">
 
+
+
+		<script>
 		/**
-		 * 요기다 정답을 넣어주세요....
-		 * input 순서대로.
-		 * @type {string}
+		 * 버트 id
+		 * 일력 박스 id
+		 * 정답
 		 */
-		var answer = ["ALTER", "ADD"];
-
-		// 기회
-		var opt = 2;
-
-		function checkAnswer(){
-
-			var win_w = window.innerWidth;
-			if(opt == 0){
-				return;
-			}
-			var flag = true;
-
-			for(var i=0;  i<answer.length ; i++) {
-
-				var c = $("#input_" + (i + 1)).val();
-
-				if(c == ""){
-					playAudio('audio1');
-					showAlertDiv1();
-					return;
-				}
-
-				if(c != answer[i]){
-					flag = false;
-				}
-
-			}
-			if(flag){
-				// 정답을 맞추면
-				playAudio('audio1');
-				$("#learning_quiz_feed").css('visibility','visible');
-				$("#page-narration-text").css('visibility','visible');
-				$("#page-narration").css('visibility','visible');
-
-			}else{
-				playAudio('audio2');
-				opt --;
-				if(opt == 0) {
-					// 기회가 없다면
-					$("#learning_quiz_feed").css('visibility','visible');
-					$("#page-narration-text").css('visibility','visible');
-					$("#page-narration").css('visibility','visible');
-				}else{
-					showAlertDiv2();
-				}
-			}
-		}
-
-		this.showAlertDiv1 = function (){
-//		function showAlertDiv1(){
-			$("#quiz_alert1").css("display", "block");
-			this.itv = setTimeout(this.hideDiv1,1200);
-		}
-
-		this.hideDiv1 = function (){
-			clearInterval(this.itv);
-			$("#quiz_alert1").css("display", "none");
-		}
-
-		this.showAlertDiv2 = function (){
-			$("#quiz_alert2").css("display", "block");
-			this.itv = setTimeout(this.hideDiv2,1200);
-		}
-
-		this.hideDiv2 = function (){
-			clearInterval(this.itv);
-			$("#quiz_alert2").css("display", "none");
-		}
+		var quiz = new Inputquit(["input_1", "input_2"], ["ALTER", "ADD"]);
 
 	</script>
 

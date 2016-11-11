@@ -57,6 +57,7 @@
     {
         margin-top:90px;
         margin-bottom: 28px;
+        height: 400px;
     }
 
     #learning-quiz-text .quiz-guide
@@ -70,11 +71,21 @@
 
     #learning-quiz-text .question dd .input_question
     {
-        line-height: 30px;
+        line-height: 50px;
         font-size: 16px;
-        padding-top: 40px;
-        height: 70px;
+        margin-top: 20px;
+        /*padding-top: 40px;*/
     }
+
+
+    #learning-quiz-text .question dd .check_x, #learning-quiz-text .question dd .check_o{
+
+        top: 0px;
+        width:30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+
 
     #learning-quiz-text .question dd .input_question input
     {
@@ -93,6 +104,19 @@
         background:url("../img/quiz/btn_img_12.png") 0 0px no-repeat;
     }
 
+    #learning-quiz-text .apply-sound audio
+    {
+        width:calc(100% - 150px);
+    }
+
+    #learning-quiz-text .apply-sound a
+    {
+        width:140px;
+        line-height: 40px;
+        background:url("../img/apply/btn_img_12.png") no-repeat;
+        font-size:16px;
+    }
+
     #learning-quiz-text .feed dt
     {
         width:120px;
@@ -105,6 +129,10 @@
         font-size:16px;
     }
 
+
+    #learning-quiz-text .narration-bg{
+        height:547px;
+    }
 
 }
 

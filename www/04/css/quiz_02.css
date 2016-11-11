@@ -15,6 +15,11 @@
         font-size: 26px;
     }
 
+
+
+
+
+
     /*요기서 부터 퀴즈*/
     .quiz li.question dt
     {
@@ -191,6 +196,10 @@
         /*margin-bottom: 28px;*/
     }
 
+    #quiz-intro {
+        padding-top: 140px;
+    }
+
     #quiz-intro .title-area
     {
         left:5%;
@@ -200,9 +209,8 @@
 
     #quiz-intro .text-area
     {
-        position: relative;
         height:195px;
-        top:-37px;
+        line-height: 195px;
         background-size: auto 100%;
     }
 
@@ -218,7 +226,7 @@
 
     #quiz-intro .btn-area
     {
-        margin-top: -20px;
+        margin-top: 20px;
     }
 
     #quiz-intro .btn-area a
@@ -321,8 +329,17 @@
     .quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
 
 
-    .quiz li.check-1														{top: 80px;z-index:100;}
-    .quiz li.check-2														{top:80px; z-index:100;}
+    .quiz li.check-1, .quiz li.check-2
+    {
+        /*top: 80px;*/
+        width:60px;
+        height:60px;
+        background-size: 60px 60px;
+        z-index:100;
+        left:14px;
+        top:-5px;
+    }
+
 
 
     .quiz li.feed															{height:130px;}

@@ -6,7 +6,7 @@
 #apply																	{position:relative; width:1000px; height:620px; z-index:100;}
 #apply:after															{content:""; display:block; clear:both;}
 #apply .theme															{position:absolute; left:0; top:54px; font:20px nsM; color:#FFF; line-height:25px; background:url("../img/inc/theme_img_01.png") no-repeat #7771BD; padding:4px 20px 2px 43px; z-index:100; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
-#apply .page-ending												{position:absolute;  float:left; width:945px; bottom:7px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; padding-right:55px;}
+#apply .page-ending										#apply-area .apply-sound audio		{position:absolute;  float:left; width:945px; bottom:7px; font:14px nsM; color:#37414A; line-height:20px; text-align:right; padding-right:55px;}
 
 
 
@@ -24,14 +24,18 @@
 #apply-area .apply-sound a										{float:right; display:block; overflow:hidden; width:12.5%; height:29px; font:18px nsM; color:#FFF; text-align:center; background:url("../img/apply/btn_narration_01.png") right top no-repeat; padding:11px 5% 0 0;}
 #apply-area .apply-sound span								{float:left; display:block; overflow:hidden; width:100%; font:14px nsM; color:#37414A; line-height:20px; padding-top:8px;}
 
-#narration-area														{display:none; position:absolute; width:890px; bottom:10px; background:#FFF; box-shadow:0 0 6px #333; opacity:0; z-index:2006;}
+#narration-area
+{display:none; position:absolute; width:890px; bottom:10px; background:#FFF; box-shadow:0 0 6px #333; opacity:0; z-index:2006;}
 #narration-area dt													{position:absolute; width:140px; height:31px; font:20px nsM; color:#FFF; line-height:25px; background:url("../img/apply/narration_tag_01.png") no-repeat; padding:9px 0 0 50px;}
-#narration-area dd													{float:left; font:16px nsM; color:#333; line-height:24px; border:5px solid #DDD; padding:50px 40px 25px 45px;}
+#narration-area dd
+{float:left; font:16px nsM; color:#333; line-height:24px; border:5px solid #DDD; padding:50px 40px 25px 45px;}
 #narration-area .btn												{position:absolute; right:12px; top:12px; width:25px; height:25px; border:none; padding:0;}
 #narration-area .btn a												{display:block; overflow:hidden; width:25px; height:25px; text-indent:-9999px; background:url("../img/apply/narration_btn_01.png") no-repeat;}
-#narration-area.open												{bottom:78px; opacity:1; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+#narration-area.open
+{bottom:78px; opacity:1; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 
-#apply-area .narration-bg										{display:none; position:absolute; width:100%; height:620px; left:0; top:0; background:#000; opacity:.6; z-index:2005;}
+#apply-area .narration-bg
+{display:none; position:absolute; width:100%; height:620px; left:0; top:0; background:#000; opacity:.6; z-index:2005;}
 
 
 
