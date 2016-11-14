@@ -68,6 +68,8 @@ var Inputquit = function (inputs, answers){
         var len = inputDoms.length;
         for(var i = 0; i<len ; i++) {
             inputDoms[i].val(incurrect[i]);
+            inputDoms[i].css('color', '#f00');
+            inputDoms[i].css('font-weight', 'bold');
             $('#inputCheck_o'+(i+1)).hide();
             $('#inputCheck_x'+(i+1)).hide();
         }
@@ -108,6 +110,15 @@ var Inputquit = function (inputs, answers){
             }
         }
         // 기회를 한번 줄이구.
+        if(falg) {
+            opp = 0;
+           // 다 맞췄어요.~
+            console.log("다 맞춰썽요")
+            var falg = true;
+            for(var i = 0; i<len ; i++) {
+                checkO(inputDoms[i], i);
+            }
+        }
 
         if(!opp || opp == 0) {
             okbtn.style.display = "none";
@@ -115,15 +126,11 @@ var Inputquit = function (inputs, answers){
 
             $("#correct-solution").show();
     		$(".apply-sound").show();
-
-
-            //$("#learning_quiz_feed").css('visibility','visible');
             return;
         }
         if(!falg) {
             showAlertDiv2();
         }
-
     }
 
     function checkO(dom, ind){
@@ -132,20 +139,18 @@ var Inputquit = function (inputs, answers){
         // 기회가 남아 있다면.
         if(opp) {
             // 일력하지 못하게 해욤.
+
         }else{
             dom.attr('disabled','disabled');
             $('#inputCheck_o'+(ind+1)).show();
-
         }
     }
 
     function checkX(dom, ind){
         if(opp) {
             dom.val('');
-
             checkBtnEnable();
         }else{
-
             dom.attr('disabled','disabled');
             console.log($('#inputCheck_o'+(ind+1)))
             $('#inputCheck_x'+(ind+1)).show();
@@ -153,25 +158,25 @@ var Inputquit = function (inputs, answers){
     }
 
 
-        function showAlertDiv1() {
-			$("#quiz_alert1").css("display", "block");
-			this.itv = setTimeout(hideDiv1,1200);
-		}
+    function showAlertDiv1() {
+        $("#quiz_alert1").css("display", "block");
+        this.itv = setTimeout(hideDiv1,1200);
+    }
 
-        function hideDiv1(){
-			clearInterval(this.itv);
-			$("#quiz_alert1").css("display", "none");
-		}
+    function hideDiv1(){
+        clearInterval(this.itv);
+        $("#quiz_alert1").css("display", "none");
+    }
 
-        function showAlertDiv2(){
-			$("#quiz_alert2").css("display", "block");
-			this.itv = setTimeout(hideDiv2,1200);
-		}
+    function showAlertDiv2(){
+        $("#quiz_alert2").css("display", "block");
+        this.itv = setTimeout(hideDiv2,1200);
+    }
 
-        function hideDiv2(){
-			clearInterval(this.itv);
-			$("#quiz_alert2").css("display", "none");
-		}
+    function hideDiv2(){
+        clearInterval(this.itv);
+        $("#quiz_alert2").css("display", "none");
+    }
 };
 
 

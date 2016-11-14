@@ -64,6 +64,8 @@ function pageInit(){
 		$("#q2_wrong1").hide();
 		$("#quiz_feed_2").hide();
 		$(".correct-check2").hide();
+
+
 	}
 
 	// 3번 문제 정리
@@ -83,6 +85,8 @@ function pageInit(){
 		$("#q3_wrong1").hide();
 		$("#quiz_feed_3").hide();
 		$(".correct-check3").hide();
+
+
 	}
 }
 

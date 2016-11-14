@@ -78,9 +78,9 @@
     }
 
 
-    #learning-quiz-text .question dd .check_x, #learning-quiz-text .question dd .check_o{
-
-        top: 0px;
+    #learning-quiz-text .question dd .check_x, #learning-quiz-text .question dd .check_o
+    {
+        top: 10px;
         width:30px;
         height: 30px;
         background-size: 30px 30px;
@@ -94,27 +94,29 @@
 
     #learning-quiz-text .question .btn p a
     {
-        font:16px nsM;
-        padding-top : 11px;
-        background:url("../img/quiz/btn_img_11.png") 0 0px no-repeat;
+        font:14px nsM;
+        padding-top : 10px;
+        background:url("../img/quiz/btn_img_21.png") 0 0px no-repeat;
     }
 
     #learning-quiz-text .question .btn p a:hover
     {
-        background:url("../img/quiz/btn_img_12.png") 0 0px no-repeat;
+        background:url("../img/quiz/btn_img_22.png") 0 0px no-repeat;
     }
 
     #learning-quiz-text .apply-sound audio
     {
-        width:calc(100% - 150px);
+        width:calc(100% - 105px);
+        height: 29px;
     }
 
     #learning-quiz-text .apply-sound a
     {
-        width:140px;
-        line-height: 40px;
-        background:url("../img/apply/btn_img_12.png") no-repeat;
-        font-size:16px;
+        width:100px;
+	
+        line-height: 29px;
+        background:url("../img/apply/btn_narration_02.png") no-repeat;
+        font-size:14px;
     }
 
     #learning-quiz-text .feed dt

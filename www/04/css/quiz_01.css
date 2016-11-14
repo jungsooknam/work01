@@ -214,7 +214,7 @@
 }
 
 
-.quiz li.question dd.type-1
+.quiz li.question dd.type-1, .quiz li.question dd.type-2
 {
     clear:both;
     font:20px nsM;
@@ -226,24 +226,33 @@
     padding:7px 0;
 }
 
-.quiz li.question dd.type-1 a
+.quiz li.question dd.type-1 a, .quiz li.question dd.type-2 a
 {
     color:#333333;
     padding-left: 35px;
+    padding-bottom: 2px;
     padding-right: 10px;
 }
 
-.quiz li.question dd.type-1 a.n-1								{background:url("../img/quiz/num_01.png") no-repeat;}
-.quiz li.question dd.type-1 a.n-1-choice
+.quiz li.question dd.type-1 a.n-1, .quiz li.question dd.type-2 a.n-1
+{background:url("../img/quiz/num_01.png") no-repeat;}
+.quiz li.question dd.type-1 a.n-1-choice, .quiz li.question dd.type-2 a.n-1-choice
 {color:#cc3366; background:url("../img/quiz/num_01.png") left bottom no-repeat;}
-.quiz li.question dd.type-1 a.n-2								{background:url("../img/quiz/num_02.png") no-repeat;}
-.quiz li.question dd.type-1 a.n-2-choice
+
+.quiz li.question dd.type-1 a.n-2, .quiz li.question dd.type-2 a.n-2
+{background:url("../img/quiz/num_02.png") no-repeat;}
+.quiz li.question dd.type-1 a.n-2-choice, .quiz li.question dd.type-2 a.n-2-choice
 {color:#cc3366; background:url("../img/quiz/num_02.png") left bottom no-repeat;}
 
-.quiz li.question dd.type-1 a.n-3								{background:url("../img/quiz/num_03.png") no-repeat;}
-.quiz li.question dd.type-1 a.n-3-choice					{color:#cc3366; background:url("../img/quiz/num_03.png") left bottom no-repeat;}
-.quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_04.png") no-repeat;}
-.quiz li.question dd.type-1 a.n-4-choice					{color:#cc3366; background:url("../img/quiz/num_04.png") left bottom no-repeat;}
+.quiz li.question dd.type-1 a.n-3, .quiz li.question dd.type-2 a.n-3
+{background:url("../img/quiz/num_03.png") no-repeat;}
+.quiz li.question dd.type-1 a.n-3-choice, .quiz li.question dd.type-2 a.n-3-choice
+{color:#cc3366; background:url("../img/quiz/num_03.png") left bottom no-repeat;}
+
+.quiz li.question dd.type-1 a.n-4, .quiz li.question dd.type-2 a.n-4
+{background:url("../img/quiz/num_04.png") no-repeat;}
+.quiz li.question dd.type-1 a.n-4-choice, .quiz li.question dd.type-2 a.n-4-choice
+{color:#cc3366; background:url("../img/quiz/num_04.png") left bottom no-repeat;}
 .quiz li.question dd.type-1 a span, .quiz li.question dd.type-2 a span
 {
     position:absolute;
@@ -260,20 +269,27 @@
 .quiz li.question dd.type-1 a span, .quiz li.question dd.type-2 a span
 {background:url("../img/quiz/check_00.png") no-repeat; z-index:101;}
 
+
+
 .quiz li.question dd.type-1 a span.correct-check, .quiz li.question dd.type-2 a span.correct-check
 {background:url("../img/quiz/check_01.png") no-repeat; z-index:100;}
 
 
 
-
-
-.quiz li.question dd.type-2
+.quiz li.question dd.type-1 a .correct-check1, .quiz li.question dd.type-2 a .correct-check1, .quiz li.question dd.type-1 a .correct-check2, .quiz li.question dd.type-2 a .correct-check2 , .quiz li.question dd.type-1 a .correct-check3, .quiz li.question dd.type-2 a .correct-check3
 {
-    clear:both;
-    font:20px nsM;
-    padding-top:20px;
-    margin: 0 13%;
+    width: 34px;
+    height: 34px;
+    display:block;
+    margin-top: -28px;
+    margin-left: -5px;
+    background:url("../img/quiz/check_01.png") no-repeat;
+    background-size: 100% 100%;
+    z-index:99;
 }
+
+
+
 .quiz li.question dd.type-2 li{
     padding:7px 0;
     float: left;
@@ -285,16 +301,6 @@
     padding-left: 35px;
     padding-right: 10px;
 }
-
-.quiz li.question dd.type-2 a.n-1								{width:17%; background:url("../img/quiz/num_01.png") no-repeat; margin-right:3%;}
-.quiz li.question dd.type-2 a.n-1-choice					{width:17%; color:#cc3366; background:url("../img/quiz/num_01.png") left bottom no-repeat; margin-right:3%;}
-.quiz li.question dd.type-2 a.n-2								{width:45%; background:url("../img/quiz/num_02.png") no-repeat;}
-.quiz li.question dd.type-2 a.n-2-choice					{width:45%; color:#cc3366; background:url("../img/quiz/num_02.png") left bottom no-repeat;}
-.quiz li.question dd.type-2 a.n-3								{width:17%; background:url("../img/quiz/num_03.png") no-repeat; margin-right:3%;}
-.quiz li.question dd.type-2 a.n-3-choice					{width:17%; color:#cc3366; background:url("../img/quiz/num_03.png") left bottom no-repeat; margin-right:3%;}
-.quiz li.question dd.type-2 a.n-4								{width:45%; background:url("../img/quiz/num_04.png") no-repeat;}
-.quiz li.question dd.type-2 a.n-4-choice					{width:45%; color:#cc3366; background:url("../img/quiz/num_04.png") left bottom no-repeat;}
-
 
 .quiz li.check-1, .quiz li.check-2 {
     position:absolute;

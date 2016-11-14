@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 
 
@@ -108,28 +108,28 @@
 
     #summary-area .type-1 dd .stype-1
     {
-        background:url("../img/learn/learn_bullet_14.png") 0 7px no-repeat;
+        background:url("../img/summary/bullet_11.png") 0 7px no-repeat;
         margin-bottom: 5px;
     }
 
     #summary-area .type-1 dd .stype-1 span
     {
         font-size: 14px;
-        margin-left:10px;
+        margin-left:12px;
     }
 
 
     #summary-area .type-1 dd .stype-2
     {
         margin-left: 15px;
-        background:url("../img/learn/learn_bullet_05.png") 0 4px no-repeat;
+        background:url("../img/summary/bullet_12.png") 0 4px no-repeat;
         margin-bottom: 10px;
     }
 
     #summary-area .type-1 dd .stype-2 span
     {
 
-        margin-left: 15px;
+        margin-left: 12px;
         font-size: 14px;
     }
 

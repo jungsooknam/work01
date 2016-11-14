@@ -344,7 +344,6 @@
         padding:25px 5% 0 4%;
         margin-left:0;
     }
-    .quiz li.question dd.type-1 a										{padding:1px 0 0 30px;}
 
     .quiz li.question dd.type-1 a.n-1								{background:url("../img/quiz/num_21.png") no-repeat;}
     .quiz li.question dd.type-1 a.n-1-choice					{background:url("../img/quiz/num_21.png") left bottom no-repeat;}
@@ -355,13 +354,6 @@
     .quiz li.question dd.type-1 a.n-4								{background:url("../img/quiz/num_24.png") no-repeat;}
     .quiz li.question dd.type-1 a.n-4-choice					{background:url("../img/quiz/num_24.png") left bottom no-repeat;}
     .quiz li.question dd.type-1 a span								{width:32px; height:32px;}
-    .quiz li.question dd.type-1 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
-    .quiz li.question dd.type-1 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
-    .quiz li.question dd.type-1 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
-
-
-    .quiz li.question dd.type-2										{width:91%; font-size:15px; line-height:18px; padding:15px 5% 0 4%;}
-    .quiz li.question dd.type-2 a										{padding:1px 0 0 30px; margin-bottom:12px;}
 
     .quiz li.question dd.type-2 a.n-1								{background:url("../img/quiz/num_21.png") no-repeat;}
     .quiz li.question dd.type-2 a.n-1-choice					{background:url("../img/quiz/num_21.png") left bottom no-repeat;}
@@ -372,9 +364,14 @@
     .quiz li.question dd.type-2 a.n-4								{width:60%; background:url("../img/quiz/num_24.png") no-repeat;}
     .quiz li.question dd.type-2 a.n-4-choice					{width:60%; background:url("../img/quiz/num_24.png") left bottom no-repeat;}
     .quiz li.question dd.type-2 a span								{width:32px; height:32px;}
-    .quiz li.question dd.type-2 a span.check-1				{background:url("../img/quiz/check_20.png") no-repeat;}
-    .quiz li.question dd.type-2 a span.check-2				{background:url("../img/quiz/check_20.png") no-repeat;}
-    .quiz li.question dd.type-2 a span.check-3				{background:url("../img/quiz/check_20.png") no-repeat;}
+
+    .quiz li.question dd.type-1 a .correct-check1, .quiz li.question dd.type-2 a .correct-check1, .quiz li.question dd.type-1 a .correct-check2, .quiz li.question dd.type-2 a .correct-check2 , .quiz li.question dd.type-1 a .correct-check3, .quiz li.question dd.type-2 a .correct-check3
+    {
+        width: 27px;
+        height: 27px;
+        margin-top: -24px;
+        margin-left: -4px;
+    }
 
 
     .quiz li.check-1, .quiz li.check-2
@@ -383,8 +380,8 @@
         height:60px;
         background-size: 60px 60px;
         z-index:100;
-        left:14px;
-        top:-5px;
+        left: 8px;
+        top: -9px;
     }
 
 
@@ -487,13 +484,11 @@
 
 
     }
-
-
-
     .q-num
     {
         top: 92px;
-        right:-20px
+        right:0px;
+        width:216px;
     }
     #quiz_alert1 img														{margin-top:180px;}
     #quiz_alert2 img														{margin-top:180px;}
@@ -507,7 +502,7 @@
 
 
 
-    /* ��� ���� */
+
 
     .quiz-result															{padding-top: 0px;background: none;background-color: #3E5D9D;margin-top: 90px;height: 250px;}
     .quiz-result .result-text											{font-size:23px;line-height:28px;padding:21px 0 19px;background-color: #1a3a6c;}
@@ -621,7 +616,7 @@
 
 
     .quiz li.question dd.type-2										{font-size:14px; line-height:18px; padding:20px 5% 0 4%;}
-    .quiz li.question dd.type-2 a										{margin-bottom:8px;}
+    /*.quiz li.question dd.type-2 a										{margin-bottom:8px;}*/
     .quiz li.question dd.type-2 a.n-1								{width:80%;}
     .quiz li.question dd.type-2 a.n-1-choice					{width:80%;}
     .quiz li.question dd.type-2 a.n-2								{width:80%;}
@@ -659,6 +654,13 @@
 
 
 
+    .quiz li.question dd.type-1 a .correct-check1, .quiz li.question dd.type-2 a .correct-check1, .quiz li.question dd.type-1 a .correct-check2, .quiz li.question dd.type-2 a .correct-check2 , .quiz li.question dd.type-1 a .correct-check3, .quiz li.question dd.type-2 a .correct-check3
+    {
+        width: 26px;
+        height: 26px;
+        margin-top: -21px;
+        margin-left: -4px;
+    }
 
 
 
@@ -724,10 +726,6 @@
     .quiz li.question dd.ex b											{padding:3px 0 0 0;}
 
     .quiz li.question dd.type-1										{width:91%; font-size:13px; line-height:18px; padding:25px 5% 0 4%;}
-    .quiz li.question dd.type-1 a										{padding:1px 0 0 30px; margin-bottom:13px;}
-
-    .quiz li.question dd.type-2										{width:91%; font-size:13px; line-height:18px; padding:20px 5% 0 4%;}
-    .quiz li.question dd.type-2 a										{padding:1px 0 0 30px; margin-bottom:7px;}
 
 
     .quiz li.check-1, .quiz li.check-2
@@ -742,8 +740,6 @@
     .quiz li.feed dt span.text-1
     {
         font-size:13px;
-        /*padding:3px 10px;*/
-        /*padding-top:8px;*/
     }
     .quiz li.feed dd
     {
@@ -778,6 +774,9 @@
 
     .quiz-result .result-check a										{top:195px;}
     .quiz-result .result-check a.type-2							{top:230px;}
+
+
+
 
 }
 
