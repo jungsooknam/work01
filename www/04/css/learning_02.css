@@ -139,6 +139,7 @@
     #content-area .type-3 p
     {
         padding:0 0 0 8px;
+        /*white-space:pre-wrap;*/
     }
 
 

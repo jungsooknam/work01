@@ -95,6 +95,9 @@
 #content-area .type-3 p
 {
     padding:0 0 0 8px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
 }
 
 #content-area .type-4
