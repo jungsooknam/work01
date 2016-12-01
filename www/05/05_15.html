@@ -1,0 +1,201 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+
+		<script type="text/javascript">
+			var _totalPageLearn =  02;									// 학습영역 페이징 수
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initLearnPage();												// 학습영역 페이징
+
+				$("#page_left").click(function(){
+					prevPageLearn();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageLearn();
+					playAudio('btn-sound');
+				});
+			});
+		</script>
+	</head>
+
+<!--인트로 페이지-->
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header class="learn">
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header>
+
+
+	<section id="learning">
+
+
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav>
+
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<ul id="content-area">
+			<li class="subject">
+				<p>MS-SQL의 설치와 구동</p>
+			</li><!-- 학습 - 주제 영역 -->
+
+
+
+			
+			<li class="text-area">
+			
+				<div id="learn-group-1" class="page-area-1">
+ 
+
+
+					<dl class="type-1"><p>테이블을 생성한 후에 제약 조건을 추가하거나 제거할 필요성이 있음</p> 
+													 
+					</dl>
+
+
+					<dl class="type-3"><p>제약 조건도 테이블의 구조 정보에 속함으로 ALTER TABLE을 이용함</p> 
+													 
+					</dl>
+
+					<dl class="type-3"><p>추가</p> 
+													 
+					</dl>
+
+					<dl class="type-2"><p>ADD CONSTRAINT</p> 
+													 
+					</dl>
+
+					<dl class="type-3"><p>제거</p> 
+													 
+					</dl>
+
+					<dl class="type-2"><p>DROP CONSTRAINT</p> 
+													 
+					</dl>
+				</div>
+
+				<div id="learn-group-2" class="page-area-1">
+
+					<dl class="type-1"><p>제약 조건 이름을 지정해 두어야 추가나 제거가 쉬움</p> 
+													 
+					</dl>
+
+
+
+					<dl class="type-3"><p>추가</p> 
+													 
+					</dl>
+
+					<dl class="type-2"><p>ALTER TABLE 테이블명<br>ADD [CONSTRAINT 제약조건명] <br>제약조건 (속성명)</p> 
+													 
+					</dl>
+
+					<dl class="type-3"><p>제거</p> 
+													 
+					</dl>
+
+					<dl class="type-2"><p>ALTER TABLE 테이블명<br>DROP CONSTRAINT 제약조건명</p> 
+													 
+					</dl>
+				</div>
+
+				<ul class="learning-page">
+					<li class="left"><img src="img/learn/btn_pre_01.png" id="page_left" alt="이전 내용보기" /></li>
+					<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+					<li class="right"><img src="img/learn/btn_next_01.png" id="page_right" alt="다음 내용보기" /></li>
+				</ul>
+
+			
+
+
+			</li><!-- 학습 - 텍스트 영역 -->
+			
+				
+			
+			
+
+			
+
+			
+
+			<li class="movie-guide">
+				<p>
+					 음성강의를 확인한 후 실습 영상을 통해 학습을 진행하세요.<br>
+					<span>재생 버튼 선택 후 전체 화면보기로 학습하세요.</span></p>
+			</li>
+
+
+
+			<li class="movie-area">
+				<div>
+					<video id="page-movie" controls preload="auto" poster="img/learn/cover_02.png">
+						<script type="text/javascript">
+							document.write("<source src='"+mp4Link+"05_15.mp4' type='video/mp4' />");
+						</script>
+						해당 브라우저는 영상을 지원하지 않습니다.
+					</video>
+				</div>
+			</li><!-- 학습 - 동영상 영역 -->
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+
+	</section><!--  본문 영역 -->
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

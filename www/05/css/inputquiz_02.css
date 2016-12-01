@@ -1,0 +1,209 @@
+﻿@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+
+    #learning-quiz-text #page-narration-text {
+        width:90%;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:849px) {
+
+    #learning-quiz-text .question dt p{
+        font-size:18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:729px) {
+    #learning-quiz-text .question dt p{
+        font-size:16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*요기서 부터 모바일*/
+@media all and (max-width:599px) {
+
+    #learning-quiz-text
+    {
+        margin-top:90px;
+
+        height: 500px;
+    }
+
+    #learning-quiz-text .quiz-guide
+    {
+        font-size:14px;
+    }
+
+    #learning-quiz-text .question dt p{
+        font-size:16px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        line-height: 40px;
+        font-size: 16px;
+        margin-top: 20px;
+        /*padding-top: 40px;*/
+    }
+
+
+    #learning-quiz-text .question dd .check_x, #learning-quiz-text .question dd .check_o
+    {
+        top: 10px;
+        width:30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+
+
+    #learning-quiz-text .question dd .input_question input
+    {
+        font-size:16px;
+    }
+
+    #learning-quiz-text .question .btn p a
+    {
+        font:14px nsM;
+        padding-top : 10px;
+        background:url("../img/quiz/btn_img_21.png") 0 0px no-repeat;
+    }
+
+    #learning-quiz-text .question .btn p a:hover
+    {
+        background:url("../img/quiz/btn_img_22.png") 0 0px no-repeat;
+    }
+
+    #learning-quiz-text .apply-sound audio
+    {
+        width:calc(100% - 105px);
+        height: 29px;
+    }
+
+    #learning-quiz-text .apply-sound a
+    {
+        width:100px;
+	
+        line-height: 29px;
+        background:url("../img/apply/btn_narration_02.png") no-repeat;
+        font-size:14px;
+    }
+
+    #learning-quiz-text .feed dt
+    {
+        width:120px;
+        font-size:16px;
+        line-height:26px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:16px;
+    }
+
+
+    #learning-quiz-text .narration-bg{
+        height:547px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:449px) {
+
+    #learning-quiz-text .question dt p{
+        font-size:14px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        font-size: 14px;
+    }
+
+
+    #learning-quiz-text .feed dt
+    {
+        font-size:14px;
+        line-height:26px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:369px) {
+    #learning-quiz-text .question dt p{
+        font-size:12px;
+    }
+
+    #learning-quiz-text .question dd .input_question
+    {
+        font-size: 12px;
+    }
+
+    #learning-quiz-text .feed dt
+    {
+        font-size:12px;
+        line-height:24px;
+    }
+
+    #learning-quiz-text .feed dd
+    {
+        font-size:12px;
+    }
+}
+
+
+
+
+
+

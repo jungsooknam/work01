@@ -82,8 +82,15 @@
     /*타이틀*/
     #summary-area .type-1 dt
     {
+        position:static;
+        float: none;
         background:none #476dab;
         height: 40px;
+        vertical-align: middle;
+        display: inline-block;
+
+        line-height: 40px;
+        text-align: center;
     }
 
     #summary-area .type-1 dt span
@@ -114,7 +121,7 @@
 
     #summary-area .type-1 dd .stype-1 span
     {
-        font-size: 14px;
+        font-size: 16px;
         margin-left:12px;
     }
 
@@ -130,25 +137,23 @@
     {
 
         margin-left: 12px;
-        font-size: 14px;
-    }
-
-    #summary-area .type-1 dd .stype-3
-    {
-        background-color: #999eaa;
-        margin-left: 15px;
-        margin-bottom: 5px;
+        font-size: 16px;
     }
 
     #summary-area .type-1 dd .stype-3 span
     {
-        color:#fff;
-        padding:10px 15px;
-        font-size: 14px;
-        display: inline-block;
+        font-size: 15px;
     }
 
+    #summary-area .type-1 dd .stype-4 span
+    {
+        font-size: 15px;
+    }
 
+    #summary-area .type-1 dd .stype-5 span
+    {
+        font-size: 15px;
+    }
 
 
 

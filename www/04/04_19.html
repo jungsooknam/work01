@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 	<title>SQL 활용</title>
@@ -39,7 +39,15 @@
 			}
 			addEventListener('resize', resizeHeight, false);
 			window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+
+
 		});
+
+			//더블클릭으로 셀선택 방지
+			$(document).on("selectstart", function(event){event.preventDefault();});
+
+			//드래그 방지
+			$(document).on("dragstart", function(event){event.preventDefault();});
 	</script>
 </head>
 

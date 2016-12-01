@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 #summary
 {
@@ -50,18 +50,20 @@
     height: 62px;
     background:url("../img/summary/box_01.png") 0 0px no-repeat;
     text-align: center;
+    line-height: 62px;
+    
 }
 
 #summary-area .type-1 dt span
 {
-    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
     width: 86%;
     color: #FFF;
     font: 26px nsM;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: left;
-    display: inline-block;
+
 }
 
 #summary-area .type-1 dd

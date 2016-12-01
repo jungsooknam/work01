@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+    #objective																{width:100%; height:620px;}
+}
+
+
+@media all and (max-width:849px) {
+
+    #objective-area dl dt
+    {
+        font-size:24px;
+        line-height:34px;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    #objective-area dl dd
+    {
+        font:20px nsM;
+        margin-left:9%;
+        margin-bottom: 18px;
+    }
+
+}
+
+
+
+
+@media all and (max-width:729px) {
+
+    #objective-area dl dt
+    {
+        font-size:20px;
+        line-height:30px;
+    }
+
+
+}
+
+/*요기서 부터 모바일*/
+
+@media all and (max-width:599px) {
+
+    #objective
+    {width:100%; height:100%;}
+
+    {width:95%; padding:8px 2.5% 0;}
+
+    #objective-area
+    {
+        width:95%;
+        padding-bottom: 48px;
+        margin: 90px auto 0;
+    }
+
+
+    #objective-area dl dt
+    {
+        font-size:18px;
+        line-height:25px;
+        border-radius: 0px 0px 6px 6px;
+    }
+
+    #objective-area dl dd
+    {
+        font:18px nsM;
+        margin-left:9%;
+        margin-bottom: 10px;
+    }
+
+    #objective-area .type-1 dd p
+    {
+        float: left;
+        position:relative;
+        width:14px;
+        font:12px Dotum;
+        color:#FFF;
+        line-height:14px;
+        text-align:center;
+        background:#b45c84;
+        margin-right: 5px;
+    }
+
+    #objective-area .type-2 dd
+    {
+        background-position:  0 3px;
+    }
+}
+
+
+
+@media all and (max-width:519px) {
+
+    #objective-area dl dt
+    {
+        font-size:16px;
+        line-height:18px;
+    }
+}
+
+
+
+@media all and (max-width:449px) {
+
+    #objective-area dl dt
+    {
+        font-size:14px;
+        line-height:18px;
+        border-radius: 0px 0px 4px 4px;
+        width:35%;
+    }
+
+    #objective-area dl dd
+    {
+        font:14px nsM;
+        margin-left:9%;
+        margin-bottom: 16px;
+    }
+
+}
+
+
+@media all and (max-width:369px) {
+
+}
+
+
+
+
+
+

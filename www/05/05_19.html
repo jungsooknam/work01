@@ -1,0 +1,245 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>SQL 활용</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+
+		<script type="text/javascript">
+			var _totalPageSummary =  05;
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initSummaryPage();											// 핵심정리 페이징
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+			<section id="summary">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+				<div id="summary-area" >
+
+					<div class="summary-guide"><span>◈ 이번 회차에 학습한 내용을 정리해보겠습니다.</span></div>
+
+
+					<dl id="summary-text1" class="type-1">
+
+						<dt><span>제약조건</span></dt>
+
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터무결성</span></p>
+							<p class="stype-2"><span>NOT NULL</span></p>
+							<p class="stype-5"><span>NULL 값 허용 불가 </span></p>
+
+
+							<p class="stype-2"><span>UNIQUE</span></p>
+							<p class="stype-5"><span>하나의 테이블 내에서 한번만 나옴</span></p>
+							<p class="stype-5"><span>주로 대체키 설정 시 사용됨</span></p>
+
+							<p class="stype-2"><span>PRIMARY KEY</span></p>
+							<p class="stype-5"><span>기본키(UNIQUE + NOT NULL)</span></p>
+
+							<p class="stype-2"><span>FOREIGN KEY</span></p>
+							<p class="stype-5"><span>외래키</span></p>
+
+							<p class="stype-2"><span>CHECK</span></p>
+							<p class="stype-5"><span>도메인 무결성</span></p>
+						</dd>
+
+
+
+					</dl>
+
+					<dl id="summary-text2" class="type-1">
+
+
+						<dt><span>제약조건</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>제약조건의 설정</span></p>
+
+							<p class="stype-2"><span>테이블을 만들 때 속성에 제약조건 지정하기</span></p>
+							<p class="stype-3"><span>CREATE TABLE 테이블명<br>
+							( 속성명 속성타입 [ [제약조건명] 제약조건],<br>
+							속성명 속성타입,<br>
+							…<br>
+							)</span></p>
+
+							<p class="stype-2"><span>참조 무결성 제약조건</span></p>
+							<p class="stype-5"><span>외래키 값은 다른 테이블의 기본키 값들 중에 하나이어야 함</span></p>
+							<p class="stype-3"><span>속성명 [CONSTRAINTS 제약조건명] <br>
+							REFERENCE 참조테이블명(속성명)</span></p>
+						</dd>
+
+					</dl>
+
+					<dl id="summary-text3" class="type-1">
+
+
+						<dt><span>제약조건</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>제약조건의 설정</span></p>
+
+							<p class="stype-2"><span>Check 제약조건</span></p>
+							<p class="stype-5"><span>도메인 무결성 제약조건 : 입력 값의 제한</span></p>
+							<p class="stype-3"><span>속성명 [CONSTRAINTS 제약조건명] <br>
+							REFERENCE 참조테이블명(속성명)</span></p>
+
+							<p class="stype-2"><span>테이블 수준 제약조건</span></p>
+							<p class="stype-5"><span>속성 단위로 제약조건 설정은 표현에 있어서 제약이 따름</span></p>
+							<p class="stype-3"><span>CREATE TABLE 테이블명<br>
+							( 속성명 속성타입 [ [제약조건명] 제약조건],<br>
+							속성명 속성타입,<br>
+							…<br>
+							)</span></p>
+						</dd>
+
+					</dl>
+
+
+
+
+					<dl id="summary-text4" class="type-1">
+
+
+						<dt><span>제약조건 변경</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>제약조건의 추가 및 제거</span></p>
+
+							<p class="stype-2"><span>테이블을 생성한 후에 제약조건을 추가하거나 제거할 필요성이 있음</span></p>
+
+							<p class="stype-2"><span>제약조건도 테이블의 구조 정보에 속함으로 ALTER TABLE을 이용함</span></p>
+
+
+							<p class="stype-5"><span>추가 : ADD CONSTRAINT</span></p>
+							<p class="stype-5"><span>제거 : DROP CONSTRAINT</span></p>
+
+						</dd>
+
+					</dl>
+
+
+
+
+
+
+					<dl id="summary-text5" class="type-1">
+
+
+						<dt><span>제약조건 변경</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>MS-SQL의 설치와 구동</span></p>
+
+							<p class="stype-2"><span>제약조건 이름을 지정해 두어야 추가나 제거가 쉬움</span></p>
+							<p class="stype-5"><span>추가</span></p>
+							<p class="stype-3"><span>ALTER TABLE 테이블명<br>
+							ADD [CONSTRAINT 제약조건명] 제약조건 (속성명)</span></p>
+
+
+							<p class="stype-5"><span>제거</span></p>
+							<p class="stype-3"><span>ALTER TABLE 테이블명<br>
+							DROP CONSTRAINT 제약조건명</span></p>
+
+
+						</dd>
+
+					</dl>
+
+
+
+
+
+
+
+
+
+
+
+					<div class="summary-page">
+						<ul>
+							<li class="left"><a href="#!" id="page_left">이전 내용보기</a></li>
+							<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+							<li class="right"><a href="#!" id="page_right">다음 내용보기</a></li>
+						</ul>
+					</div>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
+
+
+
+				<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

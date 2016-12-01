@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/*ox 퀴즈 */
+#learning-quiz
+{
+    position:relative;
+    width:100%;
+    margin-top: 70px;
+}
+
+#learning-quiz:after {content:""; display:block; clear:both;}
+
+
+#learning-quiz .quiz-name
+{
+    float: left;
+    font:50px nsM;
+    color:#2e5b9c;
+    margin-left: 4.3%;
+}
+
+#learning-quiz .quiz-text
+{
+    float: left;
+    font:18px nsM;
+    color:#2e2e2e;
+    margin-top:25px;
+}
+
+#learning-quiz .question
+{
+    width:100%;
+}
+
+
+/*문제 텟스트*/
+#learning-quiz .question dt
+{
+    top: 60px;
+    position:absolute;
+    width:100%;
+    height: 88px;
+    text-align:center;
+    background:url("../img/learn/q_box.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#learning-quiz .question dt p
+{
+    font:28px nsM;
+    color:#FFF;
+    position: absolute;
+    width:90%;
+    top : 50%;
+    margin: 0 5%;
+    transform: translate(0, -50%);
+}
+
+#learning-quiz .question dd
+{
+    position:absolute;
+    /*top:160px;*/
+    margin-top: 160px;
+    width:100%;
+    text-align:center;
+    /*border: 1px solid #f00;*/
+}
+#learning-quiz .question a
+{
+    display:inline-block;
+    overflow:hidden;
+    width:165px;
+    height:165px;
+    text-indent:-9999px;
+    margin-right: 7%;
+}
+#learning-quiz .question a.o
+{
+    background:url("../img/learn/btn_o_01.png") no-repeat;
+}
+#learning-quiz .question a.x
+{
+    background:url("../img/learn/btn_x_01.png") no-repeat;
+}
+
+#learning-quiz .question a.o:hover
+{
+    background: url("../img/learn/btn_o_02.png") no-repeat;
+}
+#learning-quiz .question a.x:hover
+{
+    background:url("../img/learn/btn_x_02.png") no-repeat;
+}
+
+#learning-quiz .question span
+{
+    display:inline-block;
+    overflow:hidden;
+    width:165px;
+    height:165px;
+    text-indent:-9999px;
+    margin-right: 7%;
+
+
+}
+#learning-quiz .question span.o-1
+{
+    background:url("../img/learn/btn_o_01.png") no-repeat;
+}
+#learning-quiz .question span.o-2
+{
+    background:url("../img/learn/btn_o_02.png") no-repeat;
+}
+#learning-quiz .question span.o-3
+{
+    background:url("../img/learn/btn_o_03.png") no-repeat;
+}
+#learning-quiz .question span.o-4
+{
+    background:url("../img/learn/btn_o_04.png") no-repeat;
+}
+
+#learning-quiz .question span.x-1
+{
+    background:url("../img/learn/btn_x_01.png") no-repeat;
+}
+#learning-quiz .question span.x-2
+{
+    background:url("../img/learn/btn_x_02.png") no-repeat;
+}
+#learning-quiz .question span.x-3
+{
+    background:url("../img/learn/btn_x_03.png") no-repeat;
+}
+
+#learning-quiz .question span.x-4
+{
+    background:url("../img/learn/btn_x_04.png") no-repeat;
+}
+
+
+#question_result
+{
+    display: none;
+}
+
+/*결과*/
+#learning-quiz .feed
+{
+    display: none;
+    position:absolute;
+    width:100%;
+    height:180px;
+    background-color:rgba(70, 110, 169, 0.2);
+    top:345px;
+}
+
+/*정답 및 해설*/
+#learning-quiz .feed dt
+{
+    width: 135px;
+    font:20px nsM;
+    color:#fff;
+    line-height:28px;
+    background:#86898f;
+    text-align: center;
+}
+
+
+#learning-quiz .feed dd
+{
+    float:left;
+    /*border: 1px solid #840;*/
+}
+
+
+#learning-quiz .feed .ox
+{
+    margin-left: 6.5%;
+    margin-top:20px;
+}
+
+
+#learning-quiz .feed .text-1
+{
+    width: calc(87.5% - 92px);
+    font:19px nsM;
+    color:#333333;
+    margin-top:20px;
+    margin-left: 2%;
+}
+
+
+#learning-quiz .feed span
+{
+    display:block;
+    width:72px;
+    height:72px;
+}
+#learning-quiz .feed span.o
+{
+    background:url("../img/learn/answer_o.png") no-repeat;
+}
+#learning-quiz .feed span.x
+{
+    background:url("../img/learn/answer_x.png") no-repeat;
+}
+

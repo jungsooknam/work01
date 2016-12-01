@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 /*학습 페이지 */
 
@@ -32,7 +32,7 @@
     color:#356e76;
     line-height:30px;
     background:url("../img/learn/learn_bullet_02.png") 0 6px no-repeat;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #content-area .subject p

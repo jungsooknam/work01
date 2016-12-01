@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);					// 대주제
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+		});
+	</script>
+</head>
+
+<!--인트로 페이지-->
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header class="learn">
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header>
+
+
+	<section id="learning">
+
+
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav>
+
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<ul id="content-area">
+			<li class="subject">
+				<p>제약조건의 설정</p>
+			</li><!-- 학습 - 주제 영역 -->
+
+
+
+			<li class="text-area">
+            
+				<dl class="type-0">
+					<p>테이블을 만들 때 속성에 제약 조건 지정하기</p>
+				</dl>            
+
+
+				<dl class="type-5">
+					<p>CREATE TABLE 테이블명<br>
+					( 속성명 속성타입 [ [제약조건명] 제약조건],<br>
+					속성명 속성타입,<br>
+					 …
+					)</p>
+				</dl>
+
+
+				<dl class="type-7"><p>예</p> 
+                                                   <span>name varchar(20) NOT NULL id int CONSTRAINT PK_01 PRIMARY KEY</span>
+				</dl>
+
+
+
+
+			</li><!-- 학습 - 텍스트 영역 -->
+
+
+
+			<li class="movie-guide">
+				<p>
+					실습 영상을 통해 학습을 진행하세요.<br>
+					<span>재생 버튼 선택 후 전체 화면보기로 학습하세요.</span></p>
+			</li>
+
+
+
+			<li class="movie-area">
+				<div>
+					<video id="page-movie" controls preload="auto" poster="img/learn/cover_01_1.png">
+						<script type="text/javascript">
+							document.write("<source src='"+mp4Link+"05_07.mp4' type='video/mp4' />");
+						</script>
+						해당 브라우저는 영상을 지원하지 않습니다.
+					</video>
+				</div>
+			</li><!-- 학습 - 동영상 영역 -->
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+
+	</section><!--  본문 영역 -->
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

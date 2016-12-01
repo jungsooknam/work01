@@ -1,0 +1,336 @@
+﻿@charset "utf-8";
+
+/*학습 페이지 */
+
+
+#learning
+{
+    position:relative;
+    width:1000px;
+    height:620px;
+    z-index:100;
+}
+
+#learning:after
+{content:""; display:block; clear:both;}
+
+
+#content-area
+{
+    position:relative;
+    width:860px;
+    margin: 70px auto 0;
+}
+
+#content-area:after {content:""; display:block; clear:both;}
+
+#content-area .subject
+{
+    display: block;
+    width:100%;
+    font:22px nsM;
+    color:#356e76;
+    line-height:30px;
+    background:url("../img/learn/learn_bullet_02.png") 0 6px no-repeat;
+    margin-bottom: 20px;
+}
+
+
+
+#content-area .subject p
+{
+    padding:0 0 0 20px;
+}
+
+
+
+
+
+
+
+#content-area .text-area
+{
+    float:left;
+    width:43%;
+}
+
+#content-area .type-0
+{
+    width:95%;
+    font:20px nsM;
+    color:#333;
+    background:url("../img/learn/learn_bullet_03.png") 0 4px no-repeat;
+    margin-left: 3%;
+    margin-bottom: 15px;
+}
+
+#content-area .type-0 p
+{
+    padding:0 0 0 15px;
+}
+
+
+
+#content-area .type-1
+{
+    width:95%;
+    font:18px nsM;
+    color:#333;
+    background:url("../img/learn/learn_bullet_04.png") 0 5px no-repeat;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+#content-area .type-1 p
+{
+    padding:0 0 0 15px;
+}
+
+#content-area .type-2
+{
+    width:95%;
+    font:17px nsM;
+    margin-left: 7%;
+
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
+
+    margin-bottom: 10px;
+}
+
+#content-area .type-2 p
+{
+    background-color: #d2dde8;
+    padding: 8px 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+}
+
+
+#content-area .type-3
+{
+    width:95%;
+    font:17px nsM;
+    background:url("../img/learn/learn_bullet_05.png") 0px 7px no-repeat;
+
+    margin-bottom: 10px;
+    margin-left: 8%;
+}
+
+#content-area .type-3 p
+{
+    padding:0 0 0 8px;
+}
+
+
+
+#content-area .type-4
+{
+    width:95%;
+
+    margin-bottom: 10px;
+    margin-left: 5%;
+    line-height:20px;
+    
+
+}
+
+#content-area .type-4 span
+{
+
+    font:17px nsM;
+    color:#333;
+    display: inline-block;
+    width:calc(95% - 20px);
+    
+
+}
+
+
+#content-area .type-4 p 
+{
+    float:left;
+    width:18px;
+    font:bold 14px Dotum;
+    color:#FFF;
+    line-height:18px;
+    text-align:center;
+    background:#527b99;
+    margin-right: 5px;
+    padding-top: -2px;
+}
+
+
+
+
+
+#content-area .type-5
+{
+    width:95%;
+    font:17px nsM;
+    margin-left: 5%;
+
+    transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
+
+    margin-bottom: 10px;
+}
+
+#content-area .type-5 p
+{
+    background-color: #d2dde8;
+    padding: 8px 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+}
+
+
+
+#content-area .type-6
+{
+
+    color:#FFF;
+    width:95%;
+    font: bold 18px nsM;
+    margin-left: 5%;
+
+    margin-bottom: 10px;
+}
+
+#content-area .type-6 p
+{
+    background-color: #527b99;
+    text-align:center;
+    padding: 8px 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+}
+
+
+
+
+
+
+
+#content-area .type-7
+{
+    width:95%;
+
+    margin-bottom: 10px;
+    margin-left: 5%;
+    line-height:20px;
+    
+
+}
+
+#content-area .type-7 span
+{
+
+    font:17px nsM;
+    color:#333;
+    display: inline-block;
+    width:calc(95% - 20px);
+    
+
+}
+
+
+#content-area .type-7 p 
+{
+    float:left;
+    width:22px;
+    font:bold 16px Dotum;
+    color:#FFF;
+    line-height:22px;
+    text-align:center;
+    background:#327b66;
+    margin-right: 5px;
+    padding-top: -2px;
+}
+
+
+
+
+
+
+
+
+
+
+/*음성강의를 확인해보세요.*/
+#page-narration-text {
+    width: 40%;
+    margin-left: 2%;
+    font: 14px nsM;
+    color: #56595b;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 400px;
+}
+
+
+#content-area .movie-guide
+{
+    float:right;
+    width:52%;
+    color:#1a3b6c;
+    font:20px nsM;
+    background:url("../img/learn/movie_bullet_06.png") 0 3px no-repeat;
+    margin-bottom: 5px;
+}
+
+#content-area .movie-guide p
+{
+    margin-left: 25px;
+}
+
+#content-area .movie-guide p span
+{
+    font-size:17px;
+    color:#3f4d62;
+}
+
+
+#content-area .movie-area
+{
+    float:right;
+    width:52%;
+}
+
+#content-area .movie-area div									{position:relative; padding-top:56.2%;}
+#content-area .movie-area video								{position:absolute; left:0; top:0; width:100%; height:100%;}
+
+
+#content-area #page-narration {
+    width: 41%;
+    margin-left: 2%;
+    height: 35px;
+    position: absolute;
+    top: 430px;
+}
+
+
+
+#content-area .learning-page {
+    width: 100px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 281px);
+}
+
+#content-area .learning-page li					{float:left; width:50px; height:21px; text-align:center;}
+#content-area .learning-page .left				{float:left; width:20px; background:url("../img/learn/btn_pre_02.png") no-repeat;}
+#content-area .learning-page .right				{float:left; width:20px; background:url("../img/learn/btn_next_02.png") no-repeat;}
+#content-area .learning-page span				{display:inline-block; font:17px play; color:#333; line-height:20px; vertical-align:middle; margin:0 2px;}
+#content-area .learning-page img					{cursor:pointer;}
+
+.page-area-1 {
+    height: 300px;
+}
