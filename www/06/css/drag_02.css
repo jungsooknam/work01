@@ -38,5 +38,10 @@
         font : 16px nsM;
     }
 
+    #drag-area #drag_zone .drag-img
+    {
+        float: none;
+    }
+
 
 }

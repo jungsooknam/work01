@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     top:100px;
-    height: 520px;
+    min-height: 520px;
 }
 
 #drag-area .drag-text .drag-guide
@@ -19,7 +19,7 @@
 
 #drag-area .drag-text .drag-q
 {
-    height: 80px;
+    min-height: 80px;
     line-height: 80px;
     text-align: center;
     background: url("../img/drag/title_bg_01.png");
@@ -40,7 +40,7 @@
 #drag-area #drag_zone
 {
     margin-top: 20px;
-    height: 210px;
+    min-height: 210px;
     width: 90%;
     margin-left: 5%;
     background-color: white;
@@ -72,9 +72,21 @@
     line-height: 22px;
     vertical-align: middle;
 }
+#drag-area #drag_zone .drag-q .check_o, #drag-area #drag_zone .drag-q .check_x {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin-left: -12px;
+}
+#drag-area #drag_zone .drag-q .check_o
+{
+    background:url('../img/drag/check_o.png') 100% 100% no-repeat;
+}
+#drag-area #drag_zone .drag-q .check_x{
+    background:url('../img/drag/check_x.png') 100% 100% no-repeat;
+}
 
 #drag-area #drag_zone .drag-q .drag-q-hitArea{
-
     width: 158px;
     height: 35px;
     background-color: #dbdbdb;
