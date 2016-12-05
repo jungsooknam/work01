@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+#apply															{position:relative; width:1000px; height:620px; z-index:100;}
+#apply:after													{content:""; display:block; clear:both;}
+#apply .theme													{position:absolute; left:18px; top:60px; font:20px nsM; color:#334366; line-height:23px; background:url("../img/inc/bullet_title.png") no-repeat; padding-left:15px; z-index:100; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+#apply .page-ending												{font:14px nsM; color:#37414A; line-height:20px; text-align:right;}
+
+
+#apply-area														{position:relative; float:left; width:890px; background:url("../img/apply/title_bg_01.png") 0 100px repeat-x; padding:60px 55px 0;}
+#apply-area:after												{content:""; display:block; clear:both;}
+
+#apply-area .apply-text											{float:left; width:890px;}
+#apply-area .apply-text li										{float:left; font:18px nsM; line-height:22px;}
+#apply-area .apply-text li.type-1								{width:780px; color:#333333;  padding-left:60px; font-size:16px}
+#apply-area .apply-text li.type-2								{position:relative; width:890px; color:#FFF; text-align:center; padding:35px 0 10px;}
+
+#apply-area .apply-sound										{float:left; width:100%; height:40px; padding:10px 0}
+#apply-area .apply-sound audio									{width:90%; height:40px; float:left; margin-right:10px}
+#apply-area .apply-sound div.btn-example						{width:60px;float:left; height:30px; text-align:center; color:#fff; background:#6699cc; padding:0; margin-top:10px; font:14px nsM; line-height:30px; cursor:pointer}
+
+#apply_zone														{position:relative; float:left; width:860px; height:390px; top:30px; left:15px; z-index:0}
+#apply_zone div													{padding:15px 10px}
+#apply_zone div p												{height:18px; margin-top:8px; font:16px nsM;  color:#333; text-align:left; line-height:42px; }
+#apply_zone div p:nth-child(1)									{margin-top:0px}
+#apply_zone div p input											{width:90px}
+#apply_zone div p span											{color:#ff0066}
+
+
+#apply_zone .apply-quiz											{float:left; width:80%; height:350px; background: #FFF; box-shadow:0 0 6px #758396;}
+/*#apply_zone .apply_answer										{display:none; position:relative; float:right; width:411px; height:355px; background:#FFF; box-shadow:0 0 6px #758396;}*/
+#apply_zone .apply_bar											{clear:both; display:none }
+
+#apply_zone .apply_answer > p									{position:absolute; right:0; top:0; width:45px; height:30px; text-align:center; line-height:30px; background:#6699cc; color:#fff; margin-right:10px; font-size:16px}
+#apply-area .apply-sound a {
+    float: right;
+    display: block;
+    overflow: hidden;
+    width: 70px;
+    height: 30px;
+    font: 15px nsM;
+    color: #fff;
+    text-align: center;
+    background: #6699cc;
+    padding: 5px 0;
+    line-height: 30px;
+    margin-top: 0px;
+}
+
+
+
+#apply_zone #check-01											{top:40px; left:80px;}
+#apply_zone #check-02											{top:150px; left:20px;}
+#apply_zone #check-03											{top:300px; left:20px;}
+#apply_zone .check												{position:absolute; display:none; width:46px; height:46px; z-index:52;}
+#apply_zone .check-o											{position:absolute; display:none; width:46px; height:46px; background:url("../img/apply/check_o.png") no-repeat; z-index:52;}
+#apply_zone .check-x											{position:absolute; display:none; width:46px; height:46px; background:url("../img/apply/check_x.png") no-repeat; z-index:52;}
+#apply_zone .drag												{position:absolute; width:150px; height:40px; z-index:51;}
+#apply_zone .drop												{position:absolute; width:150px; height:40px; z-index:50;}
+#apply_zone .button												{border:none;}
+#apply_zone .button:hover										{cursor:pointer;}
+
+
+#apply_zone .btn												{position:absolute; width:127px; height:40px; left:80%; top:280px; margin-left:4% }
+#apply_zone .btn2												{display:none}
+#apply_zone .btn3												{display:none}
+#apply_zone .btn a												{display:block; width:127px; height:35px; font:18px nsM; color:#FFF; text-align:center; padding:10px 0 0 5px; margin-top:20px; background:url("../img/apply/btn_img.png") no-repeat; background-size:contain;}
+
+
+#check-01														{left:504px; top:332px;}
+#check-02														{left:5px; top:332px;}
+#check-03														{left:237px; top:53px;}
+#check-04														{left:251px; top:332px;}
+
+
+#apply_alert1															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
+#apply_alert1 img														{margin-top:140px;}
+#apply_alert2															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
+#apply_alert2 img														{margin-top:140px;}
+
+
+#narration-area														{display:none; position:absolute; width:890px; bottom:10px; background:#FFF; box-shadow:0 0 6px #333; opacity:0; z-index:2006;}
+#narration-area dt													{position:absolute; width:140px; height:31px; font:20px nsM; color:#FFF; line-height:25px; background:#6699cc; padding:9px 0 0 50px;}
+#narration-area dd {
+    float: left;
+    font: 16px nsM;
+    color: #333;
+    line-height: 24px;
+    border: 5px solid #DDD;
+    padding: 50px 40px 25px 45px;
+    width: calc(100% - 95px);
+}
+#narration-area dd span {color:#ff0066}
+#narration-area .btn												{position:absolute; right:12px; top:12px; width:25px; height:25px; border:none; padding:0;}
+#narration-area .btn a												{display:block; overflow:hidden; width:25px; height:25px; text-indent:-9999px; background:url("../img/apply/narration_btn_01.png") no-repeat;}
+#narration-area.open												{bottom:50px; opacity:1; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
+
+#apply-area .narration-bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 657px;
+    left: 0px;
+    top: 0px;
+    background: #000;
+    opacity: 0.6;
+    z-index: 2005;
+}
+

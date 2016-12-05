@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+	<head>
+		<title>빅데이터 분석 결과 시각화</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			var currentPage = 13;											// 현 페이지 번호
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+
+				shows();
+				$(window).resize(function(){
+					shows();
+				});
+
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body onload="init();">
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+
+			<section id="apply">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+				<div id="drag-area">
+					<ul class="drag-text">
+						<li class="drag-guide">◈ 지금까지 학습한 내용을 적용해 봅시다.</li>
+						<li class="drag-q">
+							<p>
+							아래의 그래프를 그리기 위한 함수입니다. 보기의 알맞은 함수를 빈칸에 드래그해 보세요.
+							<br/>입력 완료 버튼을 클릭하여  음성강의를 확인해 보세요.
+							</p>
+						</li>
+					</ul>
+
+					<ul id="drag_zone">
+						<li class="drag-img">
+							<img src ='img/drag/img_01.png' />
+						</li>
+						<li class="drag-q">
+							f = <span class="drag-q-num"> 1</span> <span class="drag-q-hitArea"></span> (do$몸무게 ~ do$키)<br/>
+						<!--</li>-->
+<!---->
+						<!--<li class="drag-q">-->
+							abline(  <span class="drag-q-num">2</span> <span class="drag-q-hitArea"></span> )<br/>
+						<!--</li>-->
+						<!--<li class="drag-q">-->
+							<span  class="drag-q-num">3</span> <span class="drag-q-hitArea"></span> (f)<br/>
+						</li>
+					</ul>
+
+					<ul id="drag_example">
+						<li class="drag_txt">
+							<!--보기-->
+							<p>보기</p>
+						</li>
+
+						<li class="drag-object">
+							<div class="drag-back">
+								<div class="drag-item"><p>summary</p></div>
+							</div>
+
+							<div class="drag-back">
+								<div class="drag-item"><p>lm</p></div>
+							</div>
+							<div class="drag-back">
+								<div class="drag-item"><p>f</p>
+								</div>
+							</div>
+						</li>
+
+
+						<li class="drag-btn">
+							<!--확인-->
+							<a href="">확인</a>
+						</li>
+
+						<li class="drag-btn" style="display: none">
+							<!--정답확인-->
+							<a href="">정답확인</a>
+
+						</li>
+					</ul>
+
+				</div>
+
+
+
+				<div class="drag-sound">
+					<!--<audio controls style="display:none;">-->
+					<audio controls>
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"02_16.mp3' type='audio/mpeg' />");
+						</script>
+						해당 브라우저는 음성을 지원하지 않습니다.
+					</audio>
+
+					<p><a href="javascript:viewNarration();">해설보기</a></p>
+				</div>
+
+
+
+				<dl id="narration-area">
+					<dt>해설보기</dt>
+					<dd>서지탱크는 적당한 체적의 공동부를 갖는 공기탱크를 말합니다. 크랭크 케이스에서 발생된 블로바이가스가 PCV밸브와 브리더호스를 통해 연소실로 들어가 재연소되며, 저속ㆍ저 부하일때는 미량의 가스가 PCV밸브로 들어가지만 고속ㆍ고 부하 시에는 다량의 가스가 PCV밸브 통해 각 실린더 연소실로 들어갑니다.</dd>
+					<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
+				</dl>
+				<div class="narration-bg"></div>
+
+
+
+
+
+
+
+
+
+				<audio id="audio1">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+					</script>
+				</audio>
+				<audio id="audio2">
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+					</script>
+				</audio><!--  정오답 사운드 영역  -->
+
+
+
+				<div class="page-ending3">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+				<div id="apply_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어보세요." /></div>
+				<div id="apply_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+			</section>
+
+
+
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

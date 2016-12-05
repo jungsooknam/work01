@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+#drag-area {
+    position: relative;
+    width: 100%;
+    top:100px;
+    height: 520px;
+}
+
+#drag-area .drag-text .drag-guide
+{
+    position: absolute;
+    top : -38px;
+    left : 120px;
+    font : 14px nsM;
+    text-align: center;
+}
+
+
+#drag-area .drag-text .drag-q
+{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: url("../img/drag/title_bg_01.png");
+}
+
+
+#drag-area .drag-text .drag-q p
+{
+     color:#fff;
+    font : 24px nsM;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+
+#drag-area #drag_zone
+{
+    margin-top: 20px;
+    height: 210px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    color:#333;
+    box-shadow:0 0 6px #758396;
+}
+
+#drag-area #drag_zone .drag-img
+{
+    margin: 6px 50px;
+    float: left;
+}
+
+#drag-area #drag_zone .drag-q {
+    padding-top: 20px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#drag-area #drag_zone .drag-q .drag-q-num{
+    width: 22px;
+    height: 22px;
+    vert-align: bottom;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+    background-color: #6699cc;
+    display:inline-block;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+#drag-area #drag_zone .drag-q .drag-q-hitArea{
+
+    width: 158px;
+    height: 35px;
+    background-color: #dbdbdb;
+    display:inline-block;
+    vertical-align: middle;
+    box-shadow:0 0 3px #758396;
+}
+
+#drag-area #drag_example{
+    margin-top: 15px;
+    height: 80px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    color:#fff;
+    line-height: 80px;
+    box-shadow:0 0 6px #758396;
+    line-height: 80px;
+    position: relative;
+}
+
+#drag-area #drag_example .drag_txt{
+    /*display: inline-block;*/
+    float: left;
+    margin: 3px;
+    width: 60px;
+    height: calc(100% - 6px);
+    line-height: 70px;
+    background-color: #6699cc;
+    color : #fff;
+    text-align: center;
+}
+
+#drag-area #drag_example .drag_txt p{
+    display: inline-block;
+    vertical-align: middle;
+    font:20px nsM;
+}
+
+#drag-area #drag_example .drag-object{
+    display: inline-block;
+    width: calc(100% - 220px);
+    text-align: center;
+}
+
+#drag-area #drag_example .drag-object .drag-back{
+    display: inline-block;
+    width: 158px;
+    height: 35px;
+    line-height: 45px;
+    background-color: #dbdbdb;
+    text-align: center;
+    vertical-align: middle;
+    /*border: 1px solid red;*/
+    margin: -5px 10px 0 10px;
+    position: relative;
+    box-shadow:0 0 3px #758396;
+}
+
+#drag-area #drag_example .drag-object .drag-back .drag-item{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 158px;
+    height: 35px;
+    line-height: 45px;
+    background-color: #527b99;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#drag-area #drag_example .drag-object .drag-back .drag-item p{
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-bottom;
+    font : 20px nsM;
+}
+
+
+
+#drag-area #drag_example .drag-btn{
+    position: absolute;
+    display: block;
+    width: 127px;
+    height: 35px;
+    background: url("../img/drag/btn_img.png") no-repeat;
+    text-align: center;
+    right: 20px;
+    top:20px;
+    line-height: 35px;
+}
+
+a:link, a:visited, a:active, a:hover{
+    color: white;
+}
+
+#drag-area #drag_example .drag-btn a{
+    text-align: center;
+    vertical-align:middle;
+    font : 20px nsM;
+    margin-left: 15px;
+}
+
+.drag-sound{
+    margin-top: 15px;
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    height: 40px;
+}
+
+.drag-sound audio{
+    width: calc(100% - 160px);
+    height: 40px;
+    float: left;
+}
+
+.drag-sound p{
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url("../img/drag/btn_narration_01.png") top right no-repeat;
+    right: 0;
+    position: absolute;
+    top:0;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.drag-sound p a{
+    font : 20px nsM;
+    vertical-align: middle;
+    margin-right: 40px;
+}
+
+#apply .page-ending3 {
+    position: absolute;
+    bottom: 15px;
+    font: 13px nsM;
+    color: #37414A;
+    right: 70px;
+}

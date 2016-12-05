@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@media all and (max-width:999px) {
+
+}
+
+@media all and (max-width:849px) {
+
+}
+
+@media all and (max-width:729px) {
+
+}
+
+
+
+
+
+
+/*요기서 부터 모바일*/
+@media all and (max-width:599px) {
+
+    #drag-area {
+        position: relative;
+        width: 100%;
+        top:140px;
+        height: 520px;
+    }
+
+    #drag-area .drag-text .drag-guide
+    {
+        top : -28px;
+        left : 30px;
+    }
+
+    #drag-area .drag-text .drag-q p
+    {
+        font : 16px nsM;
+    }
+
+
+}
