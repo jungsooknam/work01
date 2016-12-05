@@ -10,9 +10,7 @@ var Inputquit = function (inputs, answers){
     this.incurrect = answers;
     this.userAnser = [];
     this.opp = 2; //기회는 2번
-    //this.learnDom = document.getElementById('learning-quiz-text');
     this.okBtnVisible = false;
-    //this.correct_solution = document.getElementById("correct-solution");
 
 
     for(var i = 0; i<this.len ; i++) {
@@ -20,22 +18,12 @@ var Inputquit = function (inputs, answers){
         this.inputDoms.push(input);
 
         var rect = input.position();
-        console.log(rect.top, rect.left, input.width(), input.height());
 
         var xximg = $('#inputCheck_x'+(i+1));
         var ooimg = $('#inputCheck_o'+(i+1));
 
-        console.log(xximg.width(), xximg.height(), ooimg.width(), ooimg.height());
-
-
-        $('#inputCheck_x'+(i+1)).css({top: rect.top, left: rect.left});
-        $('#inputCheck_o'+(i+1)).css({top: rect.top, left: rect.left});
-
-        //$('#inputCheck_x'+(i+1)).x =;
-        //$('#inputCheck_x'+(i+1)).y = ;
-        //
-        //$('#inputCheck_o'+(i+1)).x =rect.left;
-        //$('#inputCheck_o'+(i+1)).y = rect.top;
+        xximg.css({top: rect.top, left: rect.left});
+        ooimg.css({top: rect.top, left: rect.left});
 
         input.keydown(function() {
 
@@ -43,19 +31,20 @@ var Inputquit = function (inputs, answers){
         }.bind(this));
     }
 
-    //this.okbtn.onclick = function (){
-    //    console.log("click");
-    //    this.checkAnswer();
-    //}.bind(this);
 
-    //this.correct_solution.onclick = function (){
-    //    console.log("clickccc");
-    //    this.viewIncorrect();
-    //}.bind(this);
+    $( window ).resize(function() {
 
+        for(var i = 0; i<this.len ; i++) {
 
+            var input = this.inputDoms[i];
+            var rect = input.position();
+            var xximg = $('#inputCheck_x' + (i + 1));
+            var ooimg = $('#inputCheck_o' + (i + 1));
 
-
+            xximg.css({top: rect.top, left: rect.left});
+            ooimg.css({top: rect.top, left: rect.left});
+        }
+    }.bind(this));
 
 
 };
@@ -106,14 +95,11 @@ Inputquit.prototype = {
         this.userAnser = [];
 
         for(var i = 0; i<this.len ; i++) {
-            console.log(i, this.inputDoms[i].val());
             var val = this.inputDoms[i].val();
-            console.log(val);
             this.userAnser.push(val);
             var temp = val.split(" ");
             val = temp.join("");
             if(val == "") {
-                console.log(i, "암것두 없오.");
                 this.showAlertDiv1();
                 return;
             }
@@ -138,7 +124,6 @@ Inputquit.prototype = {
         if(falg) {
             this.opp = 0;
             // 다 맞췄어요.~
-            console.log("다 맞춰썽요")
             var falg = true;
             for(var i = 0; i<this.len ; i++) {
                 this.checkO(this.inputDoms[i], i);
@@ -176,7 +161,6 @@ Inputquit.prototype = {
             this.checkBtnEnable();
         }else{
             dom.attr('disabled','disabled');
-            console.log($('#inputCheck_o'+(ind+1)))
             $('#inputCheck_x'+(ind+1)).show();
         }
     },

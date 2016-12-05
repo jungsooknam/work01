@@ -92,7 +92,6 @@
 {
     width: 100%;
     height: 55px;
-    border:1px solid red;
 }
 
 #learning-quiz-text .question .btn p
@@ -127,12 +126,9 @@
 
 #learning-quiz-text .apply-sound
 {
-    /*float:left; */
     position: absolute;
     width:90%;
     margin-left: 5%;
-    /*margin-top: 70px;*/
-    /*padding-top:10px;*/
     bottom : 40px;
 
 }
@@ -150,7 +146,6 @@
     font:18px nsM;
     color:#FFF;
     text-align:center;
-    /*background:url("../img/apply/btn_narration_01.png") no-repeat;*/
     background-color:#6699cc ;
     line-height: 34px;
     margin-top: -1px;

@@ -20,6 +20,7 @@
 
 #learning-quiz-text .question
 {
+    position: relative;
     width:100%;
     margin-top: 10px;
 }
@@ -60,9 +61,11 @@
 }
 
 #learning-quiz-text .question dd .check_x{
+    position: absolute;
     background:url('../img/apply/check_x.png') 100% 100% no-repeat;
 }
 #learning-quiz-text .question dd .check_o{
+    position: absolute;
     background:url('../img/apply/check_o.png') 100% 100% no-repeat;
 }
 
@@ -122,12 +125,9 @@
 
 #learning-quiz-text .apply-sound
 {
-    /*float:left; */
     position: absolute;
     width:90%;
     margin-left: 5%;
-    /*margin-top: 70px;*/
-    /*padding-top:10px;*/
     bottom : 40px;
 
 }
@@ -145,7 +145,7 @@
     font:18px nsM;
     color:#FFF;
     text-align:center;
-    background:url("../img/apply/btn_narration_01.png") no-repeat;
+    background-color:#6699cc ;
     line-height: 34px;
     margin-top: -1px;
 }
@@ -191,7 +191,7 @@
     font:20px nsM;
     color:#fff;
     line-height:30px;
-    background:#915cb1;
+    background:#6699cc;
     text-align: center;
 }
 

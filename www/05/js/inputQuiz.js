@@ -2,183 +2,190 @@
  * Created by NAVER on 2016-11-10.
  */
 
-
-
-
 var Inputquit = function (inputs, answers){
 
-    var okbtn = document.getElementById('inout_btn');
-    var len = inputs.length;
-    var inputDoms = [];
-    var incurrect = answers;
-    var userAnser = [];
-    var opp = 2; //기회는 2번
-    var learnDom = document.getElementById('learning-quiz-text');
-    var okBtnVisible = false;
-    var correct_solution = document.getElementById("correct-solution");
+    this.okbtn = document.getElementById('inout_btn');
+    this.len = inputs.length;
+    this.inputDoms = [];
+    this.incurrect = answers;
+    this.userAnser = [];
+    this.opp = 2; //기회는 2번
+    this.okBtnVisible = false;
 
-    for(var i = 0; i<len ; i++) {
+
+    for(var i = 0; i<this.len ; i++) {
         var input = $("#"+inputs[i]);
-        inputDoms.push(input);
+        this.inputDoms.push(input);
+
+        var rect = input.position();
+
+        var xximg = $('#inputCheck_x'+(i+1));
+        var ooimg = $('#inputCheck_o'+(i+1));
+
+        xximg.css({top: rect.top, left: rect.left});
+        ooimg.css({top: rect.top, left: rect.left});
+
         input.keydown(function() {
-            console.log("keydown");
-            checkBtnEnable();
-        });
+
+            this.checkBtnEnable();
+        }.bind(this));
     }
 
-    function checkBtnEnable(){
-        var len = inputDoms.length;
-        if(okBtnVisible) {
-            for(var i = 0; i<len ; i++) {
-                if(inputDoms[i].val() != ""){
+
+    $( window ).resize(function() {
+
+        for(var i = 0; i<this.len ; i++) {
+
+            var input = this.inputDoms[i];
+            var rect = input.position();
+            var xximg = $('#inputCheck_x' + (i + 1));
+            var ooimg = $('#inputCheck_o' + (i + 1));
+
+            xximg.css({top: rect.top, left: rect.left});
+            ooimg.css({top: rect.top, left: rect.left});
+        }
+    }.bind(this));
+
+
+};
+
+
+Inputquit.prototype = {
+
+    checkBtnEnable : function (){
+
+        if(this.okBtnVisible) {
+            for(var i = 0; i<this.len ; i++) {
+                if(this.inputDoms[i].val() != ""){
                     return;
                 }
             }
-            okbtn.style.display = "none";
-            okBtnVisible = false;
+            this.okbtn.style.display = "none";
+            this.okBtnVisible = false;
         }else{
 
-            for(var i = 0; i<len ; i++) {
-                if(inputDoms[i].val() == ""){
+            for(var i = 0; i<this.len ; i++) {
+                if(this.inputDoms[i].val() == ""){
                     return;
                 }
             }
-            okbtn.style.display = "block";
-            okBtnVisible = true;
+            this.okbtn.style.display = "block";
+            this.okBtnVisible = true;
         }
-    }
-
-
-    okbtn.onclick = function (){
-        console.log("click");
-        checkAnswer();
-    }
-
-    correct_solution.onclick = function (){
-        console.log("clickccc");
-        viewIncorrect();
-    }
-
+    },
 
 
     // 정답 확인 버튼.
-    function viewIncorrect(){
+    viewIncorrect : function () {
         $('#correct-solution').hide();
 
-        var len = inputDoms.length;
-        for(var i = 0; i<len ; i++) {
-            inputDoms[i].val(incurrect[i]);
-            inputDoms[i].css('color', '#f00');
-            inputDoms[i].css('font-weight', 'bold');
+
+        for(var i = 0; i<this.len ; i++) {
+            this.inputDoms[i].val(this.incurrect[i]);
+            this.inputDoms[i].css('color', '#f00');
+            this.inputDoms[i].css('font-weight', 'bold');
             $('#inputCheck_o'+(i+1)).hide();
             $('#inputCheck_x'+(i+1)).hide();
         }
-    }
+    },
 
     // 입력완료 버튼 누르면 실행.
-    function checkAnswer() {
-        var len = inputDoms.length;
-        userAnser = [];
+    checkAnswer : function () {
 
-        for(var i = 0; i<len ; i++) {
-            console.log(i, inputDoms[i].val());
-            var val = inputDoms[i].val();
-            console.log(val);
-            userAnser.push(val);
+        this.userAnser = [];
+
+        for(var i = 0; i<this.len ; i++) {
+            var val = this.inputDoms[i].val();
+            this.userAnser.push(val);
             var temp = val.split(" ");
             val = temp.join("");
             if(val == "") {
-                console.log(i, "암것두 없오.");
-                showAlertDiv1();
+                this.showAlertDiv1();
                 return;
             }
         }
 
         // 입력을 다 한것이다.
-        opp --;
+        this.opp --;
         var falg = true;
-        for(var i = 0; i<len ; i++) {
+        for(var i = 0; i<this.len ; i++) {
 
-            if(userAnser[i] == incurrect[i]) {
+            if(this.userAnser[i] == this.incurrect[i]) {
                 // 요건 정답일세.
-                checkO(inputDoms[i], i);
+                this.checkO(this.inputDoms[i], i);
 
             }else{
                 // 정답이 아닐세.
-                checkX(inputDoms[i], i);
+                this.checkX(this.inputDoms[i], i);
                 falg = false;
             }
         }
         // 기회를 한번 줄이구.
         if(falg) {
-            opp = 0;
-           // 다 맞췄어요.~
-            console.log("다 맞춰썽요")
+            this.opp = 0;
+            // 다 맞췄어요.~
             var falg = true;
-            for(var i = 0; i<len ; i++) {
-                checkO(inputDoms[i], i);
+            for(var i = 0; i<this.len ; i++) {
+                this.checkO(this.inputDoms[i], i);
             }
         }
 
-        if(!opp || opp == 0) {
-            okbtn.style.display = "none";
-            okBtnVisible = false;
+        if(!this.opp || this.opp == 0) {
+            this.okbtn.style.display = "none";
+            this.okBtnVisible = false;
 
             $("#correct-solution").show();
-    		$(".apply-sound").show();
+            $(".apply-sound").show();
             return;
         }
         if(!falg) {
-            showAlertDiv2();
+            this.showAlertDiv2();
         }
-    }
+    },
 
-    function checkO(dom, ind){
-
+    checkO : function (dom, ind) {
         dom.attr('disabled','disabled');
         // 기회가 남아 있다면.
-        if(opp) {
+        if(this.opp) {
             // 일력하지 못하게 해욤.
 
         }else{
             dom.attr('disabled','disabled');
             $('#inputCheck_o'+(ind+1)).show();
         }
-    }
+    },
 
-    function checkX(dom, ind){
-        if(opp) {
+    checkX : function (dom, ind) {
+        if(this.opp) {
             dom.val('');
-            checkBtnEnable();
+            this.checkBtnEnable();
         }else{
             dom.attr('disabled','disabled');
-            console.log($('#inputCheck_o'+(ind+1)))
             $('#inputCheck_x'+(ind+1)).show();
         }
-    }
+    },
 
-
-    function showAlertDiv1() {
+    showAlertDiv1 : function () {
         $("#quiz_alert1").css("display", "block");
-        this.itv = setTimeout(hideDiv1,1200);
-    }
+        this.itv = setTimeout(this.hideDiv1,1200);
+    },
 
-    function hideDiv1(){
+    hideDiv1 : function () {
         clearInterval(this.itv);
         $("#quiz_alert1").css("display", "none");
-    }
+    },
 
-    function showAlertDiv2(){
+    showAlertDiv2 : function () {
         $("#quiz_alert2").css("display", "block");
-        this.itv = setTimeout(hideDiv2,1200);
-    }
+        this.itv = setTimeout(this.hideDiv2,1200);
+    },
 
-    function hideDiv2(){
+    hideDiv2 : function () {
+    //function hideDiv2(){
         clearInterval(this.itv);
         $("#quiz_alert2").css("display", "none");
     }
-};
-
+}
 
 
 function hiddenExplanation(){
