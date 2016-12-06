@@ -63,7 +63,7 @@
 			</header><!--  과정명, 차시명 영역  -->
 
 
-			<section id="apply">
+			<section id="apply-drag">
 				<nav>
 					<script type="text/javascript" src="js/menu.js"></script>
 					<div id="menu_open" tabindex="3">INDEX 열기</div>
@@ -89,10 +89,8 @@
 							<img src ='img/drag/img_01.png' />
 						</li>
 						<li class="drag-q">
-							f =
 
-
-							<span id = "inputCheck_x1" class="check_x"></span>
+							f = <span id = "inputCheck_x1" class="check_x"></span>
 							<span id = "inputCheck_o1" class="check_o"></span>
 							<span class="drag-q-num"> 1</span>
 							<span class="drag-q-hitArea"></span> (do$몸무게 ~ do$키)<br/>abline(
@@ -106,6 +104,7 @@
 							<span id = "inputCheck_o3" class="check_o"></span>
 							<span  class="drag-q-num">3</span>
 							<span class="drag-q-hitArea"></span> (f)<br/>
+
 						</li>
 					</ul>
 
@@ -142,30 +141,36 @@
 						</li>
 					</ul>
 
+
+
+					<div class="drag-sound">
+						<!--<audio controls style="display:none;">-->
+						<audio controls>
+							<script type="text/javascript">
+								document.write("<source src='"+mp3Link+"02_16.mp3' type='audio/mpeg' />");
+							</script>
+							해당 브라우저는 음성을 지원하지 않습니다.
+						</audio>
+
+						<p><a href="javascript:viewNarration();">해설보기</a></p>
+					</div>
+
+
+
+					<dl id="narration-area">
+						<dt>해설보기</dt>
+						<dd>서지탱크는 적당한 체적의 공동부를 갖는 공기탱크를 말합니다. 크랭크 케이스에서 발생된 블로바이가스가 PCV밸브와 브리더호스를 통해 연소실로 들어가 재연소되며, 저속ㆍ저 부하일때는 미량의 가스가 PCV밸브로 들어가지만 고속ㆍ고 부하 시에는 다량의 가스가 PCV밸브 통해 각 실린더 연소실로 들어갑니다.</dd>
+						<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
+					</dl>
+					<div class="narration-bg"></div>
+
+
+
 				</div>
 
 
 
-				<div class="drag-sound">
-					<!--<audio controls style="display:none;">-->
-					<audio controls>
-						<script type="text/javascript">
-							document.write("<source src='"+mp3Link+"02_16.mp3' type='audio/mpeg' />");
-						</script>
-						해당 브라우저는 음성을 지원하지 않습니다.
-					</audio>
 
-					<p><a href="javascript:viewNarration();">해설보기</a></p>
-				</div>
-
-
-
-				<dl id="narration-area">
-					<dt>해설보기</dt>
-					<dd>서지탱크는 적당한 체적의 공동부를 갖는 공기탱크를 말합니다. 크랭크 케이스에서 발생된 블로바이가스가 PCV밸브와 브리더호스를 통해 연소실로 들어가 재연소되며, 저속ㆍ저 부하일때는 미량의 가스가 PCV밸브로 들어가지만 고속ㆍ고 부하 시에는 다량의 가스가 PCV밸브 통해 각 실린더 연소실로 들어갑니다.</dd>
-					<dd class="btn"><a href="javascript:narrationClose();">해설닫기</a></dd>
-				</dl>
-				<div class="narration-bg"></div>
 
 
 

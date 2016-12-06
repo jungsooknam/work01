@@ -38,10 +38,115 @@
         font : 16px nsM;
     }
 
+    #drag-area #drag_zone{
+        text-align: center;
+        padding-bottom: 20px;
+
+    }
+
     #drag-area #drag_zone .drag-img
     {
         float: none;
+        margin: 6px auto;
+    }
+
+    #drag-area #drag_zone .drag-q {
+        display: inline-block;
+        padding-top: 0;
+        line-height: 40px;
+        font-size: 14px;
+        border: 1px solid red;
+        text-align: left;
+    }
+
+    #drag-area #drag_zone .drag-q .check_o
+    {
+        background:url('../img/drag/check_o_3.png') 100% 100% no-repeat;
+    }
+
+    #drag-area #drag_zone .drag-q .check_x{
+        background:url('../img/drag/check_x_3.png') 100% 100% no-repeat;
+    }
+
+    #drag-area #drag_zone .drag-q .drag-q-hitArea{
+        width: 117px;
+        height: 26px;
+    }
+    #drag-area #drag_example
+    {
+        line-height: normal;
+        /*position: static;*/
+        padding-top: 1px;
+    }
+
+    #drag-area #drag_example .drag_txt{
+        position: static;
+        float: none;
+        display: block;
+        width: auto;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    #drag-area #drag_example .drag_txt p{
+        font:14px nsM;
+    }
+
+    #drag-area #drag_example .drag-object{
+        width: calc(100% - 150px);
+        text-align: left;
+        border: 1px solid red;
+        line-height: 180px;
+        margin-left: 20px;
+    }
+
+    #drag-area #drag_example .drag-object .drag-back{
+        width: 117px;
+        height: 26px;
+        float: left;
+        margin : 0 5px 5px;
+    }
+    #drag-area #drag_example .drag-object .drag-back .drag-item{
+        width: 117px;
+        height: 26px;
+        line-height: 26px;
+    }
+
+    #drag-area #drag_example .drag-object .drag-back .drag-item p{
+        font : 14px nsM;
     }
 
 
+    #drag-area #drag_example .drag-btn{
+        width: 109px;
+        height: 30px;
+        background: url("../img/drag/btn_img_22.png") no-repeat;
+        top:40px;
+        line-height: 30px;
+    }
+
+    #drag-area #drag_example .drag-btn a{
+        font : 14px nsM;
+    }
+
+    #drag-area .drag-sound{
+        height: 30px;
+    }
+
+    #drag-area .drag-sound audio{
+        width: calc(100% - 120px);
+        height: 30px;
+    }
+
+    #drag-area .drag-sound p{
+        width: 109px;
+        height: 30px;
+        background: url("../img/drag/btn_narration_02.png") right center no-repeat;
+        line-height: 30px;
+    }
+
+    #drag-area .drag-sound p a{
+        font : 14px nsM;
+    }
 }
+

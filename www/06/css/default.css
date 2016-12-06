@@ -12,8 +12,8 @@
 @import url("learning_01.css");					/* 학습영역 요소 */
 @import url("learning_02.css");					/* 학습영역 요소 - 반응형 */
 
-@import url("apply_01.css");						/* 적용하기 요소 */
-@import url("apply_02.css");						/* 적용하기 요소 - 반응형 */
+/*@import url("apply_01.css");						!* 적용하기 요소 *!*/
+/*@import url("apply_02.css");						!* 적용하기 요소 - 반응형 *!*/
 
 @import url("quiz_01.css");						/* 문제풀기 요소 */
 @import url("quiz_02.css");						/* 문제풀기 요소 - 반응형 */
