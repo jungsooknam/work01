@@ -19,7 +19,7 @@ var DragQuiz = function (target, answers){
                 revert :
                     function(event) {
                         if(event){
-                            console.log("겹쳤음.");
+
                         }else{
                             quiz.dragReturn($(this).attr('id'), true);
                         }
@@ -56,12 +56,8 @@ var DragQuiz = function (target, answers){
 DragQuiz.prototype = {
     setDroppAble : function (drop){
 
-        console.log("asdfasdfasdf", drop)
-
         drop.droppable({
             drop:function (event, ui){
-                console.log("KKKKKK", event);
-                console.log(event.target)
 
                 var dragID = ui.draggable.attr("id");		// drag 레이어 ID 구하기
                 var dropId = event.target.id;
@@ -74,32 +70,17 @@ DragQuiz.prototype = {
         for(var i = 0 ; i< this.len ; i++){
             var itemId = this.drags[i].prop( "id" );
             if(itemId == id){
-                console.log(i, "찾았옹.");
                 return i;
             }
         }
     },
 
-    //onCheck : function (dragID, xx, yy) {
-    //    for(var i = 0 ; i< this.len ; i++){
-    //        if(this.userDrag[i] == null) {
-    //
-    //            var flag = this.drops[i].hitTestPoint({"x": xx, "y": yy, "transparency": true});
-    //            if (flag) {
-    //                this.onDrop(dragID, i);
-    //                return;
-    //                break;
-    //            }
-    //        }
-    //    }
-    //    this.dragReturn(dragID, true);
-    //},
+
 
     getDropIndexForId : function (dragID){
         for(var i = 0 ; i< this.len ; i++){
             var id = this.drops[i].prop( "id" );
             if(dragID == id){
-                console.log(i, "찾았옹.");
                 return i;
             }
         }
@@ -128,6 +109,9 @@ DragQuiz.prototype = {
         $("#apply_alert3").fadeIn(500);
         $('#narration-bg2').fadeIn(500);
         this.itv = setTimeout(this.hideDiv2,1200);
+
+        document.getElementById("audio2").play();
+
     },
 
     hideDiv2 : function () {
@@ -152,9 +136,6 @@ DragQuiz.prototype = {
         var p2 = drag.parent().offset();
 
 
-        console.log(p, p2);
-
-
         var tt = (p2.top - p.top) * -1;
         var ll = (p2.left - p.left) * -1;
 
@@ -163,15 +144,12 @@ DragQuiz.prototype = {
     },
 
     dragReturn : function (dragID, animation){
-        console.log(this);
 
         var ind = this.getDragIndexForId(dragID);
 
         // position 에 따라 바뀐다.
-        //$('#'+domID).animate({top:this.dragsP[ind].top+'px' , left:this.dragsP[ind].left+'px'});
         if(animation) {
             $('#'+dragID).animate({top:0, left:0}, 300, function (){
-                console.log('complete~~~', this);
                 $(this).css('z-index','99');
                 $(this).css('background-color','#527b99');
             });
@@ -223,7 +201,6 @@ DragQuiz.prototype = {
     },
 
     okAnswer : function (){
-        console.log("dddddddddddd");
         this.opp -- ;
 
         if(this.opp == 0) {
@@ -234,7 +211,6 @@ DragQuiz.prototype = {
         var flag = true;
 
         for(var i = 0 ; i< this.len ; i++){
-            console.log(this.userDrag[i], this.drags[i].attr('id'));
 
             if( this.userDrag[i] != this.drags[i].attr('id')) {
                 // 되돌아가.
@@ -250,16 +226,16 @@ DragQuiz.prototype = {
             // 완전 정답.
             //전답확인 버튼
            this.setEndQuiz();
+
         }else{
             this.viewAlert2();
+
         }
 
     },
 
     setDisableDrag : function (target){
         target.draggable( 'disable' );
-        //target.unbind( "mousedown" );target
-        //target.unarrationClosenbind( "mouseup" );
         target.css('cursor','default');
     },
 
@@ -268,15 +244,22 @@ DragQuiz.prototype = {
         this.hiddenOkBtn();
 
         $('#drag-audio').show();
-
+        var flag = true;
         for(var i = 0 ; i< this.len ; i++) {
             if (this.userDrag[i] != this.drags[i].attr('id')) {
                 $("#inputCheck_x"+(i+1)).show();
                 this.drags[i].css('background-color','#E31D09');
+                flag = false;
             }else{
                 $("#inputCheck_o"+(i+1)).show();
             }
             this.setDisableDrag(this.drags[i]);
+        }
+
+        if(flag){
+            document.getElementById("audio1").play();
+        }else{
+            document.getElementById("audio2").play();
         }
     },
 
