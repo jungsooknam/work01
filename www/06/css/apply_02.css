@@ -182,6 +182,7 @@
     line-height: 18px;
     background: url("../img/apply/title_bg_01.png") repeat-x;
 }
+
 #apply-area .apply-text li.type-2 span							{display:block; font-size:16px;}
 
 #apply_zone														{top:20px; width:90%; padding-left:5%; margin-top:10px}

@@ -240,3 +240,20 @@ a:link, a:visited, a:active, a:hover{
     color: #37414A;
     right: 70px;
 }
+
+
+#drag-area #narration-area
+{
+     display: block;
+    /*display: '';*/
+    position:absolute;
+    width: 90%;
+    bottom: 104px;
+    left: 5%;
+    background:#FFF;
+    box-shadow:0 0 6px #333;
+    /* opacity:0; */
+    z-index:2006;
+}
+
+
