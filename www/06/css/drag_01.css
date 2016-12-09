@@ -290,6 +290,7 @@ a:link, a:visited, a:active, a:hover{
     right: 70px;
 }
 
+<<<<<<< HEAD
 #drag-area #narration-area{
     /*display:none;*/
     position:absolute;
@@ -364,3 +365,21 @@ a:link, a:visited, a:active, a:hover{
 {
     margin-top: 120px;
 }
+=======
+
+#drag-area #narration-area
+{
+     display: block;
+    /*display: '';*/
+    position:absolute;
+    width: 90%;
+    bottom: 104px;
+    left: 5%;
+    background:#FFF;
+    box-shadow:0 0 6px #333;
+    /* opacity:0; */
+    z-index:2006;
+}
+
+
+>>>>>>> d19a2ec0549c7b472099c6f539dc3738e72db817
