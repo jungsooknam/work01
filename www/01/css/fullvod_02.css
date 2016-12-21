@@ -1,0 +1,58 @@
+﻿@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+    #learn-movie-area
+    {
+        width:86%;
+
+
+
+    }
+}
+
+@media all and (max-width:849px) {
+
+}
+
+@media all and (max-width:729px) {
+
+
+}
+
+/*요기서 부터 모바일*/
+@media all and (max-width:599px) {
+
+    #learn-movie-area
+    {
+        width:97%;
+
+        margin: 90px auto 0;
+        padding-bottom: 50px;
+    }
+
+#learn-movie-area div
+{
+    position:relative;
+    border:4px solid rgba(71,109,171, 0.1);
+    box-shadow: 0 0 10px rgba(0,39,103,0.57);
+}
+
+
+@media all and (max-width:519px) {
+}
+
+@media all and (max-width:449px) {
+
+}
+
+
+@media all and (max-width:369px) {
+
+}
+
+
+
+

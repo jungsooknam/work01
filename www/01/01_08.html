@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+	<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+	<script type="text/javascript" src='js/inputQuiz.js'></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sco-name1").text(currentSco1);
+
+			lms_mode();													// LMS 탑재관련
+			menuInit();														// 우측 메뉴
+
+			});
+
+	</script>
+</head>
+
+
+
+
+
+
+
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header>
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header><!--  과정명, 차시명 영역  -->
+
+
+
+
+
+	<section id="learning">
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav><!--  INDEX 메뉴 영역  -->
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<div id="learning-quiz-text">
+
+			<div class="quiz-guide">◈ 지금까지 학습한 내용을 적용해봅시다.</div>
+
+
+			<dl class="question">
+				<dt>
+					<p>
+						데이터베이스의 설명을 보고 무엇에 대한 설명인지 단어를 입력해보세요. 입력 완료 버튼을 선택한 후 음성강의를 확인해 보세요.
+				<p>
+				</dt>
+
+				<dd>
+					<p class = "input_question">
+						<span id = "inputCheck_x1" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o1" class="check_o" style="display:none;"></span>
+
+						<input type="text" id="input_1" class="quiz-input" value="">
+						한 조직의 여러 응용 프로그램이 공동으로 사용하는 것<br>
+
+						<span id = "inputCheck_x2" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o2" class="check_o" style="display:none;"></span>
+
+						<input type="text" id="input_2" class="quiz-input" value="">
+						여러 부서에서 사용하는 데이터를 한 곳에 모아서 공동 관리하는 것<br>
+
+						<span id = "inputCheck_x3" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o3" class="check_o" style="display:none;"></span>
+
+						<input type="text" id="input_3" class="quiz-input" value="">
+						컴퓨터가 접근할 수 있는 디스크와 같은 저장 매체에 저장된 것<br>
+
+						<span id = "inputCheck_x4" class="check_x" style="display:none;"></span>
+						<span id = "inputCheck_o4" class="check_o" style="display:none;"></span>
+
+						<input type="text" id="input_4" class="quiz-input" value="">
+						조직의 운영에 기본적으로 반드시 필요한 데이터를 저장하는 것
+
+
+					</p>
+				</dd>
+
+				<dd id="inout_btn" class = "btn" style="display: none;">
+					<p>
+						<a href="javascript:quiz.checkAnswer();">입력완료</a>
+					</p>
+				</dd>
+
+				<dd class="btn" id="correct-solution" style="display:none;">
+					<p>
+						<a href="javascript:quiz.viewIncorrect();">정답확인</a>
+					</p>
+				</dd>
+
+			</dl>
+
+
+			<div class="apply-sound" style="display:none;">
+			<!--<div class="apply-sound" >-->
+				<span>※ 해설 음성을 확인해보세요.</span>
+				<audio controls>
+					<script type="text/javascript">
+						document.write("<source src='"+mp3Link+"04_18.mp3' type='audio/mpeg' />");
+					</script>
+					해당 브라우저는 음성을 지원하지 않습니다.
+				</audio>
+
+				<div id="viewExplanationBtn">
+				<a href="#" onclick="viewExplanation();">해설보기</a>
+				</div>
+
+			</div>
+
+
+
+			<div id="quiz_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어 보세요." /></div>
+			<div id="quiz_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+
+
+
+
+			<dl id="learning_quiz_feed" class="feed" style="display:none;">
+
+				<dt>해설보기</dt>
+
+				<dd class="text-1">
+					데이터베이스는 공용 데이터, 통합 데이터, 저장 데이터, 운영 데이터라는 측면에서 각각 함축된 개념을 갖고 있습니다. 
+                                        <span>공용 데이터</span>는 한 조직의 여러 응용프로그램이 공동으로 사용하는 것을 말하고, <span>통합 데이터</span>는 여러 부서에서 사용하는 데이터를 한 곳에 모아서 공동 관리하는 것을 말합니다. 
+                                        <span>저장 데이터</span>는 컴퓨터가 접근할 수 있는 디스크와 같은 저장 매체에 저장된 것을 말하며, <span>운영 데이터</span>는 조직의 운영에 기본적으로 반드시 필요한 데이터를 저장하는 것을 말합니다.  
+
+				</dd>
+
+				<dd class="btn"><a href="#" onclick= hiddenExplanation(); >해설닫기</a></dd>
+			</dl>
+
+			<div class="narration-bg" style="display:none;"></div>
+
+
+			<audio id="audio1">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"o.mp3' type='audio/mpeg' />");
+				</script>
+			</audio>
+			<audio id="audio2">
+				<script type="text/javascript">
+					document.write("<source src='"+mp3Link+"x.mp3' type='audio/mpeg' />");
+				</script>
+			</audio><!--  정오답 음성 영역  -->
+
+
+		</div><!--  E : learning-quiz -->
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+	</section><!--  본문 영역 -->
+
+
+
+
+
+
+
+
+		<script>
+		/**
+		 * 일력 박스 id
+		 * 정답
+		 */
+//		var quiz = new Inputquit(["input_1", "input_2", "input_3", "input_4"], ["공용 데이터", "통합 데이터", "저장 데이터", "운영 데이터"]);
+			var quiz = new Inputquit(["input_1", "input_2", "input_3", "input_4"], ["ADD", "A B C", "JUNGSOOK", "Jungsook"]);
+
+	</script>
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

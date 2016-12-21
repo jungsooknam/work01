@@ -1,0 +1,226 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>SQL 활용</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+
+		<script type="text/javascript">
+			var _totalPageSummary =  06;
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initSummaryPage();											// 핵심정리 페이징
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+			<section id="summary">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+				<div id="summary-area" >
+
+					<div class="summary-guide"><span>◈ 이번 회차에 학습한 내용을 정리해보겠습니다.</span></div>
+
+
+					<dl id="summary-text1" class="type-1">
+
+						<dt> <span>데이터베이스의 개념</span></dt>
+
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스의 정의</span></p>
+							<p class="stype-2"><span>데이터베이스는 어느 한 조직의 다양한 응용 프로그램들이 공동으로 사용하는 데이터들을 통합하여 저장한 운영 데이터의 집합 </span></p>
+							<p class="stype-2"><span>데이터베이스는 공용 데이터(Shared Data)임</span></p>
+							<p class="stype-2"><span>데이터베이스는 통합된 데이터(Integrated Data)임</span></p>
+							<p class="stype-2"><span>데이터베이스는 저장된 데이터(Stored Data)임</span></p>
+							<p class="stype-2"><span>데이터베이스의 데이터는 운영 데이터(Operational Data)임</span></p>
+
+
+						</dd>
+
+
+					</dl>
+
+					<dl id="summary-text2" class="type-1">
+
+
+						<dt><span>데이터베이스의 개념</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스의 특징</span></p>
+							<p class="stype-2"><span>실시간 접근성 (Real-time Accessibility)</span></p>
+							<p class="stype-2"><span>계속적인 변화 (Continuous Evolution)</span></p>
+                                                        <p class="stype-2"><span>동시 공용 (Concurrent Sharing)</span></p>
+                                                        <p class="stype-2"><span>내용에 의한 참조 (Content References)</span></p>
+						</dd>
+						
+					</dl>
+
+
+
+					<dl id="summary-text3" class="type-1">
+
+
+						<dt><span>데이터베이스 관리 시스템</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스 관리 시스템의 정의</span></p>
+							<p class="stype-2"><span>Database Management System(DBMS)</span></p>
+							<p class="stype-2"><span>데이터베이스를 생성 및 관리해주는 기능을 제공하는 소프트웨어 패키지/시스템</span></p>
+                                                        <p class="stype-2"><span>데이터와 응용 프로그램 사이의 중계자</span></p>
+                                                        <p class="stype-2"><span>모든 사용자와 응용 프로그램들이 데이터베이스를 공유할 수 있도록 지원해 지는 범용 목적의 소프트웨어 시스템</span></p>
+						</dd>
+
+					</dl>
+
+
+
+
+					<dl id="summary-text4" class="type-1">
+
+
+						<dt><span>데이터베이스 관리 시스템</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스 관리 시스템의 기능</span></p>
+							<p class="stype-2"><span>데이터 정의 기능</span></p>
+							<p class="stype-5"><span>여러 사용자의 데이터를 통합하여 저장하고 공유할 수 있도록 데이터 모델에 따라서 정의하는 기능</span></p>
+                                                        <p class="stype-2"><span>데이터 조작 기능</span></p>
+                                                        <p class="stype-5"><span>사용자와 데이터베이스 간의 의사소통</span></p>
+							<p class="stype-5"><span>데이터베이스의 접근 및 조작(삽입, 삭제, 변경 및 검색) 기능 제공</span></p>
+                                                        <p class="stype-2"><span>데이터 제어 기능</span></p>
+                                                        <p class="stype-5"><span>데이터 일관성(Consistency)와 무결성(Integrity), 보안(Securrity)를 유지하는 기능</span></p>
+						</dd>
+
+					</dl>
+
+
+
+
+					<dl id="summary-text5" class="type-1">
+
+
+						<dt><span>데이터베이스 관리 시스템</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스 관리 시스템의 역사</span></p>
+							<p class="stype-2"><span>1세대 DBMS</span></p>
+							<p class="stype-5"><span>IDS (Integrated Data Store) : 최초의 범용 목적의 DBMS</span></p>
+                                                        <p class="stype-5"><span>IMS(Information Management System) DBMS</span></p>
+                                                        <p class="stype-2"><span>2세대 DBMS</span></p>
+							<p class="stype-5"><span>Relational data model, SQL : IBM의 E.F. Codd</span></p>
+                                                        <p class="stype-5"><span>Commercial DBMS</span></p>
+                                                        <p class="stype-5"><span>Oracle, DB2, Ingress, Sybase, Informix</span></p>
+
+						</dd>
+
+					</dl>
+
+
+
+
+					<dl id="summary-text6" class="type-1">
+
+
+						<dt><span>데이터베이스 관리 시스템</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>데이터베이스 관리 시스템의 역사</span></p>
+							<p class="stype-2"><span>3세대 DBMS</span></p>
+							<p class="stype-5"><span>데이터의 복잡성 증가</span></p>
+                                                        <p class="stype-5"><span>새로운 데이터 모델의 대두</span></p>
+                                                        <p class="stype-5"><span>2세대 DBMS+3세대 DBMS ORDBMS(객체 관계형 데이터베이스 관리 시스템)</span></p>
+
+
+
+						</dd>
+
+					</dl>
+
+
+
+
+
+					<div class="summary-page">
+						<ul>
+							<li class="left"><a href="#!" id="page_left">이전 내용보기</a></li>
+							<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+							<li class="right"><a href="#!" id="page_right">다음 내용보기</a></li>
+						</ul>
+					</div>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
+
+
+
+				<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,376 @@
+﻿@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+
+    /*!*0X 퀴즈*!*/
+
+    #learning-quiz .question a
+    {width:155px; height:155px;}
+    #learning-quiz .question a.o
+    {background-size:100%;}
+    #learning-quiz .question a.x
+    {background-size:100%;}
+    #learning-quiz .question a.o:hover
+    {background-size:100%;}
+    #learning-quiz .question a.x:hover
+    {background-size:100%;}
+
+    #learning-quiz .question span
+    {width:155px; height:155px;}
+    #learning-quiz .question span.o-1
+    {background-size:100%;}
+    #learning-quiz .question span.o-2
+    {background-size:100%;}
+    #learning-quiz .question span.o-3
+    {background-size:100%;}
+    #learning-quiz .question span.o-4
+    {background-size:100%;}
+    #learning-quiz .question span.x-1
+    {background-size:100%;}
+    #learning-quiz .question span.x-2
+    {background-size:100%;}
+    #learning-quiz .question span.x-3
+    {background-size:100%;}
+    #learning-quiz .question span.x-4
+    {background-size:100%;}
+
+    #learning-quiz .feed .text-1
+    {
+
+        font-size:18px;
+
+    }
+
+
+
+}
+
+
+@media all and (max-width:849px) {
+
+    #learning-quiz .question dt p {
+        font-size: 23px;
+    }
+    /*퀴즈*/
+    #learning-quiz .question a
+    {width:145px; height:145px;}
+
+    #learning-quiz .question span
+    {width:145px; height:145px;}
+
+    #learning-quiz .feed .text-1
+    {font-size:17px;}
+
+
+
+
+}
+
+@media all and (max-width:729px) {
+
+    #learning-quiz .feed .text-1
+    {font-size:15px;}
+}
+
+
+
+
+
+
+
+/*요기서부터 모바일*/
+@media all and (max-width:599px) {
+
+    #learning-quiz .question dt p {
+        font-size: 20px;
+    }
+
+    #learning-quiz
+    {
+        margin-top:95px;
+        /*height: 655px*/
+        padding-bottom: 28px;
+    }
+
+
+    #learning-quiz .quiz-name
+    {
+        float: none;
+        display: block;
+        width: 98%;
+        font-size:27px;
+        display: inline-block;
+        /*border: 1px solid #f00;*/
+        margin-left: 1%;
+
+        border-bottom: 1px solid #aaa;
+    }
+
+    #learning-quiz .quiz-text
+    {
+        float: none;
+        display: block;
+        width: 97%;
+        font-size:14px;
+        margin-left: 1%;
+        margin-top:6px;
+        padding-left: 1%;
+        /*padding-top: 5px;*/
+
+
+    }
+
+    #learning-quiz .question
+    {
+        display: block;
+        float: none;
+        width:100%;
+
+        margin-top: 10px;
+    }
+
+
+    #learning-quiz .question dt
+    {
+        position:static;
+        float: none;
+        min-height: 40px;
+        top:0;
+        height: auto;
+
+        vertical-align: middle;
+        display: inline-block;
+        vertical-align:middle;
+        line-height: 40px;
+        text-align: center;
+
+        padding: 10px 0;
+    }
+
+    #learning-quiz .question dt p
+    {
+        position:static;
+        float: none;
+        font-size: 18px;
+        transform : none;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+
+    #learning-quiz .question dd
+    {
+        position:static;
+        float: none;
+        height: 130px;
+        margin-top: 10px;
+    }
+
+    #learning-quiz .question a
+    {
+        width:120px; height:120px;
+    }
+
+    /**/
+    #learning-quiz .question span
+    {
+        width:120px; height:120px;
+    }
+
+    #learning-quiz .feed
+    {
+        position:static;
+        height:auto;
+        top:0px;
+
+        display: block;
+        visibility: hidden;
+        float: none;
+
+    }
+
+    /*정답 및 해설*/
+    #learning-quiz .feed dt
+    {
+        position:static;
+        width: 100px;
+        font-size:14px;
+        line-height: 20px;
+        padding:0;
+    }
+
+
+    #learning-quiz .feed .ox
+    {
+        position:static;
+        margin-top:10px;
+        float: none;
+    }
+
+    #learning-quiz .feed .text-1
+    {
+        position:static;
+        float: none;
+        width: calc(84% - 30px);
+        font-size:14px;
+        padding-bottom: 20px;
+        margin-top:-50px;
+        margin-left: 100px;
+        min-height: 40px;
+        /*border: 1px solid #f00;*/
+    }
+
+
+    #learning-quiz .feed span
+    {
+        width:50px;
+        height:50px;
+        display: inline-block;
+    }
+
+    #learning-quiz .feed span.o
+    {
+        background-size: 100% 100%;
+    }
+    #learning-quiz .feed span.x
+    {
+        background-size: 100% 100%
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:519px) {
+
+
+
+    #learning-quiz .question a
+    {width:110px; height:110px;}
+
+    /**/
+    #learning-quiz .question span
+    {width:110px; height:110px;}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:449px) {
+
+    /*#learning-quiz .quiz-name {*/
+        /*font-size: 18px;*/
+    /*}*/
+
+    /*#learning-quiz .quiz-text {*/
+        /*font-size: 12px;*/
+    /*}*/
+
+    #learning-quiz .question dt p {
+        font-size: 15px;
+    }
+
+    #learning-quiz .question dd {
+        padding-top: 20px;
+    }
+
+    #learning-quiz .question a {
+        width: 100px;
+        height: 100px;
+    }
+
+    /**/
+    #learning-quiz .question span {
+        width: 100px;
+        height: 100px;
+    }
+
+    #learning-quiz .feed dt {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #learning-quiz .feed .text-1
+    {
+        position:static;
+        float: none;
+        width: calc(83% - 30px);
+        font-size:13px;
+        padding-bottom: 20px;
+        margin-top:-40px;
+        margin-left: 80px;
+        min-height: 40px;
+        /*border: 1px solid #f00;*/
+    }
+
+
+
+    #learning-quiz .feed span {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media all and (max-width:369px) {
+
+    /*#learning-quiz .quiz-name*/
+    /*{*/
+        /*font-size:16px;*/
+    /*}*/
+    /*#learning-quiz .quiz-text*/
+    /*{*/
+        /*font-size:10px;*/
+    /*}*/
+
+    #learning-quiz .question dt p
+    {
+        font-size: 14px;
+    }
+
+
+    #learning-quiz .question a
+    {width:90px; height:90px;}
+
+    /**/
+    #learning-quiz .question span
+    {width:90px; height:90px;}
+
+    #learning-quiz .feed .text-1
+    {
+        position:static;
+        float: none;
+        width: calc(83% - 30px);
+        font-size:13px;
+        padding-bottom: 20px;
+        margin-top:-40px;
+        margin-left: 70px;
+        min-height: 40px;
+        /*border: 1px solid #f00;*/
+    }
+
+
+}
+
+
+
+
