@@ -1,11 +1,36 @@
 @charset "utf-8";
 
+#apply_drag{
+    position:relative;
+    width:100%;
+    z-index:100;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+#apply_drag:after{
+    content:""; display:block; clear:both;
+}
+#apply_drag .theme{
+    position:absolute;
+    left:18px;
+    top:60px;
+    font:20px nsM;
+    color:#334366;
+    line-height:23px;
+    background:url("../img/inc/bullet_title.png") no-repeat;
+    padding-left:15px;
+    z-index:100; transition:All 0.2s ease;
+    -webkit-transition:All 0.2s ease;
+    -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;
+}
+
 #drag-area {
     position: relative;
     width: 100%;
     top:100px;
-    min-height: 520px;
     height: auto;
+    padding-bottom: 43px;
 }
 
 #drag-area .drag-text .drag-guide
@@ -29,12 +54,13 @@
 
 #drag-area .drag-text .drag-q p
 {
-     color:#fff;
-    font : 24px nsM;
+    color:#fff;
+    font : 22px nsM;
     width: auto;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    margin : 0 10px;
 }
 
 
@@ -73,12 +99,15 @@
     display:inline-block;
     line-height: 22px;
     vertical-align: middle;
+    margin-right: 5px;
 }
 #drag-area #drag_zone .drag-q .check_o, #drag-area #drag_zone .drag-q .check_x {
     position: absolute;
     width: 46px;
     height: 46px;
     margin-left: -12px;
+    z-index: 102;
+    display: none;
 }
 #drag-area #drag_zone .drag-q .check_o
 {
@@ -109,43 +138,48 @@
     background-color: white;
     color:#fff;
     box-shadow:0 0 6px #758396;
-    line-height: 80px;
     position: relative;
+    line-height: 80px;
+    /*border: 1px solid red;*/
 }
 
 #drag-area #drag_example .drag_txt{
-    float: left;
+    display: block;
     margin: 3px;
     width: 60px;
-    height: calc(100% - 6px);
-    line-height: 70px;
+    position: absolute;
+    top:0;
+    bottom:0;
     background-color: #6699cc;
     color : #fff;
     text-align: center;
 }
 
 #drag-area #drag_example .drag_txt p{
+
+    font:16px nsM;
     display: inline-block;
     vertical-align: middle;
-    font:20px nsM;
 }
 
 #drag-area #drag_example .drag-object{
     display: inline-block;
+    margin-left: 63px;
     width: calc(100% - 220px);
     text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
 }
 
 #drag-area #drag_example .drag-object .drag-back{
     display: inline-block;
     width: 158px;
     height: 35px;
-    line-height: 45px;
+    line-height: 35px;
     background-color: #dbdbdb;
     text-align: center;
     vertical-align: middle;
-    /*border: 1px solid red;*/
-    margin: -5px 10px 0 10px;
+    margin:0 10px;
     position: relative;
 
     -moz-box-shadow:    inset 0 0 6px #888;
@@ -176,16 +210,21 @@
 
 
 #drag-area #drag_example .drag-btn{
-    position: absolute;
-    display: block;
-    width: 127px;
-    height: 35px;
-    background: url("../img/drag/btn_img.png") no-repeat;
-    text-align: center;
     right: 20px;
     top:20px;
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 127px;
+    text-align: center;
     line-height: 35px;
 }
+
+#drag-ok-btn, #drag-check-btn{
+    background: url("../img/drag/btn_img.png") no-repeat;
+    cursor: pointer;
+}
+
 
 a:link, a:visited, a:active, a:hover{
     color: white;
@@ -194,7 +233,7 @@ a:link, a:visited, a:active, a:hover{
 #drag-area #drag_example .drag-btn a{
     text-align: center;
     vertical-align:middle;
-    font : 20px nsM;
+    font : 16px nsM;
     margin-left: 15px;
 }
 
@@ -206,12 +245,20 @@ a:link, a:visited, a:active, a:hover{
     height: 40px;
 }
 
+#drag-area .drag-sound .drag-audio-guide{
+    position: absolute;
+    left:0;
+    top:50px;
+    font : 14px nsM
+}
+
 #drag-area .drag-sound audio{
     position: static;
     width: calc(100% - 160px);
     height: 40px;
     float: left;
 }
+
 
 #drag-area .drag-sound p{
     display: block;
@@ -223,12 +270,14 @@ a:link, a:visited, a:active, a:hover{
     top:0;
     line-height: 40px;
     text-align: center;
+    cursor: pointer;
 }
 
 #drag-area .drag-sound p a{
-    font : 20px nsM;
+    font : 14px nsM;
     vertical-align: middle;
     margin-right: 40px;
+    color: white;
 }
 
 
@@ -241,6 +290,82 @@ a:link, a:visited, a:active, a:hover{
     right: 70px;
 }
 
+<<<<<<< HEAD
+#drag-area #narration-area{
+    /*display:none;*/
+    position:absolute;
+    width:90%;
+    margin-left: 5%;
+    bottom:90px;
+    background:#FFF;
+    box-shadow:0 0 6px #333;
+    z-index:2006;
+}
+
+#drag-area #narration-area dt{
+    display: inline-block;
+    background: url("../img/drag/narration_tag_01.png") no-repeat;
+    width:190px ;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+#drag-area #narration-area dt p{
+    display: inline-block;
+    font:16px nsM;
+    color:white;
+    text-align: left;
+    text-indent: 60px;
+}
+
+
+#drag-area #narration-area dd .narration-num{
+    width: 22px;
+    height: 22px;
+    vert-align: bottom;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+    background-color: #6699cc;
+    display:inline-block;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+#drag-area #narration-bg2
+{
+    display:none;
+    position: absolute;
+    width: 100%;
+    height:calc(100% + 100px);
+    left: 0px;
+    top: -100px;
+    background: #000;
+    opacity: 0.6;
+    z-index: 2005;
+}
+
+#apply_alert3
+{
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    opacity: 1;
+    text-align:center;
+    z-index:3000;
+}
+
+#apply_alert3 img
+{
+    margin-top: 120px;
+}
+=======
 
 #drag-area #narration-area
 {
@@ -257,3 +382,4 @@ a:link, a:visited, a:active, a:hover{
 }
 
 
+>>>>>>> d19a2ec0549c7b472099c6f539dc3738e72db817

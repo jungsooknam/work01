@@ -27,7 +27,6 @@
 #apply_zone div p span											{color:#ff0066}
 
 
-#apply_zone .apply-quiz											{float:left; width:80%; height:350px; background: #FFF; box-shadow:0 0 6px #758396;}
 /*#apply_zone .apply_answer										{display:none; position:relative; float:right; width:411px; height:355px; background:#FFF; box-shadow:0 0 6px #758396;}*/
 #apply_zone .apply_bar											{clear:both; display:none }
 
@@ -75,11 +74,21 @@
 
 #apply_alert1															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
 #apply_alert1 img														{margin-top:140px;}
-#apply_alert2															{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
-#apply_alert2 img														{margin-top:140px;}
+#apply_alert2
+{position:absolute; width:100%; height:100%; left:0; top:0; text-align:center; background:url("../img/quiz/pop_alert_bg.png") repeat; z-index:300;}
+#apply_alert2 img
+{margin-top:140px;}
 
 
-#narration-area														{display:none; position:absolute; width:890px; bottom:10px; background:#FFF; box-shadow:0 0 6px #333; opacity:0; z-index:2006;}
+#narration-area
+{
+    /*display:none; */
+    position:absolute; width:890px;
+    bottom:10px; background:#FFF;
+    box-shadow:0 0 6px #333;
+    /*opacity:0; */
+    z-index:2006;
+}
 #narration-area dt													{position:absolute; width:140px; height:31px; font:20px nsM; color:#FFF; line-height:25px; background:#6699cc; padding:9px 0 0 50px;}
 #narration-area dd {
     float: left;
@@ -96,8 +105,8 @@
 #narration-area.open												{bottom:50px; opacity:1; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease;}
 
 #apply-area .narration-bg {
-    display: none;
-    position: absolute;
+
+    /*display: none;*/
     width: 100%;
     height: 657px;
     left: 0px;

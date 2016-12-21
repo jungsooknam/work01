@@ -1,15 +1,57 @@
 @charset "utf-8";
 
 @media all and (max-width:999px) {
+    #drag-area .drag-text .drag-q p
+    {
+        font : 20px nsM;
+    }
 
+    #drag-area #drag_zone .drag-img
+    {
+        margin: 6px 40px;
+    }
+
+    #drag-area #drag_zone .drag-q {
+        font : 18px nsM;
+        line-height: 50px;
+    }
 }
 
 @media all and (max-width:849px) {
+
+    #drag-area #drag_zone .drag-img
+    {
+        margin: 6px 30px;
+    }
+
+    #drag-area .drag-text .drag-q p
+    {
+        font : 18px nsM;
+    }
+
+    #drag-area #drag_zone .drag-q {
+        font : 16px nsM;
+        line-height: 45px;
+    }
 
 }
 
 @media all and (max-width:729px) {
 
+    #drag-area .drag-text .drag-q p
+    {
+        font : 16px nsM;
+    }
+
+    #drag-area #drag_zone .drag-img
+    {
+        margin: 6px 20px;
+    }
+
+    #drag-area #drag_zone .drag-q {
+        font : 14px nsM;
+        line-height: 40px;
+    }
 }
 
 
@@ -20,11 +62,19 @@
 /*요기서 부터 모바일*/
 @media all and (max-width:599px) {
 
+    #apply_drag{
+        padding-bottom: 140px;
+    }
+    #apply_drag .theme{
+        width:80%;
+        top:80px;
+        font-size:17px;
+        line-height:20px;
+        color:#334366;
+    }
+
     #drag-area {
-        position: relative;
-        width: 100%;
         top:140px;
-        height: 520px;
     }
 
     #drag-area .drag-text .drag-guide
@@ -36,18 +86,22 @@
     #drag-area .drag-text .drag-q p
     {
         font : 16px nsM;
+        line-height: 18px;
     }
 
     #drag-area #drag_zone{
+        width: 94%;
+        margin-left: 3%;
+        margin-top: 10px;
         text-align: center;
         padding-bottom: 20px;
 
     }
 
-    #drag-area #drag_zone .drag-img
-    {
+    #drag-area #drag_zone .drag-img{
         float: none;
-        margin: 6px auto;
+        margin: 0 0 10px 0;
+        padding-top: 20px;
     }
 
     #drag-area #drag_zone .drag-q {
@@ -55,12 +109,23 @@
         padding-top: 0;
         line-height: 40px;
         font-size: 14px;
-        border: 1px solid red;
         text-align: left;
     }
 
-    #drag-area #drag_zone .drag-q .check_o
+    #drag-area #drag_zone .drag-q .drag-q-num{
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    #drag-area #drag_zone .drag-q .check_o, #drag-area #drag_zone .drag-q .check_x
     {
+        width: 36px;
+        height: 36px;
+    }
+
+    #drag-area #drag_zone .drag-q .check_o{
         background:url('../img/drag/check_o_3.png') 100% 100% no-repeat;
     }
 
@@ -72,11 +137,13 @@
         width: 117px;
         height: 26px;
     }
-    #drag-area #drag_example
-    {
+    #drag-area #drag_example{
+        width: 94%;
+        margin-left: 3%;
+        margin-top: 10px;
         line-height: normal;
-        /*position: static;*/
         padding-top: 1px;
+        text-align:right;
     }
 
     #drag-area #drag_example .drag_txt{
@@ -93,19 +160,24 @@
     }
 
     #drag-area #drag_example .drag-object{
-        width: calc(100% - 150px);
+        margin-left: 0;
+        padding-top: 10px;
+        width: calc(67% + 78px);
         text-align: left;
-        border: 1px solid red;
-        line-height: 180px;
-        margin-left: 20px;
+        line-height: normal;
     }
 
     #drag-area #drag_example .drag-object .drag-back{
+        display: inline-block;
         width: 117px;
         height: 26px;
         float: left;
-        margin : 0 5px 5px;
+        margin-top:0;
+        margin-left:0;
+        margin-right: calc(50% - 117px);
+        margin-bottom: 10px;
     }
+
     #drag-area #drag_example .drag-object .drag-back .drag-item{
         width: 117px;
         height: 26px;
@@ -118,11 +190,17 @@
 
 
     #drag-area #drag_example .drag-btn{
+        display: inline-block;
+        position: static;
         width: 109px;
         height: 30px;
-        background: url("../img/drag/btn_img_22.png") no-repeat;
-        top:40px;
         line-height: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    #drag-ok-btn, #drag-check-btn{
+        background: url("../img/drag/btn_img_22.png") no-repeat;
+
     }
 
     #drag-area #drag_example .drag-btn a{
@@ -131,6 +209,9 @@
 
     #drag-area .drag-sound{
         height: 30px;
+
+        width: 94%;
+        margin-left: 3%;
     }
 
     #drag-area .drag-sound audio{
@@ -147,6 +228,76 @@
 
     #drag-area .drag-sound p a{
         font : 14px nsM;
+    }
+
+    #drag-area #narration-area{
+        bottom:80px;
+        width:94%;
+        margin-left: 3%;
+    }
+
+    #drag-area .page-ending3{
+        right: 5%;
+    }
+
+    #drag-area .drag-sound .drag-audio-guide{
+        position: absolute;
+        left:0;
+        top:43px;
+        font : 14px nsM
+    }
+
+    #drag-area #narration-area dt {
+        background: url("../img/drag/narration_tag_03.png") no-repeat;
+        width:140px ;
+        height: 30px;
+        line-height: 25px;
+    }
+
+    #drag-area #narration-area dd{
+        width: calc(100% - 50px);
+        padding: 40px 20px 10px 20px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    #drag-area #narration-area .btn{
+        width:25px;
+        padding: 0;
+    }
+
+    #drag-area #narration-area dt p{
+        font:14px nsM;
+        text-indent: 30px;
+    }
+
+    #drag-area #narration-area dd .narration-num{
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    #apply_alert3 img
+    {
+        margin-top: 250px;
+    }
+}
+
+@media all and (max-width:449px) {
+    #drag-area .drag-text .drag-q p
+    {
+        font : 14px nsM;
+        line-height: 18px;
+    }
+
+}
+
+@media all and (max-width:369px) {
+    #drag-area .drag-text .drag-q p
+    {
+        font : 12px nsM;
+        line-height: 16px;
     }
 }
 

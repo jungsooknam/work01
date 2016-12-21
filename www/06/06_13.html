@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
-		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+		<!--<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>-->
 
 		<link rel="stylesheet" type="text/css" href="css/font.css" />
 		<script type="text/javascript" src="js/webfont.js"></script>
@@ -22,30 +22,23 @@
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 
 		<script type="text/javascript" src="js/globalvars.js"></script>
-		<script type="text/javascript" src="js/jquery-latest.js"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/common-script.js"></script>
-		<script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
-		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src='js/DragQuiz.js'></script>
+
+
 		<script type="text/javascript" src='js/jquery.ui.touch-punch.js'></script>
+
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#sco-name1").text(currentSco1);					// 대주제
-
 				lms_mode();													// LMS 탑재관련
 				menuInit();														// 우측 메뉴
-
-				shows();
-				$(window).resize(function(){
-					shows();
-				});
-
-				var contentId = getContentId();
-				function resizeHeight(){
-					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
-				}
-				addEventListener('resize', resizeHeight, false);
-				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
 			});
 		</script>
 	</head>
@@ -54,16 +47,20 @@
 
 
 
-	<body onload="init();">
+	<body>
 		<div id="wrapper" class="body-learning">
 
 			<header class="learn">
 				<h1 id="course" tabindex="1"></h1>
 				<h2 id="chap-1" tabindex="2"></h2>
 			</header><!--  과정명, 차시명 영역  -->
+<<<<<<< HEAD
+			<section id="apply_drag">
+=======
 
 
 			<section id="apply">
+>>>>>>> d19a2ec0549c7b472099c6f539dc3738e72db817
 				<nav>
 					<script type="text/javascript" src="js/menu.js"></script>
 					<div id="menu_open" tabindex="3">INDEX 열기</div>
@@ -88,23 +85,23 @@
 						<li class="drag-img">
 							<img src ='img/drag/img_01.png' />
 						</li>
+
 						<li class="drag-q">
 
 							f = <span id = "inputCheck_x1" class="check_x"></span>
 							<span id = "inputCheck_o1" class="check_o"></span>
 							<span class="drag-q-num"> 1</span>
-							<span class="drag-q-hitArea"></span> (do$몸무게 ~ do$키)<br/>abline(
+							<span id="drop_item1" class="drag-q-hitArea"></span> (do$몸무게 ~ do$키)<br/>abline(
 
 							<span id = "inputCheck_x2" class="check_x"></span>
 							<span id = "inputCheck_o2" class="check_o"></span>
 							<span class="drag-q-num">2</span>
-							<span class="drag-q-hitArea"></span> )<br/>
+							<span id="drop_item2" class="drag-q-hitArea"></span> )<br/>
 
 							<span id = "inputCheck_x3" class="check_x"></span>
 							<span id = "inputCheck_o3" class="check_o"></span>
 							<span  class="drag-q-num">3</span>
-							<span class="drag-q-hitArea"></span> (f)<br/>
-
+							<span id="drop_item3" class="drag-q-hitArea"></span> (f)<br/>
 						</li>
 					</ul>
 
@@ -115,32 +112,32 @@
 						</li>
 
 						<li class="drag-object">
-							<div class="drag-back">
-								<div class="drag-item"><p>summary</p></div>
+							<div id = "drag-back1" class="drag-back">
+								<div id="drag_itm1" class="drag-item"><p>summary</p></div>
 							</div>
 
-							<div class="drag-back">
-								<div class="drag-item"><p>lm</p></div>
+							<div id = "drag-back2" class="drag-back">
+								<div id="drag_itm2" class="drag-item"><p>lm</p></div>
 							</div>
-							<div class="drag-back">
-								<div class="drag-item"><p>f</p>
+							<div id = "drag-back3" class="drag-back">
+								<div id="drag_itm3" class="drag-item"><p>f</p>
 								</div>
 							</div>
 						</li>
-
-
-						<li class="drag-btn">
+						<li class="drag-btn">&nbsp;</li>
+						<li class="drag-btn" id="drag-ok-btn" onclick="quiz.okAnswer();" style="display: none">
 							<!--확인-->
-							<a href="">확인</a>
+							<a>확인</a>
 						</li>
-
-						<li class="drag-btn" style="display: none">
+						<li class="drag-btn"  id="drag-check-btn" onclick="quiz.checkAnswer();" style="display: none">
 							<!--정답확인-->
-							<a href="">정답확인</a>
-
+							<a>정답확인</a>
 						</li>
-					</ul>
 
+<<<<<<< HEAD
+
+
+=======
 					<div class="drag-sound">
 						<!--<audio controls style="display:none;">-->
 						<audio controls>
@@ -149,10 +146,37 @@
 							</script>
 							해당 브라우저는 음성을 지원하지 않습니다.
 						</audio>
+>>>>>>> d19a2ec0549c7b472099c6f539dc3738e72db817
 
-						<p><a href="javascript:viewNarration();">해설보기</a></p>
+
+<<<<<<< HEAD
+					</ul>
+
+					<div class = "drag-sound">
+
+						<div id = "drag-audio" style="display: none">
+							<div class = "drag-audio-guide">- 해설음성을 확인해 보세요.</div>
+							<audio controls>
+								<script type="text/javascript">
+									document.write("<source src='"+mp3Link+"04_03.mp3' type='audio/mpeg' />");
+								</script>
+								해당 브라우저는 음성을 지원하지 않습니다.
+							</audio>
+							<p onclick="quiz.viewNarration();"><a>해설보기</a></p>
+						</div>
 					</div>
 
+					<dl id="narration-area" style="display: none">
+						<dt><p>해설보기</p></dt>
+						<dd>
+							<span class = "narration-num">1</span> 은 선형회귀함수를 넣어야 하므로 lm을 입력해야 한다.<br/>
+							<span class = "narration-num">2</span> 는 회귀분석한 데이터를 담는 변수를 넣어야 하므로 f를 입력해야 한다..<br/>
+							<span class = "narration-num">3</span> 은 회귀분석에 대한 결과를 보여주는 함수를 넣어야 하므로  summary를 입력해야 한다..
+						</dd>
+						<dd class="btn"><a href="javascript:quiz.narrationClose();">해설닫기</a></dd>
+					</dl>
+					<div id="narration-bg2"></div>
+=======
 					<dl id="narration-area">
 						<dt>해설보기</dt>
 						<dd>서지탱크는 적당한 체적의 공동부를 갖는 공기탱크를 말합니다. 크랭크 케이스에서 발생된 블로바이가스가 PCV밸브와 브리더호스를 통해 연소실로 들어가 재연소되며, 저속ㆍ저 부하일때는 미량의 가스가 PCV밸브로 들어가지만 고속ㆍ고 부하 시에는 다량의 가스가 PCV밸브 통해 각 실린더 연소실로 들어갑니다.</dd>
@@ -161,21 +185,11 @@
 
 					<div class="narration-bg"></div>
 
+>>>>>>> d19a2ec0549c7b472099c6f539dc3738e72db817
 
+					<div class="page-ending3">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
 
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 				<audio id="audio1">
 					<script type="text/javascript">
@@ -188,17 +202,16 @@
 					</script>
 				</audio><!--  정오답 사운드 영역  -->
 
-
-
-				<div class="page-ending3">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
-
-				<div id="apply_alert1" style="display:none;"><img src="img/quiz/pop_alert_01.png" alt="문제를 풀어보세요." /></div>
-				<div id="apply_alert2" style="display:none;"><img src="img/quiz/pop_alert_02.png" alt="다시 한번 생각해 보세요." /></div>
+				<div id="apply_alert3">
+					<img src="img/drag/pop_alert_02.png" alt="다시 한번 생각해 보세요." />
+				</div>
 
 			</section>
 
 
-
+			<script>
+				var quiz = new DragQuiz(["drag_itm2", "drag_itm3", "drag_itm1"],['drop_item1', 'drop_item2', 'drop_item3']);
+			</script>
 
 
 
