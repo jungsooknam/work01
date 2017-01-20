@@ -1,3 +1,12 @@
+/**
+ * 2017.01.20 : 정답이 여러게 일 경우 추가 코드.
+ * 정답이 여러개 일 경우.
+ * ex "any / some" 답들 사이에 구분자 "/" 를 삽입한다.
+ *
+ * @param inputs
+ * @param answers
+ * @constructor
+ */
 
 var Inputquit = function (inputs, answers){
 
