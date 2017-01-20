@@ -1,0 +1,343 @@
+﻿@charset "utf-8";
+
+
+
+@media all and (max-width:999px) {
+    #summary																{width:100%; height:620px;}
+}
+
+
+
+@media all and (max-width:849px) {
+
+    #summary-area .type-1 dd .stype-1 span
+    {
+        font-size:18px;
+    }
+
+    #summary-area .type-1 dd .stype-2 span
+    {
+        font-size:16px;
+    }
+
+    #summary-area .type-1 dd .stype-3 span
+    {
+        font-size:16px;
+    }
+
+    #summary-area .type-1 dd .stype-5 span
+    {
+        font-size:16px;
+    }
+
+    #summary-area .type-1 dd .stype-4 span
+    {
+        font-size: 16px;
+    }
+
+    #summary-area .type-1 dd .stype-4 .s_num
+    {
+        font-size: 12px;
+        line-height:16px;
+    }
+
+
+    #summary-area .type-1 dd .stype-4_1 span
+    {
+        font-size: 16px;
+    }
+
+    #summary-area .type-1 dd .stype-4_1 .s_num
+    {
+        font-size: 12px;
+        line-height:16px;
+    }
+
+
+
+
+    #summary-area .type-1 dd .stype-5 span
+    {
+        font-size: 16px;
+    }
+
+
+
+    #summary-area .type-1 dd .stype-5_1 span
+    {
+        font-size: 16px;
+    }
+
+
+    #summary-area .type-1 dd .stype-6 span
+    {
+        font-size: 16px;
+    }
+
+    #summary-area .type-1 dd .stype-7 span
+    {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+
+
+
+@media all and (max-width:729px) {
+
+}
+
+
+
+
+
+
+
+
+/*여서 부터 모바일*/
+@media all and (max-width:599px) {
+
+    #summary
+    {width:100%; height:100%;}
+
+    {width:95%; padding:8px 2.5% 0;}
+
+    #summary-area .summary-guide {
+        font-size: 14px;
+    }
+
+    #summary-area
+    {
+        width:100%;
+        margin-top:85px;
+        height: 520px
+    }
+
+    /*타이틀*/
+    #summary-area .type-1 dt
+    {
+        position:static;
+        float: none;
+        background:none #476dab;
+        height: 40px;
+        vertical-align: middle;
+        display: inline-block;
+
+        line-height: 40px;
+        text-align: center;
+    }
+
+    #summary-area .type-1 dt span
+    {
+        width: 95%;
+        font: 18px nsM;
+    }
+
+
+    #summary-area .type-1 dd
+    {
+        width: 94%;
+        /*margin-left:3%;*/
+        margin:10px 3%;
+        height: auto;
+    }
+
+    #summary-area dl .leftbox
+    {
+        border : 0;
+    }
+
+    #summary-area .type-1 dd .stype-1
+    {
+        background:url("../img/summary/bullet_11.png") 0 7px no-repeat;
+        margin-bottom: 4px;
+    }
+
+    #summary-area .type-1 dd .stype-1 span
+    {
+        font-size: 16px;
+        margin-left:12px;
+    }
+
+
+    #summary-area .type-1 dd .stype-2
+    {
+        margin-left: 15px;
+        background:url("../img/summary/bullet_12.png") 0 4px no-repeat;
+        margin-top: 8px; 
+        margin-bottom: 7px;
+    }
+
+    #summary-area .type-1 dd .stype-2 span
+    {
+
+        margin-left: 12px;
+        font-size: 16px;
+    }
+
+    #summary-area .type-1 dd .stype-3 span
+    {
+        font-size: 15px;
+    }
+
+
+    #summary-area .type-1 dd .stype-4 span
+    {
+        font-size: 15px;
+    }
+
+
+    #summary-area .type-1 dd .stype-4_1 span
+    {
+        font-size: 15px;
+    }
+
+
+
+    #summary-area .type-1 dd .stype-5 span
+    {
+        font-size: 15px;
+    }
+
+    #summary-area .type-1 dd .stype-5_1 span
+    {
+        font-size: 15px;
+    }
+
+
+    #summary-area .type-1 dd .stype-6 span
+    {
+        font-size: 15px;
+    }
+
+    #summary-area .type-1 dd .stype-7 span
+    {
+        font-size: 15px;
+    }
+
+    #summary-area .type-1 dd .stype-8 span
+    {
+        font-size: 15px;
+    }
+
+    .summary-page {
+        width: 100%;
+        float:right;
+        margin-top: 10px;
+        bottom: 0;
+    }
+
+    #summary-area ul
+    {
+        margin: 0 auto;
+        width:180px;
+        height:23px;
+        background:url("../img/summary/btn_img_mobile.png") no-repeat;
+    }
+
+
+    #summary-area li
+    {
+        float:left;
+        width:60px;
+        height:28px;
+        font:100 16px play;
+        color:#2C313A;
+        text-align:center;
+    }
+
+    #summary-area li a
+    {
+        display:block;
+        overflow:hidden;
+        text-indent:-9999px;
+    }
+
+    #summary-area li.left a
+    {
+        height: 30px;
+        background:url("../img/summary/btn_pre_mobile.png") no-repeat;
+    }
+    #summary-area li.right a
+    {
+        height: 30px;
+        background:url("../img/summary/btn_next_mobile.png") 2px 0 no-repeat;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:519px) {
+
+    #summary-area
+    {
+        width:100%;
+        margin-top:85px;
+        height: 550px
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width:449px) {
+
+
+    #summary-area
+    {
+        width:100%;
+        margin-top:85px;
+        height: 580px
+    }
+
+
+}
+
+@media all and (max-width:369px) {
+
+    #summary-area
+    {
+        width:100%;
+        margin-top:85px;
+        height: 620px
+    }
+
+
+}
+
+
+@media all and (max-width:320px) {
+
+    #summary-area
+    {
+        width:100%;
+        margin-top:85px;
+        height: 650px
+    }
+
+
+}
+
+
+
+

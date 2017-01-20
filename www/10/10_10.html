@@ -1,0 +1,194 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>SQL 활용</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+	<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<script src="js/webfont.js"></script>
+	<script type="text/javascript">
+		WebFont.load({
+			custom: {
+				families: ['nbgM', 'play']
+			}
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+	<script type="text/javascript" src="js/globalvars.js"></script>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/common-script.js"></script>
+
+
+		<script type="text/javascript">
+			var _totalPageLearn =  02;									// 학습영역 페이징 수
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initLearnPage();												// 학습영역 페이징
+
+				$("#page_left").click(function(){
+					prevPageLearn();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageLearn();
+					playAudio('btn-sound');
+				});
+			var contentId = getContentId();
+			function resizeHeight(){
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			}
+			addEventListener('resize', resizeHeight, false);
+			window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+<!--인트로 페이지-->
+<body>
+<div id="wrapper" class="body-learning">
+
+	<header class="learn">
+		<h1 id="course" tabindex="1"></h1>
+		<h2 id="chap-1" tabindex="2"></h2>
+	</header>
+
+
+	<section id="learning">
+
+
+		<nav>
+			<script type="text/javascript" src="js/menu.js"></script>
+			<div id="menu_open" tabindex="3">INDEX 열기</div>
+			<div id="menu"></div>
+			<div id="menu-bg"></div>
+		</nav>
+
+		<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+		<ul id="content-area">
+			<li class="subject">
+				<p>상호 연관 서브 쿼리</p>
+			</li><!-- 학습 - 주제 영역 -->
+
+
+
+			
+			<li class="text-area">
+			
+				<div id="learn-group-1" class="page-area-1">
+					<dl class="type-0"><p>상호 연관 서브 쿼리</p></dl>   
+
+
+					<dl class="type-1"><p>메인 쿼리절과 서브 쿼리 간에 검색 결과를 교환하는 서브 쿼리</p></dl>
+
+
+					<dl class="type-3_1"><p>메인 쿼리와 서브 쿼리 간의 결과를 교환하기 위하여 서브 쿼리의 WHERE 조건절에서 메인 쿼리의 테이블과 연결함</p></dl>
+
+					<dl class="type-3_1"><p>서브 쿼리의 조건절에 메인 쿼리에서 사용하는 테이블의 속성이 나타남</p></dl>
+
+					<dl class="type-3_1"><p>메인 쿼리에서 어떤 튜플에 대한 조건을 비교하는가에 따라서 서브 쿼리의 결과가 다르게 나타남</p></dl>
+
+
+
+
+				</div>
+
+				<div id="learn-group-2" class="page-area-1">
+					<dl class="type-0">
+						<p>상호 연관 서브 쿼리</p>
+					</dl>
+
+					<dl class="type-1"><p>주의 사항</p></dl>
+
+					<dl class="type-3_1"><p>메인 쿼리에서 table1에 속한 튜플을 하나씩 접근하여 WHERE 절 수행 시 서브 쿼리가 반복적으로 수행됨으로 성능이 매우 떨어질 수 있음</p></dl>
+
+					<dl class="type-3_1"><p>조인 구문을 이용하는 것이 더 효율적임</p></dl>
+
+					<dl class="type-q"><p>Q</p>
+
+					<span>각 사원에 대하여 관리자와 동일 부서에서 근무하는 사원들의 이름, 급여, 부서 번호 출력</span>
+
+					</dl>
+
+
+
+
+
+
+				</div>
+
+				<ul class="learning-page">
+					<li class="left"><img src="img/learn/btn_pre_01.png" id="page_left" alt="이전 내용보기" /></li>
+					<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+					<li class="right"><img src="img/learn/btn_next_01.png" id="page_right" alt="다음 내용보기" /></li>
+				</ul>
+
+			
+
+
+			</li><!-- 학습 - 텍스트 영역 -->
+			
+				
+			
+			
+
+			
+
+			
+
+			<li class="movie-guide">
+				<p>
+					 음성강의를 확인한 후 실습 영상을 통해 학습을 진행하세요.<br>
+					<span>재생 버튼 선택 후 전체 화면보기로 학습하세요.</span></p>
+			</li>
+
+
+
+			<li class="movie-area">
+				<div>
+					<video id="page-movie" controls preload="auto" poster="img/learn/cover_01_1.png">
+						<script type="text/javascript">
+							document.write("<source src='"+mp4Link+"10_05.mp4' type='video/mp4' />");
+						</script>
+						해당 브라우저는 영상을 지원하지 않습니다.
+					</video>
+				</div>
+			</li><!-- 학습 - 동영상 영역 -->
+		</ul>
+
+
+
+
+
+
+
+
+
+
+
+		<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+
+
+	</section><!--  본문 영역 -->
+
+
+
+	<footer>
+		<script type="text/javascript" src="js/footer.js"></script>
+	</footer><!--  하단 영역 -->
+</div>
+</body>
+</html>

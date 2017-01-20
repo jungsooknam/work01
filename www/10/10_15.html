@@ -1,0 +1,269 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>SQL 활용</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script type="text/javascript" src="http://www.e-koreatech.ac.kr/res/lia/lia.all.js?V=11" charset="utf-8"></script>
+		<script type="text/javascript" src="js/getContentId.js" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<script type="text/javascript" src="js/webfont.js"></script>
+		<script type="text/javascript">
+			WebFont.load({
+				custom: {
+					families: ['nbgM', 'play']
+				}
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+
+		<script type="text/javascript" src="js/globalvars.js"></script>
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/common-script.js"></script>
+
+		<script type="text/javascript">
+			var _totalPageSummary =  06;
+
+			$(document).ready(function(){
+				$("#sco-name1").text(currentSco1);					// 대주제
+
+				lms_mode();													// LMS 탑재관련
+				menuInit();														// 우측 메뉴
+				initSummaryPage();											// 핵심정리 페이징
+
+				$("#page_left").click(function(){
+					prevPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				$("#page_right").click(function(){
+					nextPageSummary();
+					playAudio('btn-sound');
+				});
+				
+				var contentId = getContentId();
+				function resizeHeight(){
+					window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+				}
+				addEventListener('resize', resizeHeight, false);
+				window.parent.postMessage( contentId + '_' + wrapper.scrollHeight, '*');
+			});
+		</script>
+	</head>
+
+
+
+
+
+	<body>
+		<div id="wrapper" class="body-learning">
+
+			<header class="learn">
+				<h1 id="course" tabindex="1"></h1>
+				<h2 id="chap-1" tabindex="2"></h2>
+			</header><!--  과정명, 차시명 영역  -->
+
+			<section id="summary">
+				<nav>
+					<script type="text/javascript" src="js/menu.js"></script>
+					<div id="menu_open" tabindex="3">INDEX 열기</div>
+					<div id="menu"></div>
+					<div id="menu-bg"></div>
+				</nav><!--  INDEX 메뉴 영역  -->
+				<p id="sco-name1" class="theme"></p><!--  대주제 영역  -->
+
+
+
+				<div id="summary-area" >
+
+					<div class="summary-guide"><span>◈ 이번 회차에 학습한 내용을 정리해보겠습니다.</span></div>
+
+
+					<dl id="summary-text1" class="type-1">
+
+						<dt><span>중첩 질의문의 개요</span></dt>
+
+						<dd class="leftbox">
+							<p class="stype-1"><span>중첩 질의문의 개념</span></p>
+							<p class="stype-2"><span>하나의 SQL문의 결과를 다른 SQL문에 전달함</span></p>
+							<p class="stype-2"><span>두 개의 SQL문을 하나의 SQL로 처리함</span></p>
+							<p class="stype-2"><span>이론적으로 중첩 질의문은 조인 구문과 표현능력이 동일함</span></p>
+							<p class="stype-2"><span>SQL문 안에 SQL문이 포함되어 있음</span></p>
+
+
+						</dd>
+
+
+
+					</dl>
+
+					<dl id="summary-text2" class="type-1">
+
+
+						<dt><span>중첩 질의문의 개요</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>단일행 서브 쿼리와 다중행 서브 쿼리</span></p>
+
+				
+
+							<p class="stype-2"><span>단일행 서브 쿼리</span></p>
+							<p class="stype-5"><span>서브 쿼리의 결과로 하나의 튜플만이 반환됨</span></p>
+
+							<p class="stype-2"><span>다중행 서브 쿼리</span></p>
+							<p class="stype-5"><span>서브 쿼리의 결과로 여러 개의 튜플들이 반환됨</span></p>
+
+							<p class="stype-2"><span>단일행 서브 쿼리와 다중행 서브 쿼리를 구분해야 하는 이유</span></p>
+							<p class="stype-5"><span>일반적인 비교 연산자인 =, <, <=, >, >=, !=등은 속성값 간의 비교 연산임</span></p>
+
+
+
+						</dd>
+
+					</dl>
+
+					<dl id="summary-text3" class="type-1">
+
+
+						<dt><span>중첩 질의문의 개요</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>단일행 서브 쿼리와 다중행 서브 쿼리</span></p>
+
+							<p class="stype-2"><span>다중행 비교 연산자</span></p>
+
+
+							<p class="stype-4"><span class="s_num">1
+							</span><span>IN</span></p>
+							<p class="stype-5_1"><span>속성값이 여러 값들 중 하나이기만 하면 참</span></p>
+							<p class="stype-5_1"><span>“= OR”의 의미</span></p>
+
+
+
+
+							<p class="stype-4"><span class="s_num">2
+							</span><span>ANY 또는 SOME</span></p>
+							<p class="stype-5_1"><span>메인 쿼리 비교 조건에서 서브 쿼리의 결과와 하나라도 일치하면 참</span></p>
+							<p class="stype-5_1"><span>IN과의 차이점은 >, >=, <=, <과 같은 범위 비교와도 같이 사용 가능함</span></p>
+
+							<p class="stype-4"><span class="s_num">3
+							</span><span>ALL</span></p>
+							<p class="stype-5_1"><span>메인 쿼리 비교 조건에서 서브 쿼리의 결과와 모두 일치하면 참</span></p>
+
+
+							<p class="stype-4"><span class="s_num">4
+							</span><span>EXISTS 연산자</span></p>
+							<p class="stype-5_1"><span>서브 쿼리의 결과가 하나라도 존재하면 참이 되는 연산자</span></p>
+						
+
+							<p class="stype-4"><span class="s_num">5
+							</span><span>NOT EXISTS</span></p>
+							<p class="stype-5_1"><span>EXISTS와 상반되는 연산자</span></p>
+						
+
+						</dd>
+
+					</dl>
+
+
+
+
+					<dl id="summary-text4" class="type-1">
+
+
+						<dt><span>다양한 중첩 질의문</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>다중 컬럼 서브 쿼리</span></p>
+
+							<p class="stype-2"><span>서브 쿼리의 결과가 여러 개의 속성들로 구성되어 주 쿼리의 조건과 비교하는 서브 쿼리임</span></p>
+
+							<p class="stype-2"><span>복수 개의 서브 쿼리들로 구성됨</span></p>
+
+							<p class="stype-2"><span>메인 쿼리와 서브 쿼리의 비교 대상 칼럼을 분리하여 개별적으로 비교한 후 AND 연산에 의해 최종 결과를 출력함</span></p>
+
+
+						</dd>
+
+					</dl>
+
+
+
+
+
+
+					<dl id="summary-text5" class="type-1">
+
+
+						<dt><span>다양한 중첩 질의문</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>상호 연관 서브 쿼리</span></p>
+
+							<p class="stype-2"><span>비상호 연관 서브 쿼리</span></p>
+							<p class="stype-5"><span>서브 쿼리의 결과가 메인 쿼리에서 검사하는 튜플에는 영향 받지 않고 그 결과가 일정함</span></p>
+
+							<p class="stype-2"><span>상호 연관 서브 쿼리</span></p>
+							<p class="stype-5"><span>메인 쿼리절과 서브 쿼리 간에 검색 결과를 교환하는 서브 쿼리</span></p>
+
+							<p class="stype-2"><span>주의 사항</span></p>
+							<p class="stype-5"><span>메인 쿼리에서 table1에 속한 튜플을 하나씩 접근하여 WHERE 절 수행 시 서브 쿼리가 반복적으로 수행됨으로 성능이 매우 떨어질 수 있음</span></p>
+
+						</dd>
+					</dl>
+
+
+
+
+					<dl id="summary-text6" class="type-1">
+
+
+						<dt><span>다양한 중첩 질의문</span></dt>
+						<dd class="leftbox">
+							<p class="stype-1"><span>중첩 질의문 작성 시 주의점</span></p>
+
+							<p class="stype-2"><span>중첩 질의문 사용 시 오류가 없도록 IN, ANY, ALL을 기본적으로 사용함</span></p>
+
+							<p class="stype-2"><span>서브 쿼리 내에서는 ORDER BY 절을 사용하면 안됨</span></p>
+
+							<p class="stype-2"><span>서브 쿼리의 결과가 NULL일 경우, 메인 쿼리의 결과 또한 NULL임</span></p>
+
+							<p class="stype-2"><span>서브 쿼리가 NULL을 반환할 경우, 메인 쿼리에서 결과를 생성하고 싶으면 “NOT EXISTS” 를 사용함</span></p>
+
+						</dd>
+					</dl>
+
+
+
+
+
+
+
+					<div class="summary-page">
+						<ul>
+							<li class="left"><a href="#!" id="page_left">이전 내용보기</a></li>
+							<li><span id="current_page_no"></span> / <span id="total_page_no"></span></li>
+							<li class="right"><a href="#!" id="page_right">다음 내용보기</a></li>
+						</ul>
+					</div>
+
+					<audio id="btn-sound">
+						<script type="text/javascript">
+							document.write("<source src='"+mp3Link+"next.mp3' type='audio/mpeg' />");
+						</script>
+					</audio>
+				</div>
+
+
+
+				<div class="page-ending">※ 학습을 완료한 후 다음페이지로 이동하세요.</div>
+			</section><!--  본문 영역 -->
+
+
+
+			<footer>
+				<script type="text/javascript" src="js/footer.js"></script>
+			</footer><!--  하단 영역 -->
+		</div>
+	</body>
+</html>
